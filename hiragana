@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hiragana</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+* {font-size:105%;}
+#hiragana {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+#hiragana td, #hiragana th {
+    border: 1px solid #98bf21;
+    padding: 3px 7px 2px 7px;
+    text-align: center;
+    width: 15%;
+}
+#hiragana th {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A7C942;
+    color: #ffffff;
+}
+#hiragana tr.alt td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+#n  {
+    padding: 1% 20%;
+}
+    </style>
+</head>
+
+<body>
+
+<table id="hiragana">
+    <tr><th> </th>                  <th>a</th>        <th>e</th>        <th>i</th>                   <th>o</th>        <th>u</th></tr>
+    <tr><td> </td>                  <td>&#12354;</td> <td>&#12360;</td> <td>&#12356;</td>            <td>&#12362;</td> <td>&#12358;</td></tr>
+    <tr class="alt"><td>b</td>      <td>&#12400;</td> <td>&#12409;</td> <td>&#12403;</td>            <td>&#12412;</td> <td>&#12406;</td></tr>
+    <tr>            <td>d</td>      <td>&#12384;</td> <td>&#12391;</td> <td>&#12386;</td>            <td>&#12393;</td> <td>&#12389;</td></tr>
+    <tr class="alt"><td>g</td>      <td>&#12364;</td> <td>&#12370;</td> <td>&#12366;</td>            <td>&#12372;</td> <td>&#12368;</td></tr>
+    <tr>            <td>h</td>      <td>&#12399;</td> <td>&#12408;</td> <td>&#12402;</td>            <td>&#12411;</td> <td>&#12405;</td></tr>
+    <tr class="alt"><td>k</td>      <td>&#12363;</td> <td>&#12369;</td> <td>&#12365;</td>            <td>&#12371;</td> <td>&#12367;</td></tr>
+    <tr>            <td>m</td>      <td>&#12414;</td> <td>&#12417;</td> <td>&#12415;</td>            <td>&#12418;</td> <td>&#12416;</td></tr>
+    <tr class="alt"><td>n</td>      <td>&#12394;</td> <td>&#12397;</td> <td>&#12395;</td>            <td>&#12398;</td> <td>&#12396;</td></tr>
+    <tr>            <td>p</td>      <td>&#12401;</td> <td>&#12410;</td> <td>&#12404;</td>            <td>&#12413;</td> <td>&#12407;</td></tr>
+    <tr class="alt"><td>r</td>      <td>&#12425;</td> <td>&#12428;</td> <td>&#12426;</td>            <td>&#12429;</td> <td>&#12427;</td></tr>
+    <tr>            <td>s</td>      <td>&#12373;</td> <td>&#12379;</td> <td>&#12375;&nbsp;SHI</td>   <td>&#12381;</td> <td>&#12377;</td></tr>
+    <tr class="alt"><td>t</td>      <td>&#12383;</td> <td>&#12390;</td> <td>&#12385;&nbsp;CHI</td>   <td>&#12392;</td> <td>&#12388;&nbsp;TSU</td></tr>
+    <tr>            <td>w</td>      <td>&#12431;</td> <td>&#12433;</td> <td>&#12432;</td>            <td>&#12434;</td> <td></td></tr> 
+    <tr class="alt"><td>y</td>      <td>&#12420;</td> <td>        </td> <td></td>                    <td>&#12424;</td> <td>&#12422;</td></tr>
+    <tr>            <td>z</td>      <td>&#12374;</td> <td>&#12380;</td> <td>&#12376;</td>            <td>&#12382;</td> <td>&#12378;</td></tr>
+</table>
+<div id="n">
+n&nbsp;-&nbsp;&#12435;
+</div>
+<table>
+    <tr><td></td><td>North: &#21271; &nbsp; n&#333;su &nbsp; &#12494;&#12540;&#12473;</td><td></td></tr>
+    <tr><td>West: &#35199; &nbsp; nishi &nbsp; </td><td></td><td>East: &#26481; &nbsp; &#299;suto &nbsp; </td></tr>
+    <tr><td></td><td>South: &#21335;  &nbsp; nampou &nbsp; </td><td></td></tr>
+</table>
+</body>
+</html>
