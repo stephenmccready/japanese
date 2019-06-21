@@ -1,55 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>Hiragana</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-* {font-size:105%;}
-#hiragana {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="A Japanese Language Learning Aid">
+	<meta name="keywords" content="Japanese,Language,Hiragana">
+	<meta property="og:title" content="A Japanese Language Learning Aid">
+	<meta property="og:description" content="A Japanese Language Learning Aid for Hiragana">
+	<title>ひらがな Hiragana</title>
+<style>
+* {font-size: 1.25em;font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+.hiragana {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
 	width: 100%;
+	text-align: center;
 }
-#hiragana td, #hiragana th {
-    border: 1px solid #98bf21;
-    padding: 1% 1% 1% 1%;
-    text-align: center;
-    width: 9%;
+.hiragana td {padding-top: 0.35em; padding-bottom: 0.35em;}
+.hiragana tr.alt td {
+	color: #000000;
+	background-color: #EAF2D3;
 }
-#hiragana th {
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 4px;
-    background-color: #A7C942;
-    color: #ffffff;
+.pron {
+	font-size: 0.65em;
 }
-#hiragana tr.alt td {
-    color: #000000;
-    background-color: #EAF2D3;
-}
-    </style>
+</style>
 </head>
-
 <body>
-<p>
-<table id="hiragana">
-    <tr><th>n</th><th>w</th><th>r</th><th>y</th><th>m</th><th>h</th><th>n</th><th>t</th><th>s</th><th>k</th><th></th></tr>
-    <tr><td>&#12435;<br>n</td><td>&#12431;<br>wa</td><td>&#12425;<br>ra</td><td>&#12420;<br>ya</td><td>&#12414;<br>ma</td><td>&#12399;<br>ha</td><td>&#12394;<br>na</td><td>&#12383;<br>ta</td><td>&#12373;<br>sa</td><td>&#12363;<br>ka</td><td>&#12354;<br>a</td></tr>
-    <tr class="alt"><td></td><td></td><td>&#12426;<br>ri</td><td></td><td>&#12415;<br>mi</td><td>&#12402;<br>hi</td><td>&#12395;<br>ni</td><td>&#12385;<br>ti</td><td>&#12375;<br>si</td><td>&#12365;<br>ki</td><td>&#12356;<br>i</td></tr>
-    <tr><td></td><td></td><td>&#12427;<br>ru</td><td>&#12422;<br>yu</td><td>&#12416;<br>mu</td><td>&#12405;<br>hu</td><td>&#12396;<br>nu</td><td>&#12388;<br>tu</td><td>&#12377;<br>su</td><td>&#12367;<br>ku</td><td>&#12358;<br>u</td></tr>
-    <tr class="alt"><td></td><td></td><td>&#12428;<br>re</td><td></td><td>&#12417;<br>me</td><td>&#12408;<br>he</td><td>&#12397;<br>ne</td><td>&#12390;<br>te</td><td>&#12379;<br>se</td><td>&#12369;<br>ke</td><td>&#12360;<br>e</td></tr>
-    <tr><td></td><td>&#12434;<br>wo</td><td>&#12429;<br>ro</td><td>&#12424;<br>yo</td><td>&#12418;<br>mo</td><td>&#12411;<br>ho</td><td>&#12398;<br>no</td><td>&#12392;<br>to</td><td>&#12381;<br>so</td><td>&#12371;<br>ko</td><td>&#12362;<br>o</td></tr>
+<table class="hiragana">
+	<tr class="alt"><td><span class="hg">あ</span><br/><span class="pron">a</span></td><td><span class="hg">い</span><br/><span class="pron">i</span></td><td><span class="hg">う</span><br/><span class="pron">u</span></td><td><span class="hg">え</span><br/><span class="pron">e</span></td><td><span class="hg">お</span><br/><span class="pron">o</span></td></tr>
+	<tr><td><span class="hg">か</span><br/><span class="pron">ka</span></td><td><span class="hg">き</span><br/><span class="pron">ki</span></td><td><span class="hg">く</span><br/><span class="pron">ku</span></td><td><span class="hg">け</span><br/><span class="pron">ke</span></td><td><span class="hg">こ</span><br/><span class="pron">ko</span></td></tr>
+	<tr class="alt"><td><span class="hg">さ</span><br/><span class="pron">sa</span></td><td><span class="hg">し</span><br/><span class="pron">shi</span></td><td><span class="hg">す</span><br/><span class="pron">su</span></td><td><span class="hg">せ</span><br/><span class="pron">se</span></td><td><span class="hg">そ</span><br/><span class="pron">so</span></td></tr>
+	<tr><td><span class="hg">た</span><br/><span class="pron">ta</span></td><td><span class="hg">ち</span><br/><span class="pron">chi</span></td><td><span class="hg">つ</span><br/><span class="pron">tsu</span></td><td><span class="hg">て</span><br/><span class="pron">te</span></td><td><span class="hg">と</span><br/><span class="pron">to</span></td></tr>
+	<tr class="alt"><td><span class="hg">な</span><br/><span class="pron">na</span></td><td><span class="hg">に</span><br/><span class="pron">ni</span></td><td><span class="hg">ぬ</span><br/><span class="pron">nu</span></td><td><span class="hg">ね</span><br/><span class="pron">ne</span></td><td><span class="hg">の</span><br/><span class="pron">no</span></td></tr>
+	<tr><td><span class="hg">は</span><br/><span class="pron">ha</span></td><td><span class="hg">ひ</span><br/><span class="pron">hi</span></td><td><span class="hg">ふ</span><br/><span class="pron">hu</span></td><td><span class="hg">へ</span><br/><span class="pron">he</span></td><td><span class="hg">ほ</span><br/><span class="pron">ho</span></td></tr>
+	<tr class="alt"><td><span class="hg">ま</span><br/><span class="pron">ma</span></td><td><span class="hg">み</span><br/><span class="pron">mi</span></td><td><span class="hg">む</span><br/><span class="pron">mu</span></td><td><span class="hg">め</span><br/><span class="pron">me</span></td><td><span class="hg">も</span><br/><span class="pron">mo</span></td></tr>
+	<tr><td><span class="hg">や</span><br/><span class="pron">ya</span></td><td><span class="hg"></span></td><td><span class="hg">ゆ</span><br/><span class="pron">yu</span></td><td><span class="hg"></span></td><td><span class="hg">よ</span><br/><span class="pron">yo</span></td></tr>
+	<tr class="alt"><td><span class="hg">ら</span><br/><span class="pron">ra</span></td><td><span class="hg">り</span><br/><span class="pron">ri</span></td><td><span class="hg">る</span><br/><span class="pron">ru</span></td><td><span class="hg">れ</span><br/><span class="pron">re</span></td><td><span class="hg">ろ</span><br/><span class="pron">ro</span></td></tr>
+	<tr><td><span class="hg">わ</span><br/><span class="pron">wa</span></td><td><span class="hg"></span></td><td><span class="hg">ん</span><br/><span class="pron">n</span></td><td><span class="hg"></span></td><td><span class="hg">を</span><br/><span class="pron">wo</span></td></tr> 
+
+	<tr class="alt"><td><span class="hg">が</span><br/><span class="pron">ga</span></td><td><span class="hg">ぎ</span><br/><span class="pron">gi</span></td><td><span class="hg">ぐ</span><br/><span class="pron">gu</span></td><td><span class="hg">げ</span><br/><span class="pron">ge</span></td><td><span class="hg">ご</span><br/><span class="pron">go</span></td></tr>
+	<tr><td><span class="hg">ざ</span><br/><span class="pron">za</span></td><td><span class="hg">じ</span><br/><span class="pron">ji</span></td><td><span class="hg">ず</span><br/><span class="pron">zu</span></td><td><span class="hg">ぜ</span><br/><span class="pron">ze</span></td><td><span class="hg">ぞ</span><br/><span class="pron">zo</span></td></tr>
+	<tr class="alt"><td><span class="hg">だ</span><br/><span class="pron">da</span></td><td><span class="hg">ぢ</span><br/><span class="pron">di</span></td><td><span class="hg">づ</span><br/><span class="pron">du</span></td><td><span class="hg">で</span><br/><span class="pron">de</span></td><td><span class="hg">ど</span><br/><span class="pron">do</span></td></tr>
+	<tr><td><span class="hg">ば</span><br/><span class="pron">ba</span></td><td><span class="hg">び</span><br/><span class="pron">bi</span></td><td><span class="hg">ぶ</span><br/><span class="pron">bu</span></td><td><span class="hg">べ</span><br/><span class="pron">be</span></td><td><span class="hg">ぼ</span><br/><span class="pron">bo</span></td></tr>
+	<tr class="alt"><td><span class="hg">ぱ</span><br/><span class="pron">pa</span></td><td><span class="hg">ぴ</span><br/><span class="pron">pi</span></td><td><span class="hg">ぷ</span><br/><span class="pron">pu</span></td><td><span class="hg">ぺ</span><br/><span class="pron">pe</span></td><td><span class="hg">ぽ</span><br/><span class="pron">po</span></td></tr>
 </table>
-</p>
-<p>
-<table id="hiragana">
-    <tr><th>p</th><th>b</th><th>d</th><th>z</th><th>g</th></tr>
-    <tr><td>&#12401;<br>pa</td><td>&#12400;<br>ba</td><td>&#12384;<br>da</td><td>&#12374;<br>za</td><td>&#12364;<br>ga</td></tr>
-    <tr><td>&#12404;<br>pi</td><td>&#12403;<br>bi</td><td>&#12386;<br>ji</td><td>&#12376;<br>ji</td><td>&#12366;<br>gi</td></tr>
-    <tr><td>&#12407;<br>pu</td><td>&#12406;<br>bu</td><td>&#12389;<br>dzu</td><td>&#12378;<br>zu</td><td>&#12368;<br>gu</td></tr>
-    <tr><td>&#12410;<br>pe</td><td>&#12409;<br>be</td><td>&#12391;<br>de</td><td>&#12380;<br>ze</td><td>&#12370;<br>ge</td></tr>
-    <tr><td>&#12413;<br>po</td><td>&#12412;<br>bo</td><td>&#12393;<br>do</td><td>&#12382;<br>zo</td><td>&#12372;<br>go</td></tr>
-</table>
-</p>
+<!--
+<audio preload="auto" id="あ"><source src="audio\あ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="い"><source src="audio\い.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="う"><source src="audio\う.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="え"><source src="audio\え.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="お"><source src="audio\お.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="か"><source src="audio\か.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="き"><source src="audio\き.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="く"><source src="audio\く.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="け"><source src="audio\け.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="こ"><source src="audio\こ.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="さ"><source src="audio\さ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="し"><source src="audio\し.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="す"><source src="audio\す.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="せ"><source src="audio\せ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="そ"><source src="audio\そ.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="た"><source src="audio\た.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ち"><source src="audio\ち.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="つ"><source src="audio\つ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="て"><source src="audio\て.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="と"><source src="audio\と.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="な"><source src="audio\な.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="に"><source src="audio\に.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぬ"><source src="audio\ぬ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ね"><source src="audio\ね.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="の"><source src="audio\の.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="は"><source src="audio\は.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ひ"><source src="audio\ひ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ふ"><source src="audio\ふ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="へ"><source src="audio\へ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ほ"><source src="audio\ほ.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="ま"><source src="audio\ま.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="み"><source src="audio\み.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="む"><source src="audio\む.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="め"><source src="audio\め.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="も"><source src="audio\も.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="や"><source src="audio\や.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ゆ"><source src="audio\ゆ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="よ"><source src="audio\よ.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="ら"><source src="audio\ら.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="り"><source src="audio\り.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="る"><source src="audio\る.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="れ"><source src="audio\れ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ろ"><source src="audio\ろ.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="わ"><source src="audio\わ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="を"><source src="audio\を.mp3" type="audio/mpeg"></audio>
+
+<audio preload="auto" id="ん"><source src="audio\ん.mp3" type="audio/mpeg"></audio>
+-->
 </body>
 </html>
