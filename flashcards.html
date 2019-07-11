@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A Japanese Language Flashcard WebApp">
+<meta name="keywords" content="Japanese,Language,Hiragana,Katakana,Flashcard">
+<meta property="og:title" content="A Japanese Language Flashcard WebApp">
+<meta property="og:description" content="A Japanese Language Flashcard WebApp using Hiragana & Katakana">
+<title>Japanese</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>* {text-align: center;} #romaji-container {font-size: 2.25em; min-height: 2.25em; color: #17a2b8;}  #hira-container {font-size: 1.75em; min-height: 1.75em; color: #1e7e34;} #kata-container {font-size: 1.75em; min-height: 1.75em; color: #1e7e34;}
+#charContainer {font-size: 7em; min-height: 1.5em;}
+#kataChar {width:50%; float:left; text-align:right; padding-right: 0.25em;}
+#hiraChar {width:50%; float:right; text-align:left; padding-left: 0.25em;}
+</style>
+</head>
+<body onload="random();">
+<div class="card">
+	<div id="card-header" class="card-header"><div class="float-left"></div><div id="card-count" class="float-right"></div></div>
+	<div id="card-body" class="card-body">
+		<div id="charContainer">
+			<div id="hiraChar" class="clearfix"></div>
+			<div id="kataChar" class="clearfix"></div>
+		</div>
+		<div id="romaji-container" class="clearfix"><div id="romaji"></div></div>
+		<div id="hira-container" class="clearfix"><div id="hiraX"></div></div>
+		<div id="kata-container" class="clearfix"><div id="kataX"></div></div>
+		<button id="btnExPin" class="btn btn-secondary btn-sm" onclick="toggleExPermenancy();">
+			<i class="fas fa-thumbtack"></i></button>
+		<button class="btn btn-success btn-lg" onclick="toggleEx();"><i class="fas fa-quote-right"></i></button>
+		<button class="btn btn-dark btn-lg" onclick="play();"><i class="fas fa-play"></i></button>
+		<button class="btn btn-info btn-lg" onclick="toggleRomaji();"><i class="fas fa-eye"></i></button>
+		<button id="btnRomajiPin" class="btn btn-secondary btn-sm" onclick="toggleRomajiPermenancy();">
+			<i class="fas fa-thumbtack"></i></button>
+	</div> 
+	<div id="card-footer" class="card-footer">
+		<button class="btn btn-primary btn-lg" onclick="newCard(1);"><i class="fas fa-fast-backward"></i></button>
+		<button class="btn btn-primary btn-lg" onclick="backward();"><i class="fas fa-backward"></i></button>
+		<button class="btn btn-primary btn-lg" onclick="random();"><i class="fas fa-random"></i></button>
+		<button class="btn btn-primary btn-lg" onclick="forward();"><i class="fas fa-forward"></i></button>
+		<button class="btn btn-primary btn-lg" onclick="newCard(fLen);"><i class="fas fa-fast-forward"></i></button>
+	</div>
+</div>
+<script>var arr = [{kataChar:"ア",hiraChar:"あ",romaji:"a",hiraX:"あか",hiraEng:"red",kataX:"",kataEng:"",hiraRom:"aka",kataRom:""}];
+arr.push ({kataChar:"イ",hiraChar:"い",romaji:"i",hiraX:"あまい",hiraEng:"sweet",kataX:"",kataEng:"",hiraRom:"amai",kataRom:""});
+arr.push ({kataChar:"ウ",hiraChar:"う",romaji:"u",hiraX:"ぎんこう",hiraEng:"bank",kataX:"",kataEng:"",hiraRom:"ginkou",kataRom:""});
+arr.push ({kataChar:"エ",hiraChar:"え",romaji:"e",hiraX:"いえ",hiraEng:"house",kataX:"",kataEng:"",hiraRom:"ie",kataRom:""});
+arr.push ({kataChar:"オ",hiraChar:"お",romaji:"o",hiraX:"あお",hiraEng:"blue",kataX:"",kataEng:"",hiraRom:"ao",kataRom:""});
+
+arr.push ({kataChar:"カ",hiraChar:"か",romaji:"ka",hiraX:"せねか",hiraEng:"back",kataX:"",kataEng:"",hiraRom:"seneka",kataRom:""});
+arr.push ({kataChar:"キ",hiraChar:"き",romaji:"ki",hiraX:"すき",hiraEng:"suki",kataX:"",kataEng:"",hiraRom:"likes",kataRom:""});
+arr.push ({kataChar:"ク",hiraChar:"く",romaji:"ku",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ケ",hiraChar:"け",romaji:"ke",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"コ",hiraChar:"こ",romaji:"ko",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"サ",hiraChar:"さ",romaji:"sa",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"シ",hiraChar:"し",romaji:"shi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ス",hiraChar:"す",romaji:"su",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"セ",hiraChar:"せ",romaji:"se",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ソ",hiraChar:"そ",romaji:"so",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"タ",hiraChar:"た",romaji:"ta",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"チ",hiraChar:"ち",romaji:"chi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ツ",hiraChar:"つ",romaji:"tsu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"テ",hiraChar:"て",romaji:"te",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ト",hiraChar:"と",romaji:"to",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ナ",hiraChar:"な",romaji:"na",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ニ",hiraChar:"に",romaji:"ni",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヌ",hiraChar:"ぬ",romaji:"nu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ネ",hiraChar:"ね",romaji:"ne",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ノ",hiraChar:"の",romaji:"no",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ハ",hiraChar:"は",romaji:"ha",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヒ",hiraChar:"ひ",romaji:"hi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"フ",hiraChar:"ふ",romaji:"hu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヘ",hiraChar:"へ",romaji:"he",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ホ",hiraChar:"ほ",romaji:"ho",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"マ",hiraChar:"ま",romaji:"ma",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ミ",hiraChar:"み",romaji:"mi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ム",hiraChar:"む",romaji:"mu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"メ",hiraChar:"め",romaji:"me",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"モ",hiraChar:"も",romaji:"mo",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ヤ",hiraChar:"や",romaji:"ya",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ユ",hiraChar:"ゆ",romaji:"yu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヨ",hiraChar:"よ",romaji:"yo",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ラ",hiraChar:"ら",romaji:"ra",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"リ",hiraChar:"り",romaji:"ri",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ル",hiraChar:"る",romaji:"ru",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"レ",hiraChar:"れ",romaji:"re",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ロ",hiraChar:"ろ",romaji:"ro",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ワ",hiraChar:"わ",romaji:"wa",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヲ",hiraChar:"を",romaji:"wo",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ン",hiraChar:"ん",romaji:"n",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ガ",hiraChar:"が",romaji:"ga",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ギ",hiraChar:"ぎ",romaji:"gi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"グ",hiraChar:"ぐ",romaji:"gu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ゲ",hiraChar:"げ",romaji:"ge",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ゴ",hiraChar:"ご",romaji:"go",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+			
+arr.push ({kataChar:"ザ",hiraChar:"ざ",romaji:"za",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ジ",hiraChar:"じ",romaji:"ji",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ズ",hiraChar:"ず",romaji:"zu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ゼ",hiraChar:"ぜ",romaji:"ze",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ゾ",hiraChar:"ぞ",romaji:"zo",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"ダ",hiraChar:"だ",romaji:"da",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヂ",hiraChar:"ぢ",romaji:"di",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ヅ",hiraChar:"づ",romaji:"du",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"デ",hiraChar:"で",romaji:"de",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ド",hiraChar:"ど",romaji:"do",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+		
+arr.push ({kataChar:"バ",hiraChar:"ば",romaji:"ba",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ビ",hiraChar:"び",romaji:"bi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ブ",hiraChar:"ぶ",romaji:"bu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ベ",hiraChar:"べ",romaji:"be",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ボ",hiraChar:"ぼ",romaji:"bo",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+
+arr.push ({kataChar:"パ",hiraChar:"ぱ",romaji:"pa",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ピ",hiraChar:"ぱ",romaji:"pi",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"プ",hiraChar:"ぷ",romaji:"pu",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ペ",hiraChar:"ぺ",romaji:"pe",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+arr.push ({kataChar:"ポ",hiraChar:"ぽ",romaji:"po",hiraX:"",hiraEng:"",kataX:"",kataEng:"",hiraRom:"",kataRom:""});
+var id = 1;var fLen = 71;var exPermenancy = false;var romajiPermenancy = false;
+function newCard(x) {
+if(romajiPermenancy){$("#romaji").show();} else {$("#romaji").hide();}
+if(exPermenancy){$("#hiraX").show();$("#kataX").show();} else {$("#hiraX").hide();$("#kataX").hide();}
+id=x;
+document.getElementById("kataChar").innerHTML = arr[id - 1]["kataChar"];
+document.getElementById("hiraChar").innerHTML = arr[id - 1]["hiraChar"];
+document.getElementById("romaji").innerHTML = arr[id - 1]["romaji"];
+document.getElementById("hiraX").innerHTML = arr[id - 1]["hiraX"] + '&nbsp;' + arr[id - 1]["hiraEng"] + '&nbsp;' + arr[id - 1]["hiraRom"];
+document.getElementById("kataX").innerHTML = arr[id - 1]["kataX"] + '&nbsp;' + arr[id - 1]["kataEng"] + '&nbsp;' + arr[id - 1]["kataRom"];
+document.getElementById("card-count").innerHTML = id + " of " + fLen;}
+function backward() {if(id == 1) {id = fLen;} else {id = id - 1;};newCard(id);}
+function random() {id = Math.floor(Math.random() * fLen);newCard(id);}
+function forward() {if(id == fLen) {id = 1;} else {id = id + 1;};newCard(id);}
+function play() {var x = document.getElementById(hira[id - 1]["hiraChar"]);x.play();}
+function toggleRomaji() {$("#romaji").toggle();}
+function toggleRomajiPermenancy() {
+	$("#romaji").toggle();
+	if(romajiPermenancy==true){
+		romajiPermenancy=false;
+		$("#romaji").hide();
+		$("#btnRomajiPin").removeClass("btn-info");
+		$("#btnRomajiPin").addClass("btn-secondary");
+	} else {
+		romajiPermenancy=true
+		$("#romaji").show();
+		$("#btnRomajiPin").removeClass("btn-secondary");
+		$("#btnRomajiPin").addClass("btn-info");
+	}
+}
+function toggleEx() {$("#hiraX").toggle();$("#kataX").toggle();}
+function toggleExPermenancy() {
+	$("#hiraX").toggle();
+	$("#kataX").toggle();
+	if(exPermenancy==true){
+		exPermenancy=false;
+		$("#hiraX").hide();
+		$("#kataX").hide();
+		$("#btnExPin").removeClass("btn-success");
+		$("#btnExPin").addClass("btn-secondary");
+	} else {
+		exPermenancy=true
+		$("#hiraX").show();
+		$("#kataX").show();
+		$("#btnExPin").removeClass("btn-secondary");
+		$("#btnExPin").addClass("btn-success");
+	}
+}
+</script>
+<script async src="https://kit.fontawesome.com/f429f186c5.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<audio preload="auto" id="あ"><source src="audio\あ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="い"><source src="audio\い.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="う"><source src="audio\う.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="え"><source src="audio\え.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="お"><source src="audio\お.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="か"><source src="audio\か.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="き"><source src="audio\き.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="く"><source src="audio\く.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="け"><source src="audio\け.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="こ"><source src="audio\こ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="さ"><source src="audio\さ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="し"><source src="audio\し.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="す"><source src="audio\す.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="せ"><source src="audio\せ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="そ"><source src="audio\そ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="た"><source src="audio\た.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ち"><source src="audio\ち.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="つ"><source src="audio\つ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="て"><source src="audio\て.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="と"><source src="audio\と.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="な"><source src="audio\な.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="に"><source src="audio\に.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぬ"><source src="audio\ぬ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ね"><source src="audio\ね.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="の"><source src="audio\の.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="は"><source src="audio\は.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ひ"><source src="audio\ひ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ふ"><source src="audio\ふ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="へ"><source src="audio\へ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ほ"><source src="audio\ほ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ま"><source src="audio\ま.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="み"><source src="audio\み.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="む"><source src="audio\む.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="め"><source src="audio\め.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="も"><source src="audio\も.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="や"><source src="audio\や.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ゆ"><source src="audio\ゆ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="よ"><source src="audio\よ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ら"><source src="audio\ら.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="り"><source src="audio\り.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="る"><source src="audio\る.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="れ"><source src="audio\れ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ろ"><source src="audio\ろ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="わ"><source src="audio\わ.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="を"><source src="audio\を.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ん"><source src="audio\ん.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="が"><source src="audio/%E3%81%8B%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぎ"><source src="audio/%E3%81%8D%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぐ"><source src="audio/%E3%81%8F%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="げ"><source src="audio/%E3%81%91%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ご"><source src="audio/%E3%81%93%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ざ"><source src="audio/%E3%81%95%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="じ"><source src="audio/%E3%81%97%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ず"><source src="audio/%E3%81%99%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぜ"><source src="audio/%E3%81%9B%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぞ"><source src="audio/%E3%81%9D%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="だ"><source src="audio/%E3%81%9F%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぢ"><source src="audio/%E3%81%A1%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="づ"><source src="audio/%E3%81%A4%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="で"><source src="audio/%E3%81%A6%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ど"><source src="audio/%E3%81%A8%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ば"><source src="audio/%E3%81%AF%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="び"><source src="audio/%E3%81%B2%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぶ"><source src="audio/%E3%81%B5%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="べ"><source src="audio/%E3%81%B8%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぼ"><source src="audio/%E3%81%BB%E3%82%99.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぱ"><source src="audio/%E3%81%AF%E3%82%9A.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぴ"><source src="audio/%E3%81%B2%E3%82%9A.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぷ"><source src="audio/%E3%81%B5%E3%82%9A.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぺ"><source src="audio/%E3%81%B8%E3%82%9A.mp3" type="audio/mpeg"></audio>
+<audio preload="auto" id="ぽ"><source src="audio/%E3%81%BB%E3%82%9A.mp3" type="audio/mpeg"></audio>
+</body>
+</html>
