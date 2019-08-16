@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>ひらがな Hiragana</title>
 <style>
-* {padding:0; margin: 0;}
-#tableDiv {padding-top:3px;}
-td {text-align: center;}
-.button {border:none;color:white;padding:6px 15px;margin-right:15px;text-align:center;text-decoration:none;display:inline-block;font-size:26px;
-}
-.regularBtn {background-color: #4CAF50;}
-.specialBtn {background-color: 	#af4cab;}
+* {padding:0; margin:0; font-family: 'Montserrat', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', sans-serif;}
+table {border-collapse:collapse; width:100%;}
+td {text-align:center; font-size:1.35em;}
+sub {font-size: .65em;}
+tr:nth-child(even){background-color: #f2f2f2}
+.special {color: green;}
 </style>
 <script>
 var hira = [{character:"あ",consonant:"∅",vowel:"a",consonantOrder:0,vowelOrder:1,romaji:"a",pronunciation:"aa, ah"}];
@@ -71,29 +70,54 @@ hira.push ({character:"を",consonant:"w",vowel:"o",consonantOrder:9,vowelOrder:
 
 hira.push ({character:"ん",consonant:"n",vowel:"∅",consonantOrder:10,vowelOrder:1,romaji:"n",pronunciation:"n"});
 
+hira.push ({character:"が",consonant:"g",vowel:"a",consonantOrder:11,vowelOrder:1,romaji:"ga",pronunciation:"ga"});
+hira.push ({character:"ぎ",consonant:"g",vowel:"i",consonantOrder:11,vowelOrder:2,romaji:"gi",pronunciation:"gi"});
+hira.push ({character:"ぐ",consonant:"g",vowel:"u",consonantOrder:11,vowelOrder:3,romaji:"gu",pronunciation:"gu"});
+hira.push ({character:"げ",consonant:"g",vowel:"e",consonantOrder:11,vowelOrder:4,romaji:"ge",pronunciation:"ge"});
+hira.push ({character:"ご",consonant:"g",vowel:"o",consonantOrder:11,vowelOrder:5,romaji:"go",pronunciation:"go"});
+
+hira.push ({character:"ざ",consonant:"z",vowel:"a",consonantOrder:12,vowelOrder:1,romaji:"za",pronunciation:"za"});
+hira.push ({character:"じ",consonant:"z",vowel:"i",consonantOrder:12,vowelOrder:2,romaji:"ji",pronunciation:"zi"});
+hira.push ({character:"ず",consonant:"z",vowel:"u",consonantOrder:12,vowelOrder:3,romaji:"zu",pronunciation:"zu"});
+hira.push ({character:"ぜ",consonant:"z",vowel:"e",consonantOrder:12,vowelOrder:4,romaji:"ze",pronunciation:"ze"});
+hira.push ({character:"ぞ",consonant:"z",vowel:"o",consonantOrder:12,vowelOrder:5,romaji:"zo",pronunciation:"zo"});
+
+hira.push ({character:"だ",consonant:"d",vowel:"a",consonantOrder:13,vowelOrder:1,romaji:"da",pronunciation:"da"});
+hira.push ({character:"ぢ",consonant:"d",vowel:"i",consonantOrder:13,vowelOrder:2,romaji:"ji",pronunciation:"di"});
+hira.push ({character:"づ",consonant:"d",vowel:"u",consonantOrder:13,vowelOrder:3,romaji:"zu",pronunciation:"du"});
+hira.push ({character:"で",consonant:"d",vowel:"e",consonantOrder:13,vowelOrder:4,romaji:"de",pronunciation:"de"});
+hira.push ({character:"ど",consonant:"d",vowel:"o",consonantOrder:13,vowelOrder:5,romaji:"do",pronunciation:"do"});
+
+hira.push ({character:"ば",consonant:"b",vowel:"a",consonantOrder:14,vowelOrder:1,romaji:"ba",pronunciation:"ba"});
+hira.push ({character:"び",consonant:"b",vowel:"i",consonantOrder:14,vowelOrder:2,romaji:"bi",pronunciation:"bi"});
+hira.push ({character:"ぶ",consonant:"b",vowel:"u",consonantOrder:14,vowelOrder:3,romaji:"bu",pronunciation:"bu"});
+hira.push ({character:"べ",consonant:"b",vowel:"e",consonantOrder:14,vowelOrder:4,romaji:"be",pronunciation:"be"});
+hira.push ({character:"ぼ",consonant:"b",vowel:"o",consonantOrder:14,vowelOrder:5,romaji:"bo",pronunciation:"bo"});
+
+hira.push ({character:"ぱ",consonant:"p",vowel:"a",consonantOrder:15,vowelOrder:1,romaji:"pa",pronunciation:"pa"});
+hira.push ({character:"ぴ",consonant:"p",vowel:"i",consonantOrder:15,vowelOrder:2,romaji:"pi",pronunciation:"pi"});
+hira.push ({character:"ぷ",consonant:"p",vowel:"u",consonantOrder:15,vowelOrder:3,romaji:"pu",pronunciation:"pu"});
+hira.push ({character:"ぺ",consonant:"p",vowel:"e",consonantOrder:15,vowelOrder:4,romaji:"pe",pronunciation:"pe"});
+hira.push ({character:"ぽ",consonant:"p",vowel:"o",consonantOrder:15,vowelOrder:5,romaji:"po",pronunciation:"po"});				
+
 function jInit() {
 	var fLen = hira.length;
 	var html = "<table>";
 	for (i = 0; i < fLen; i++) {
 		if(hira[i]["character"] !=  "ん") {
-		
-			if(hira[i]["vowelOrder"] ==  1) {
-				html += "<tr><td>" + hira[i]["consonant"] + "</td>";
-			}
-  		
-  			if(hira[i]["romaji"].length > 2 ){
-  				btnclass = " specialBtn";
+  			if(hira[i]["romaji"].length > 2 || hira[i]["romaji"] == 'ji' || hira[i]["character"] == 'づ'){
+  				tdclass = "special";
   			} else {
-  				btnclass = " regularBtn";
+  				tdclass = "";
   			}
-  		
-  			html += "<td><button class=\"button " + btnclass + "\" onclick=\"play('" + hira[i]["character"] + "');\">" + hira[i]["character"] + "</button></td>";
-			play(hira[i]["character"]);
-		
+  			html += "<td class='" + tdclass + "'>"
+  				+ hira[i]["character"]
+  				+ " <sub>" + hira[i]["romaji"] + "</sub>"
+  				+ "</td>";
  			if(hira[i]["character"] ==  "や" || hira[i]["character"] ==  "ゆ") {
 				html += "<td></td>";
 			} else if(hira[i]["character"] ==  "わ") {
-				html += "<td>n</td><td><button class=\"button " + btnclass + "\" onclick=\"play('ん');\">ん</button></td><td></td>";
+				html += "<td></td><td class='special'>ん <sub>n</sub></td><td></td>";
 			}
  			
   			if(hira[i]["vowelOrder"] ==  5) {
@@ -111,62 +135,6 @@ function play(id) {
 </script>
 </head>
 <body onload="jInit();">
-<audio preload="auto" id="あ"><source src="audio\あ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="い"><source src="audio\い.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="う"><source src="audio\う.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="え"><source src="audio\え.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="お"><source src="audio\お.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="か"><source src="audio\か.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="き"><source src="audio\き.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="く"><source src="audio\く.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="け"><source src="audio\け.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="こ"><source src="audio\こ.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="さ"><source src="audio\さ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="し"><source src="audio\し.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="す"><source src="audio\す.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="せ"><source src="audio\せ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="そ"><source src="audio\そ.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="た"><source src="audio\た.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ち"><source src="audio\ち.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="つ"><source src="audio\つ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="て"><source src="audio\て.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="と"><source src="audio\と.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="な"><source src="audio\な.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="に"><source src="audio\に.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ぬ"><source src="audio\ぬ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ね"><source src="audio\ね.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="の"><source src="audio\の.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="は"><source src="audio\は.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ひ"><source src="audio\ひ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ふ"><source src="audio\ふ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="へ"><source src="audio\へ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ほ"><source src="audio\ほ.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="ま"><source src="audio\ま.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="み"><source src="audio\み.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="む"><source src="audio\む.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="め"><source src="audio\め.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="も"><source src="audio\も.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="や"><source src="audio\や.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ゆ"><source src="audio\ゆ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="よ"><source src="audio\よ.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="ら"><source src="audio\ら.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="り"><source src="audio\り.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="る"><source src="audio\る.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="れ"><source src="audio\れ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="ろ"><source src="audio\ろ.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="わ"><source src="audio\わ.mp3" type="audio/mpeg"></audio>
-<audio preload="auto" id="を"><source src="audio\を.mp3" type="audio/mpeg"></audio>
-
-<audio preload="auto" id="ん"><source src="audio\ん.mp3" type="audio/mpeg"></audio>
 <div id="tableDiv"></div>
 </body>
 </html>
