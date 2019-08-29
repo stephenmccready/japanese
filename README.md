@@ -1,10 +1,9 @@
 # japanese
 Japanese language reference
 
-Flashcard WebApp:
+Flashcard WebApp:<br/>
 https://www.stephenmccready.asia/japanese/index.html
 
-Table of Hiragana and Katakana characters
-
-http://www.stephenmccready.com/katakana.html<br />
-http://www.stephenmccready.com/hiragana.html<br/>
+Table of Hiragana and Katakana characters:
+https://www.stephenmccready.asia/japanese/hiraganaTable.html<br/>
+https://www.stephenmccready.asia/japanese/katakanaTable.html<br/>
