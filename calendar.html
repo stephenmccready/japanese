@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja" DIR="LTR">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A Japanese Language Learning Aid">
@@ -17,17 +18,12 @@ table th {padding-top: 0.5em; padding-bottom: 0.5em; text-align: center; backgro
 .kanji td  {}
 .english td {background-color:#F3E0BE;}
 </style>
+</head>
 <body>
-
 <table>
-<tr class="english"><th>Spring</th><th>Summer</th><th>Autumn</th><th>Winter</th></tr>
-<tr class="romaji"><td>haru</td><td>natsu</td><td>aki</td><td>fuyu</td></tr>
-<tr class="kanji"><td>春</td><td>夏</td><td>秋</td><td>冬</td></tr>
-</table>
-<br/>
-<table>
+<tr class=""><th id="kotoshi" colspan="7"></th></tr>
 <tr class="english"><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
-<tr class="romaji"><td>nichi-yōbi</td><td>getsu-yōbi</td><td>ka-yōbi</td><td>sui-yōbi</td><td>moku-yōbi</td><td>kin-yōbi</td><td>do-yōbi</td></tr>
+<tr class="romaji"><td>nichi-yōbi</td><td>getsu-yōbi</td><td>ka-yōbi</td><td>sui-yōbi</td><td>moku-yōbi</td><td>kin-yōbi</td><td>do-yobi</td></tr>
 <tr class="kanji"><td>日曜日</td><td>月曜日</td><td>火曜日</td><td>水曜日</td><td>木曜日</td><td>金曜日</td><td>土曜日</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
@@ -55,6 +51,42 @@ table th {padding-top: 0.5em; padding-bottom: 0.5em; text-align: center; backgro
 <tr class="romaji"><td>nijūku-nichi</td><td>sanjū-nichi</td><td>sanjūichi-nichi</td><td></td><td></td><td></td><td></td></tr>
 <tr class="kanji"><td>二十九日</td><td>三十日</td><td>三十一日</td><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
 
+<table>
+<tr class="english"><th>Spring</th><th>Summer</th><th>Autumn</th><th>Winter</th></tr>
+<tr class="romaji"><td>haru</td><td>natsu</td><td>aki</td><td>fuyu</td></tr>
+<tr class="kanji"><td>春</td><td>夏</td><td>秋</td><td>冬</td></tr>
+</table>
 </body>
+
+<script>
+var today = new Date();
+var y1 = '';
+var y2 = '';
+switch ((today.getFullYear().toString()).substring(2,3)){
+	case '1': y1='ju'; break
+	case '2': y1='niju'; break
+	case '3': y1='sanju'; break
+	case '4': y1='yonju'; break
+	case '5': y1='goju'; break
+	case '6': y1='rokuju'; break
+	case '7': y1='nanaju'; break
+	case '8': y1='hachiju'; break
+	case '9': y1='kuju'; break
+}
+switch ((today.getFullYear().toString()).substring(3,4)){
+	case '1': y2='ichi'; break
+	case '2': y2='ni'; break
+	case '3': y2='san'; break
+	case '4': y2='yon'; break
+	case '5': y2='go'; break
+	case '6': y2='roku'; break
+	case '7': y2='nana'; break
+	case '8': y2='hachi'; break
+	case '9': y2='ku'; break
+}
+
+document.getElementById("kotoshi").innerHTML = today.getFullYear() + ' (nisen-'+y1+y2+'-nen)';
+</script>
 </html>
