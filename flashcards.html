@@ -7,32 +7,24 @@
 <meta name="keywords" content="Japanese,Language,Hiragana,Katakana,Flashcard">
 <meta property="og:title" content="A Japanese Language Flashcard WebApp">
 <meta property="og:description" content="A Japanese Language Flashcard WebApp using Hiragana & Katakana">
+<meta http-equiv="Expires" content="0">
 <title>Japanese</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.stephenmccready.asia/japanese/favicon.ico" />
 <style>
 * {padding:0; margin:0; text-align: center; font-family: 'Montserrat', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', sans-serif;}
-#rom-container {font-size: 2.25em; min-height: 2.25em; color: #17a2b8;}
-#ex-container {font-size: 1.75em; min-height: 1.75em; color: #1e7e34;}
+#rom-container {font-size: 2em; min-height: 2em; color: #17a2b8;}
+#exh-container {font-size: 1.5em; min-height: 1.5em; color: #1e7e34;}
+#exk-container {font-size: 1.5em; min-height: 1.5em; color: #1e7e34;margin-bottom:0.5em;}
 #card-hdr{text-align:center; width:60%;}
 #charContainer {font-size: 7em; min-height: 1.5em;}
 #hChar {width:50%; float:left; text-align:right; padding-right: 0.25em;}
 #kChar {width:50%; float:right; text-align:left; padding-left: 0.25em;}
 #settings {display:none;width: 100%; margin: auto; padding-top:.25em;}
 input, select{font-family: 'Segoe UI', sans-serif;font-size: 10pt;margin: 2px 0px 2px 0px;padding-left: 5px;height: 20px; width: -webkit-calc(100% - 20px - 110px); width: calc(100% - 20px - 110px);}
-.ThreeColumns{-webkit-column-count: 4;column-count: 4;-webkit-column-gap: 0px;column-gap: 0px;min-width: 25%;}
+.MultiColumns{-webkit-column-count: 4;column-count: 4;-webkit-column-gap: 0px;column-gap: 0px;min-width: 25%;}
 .Column{padding-left:1em;}
-.container {
-  display: block;
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+.container {display: block;position: relative;padding-left: 20px;margin-bottom: 10px;cursor: pointer;font-size: 20px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 .container input {position: absolute;opacity: 0;cursor: pointer;height: 0;width: 0;}
 .check {position: absolute;top: 0;left: 0;height: 25px;width: 25px;background-color: #eee;}
 .container:hover input ~ .check {background-color: #ccc;}
@@ -47,138 +39,102 @@ td {text-align:center; font-size:1.35em;}
 sub {font-size: .65em;}
 tr:nth-child(odd){background-color: #f2f2f2}
 .special {color: green;}
+.grey {color: lightgrey;}
 #tableHiraganaDiv, #tableKatakanaDiv {margin-top: 3em;margin-bottom: 3em;}
 </style>
-<script sync src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
-<script sync>var arr = [];
+<script>var arr = [];
 var id = 1;var exPermenancy = false;var romPermenancy = false;var playPermenancy = false;
 function init(initFlag) {
 	arr.length=0;
-	if($('#a').prop('checked')) {
-		arr.push ({kChar:"ア",hChar:"あ",rom:"a",hiraX:"あい",eng:"love",kataX:"アイ",romX:"ai"});
-		arr.push ({kChar:"イ",hChar:"い",rom:"i",hiraX:"いえ",eng:"house",kataX:"イエ",romX:"ie"});
-		arr.push ({kChar:"ウ",hChar:"う",rom:"u",hiraX:"うえ",eng:"upper, higher",kataX:"ウエ",romX:"ue"});
-		arr.push ({kChar:"エ",hChar:"え",rom:"e",hiraX:"うえ",eng:"upper, higher",kataX:"ウエ",romX:"ue"});
-		arr.push ({kChar:"オ",hChar:"お",rom:"o",hiraX:"あお",eng:"blue",kataX:"アオ",romX:"ao"});
-	}
-	if($("#k").is(':checked')) {
-		arr.push ({kChar:"カ",hChar:"か",rom:"ka",hiraX:"かお",eng:"face",kataX:"カオ",romX:"kao"});
-		arr.push ({kChar:"キ",hChar:"き",rom:"ki",hiraX:"えき",eng:"station",kataX:"エキ",romX:"eki"});
-		arr.push ({kChar:"ク",hChar:"く",rom:"ku",hiraX:"きく",eng:"chrysanthemum",kataX:"キク",romX:"kiku"});
-		arr.push ({kChar:"ケ",hChar:"け",rom:"ke",hiraX:"いけ",eng:"pond",kataX:"イケ",romX:"ike"});
-		arr.push ({kChar:"コ",hChar:"こ",rom:"ko",hiraX:"こえ",eng:"voice",kataX:"コエ",romX:"koe"});
-	}
-	if($("#s").is(':checked')) {
-		arr.push ({kChar:"サ",hChar:"さ",rom:"sa",hiraX:"さか",eng:"slope",kataX:"サカ",romX:"saka"});
-		arr.push ({kChar:"シ",hChar:"し",rom:"shi",hiraX:"しお",eng:"salt",kataX:"シオ",romX:"shio"});
-		arr.push ({kChar:"ス",hChar:"す",rom:"su",hiraX:"いす",eng:"chair",kataX:"イス",romX:"isu"});
-		arr.push ({kChar:"セ",hChar:"せ",rom:"se",hiraX:"せかい",eng:"world",kataX:"セカイ",romX:"sekai"});
-		arr.push ({kChar:"ソ",hChar:"そ",rom:"so",hiraX:"きそく",eng:"rule",kataX:"キソク",romX:"kisoku"});
-	}
-	if($("#t").is(':checked')) {
-		arr.push ({kChar:"タ",hChar:"た",rom:"ta",hiraX:"した",eng:"lower",kataX:"シタ",romX:"shita"});
-		arr.push ({kChar:"チ",hChar:"ち",rom:"chi",hiraX:"くち",eng:"mouth",kataX:"クチ",romX:"kuchi"});
-		arr.push ({kChar:"ツ",hChar:"つ",rom:"tsu",hiraX:"つくえ",eng:"desk",kataX:"ツクエ",romX:"tsukue"});
-		arr.push ({kChar:"テ",hChar:"て",rom:"te",hiraX:"て",eng:"hand",kataX:"テ",romX:"te"});
-		arr.push ({kChar:"ト",hChar:"と",rom:"to",hiraX:"いと",eng:"thread",kataX:"イト",romX:"ito"});
-	}
-	if($("#n").is(':checked')) {
-		arr.push ({kChar:"ナ",hChar:"な",rom:"na",hiraX:"なつ",eng:"summer",kataX:"ナツ",romX:"natsu"});
-		arr.push ({kChar:"ニ",hChar:"に",rom:"ni",hiraX:"にし",eng:"west",kataX:"ニシ",romX:"nishi"});
-		arr.push ({kChar:"ヌ",hChar:"ぬ",rom:"nu",hiraX:"いぬ",eng:"dog",kataX:"イヌ",romX:"inu"});
-		arr.push ({kChar:"ネ",hChar:"ね",rom:"ne",hiraX:"ねこ",eng:"cat",kataX:"ネコ",romX:"neko"});
-		arr.push ({kChar:"ノ",hChar:"の",rom:"no",hiraX:"きのこ",eng:"mushroom",kataX:"キノコ",romX:"kinoko"});
-	}
-	if($("#h").is(':checked')) {
-		arr.push ({kChar:"ハ",hChar:"は",rom:"ha (wa)",hiraX:"はこ",eng:"box",kataX:"ハコ",romX:"hako"});
-		arr.push ({kChar:"ヒ",hChar:"ひ",rom:"hi",hiraX:"ひ",eng:"fire",kataX:"ヒ",romX:"hi"});
-		arr.push ({kChar:"フ",hChar:"ふ",rom:"fu",hiraX:"ふね",eng:"ship",kataX:"フネ",romX:"fune"});
-		arr.push ({kChar:"ヘ",hChar:"へ",rom:"he",hiraX:"へい",eng:"fence",kataX:"ヘイ",romX:"hei"});
-		arr.push ({kChar:"ホ",hChar:"ほ",rom:"ho",hiraX:"ほし",eng:"star",kataX:"ホシ",romX:"hoshi"});
-	}
-	if($("#m").is(':checked')) {
-		arr.push ({kChar:"マ",hChar:"ま",rom:"ma",hiraX:"まち",eng:"town",kataX:"マチ",romX:"machi"});
-		arr.push ({kChar:"ミ",hChar:"み",rom:"mi",hiraX:"みみ",eng:"ear",kataX:"ミミ",romX:"mimi"});
-		arr.push ({kChar:"ム",hChar:"む",rom:"mu",hiraX:"むし",eng:"insect",kataX:"ムシ",romX:"mushi"});
-		arr.push ({kChar:"メ",hChar:"め",rom:"me",hiraX:"め",eng:"eye",kataX:"メ",romX:"me"});
-		arr.push ({kChar:"モ",hChar:"も",rom:"mo",hiraX:"かいもの",eng:"shopping",kataX:"カイモノ",romX:"kaimono"});
-	}
-	if($("#y").is(':checked')) {
-		arr.push ({kChar:"ヤ",hChar:"や",rom:"ya",hiraX:"やね",eng:"roof",kataX:"ヤネ",romX:"yane"});
-		arr.push ({kChar:"ユ",hChar:"ゆ",rom:"yu",hiraX:"ゆめ",eng:"dream",kataX:"ユメ",romX:"yume"});
-		arr.push ({kChar:"ヨ",hChar:"よ",rom:"yo",hiraX:"よやく",eng:"reservation",kataX:"ヨヤク",romX:"yoyaku"});
-	}
-	if($("#r").is(':checked')) {
-		arr.push ({kChar:"ラ",hChar:"ら",rom:"ra",hiraX:"さくらと",eng:"cherry tree",kataX:"サクラ",romX:"sakura"});
-		arr.push ({kChar:"リ",hChar:"り",rom:"ri",hiraX:"となり",eng:"next to",kataX:"トナリ",romX:"tonari"});
-		arr.push ({kChar:"ル",hChar:"る",rom:"ru",hiraX:"くるま",eng:"car",kataX:"クルマ",romX:"kuruma"});
-		arr.push ({kChar:"レ",hChar:"れ",rom:"re",hiraX:"れきし",eng:"history",kataX:"レキシ",romX:"rekishi"});
-		arr.push ({kChar:"ロ",hChar:"ろ",rom:"ro",hiraX:"ふろ",eng:"bath",kataX:"ワタシ",romX:"furo"});
-	}
-	if($("#w").is(':checked')) {
-		arr.push ({kChar:"ワ",hChar:"わ",rom:"wa",hiraX:"わたし",eng:"I",kataX:"ワタシ",romX:"watashi"});
-		arr.push ({kChar:"ヲ",hChar:"を",rom:"wo (o)",hiraX:"ほしおみる",eng:"watch stars",kataX:"ホシオミル",romX:"hoshi o miru"});
-	}
-	if($("#nn").is(':checked')) {
-		arr.push ({kChar:"ン",hChar:"ん",rom:"n",hiraX:"ほん",eng:"book",kataX:"ホン",romX:"hon"});
-	}
-	if($("#g").is(':checked')) {
-		arr.push ({kChar:"ガ",hChar:"が",rom:"ga",hiraX:"えいが",eng:"movie",kataX:"エイガ",romX:"eega"});
-		arr.push ({kChar:"ギ",hChar:"ぎ",rom:"gi",hiraX:"ぎんこう",eng:"bank",kataX:"ギンコウ",romX:"ginkoo"});
-		arr.push ({kChar:"グ",hChar:"ぐ",rom:"gu",hiraX:"かぐ",eng:"furniture",kataX:"カグ",romX:"kagu"});
-		arr.push ({kChar:"ゲ",hChar:"げ",rom:"ge",hiraX:"かげ",eng:"shadow",kataX:"カゲ",romX:"kage"});
-		arr.push ({kChar:"ゴ",hChar:"ご",rom:"go",hiraX:"りんご",eng:"apple",kataX:"リンゴ",romX:"ringo"});
-	}
-	if($("#z").is(':checked')) {
-		arr.push ({kChar:"ザ",hChar:"ざ",rom:"za",hiraX:"かざん",eng:"volcano",kataX:"カザン",romX:"kazan"});
-		arr.push ({kChar:"ジ",hChar:"じ",rom:"ji",hiraX:"そうじ",eng:"cleaning",kataX:"ソウジ",romX:"sooji"});
-		arr.push ({kChar:"ズ",hChar:"ず",rom:"zu",hiraX:"みず",eng:"water",kataX:"ミズ",romX:"mizu"});
-		arr.push ({kChar:"ゼ",hChar:"ぜ",rom:"ze",hiraX:"かぜ",eng:"wind",kataX:"カゼ",romX:"kaze"});
-		arr.push ({kChar:"ゾ",hChar:"ぞ",rom:"zo",hiraX:"かぞく",eng:"family",kataX:"カゾク",romX:"kazoku"});
-	}
-	if($("#d").is(':checked')) {
-		arr.push ({kChar:"ダ",hChar:"だ",rom:"da",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ヂ",hChar:"ぢ",rom:"ji (dzi)",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ヅ",hChar:"づ",rom:"zu (dzu)",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"デ",hChar:"で",rom:"de",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ド",hChar:"ど",rom:"do",hiraX:"",eng:"",kataX:"",romX:""});
-	}
-	if($("#b").is(':checked')) {
-		arr.push ({kChar:"バ",hChar:"ば",rom:"ba",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ビ",hChar:"び",rom:"bi",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ブ",hChar:"ぶ",rom:"bu",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ベ",hChar:"べ",rom:"be",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ボ",hChar:"ぼ",rom:"bo",hiraX:"",eng:"",kataX:"",romX:""});
-	}
-	if($("#p").is(':checked')) {
-		arr.push ({kChar:"パ",hChar:"ぱ",rom:"pa",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ピ",hChar:"ぴ",rom:"pi",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"プ",hChar:"ぷ",rom:"pu",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ペ",hChar:"ぺ",rom:"pe",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"ポ",hChar:"ぽ",rom:"po",hiraX:"",eng:"",kataX:"",romX:""});
-	}
+		arr.push ({kChar:"ア",hChar:"あ",rom:"a",hiraX:"あい",engH:"love",kataX:"アメリカ",engK:"America",romK:"amerika",romH:"ai"});
+		arr.push ({kChar:"イ",hChar:"い",rom:"i",hiraX:"いえ",engH:"house",kataX:"エンジニア",engK:"engineer",romK:"enjinia",romH:"ie"});
+		arr.push ({kChar:"ウ",hChar:"う",rom:"u",hiraX:"うえ",engH:"upper, higher",kataX:"ウイスキー",engK:"whisky",romK:"uisukī",romH:"ue"});
+		arr.push ({kChar:"エ",hChar:"え",rom:"e",hiraX:"うえ",engH:"upper, higher",kataX:"エアコン",engK:"air conditioner",romK:"aicon",romH:"ue"});
+		arr.push ({kChar:"オ",hChar:"お",rom:"o",hiraX:"あお",engH:"blue",kataX:"オムレツ",engK:"omelet",romK:"omureto",romH:"ao"});
+		arr.push ({kChar:"カ",hChar:"か",rom:"ka",hiraX:"かお",engH:"face",kataX:"カライケ",engK:"karaoke",romK:"karaoke",romH:"kao"});
+		arr.push ({kChar:"キ",hChar:"き",rom:"ki",hiraX:"えき",engH:"station",kataX:"キウイ",engK:"kiwi fruit",romK:"kiui",romH:"eki"});
+		arr.push ({kChar:"ク",hChar:"く",rom:"ku",hiraX:"きく",engH:"chrysanthemum",kataX:"ミルク",engK:"milk",romK:"miruku",romH:"kiku"});
+		arr.push ({kChar:"ケ",hChar:"け",rom:"ke",hiraX:"いけ",engH:"pond",kataX:"ケーキ",engK:"cake",romK:"kēki",romH:"ike"});
+		arr.push ({kChar:"コ",hChar:"こ",rom:"ko",hiraX:"こえ",engH:"voice",kataX:"コアラ",engK:"koala",romK:"koara",romH:"koe"});
+		arr.push ({kChar:"サ",hChar:"さ",rom:"sa",hiraX:"さか",engH:"slope",kataX:"サーカス",engK:"circus",romK:"sākasu",romH:"saka"});
+		arr.push ({kChar:"シ",hChar:"し",rom:"shi",hiraX:"しお",engH:"salt",kataX:"タクシー",engK:"taxi",romK:"takushī",romH:"shio"});
+		arr.push ({kChar:"ス",hChar:"す",rom:"su",hiraX:"いす",engH:"chair",kataX:"スキー",engK:"ski",romK:"sukī",romH:"isu"});
+		arr.push ({kChar:"セ",hChar:"せ",rom:"se",hiraX:"せかい",engH:"world",kataX:"セーター",engK:"sweater",romK:"sētā",romH:"sekai"});
+		arr.push ({kChar:"ソ",hChar:"そ",rom:"so",hiraX:"きそく",engH:"rule",kataX:"ソース",engK:"sauce",romK:"sōsu",romH:"kisoku"});
+		arr.push ({kChar:"タ",hChar:"た",rom:"ta",hiraX:"した",engH:"lower",kataX:"タオル",engK:"towel",romK:"taoru",romH:"shita"});
+		arr.push ({kChar:"チ",hChar:"ち",rom:"chi",hiraX:"くち",engH:"mouth",kataX:"チキン",engK:"chicken",romK:"chikin",romH:"kuchi"});
+		arr.push ({kChar:"ツ",hChar:"つ",rom:"tsu",hiraX:"つくえ",engH:"desk",kataX:"スーツ",engK:"suit",romK:"sēta",romH:"tsukue"});
+		arr.push ({kChar:"テ",hChar:"て",rom:"te",hiraX:"て",engH:"hand",kataX:"テスト",engK:"test",romK:"tesuto",romH:"te"});
+		arr.push ({kChar:"ト",hChar:"と",rom:"to",hiraX:"いと",engH:"thread",kataX:"トイレ",engK:"toilet",romK:"toire",romH:"ito"});
+		arr.push ({kChar:"ナ",hChar:"な",rom:"na",hiraX:"なつ",engH:"summer",kataX:"ナイフ",engK:"knife",romK:"naifu",romH:"natsu"});
+		arr.push ({kChar:"ニ",hChar:"に",rom:"ni",hiraX:"にし",engH:"west",kataX:"テニス",engK:"tennis",romK:"tenisu",romH:"nishi"});
+		arr.push ({kChar:"ヌ",hChar:"ぬ",rom:"nu",hiraX:"いぬ",engH:"dog",kataX:"カヌー",engK:"canoe",romK:"kanū",romH:"inu"});
+		arr.push ({kChar:"ネ",hChar:"ね",rom:"ne",hiraX:"ねこ",engH:"cat",kataX:"ネクタイ",engK:"necktie",romK:"nekutai",romH:"neko"});
+		arr.push ({kChar:"ノ",hChar:"の",rom:"no",hiraX:"きのこ",engH:"mushroom",kataX:"ノート",engK:"notebook",romK:"nōto",romH:"kinoko"});
+		arr.push ({kChar:"ハ",hChar:"は",rom:"ha (wa)",hiraX:"はこ",engH:"box",kataX:"ハンカチ",engK:"handkerchief",romK:"hankachi",romH:"hako"});
+		arr.push ({kChar:"ヒ",hChar:"ひ",rom:"hi",hiraX:"ひ",engH:"fire",kataX:"コーヒー",engK:"coffee",romK:"kōhī",romH:"hi"});
+		arr.push ({kChar:"フ",hChar:"ふ",rom:"fu",hiraX:"ふね",engH:"ship",kataX:"フルーツ",engK:"fruit",romK:"furūtsu",romH:"fune"});
+		arr.push ({kChar:"ヘ",hChar:"へ",rom:"he",hiraX:"へい",engH:"fence",kataX:"ヘリコプター",engK:"helicopter",romK:"herikoputā",romH:"hei"});
+		arr.push ({kChar:"ホ",hChar:"ほ",rom:"ho",hiraX:"ほし",engH:"star",kataX:"ホテル",engK:"hotel",romK:"hoteru",romH:"hoshi"});
+		arr.push ({kChar:"マ",hChar:"ま",rom:"ma",hiraX:"まち",engH:"town",kataX:"マイク",engK:"microphone",romK:"maiku",romH:"machi"});
+		arr.push ({kChar:"ミ",hChar:"み",rom:"mi",hiraX:"みみ",engH:"ear",kataX:"ミシン",engK:"sewing machine",romK:"mishin",romH:"mimi"});
+		arr.push ({kChar:"ム",hChar:"む",rom:"mu",hiraX:"むし",engH:"insect",kataX:"ハム",engK:"ham",romK:"hamu",romH:"mushi"});
+		arr.push ({kChar:"メ",hChar:"め",rom:"me",hiraX:"め",engH:"eye",kataX:"メロン",engK:"melon",romK:"meron",romH:"me"});
+		arr.push ({kChar:"モ",hChar:"も",rom:"mo",hiraX:"かいもの",engH:"shopping",kataX:"モートー",engK:"motor",romK:"mōtō",romH:"kaimono"});
+		arr.push ({kChar:"ヤ",hChar:"や",rom:"ya",hiraX:"やね",engH:"roof",kataX:"タイヤ",engK:"tire",romK:"taiya",romH:"yane"});
+		arr.push ({kChar:"ユ",hChar:"ゆ",rom:"yu",hiraX:"ゆめ",engH:"dream",kataX:"ユニホーム",engK:"uniform",romK:"yunihōmu",romH:"yume"});
+		arr.push ({kChar:"ヨ",hChar:"よ",rom:"yo",hiraX:"よやく",engH:"reservation",kataX:"クレヨン",engK:"crayon",romK:"kureyon",romH:"yoyaku"});
+		arr.push ({kChar:"ラ",hChar:"ら",rom:"ra",hiraX:"さくらと",engH:"cherry tree",kataX:"カメラ",engK:"camera",romK:"camera",romH:"sakura"});
+		arr.push ({kChar:"リ",hChar:"り",rom:"ri",hiraX:"となり",engH:"next to",kataX:"アクセサリー",engK:"accessory",romK:"akusesarī",romH:"tonari"});
+		arr.push ({kChar:"ル",hChar:"る",rom:"ru",hiraX:"くるま",engH:"car",kataX:"モノレール",engK:"monorail",romK:"monorūru",romH:"kuruma"});
+		arr.push ({kChar:"レ",hChar:"れ",rom:"re",hiraX:"れきし",engH:"history",kataX:"レストラン",engK:"resaurant",romK:"resutoran",romH:"rekishi"});
+		arr.push ({kChar:"ロ",hChar:"ろ",rom:"ro",hiraX:"ふろ",engH:"bath",kataX:"ストロー",engK:"straw",romK:"sutorō",romH:"furo"});
+		arr.push ({kChar:"ワ",hChar:"わ",rom:"wa",hiraX:"わたし",engH:"I",kataX:"ワイン",engK:"wine",romK:"wain",romH:"watashi"});
+		arr.push ({kChar:"ヲ",hChar:"を",rom:"wo (o)",hiraX:"ほしおみる",engH:"watch stars",kataX:"",engK:"",romK:"",romH:"hoshi o miru"});
+		arr.push ({kChar:"ン",hChar:"ん",rom:"n",hiraX:"ほん",engH:"book",kataX:"ライオン",engK:"lion",romK:"raion",romH:"hon"});
+		arr.push ({kChar:"ガ",hChar:"が",rom:"ga",hiraX:"えいが",engH:"movie",kataX:"ガラス",engK:"glass",romK:"garasu",romH:"ēga"});
+		arr.push ({kChar:"ギ",hChar:"ぎ",rom:"gi",hiraX:"ぎんこう",engH:"bank",kataX:"ギター",engK:"guitar",romK:"gitā",romH:"ginkō"});
+		arr.push ({kChar:"グ",hChar:"ぐ",rom:"gu",hiraX:"かぐ",engH:"furniture",kataX:"グラフ",engK:"graph",romK:"gurafu",romH:"kagu"});
+		arr.push ({kChar:"ゲ",hChar:"げ",rom:"ge",hiraX:"かげ",engH:"shadow",kataX:"ゲーム",engK:"game",romK:"gēmu",romH:"kage"});
+		arr.push ({kChar:"ゴ",hChar:"ご",rom:"go",hiraX:"りんご",engH:"apple",kataX:"ゴルフ",engK:"golf",romK:"gorufu",romH:"ringo"});
+		arr.push ({kChar:"ザ",hChar:"ざ",rom:"za",hiraX:"かざん",engH:"volcano",kataX:"",engK:"",romK:"",romH:"kazan"});
+		arr.push ({kChar:"ジ",hChar:"じ",rom:"ji",hiraX:"そうじ",engH:"cleaning",kataX:"",engK:"",romK:"",romH:"sōji"});
+		arr.push ({kChar:"ズ",hChar:"ず",rom:"zu",hiraX:"みず",engH:"water",kataX:"",engK:"",romK:"",romH:"mizu"});
+		arr.push ({kChar:"ゼ",hChar:"ぜ",rom:"ze",hiraX:"かぜ",engH:"wind",kataX:"",engK:"",romK:"",romH:"kaze"});
+		arr.push ({kChar:"ゾ",hChar:"ぞ",rom:"zo",hiraX:"かぞく",engH:"family",kataX:"",engK:"",romK:"",romH:"kazoku"});
+		arr.push ({kChar:"ダ",hChar:"だ",rom:"da",hiraX:"ひだり",engH:"left",kataX:"",engK:"",romK:"",romH:"hidari"});
+		arr.push ({kChar:"ヂ",hChar:"ぢ",rom:"ji",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"ヅ",hChar:"づ",rom:"zu",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"デ",hChar:"で",rom:"de",hiraX:"でんわ",engH:"telephone",kataX:"",engK:"",romK:"",romH:"denwa"});
+		arr.push ({kChar:"ド",hChar:"ど",rom:"do",hiraX:"まど",engH:"window",kataX:"",engK:"",romK:"",romH:"mado"});
+		arr.push ({kChar:"バ",hChar:"ば",rom:"ba",hiraX:"たばこ",engH:"cigarette",kataX:"",engK:"",romK:"",romH:"tabako"});
+		arr.push ({kChar:"ビ",hChar:"び",rom:"bi",hiraX:"びよおいん",engH:"beauty salon",kataX:"",engK:"",romK:"",romH:"biyōin"});
+		arr.push ({kChar:"ブ",hChar:"ぶ",rom:"bu",hiraX:"しんぶん",engH:"newspaper",kataX:"",engK:"",romK:"",romH:"shimbun"});
+		arr.push ({kChar:"ベ",hChar:"べ",rom:"be",hiraX:"かべ",engH:"wall",kataX:"",engK:"",romK:"",romH:"kabe"});
+		arr.push ({kChar:"ボ",hChar:"ぼ",rom:"bo",hiraX:"ぼうし",engH:"hat, cap",kataX:"",engK:"",romK:"",romH:"bōshi"});
+		arr.push ({kChar:"パ",hChar:"ぱ",rom:"pa",hiraX:"でんぱ",engH:"electric wave",kataX:"",engK:"",romK:"",romH:"dempa"});
+		arr.push ({kChar:"ピ",hChar:"ぴ",rom:"pi",hiraX:"えんぴつ",engH:"pencil",kataX:"",engK:"",romK:"",romH:"empitsu"});
+		arr.push ({kChar:"プ",hChar:"ぷ",rom:"pu",hiraX:"てんぷら",engH:"tempura",kataX:"",engK:"",romK:"",romH:"tempura"});
+		arr.push ({kChar:"ペ",hChar:"ぺ",rom:"pe",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"ポ",hChar:"ぽ",rom:"po",hiraX:"さんぽ",engH:"taking a walk",kataX:"",engK:"",romK:"",romH:"sampo"});
 /*
-	if($("#ya").is(':checked')) {
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-	}
-	if($("#yu").is(':checked')) {
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-	}
-	if($("#yo").is(':checked')) {
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
-		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",eng:"",kataX:"",romX:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
+		arr.push ({kChar:"",hChar:"",rom:"",hiraX:"",engH:"",kataX:"",engK:"",romK:"",romH:""});
 	}
 */
 	if(initFlag) {
@@ -193,50 +149,10 @@ function init(initFlag) {
 <div class="card">
 	<div id="card-header" class="card-header">
 		<div class="float-left">
-			<button class="btn btn-info btn-lg" onclick="$('#card-body').toggle();$('#card-footer').toggle();$('#settings').toggle();init(false);"><i class="fas fa-cog"></i></button>
+<!--			<button class="btn btn-info btn-lg" onclick="$('#card-body').toggle();$('#card-footer').toggle();$('#settings').toggle();init(false);"><i class="fas fa-cog"></i></button> -->
 		</div>
 		<div class="float-left" id="card-hdr">日本語</div>
-		<div id="card-count" class="float-right"></div></div>
-	<div id="settings">
-		<div class="ThreeColumns">
-			<form id="optionsform">
-			<div class="Column">
-				<label class="container" for="a">ø<input type="checkbox" id="a" value="a" checked="checked"><span class="check"></span></label>
-  				<label class="container" for="k">k<input type="checkbox" id="k" value="k" checked="checked"><span class="check"></span></label>
-				<label class="container" for="s">s<input type="checkbox" id="s" value="s" checked="checked"><span class="check"></span></label>
-				<label class="container" for="t">t<input type="checkbox" id="t" value="t" checked="checked"><span class="check"></span></label>
-				<label class="container" for="ya">ゃ<input type="checkbox" id="ya" value="ya"><span class="check"></span></label>
-			</div>
-			<div class="Column">
-				<label class="container" for="n">n<input type="checkbox" id="n" value="n" checked="checked"><span class="check"></span></label>
-  				<label class="container" for="h">h<input type="checkbox" id="h" value="h" checked="checked"><span class="check"></span></label>
-				<label class="container" for="m">m<input type="checkbox" id="m" value="m" checked="checked"><span class="check"></span></label>
-				<label class="container" for="y">y<input type="checkbox" id="y" value="y" checked="checked"><span class="check"></span></label>
-				<label class="container" for="yu">ゅ<input type="checkbox" id="yu" value="yu"><span class="check"></span></label>
-			</div>
-			<div class="Column">
-				<label class="container" for="r">r<input type="checkbox" id="r" value="r" checked="checked"><span class="check"></span></label>
-				<label class="container" for="w">w<input type="checkbox" id="w" value="w" checked="checked"><span class="check"></span></label>
-				<label class="container" for="nn">ん<input type="checkbox" id="nn" value="nn" checked="checked"><span class="check"></span></label>
-  				<label class="container" for="g">g<input type="checkbox" id="g" value="g"><span class="check"></span></label>
-				<label class="container" for="yo">ゃ<input type="checkbox" id="yo" value="yo"><span class="check"></span></label>
-			</div>
-			<div class="Column">
-				<label class="container" for="z">z<input type="checkbox" id="z" value="z"><span class="check"></span></label>
-				<label class="container" for="d">d<input type="checkbox" id="d" value="d"><span class="check"></span></label>
-				<label class="container" for="b">b<input type="checkbox" id="b" value="b"><span class="check"></span></label>
-  				<label class="container" for="p">p<input type="checkbox" id="p" value="p"><span class="check"></span></label>
-				<label class="container" for="x">∀<input type="checkbox" id="x" value="x"><span class="check"></span></label>
-			</div>
-		</div>
-		<div class="clearfix options">
-			<div class="btn-group btn-group-toggle" data-toggle="buttons">
-				<label class="btn btn-secondary active"><input type="radio" name="options" id="hira" autocomplete="off" checked> Hiragana</label>
-				<label class="btn btn-secondary"><input type="radio" name="options" id="kata" autocomplete="off"> Katakana</label>
-				<label class="btn btn-secondary"><input type="radio" name="options" id="bith" autocomplete="off"> Both</label>
-			</div>		
-			</form>
-		</div>
+		<div id="card-count" class="float-right"></div>
 	</div>
 	<div id="card-body" class="card-body">
 		<div id="charContainer">
@@ -244,7 +160,8 @@ function init(initFlag) {
 			<div id="kChar" class="clearfix"></div>
 		</div>
 		<div id="rom-container" class="clearfix"><div id="rom">loading...</div></div>
-		<div id="ex-container" class="clearfix"><div id="ex"></div></div>
+		<div id="exh-container" class="clearfix"><div id="exH"></div></div>
+		<div id="exk-container" class="clearfix"><div id="exK"></div></div>
 		<button class="btn btn-success btn-lg" onclick="toggleEx();"><i class="fas fa-quote-right"></i></button>
 		<button id="btnExPin" class="btn btn-secondary btn-sm" onclick="toggleExPermenancy();">
 			<i class="fas fa-thumbtack"></i></button>
@@ -271,10 +188,14 @@ function jInit() {
 	var html = "<table>";
 	for (i = 0; i < fLen; i++) {
 		if(hira[i]["character"] !=  "ん") {
-  			if(hira[i]["romaji"].length > 2 || hira[i]["romaji"] == 'ji' || hira[i]["character"] == 'づ'){
+  			if(hira[i]["romaji"].length > 2 || hira[i]["character"] == 'じ'){
   				tdclass = "special";
   			} else {
-  				tdclass = "";
+  				if(hira[i]["character"] == 'ぢ' || hira[i]["character"] == 'づ'){
+  					tdclass = "grey";
+  				} else {
+  					tdclass = "";
+  				}
   			}
   			html += "<td class='" + tdclass + "'>"
   				+ hira[i]["character"]
@@ -299,10 +220,14 @@ function jInit() {
 	for (i = 0; i < fLen; i++) {
   		if(kata[i]["character"] !=  "ン") {
 
-  	  		if(kata[i]["romaji"].length > 2  || kata[i]["romaji"] == 'ji' || kata[i]["character"] == 'ヅ'){
+  	  		if(kata[i]["romaji"].length > 2 || kata[i]["character"] == 'ズ'){
   				tdclass = "special";
   			} else {
-  				tdclass = "";
+//  				if(kata[i]["character"] == 'ヂ' || kata[i]["character"] == 'ヅ'){
+//  					tdclass = "grey";
+//  				} else {
+  					tdclass = "";
+//  				}
   			}
   		
   			html += "<td class='" + tdclass + "'>" 
@@ -333,11 +258,12 @@ function newCard(x) {
 	if(x==1){id=1;}
 	if(x==999){id=arr.length;}
 	if(romPermenancy){$("#rom").show();} else {$("#rom").hide();}
-	if(exPermenancy){$("#ex").show();} else {$("#ex").hide();}
+	if(exPermenancy){$("#exH").show();$("#exK").show();} else {$("#exH").hide();$("#exK").hide();}
 	document.getElementById("hChar").innerHTML = arr[id - 1]["hChar"];
 	document.getElementById("kChar").innerHTML = arr[id - 1]["kChar"];
 	document.getElementById("rom").innerHTML = arr[id - 1]["rom"];
-	document.getElementById("ex").innerHTML = arr[id - 1]["hiraX"] + '&nbsp;' + arr[id - 1]["romX"] + '&nbsp;' + arr[id - 1]["kataX"] + '&nbsp;' + arr[id - 1]["eng"];
+	document.getElementById("exH").innerHTML = arr[id - 1]["hiraX"] + '&nbsp;&#183;&nbsp;' + arr[id - 1]["romH"] + '&nbsp;&#183;&nbsp;' + arr[id - 1]["engH"];
+	document.getElementById("exK").innerHTML = arr[id - 1]["kataX"] + '&nbsp;&#183;&nbsp;' + arr[id - 1]["romK"] + '&nbsp;&#183;&nbsp;' + arr[id - 1]["engK"];
 	document.getElementById("card-count").innerHTML = id + " of " + arr.length;
 	if(playPermenancy){play()};
 	$(".ui-loader-header").text('');
@@ -386,12 +312,14 @@ function toggleExPermenancy() {
 	$("#ex").toggle();
 	if(exPermenancy==true){
 		exPermenancy=false;
-		$("#ex").hide();
+		$("#exH").hide();
+		$("#exK").hide();
 		$("#btnExPin").removeClass("btn-success");
 		$("#btnExPin").addClass("btn-secondary");
 	} else {
 		exPermenancy=true
-		$("#ex").show();
+		$("#exH").show();
+		$("#exK").show();
 		$("#btnExPin").removeClass("btn-secondary");
 		$("#btnExPin").addClass("btn-success");
 	}
@@ -571,55 +499,55 @@ kata.push ({character:"プ",consonant:"p",vowel:"u",consonantOrder:15,vowelOrder
 kata.push ({character:"ペ",consonant:"p",vowel:"e",consonantOrder:15,vowelOrder:4,romaji:"pe",pronunciation:"pe"});
 kata.push ({character:"ポ",consonant:"p",vowel:"o",consonantOrder:15,vowelOrder:5,romaji:"po",pronunciation:"po"});	
 </script>
-<script src="https://kit.fontawesome.com/f429f186c5.js"></script>
+<script src="https://kit.fontawesome.com/d6add3d246.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<audio id="あ" preload="none"><source src="audio\あ.mp3" type="audio/mpeg"></audio>
-<audio id="い" preload="none"><source src="audio\い.mp3" type="audio/mpeg"></audio>
-<audio id="う" preload="none"><source src="audio\う.mp3" type="audio/mpeg"></audio>
-<audio id="え" preload="none"><source src="audio\え.mp3" type="audio/mpeg"></audio>
-<audio id="お" preload="none"><source src="audio\お.mp3" type="audio/mpeg"></audio>
-<audio id="か" preload="none"><source src="audio\か.mp3" type="audio/mpeg"></audio>
-<audio id="き" preload="none"><source src="audio\き.mp3" type="audio/mpeg"></audio>
-<audio id="く" preload="none"><source src="audio\く.mp3" type="audio/mpeg"></audio>
-<audio id="け" preload="none"><source src="audio\け.mp3" type="audio/mpeg"></audio>
-<audio id="こ" preload="none"><source src="audio\こ.mp3" type="audio/mpeg"></audio>
-<audio id="さ" preload="none"><source src="audio\さ.mp3" type="audio/mpeg"></audio>
-<audio id="し" preload="none"><source src="audio\し.mp3" type="audio/mpeg"></audio>
-<audio id="す" preload="none"><source src="audio\す.mp3" type="audio/mpeg"></audio>
-<audio id="せ" preload="none"><source src="audio\せ.mp3" type="audio/mpeg"></audio>
-<audio id="そ" preload="none"><source src="audio\そ.mp3" type="audio/mpeg"></audio>
-<audio id="た" preload="none"><source src="audio\た.mp3" type="audio/mpeg"></audio>
-<audio id="ち" preload="none"><source src="audio\ち.mp3" type="audio/mpeg"></audio>
-<audio id="つ" preload="none"><source src="audio\つ.mp3" type="audio/mpeg"></audio>
-<audio id="て" preload="none"><source src="audio\て.mp3" type="audio/mpeg"></audio>
-<audio id="と" preload="none"><source src="audio\と.mp3" type="audio/mpeg"></audio>
-<audio id="な" preload="none"><source src="audio\な.mp3" type="audio/mpeg"></audio>
-<audio id="に" preload="none"><source src="audio\に.mp3" type="audio/mpeg"></audio>
-<audio id="ぬ" preload="none"><source src="audio\ぬ.mp3" type="audio/mpeg"></audio>
-<audio id="ね" preload="none"><source src="audio\ね.mp3" type="audio/mpeg"></audio>
-<audio id="の" preload="none"><source src="audio\の.mp3" type="audio/mpeg"></audio>
-<audio id="は" preload="none"><source src="audio\は.mp3" type="audio/mpeg"></audio>
-<audio id="ひ" preload="none"><source src="audio\ひ.mp3" type="audio/mpeg"></audio>
-<audio id="ふ" preload="none"><source src="audio\ふ.mp3" type="audio/mpeg"></audio>
-<audio id="へ" preload="none"><source src="audio\へ.mp3" type="audio/mpeg"></audio>
-<audio id="ほ" preload="none"><source src="audio\ほ.mp3" type="audio/mpeg"></audio>
-<audio id="ま" preload="none"><source src="audio\ま.mp3" type="audio/mpeg"></audio>
-<audio id="み" preload="none"><source src="audio\み.mp3" type="audio/mpeg"></audio>
-<audio id="む" preload="none"><source src="audio\む.mp3" type="audio/mpeg"></audio>
-<audio id="め" preload="none"><source src="audio\め.mp3" type="audio/mpeg"></audio>
-<audio id="も" preload="none"><source src="audio\も.mp3" type="audio/mpeg"></audio>
-<audio id="や" preload="none"><source src="audio\や.mp3" type="audio/mpeg"></audio>
-<audio id="ゆ" preload="none"><source src="audio\ゆ.mp3" type="audio/mpeg"></audio>
-<audio id="よ" preload="none"><source src="audio\よ.mp3" type="audio/mpeg"></audio>
-<audio id="ら" preload="none"><source src="audio\ら.mp3" type="audio/mpeg"></audio>
-<audio id="り" preload="none"><source src="audio\り.mp3" type="audio/mpeg"></audio>
-<audio id="る" preload="none"><source src="audio\る.mp3" type="audio/mpeg"></audio>
-<audio id="れ" preload="none"><source src="audio\れ.mp3" type="audio/mpeg"></audio>
-<audio id="ろ" preload="none"><source src="audio\ろ.mp3" type="audio/mpeg"></audio>
-<audio id="わ" preload="none"><source src="audio\わ.mp3" type="audio/mpeg"></audio>
-<audio id="を" preload="none"><source src="audio\を.mp3" type="audio/mpeg"></audio>
-<audio id="ん" preload="none"><source src="audio\ん.mp3" type="audio/mpeg"></audio>
+<audio id="あ" preload="none"><source src="audio/あ.mp3" type="audio/mpeg"></audio>
+<audio id="い" preload="none"><source src="audio/い.mp3" type="audio/mpeg"></audio>
+<audio id="う" preload="none"><source src="audio/う.mp3" type="audio/mpeg"></audio>
+<audio id="え" preload="none"><source src="audio/え.mp3" type="audio/mpeg"></audio>
+<audio id="お" preload="none"><source src="audio/お.mp3" type="audio/mpeg"></audio>
+<audio id="か" preload="none"><source src="audio/か.mp3" type="audio/mpeg"></audio>
+<audio id="き" preload="none"><source src="audio/き.mp3" type="audio/mpeg"></audio>
+<audio id="く" preload="none"><source src="audio/く.mp3" type="audio/mpeg"></audio>
+<audio id="け" preload="none"><source src="audio/け.mp3" type="audio/mpeg"></audio>
+<audio id="こ" preload="none"><source src="audio/こ.mp3" type="audio/mpeg"></audio>
+<audio id="さ" preload="none"><source src="audio/さ.mp3" type="audio/mpeg"></audio>
+<audio id="し" preload="none"><source src="audio/し.mp3" type="audio/mpeg"></audio>
+<audio id="す" preload="none"><source src="audio/す.mp3" type="audio/mpeg"></audio>
+<audio id="せ" preload="none"><source src="audio/せ.mp3" type="audio/mpeg"></audio>
+<audio id="そ" preload="none"><source src="audio/そ.mp3" type="audio/mpeg"></audio>
+<audio id="た" preload="none"><source src="audio/た.mp3" type="audio/mpeg"></audio>
+<audio id="ち" preload="none"><source src="audio/ち.mp3" type="audio/mpeg"></audio>
+<audio id="つ" preload="none"><source src="audio/つ.mp3" type="audio/mpeg"></audio>
+<audio id="て" preload="none"><source src="audio/て.mp3" type="audio/mpeg"></audio>
+<audio id="と" preload="none"><source src="audio/と.mp3" type="audio/mpeg"></audio>
+<audio id="な" preload="none"><source src="audio/な.mp3" type="audio/mpeg"></audio>
+<audio id="に" preload="none"><source src="audio/に.mp3" type="audio/mpeg"></audio>
+<audio id="ぬ" preload="none"><source src="audio/ぬ.mp3" type="audio/mpeg"></audio>
+<audio id="ね" preload="none"><source src="audio/ね.mp3" type="audio/mpeg"></audio>
+<audio id="の" preload="none"><source src="audio/の.mp3" type="audio/mpeg"></audio>
+<audio id="は" preload="none"><source src="audio/は.mp3" type="audio/mpeg"></audio>
+<audio id="ひ" preload="none"><source src="audio/ひ.mp3" type="audio/mpeg"></audio>
+<audio id="ふ" preload="none"><source src="audio/ふ.mp3" type="audio/mpeg"></audio>
+<audio id="へ" preload="none"><source src="audio/へ.mp3" type="audio/mpeg"></audio>
+<audio id="ほ" preload="none"><source src="audio/ほ.mp3" type="audio/mpeg"></audio>
+<audio id="ま" preload="none"><source src="audio/ま.mp3" type="audio/mpeg"></audio>
+<audio id="み" preload="none"><source src="audio/み.mp3" type="audio/mpeg"></audio>
+<audio id="む" preload="none"><source src="audio/む.mp3" type="audio/mpeg"></audio>
+<audio id="め" preload="none"><source src="audio/め.mp3" type="audio/mpeg"></audio>
+<audio id="も" preload="none"><source src="audio/も.mp3" type="audio/mpeg"></audio>
+<audio id="や" preload="none"><source src="audio/や.mp3" type="audio/mpeg"></audio>
+<audio id="ゆ" preload="none"><source src="audio/ゆ.mp3" type="audio/mpeg"></audio>
+<audio id="よ" preload="none"><source src="audio/よ.mp3" type="audio/mpeg"></audio>
+<audio id="ら" preload="none"><source src="audio/ら.mp3" type="audio/mpeg"></audio>
+<audio id="り" preload="none"><source src="audio/り.mp3" type="audio/mpeg"></audio>
+<audio id="る" preload="none"><source src="audio/る.mp3" type="audio/mpeg"></audio>
+<audio id="れ" preload="none"><source src="audio/れ.mp3" type="audio/mpeg"></audio>
+<audio id="ろ" preload="none"><source src="audio/ろ.mp3" type="audio/mpeg"></audio>
+<audio id="わ" preload="none"><source src="audio/わ.mp3" type="audio/mpeg"></audio>
+<audio id="を" preload="none"><source src="audio/を.mp3" type="audio/mpeg"></audio>
+<audio id="ん" preload="none"><source src="audio/ん.mp3" type="audio/mpeg"></audio>
 <audio id="が" preload="none"><source src="audio/%E3%81%8B%E3%82%99.mp3" type="audio/mpeg"></audio>
 <audio id="ぎ" preload="none"><source src="audio/%E3%81%8D%E3%82%99.mp3" type="audio/mpeg"></audio>
 <audio id="ぐ" preload="none"><source src="audio/%E3%81%8F%E3%82%99.mp3" type="audio/mpeg"></audio>
@@ -646,6 +574,7 @@ kata.push ({character:"ポ",consonant:"p",vowel:"o",consonantOrder:15,vowelOrder
 <audio id="ぺ" preload="none"><source src="audio/%E3%81%B8%E3%82%9A.mp3" type="audio/mpeg"></audio>
 <audio id="ぽ" preload="none"><source src="audio/%E3%81%BB%E3%82%9A.mp3" type="audio/mpeg"></audio>
 <script>
+/*
 $('#optionsform :checkbox').change(function() {
     if (this.checked) {
         $('#optionsform :checkbox').prop('checked', true);
@@ -653,6 +582,7 @@ $('#optionsform :checkbox').change(function() {
         $('#optionsform :checkbox').prop('checked', false);
     }
 });
+*/
 if(window.attachEvent) {
     window.attachEvent('onload', $.mobile.loading().hide());
 } else {
