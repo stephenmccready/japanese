@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<title>みんなの日本語 1</title>
+	<meta charset="UTF-8">
+	<title>みんなの日本語 1</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -245,8 +245,12 @@ html,body{height:100%;background:linear-gradient(to bottom,#ffffff 75%,#535353 1
 .hirakata{font-size:2em;margin-top:2.25em;text-align:center;}
 .teform{font-size:1.5em;text-align:center;color:#6673ff;}
 .naiform{font-size:1.5em;text-align:center;color:#009100;}
+.dicform{font-size:1.5em;text-align:center;color:#910091;}
+.adjnegpast{font-size:1.5em;text-align:center;color:#919100;}
 .supteform{color:#6673ff;}
 .supnaiform{color:#009100;}
+.supdicform{color:#910091;}
+.supadjnegpast{color:#919100;}
 .kanji{text-shadow:2px 2px 4px #6f6f6f;font-size:3.25em;}
 .eng{font-family:Helvetica;color:#b72264;font-style:italic;font-size:1.85em;}
 .nonSelect{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
@@ -257,9 +261,9 @@ a{padding:.25em 0 .25em 0;width:14.285%;float:left;}
 .spanHead{font-size:1.25em;float:left;}
 .fa{font-size:2em;padding-top:.25em;padding-left:.25em}
 #lesson {width:100%;font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;}
-#lesson tr > *:nth-child(1){width:27.5%;}
-#lesson tr > *:nth-child(2){width:27.5%;}
-#lesson tr > *:nth-child(3){width:45%;}
+#lesson tr > *:nth-child(1){width:25%;}
+#lesson tr > *:nth-child(2){width:40%;}
+#lesson tr > *:nth-child(3){width:35%;}
 #lesson td, #lesson th {border:1px solid #ddd;padding:8px;}
 #lesson tr:nth-child(even){background-color:#f2f2f2;}
 #lesson tr:nth-child(odd){background-color:#FFF;}
@@ -293,11 +297,11 @@ transform:translateX(26px);}
 <div class="fixed-header">
 	<div class="w3-bar w3-center" id="navbar">
 	  <a href="#" class="w3-button" id="leftNav">&laquo;</a>
-	  <a href="#" class="w3-button lessonButton" id="1" style="display:block;"> 1</a>
-	  <a href="#" class="w3-button lessonButton" id="2" style="display:block;"> 2</a>
-	  <a href="#" class="w3-button lessonButton" id="3" style="display:block;"> 3</a>
-	  <a href="#" class="w3-button lessonButton" id="4" style="display:block;"> 4</a>
-	  <a href="#" class="w3-button lessonButton" id="5" style="display:block;"> 5</a>
+	  <a href="#" class="w3-button lessonButton" id="1" style="display:none;"> 1</a>
+	  <a href="#" class="w3-button lessonButton" id="2" style="display:none;"> 2</a>
+	  <a href="#" class="w3-button lessonButton" id="3" style="display:none;"> 3</a>
+	  <a href="#" class="w3-button lessonButton" id="4" style="display:none;"> 4</a>
+	  <a href="#" class="w3-button lessonButton" id="5" style="display:none;"> 5</a>
 	  <a href="#" class="w3-button lessonButton" id="6" style="display:none;"> 6</a>
 	  <a href="#" class="w3-button lessonButton" id="7" style="display:none;"> 7</a>
 	  <a href="#" class="w3-button lessonButton" id="8" style="display:none;"> 8</a>
@@ -308,21 +312,26 @@ transform:translateX(26px);}
 	  <a href="#" class="w3-button lessonButton" id="13" style="display:none;">13</a>
 	  <a href="#" class="w3-button lessonButton" id="14" style="display:none;">14</a>
 	  <a href="#" class="w3-button lessonButton" id="15" style="display:none;">15</a>
-	  <a href="#" class="w3-button lessonButton" id="16" style="display:none;">16</a>
-	  <a href="#" class="w3-button lessonButton" id="17" style="display:none;">17</a>
-	  <a href="#" class="w3-button lessonButton" id="18" style="display:none;">18</a>
-	  <a href="#" class="w3-button lessonButton" id="19" style="display:none;">19</a>
-	  <a href="#" class="w3-button lessonButton" id="20" style="display:none;">20</a>
+	  <a href="#" class="w3-button lessonButton" id="16" style="display:block;">16</a>
+	  <a href="#" class="w3-button lessonButton" id="17" style="display:block;">17</a>
+	  <a href="#" class="w3-button lessonButton" id="18" style="display:block;">18</a>
+	  <a href="#" class="w3-button lessonButton" id="19" style="display:block;">19</a>
+	  <a href="#" class="w3-button lessonButton" id="20" style="display:block;">20</a>
 	  <a href="#" class="w3-button lessonButton" id="21" style="display:none;">21</a>
 	  <a href="#" class="w3-button lessonButton" id="22" style="display:none;">22</a>
 	  <a href="#" class="w3-button lessonButton" id="23" style="display:none;">23</a>
 	  <a href="#" class="w3-button lessonButton" id="24" style="display:none;">24</a>
 	  <a href="#" class="w3-button lessonButton" id="25" style="display:none;">25</a>
-	  <a href="#" class="w3-button lessonButton" id="26" style="display:none;">I</a>
-	  <a href="#" class="w3-button lessonButton" id="27" style="display:none;">II</a>
-	  <a href="#" class="w3-button lessonButton" id="28" style="display:none;">III</a>
-	  <a href="#" class="w3-button lessonButton" id="29" style="display:none;"></a>
-	  <a href="#" class="w3-button lessonButton" id="30" style="display:none;"></a>
+	  <a href="#" class="w3-button lessonButton" id="26" style="display:none;">&#8544;</a>
+	  <a href="#" class="w3-button lessonButton" id="27" style="display:none;">&#8545;</a>
+	  <a href="#" class="w3-button lessonButton" id="28" style="display:none;">&#8546;</a>
+	  <a href="#" class="w3-button lessonButton" id="29" style="display:none;">動</a><!-- 動詞 = dōshi - verb -->
+	  <a href="#" class="w3-button lessonButton" id="30" style="display:none;"><span class="tinyText">副詞</span></a><!-- 副詞 fukushi - adverb -->
+	  <a href="#" class="w3-button lessonButton" id="31" style="display:none;"><span class="tinyText">形容</span></a><!-- 形容詞 = keiyō shi　- adjective-->
+	  <a href="#" class="w3-button lessonButton" id="32" style="display:none;">な</a>
+	  <a href="#" class="w3-button lessonButton" id="33" style="display:none;">い</a>
+	  <a href="#" class="w3-button lessonButton" id="34" style="display:none;"><span class="tinyText">家族</span></a><!-- 家族 = family -->
+	  <a href="#" class="w3-button lessonButton" id="35" style="display:none;">暦</a><!-- 暦 = koyomi - calendar -->
 	  <a href="#" class="w3-button" id="rightNav">&raquo;</a>
 	</div>
 	<div class="w3-display-container w3-teal" style="height:300px;">
@@ -346,6 +355,8 @@ transform:translateX(26px);}
 	<div id="hirakata" class="w3-cell-row w3-middle hirakata"></div>
 	<div id="teform" class="w3-cell-row w3-middle teform"></div>
 	<div id="naiform" class="w3-cell-row w3-middle naiform"></div>
+	<div id="dicform" class="w3-cell-row w3-middle dicform"></div>
+	<div id="adjnegpast" class="w3-cell-row w3-middle adjnegpast"></div>
 	<div class="w3-cell-row">
 		<div id="middle" class="w3-col w3-center" style="width:100%; text-align:center;">
 			<div id="kanji" class="kanji"></div>
@@ -354,13 +365,14 @@ transform:translateX(26px);}
 	</div>
 </div>
 <div id="list" style="clear: both;margin-top:8em;">
-	<table id="lesson" ></table>
+	<table id="lesson"></table>
 </div>
 <input type="text" id="kanjiHidden" style="display:none;">
 <script>
 var holdTable = [];
 var vocabTable=[];
-var menu=1;
+// Starting chapter:
+var menu=19;
 var currentWord=0;
 var state='card';
 var lessonTable = document.getElementById("lesson");
@@ -381,19 +393,19 @@ for (var i = 0; i < elements.length; i++) {
 
 document.getElementById('leftNav').addEventListener('click', function (event) {
 	switch (menu) {
-	case 1:
-		document.getElementById("26").style.display = "inline";
-		document.getElementById("27").style.display = "inline";
-		document.getElementById("28").style.display = "inline";
-		document.getElementById("29").style.display = "inline";
-		document.getElementById("30").style.display = "inline";
+	case 1: case 2:case 3:case 4:case 5:
+		document.getElementById("31").style.display = "inline";
+		document.getElementById("32").style.display = "inline";
+		document.getElementById("33").style.display = "inline";
+		document.getElementById("34").style.display = "inline";
+		document.getElementById("35").style.display = "inline";
 		document.getElementById("1").style.display = "none";
 		document.getElementById("2").style.display = "none";
 		document.getElementById("3").style.display = "none";
 		document.getElementById("4").style.display = "none";
 		document.getElementById("5").style.display = "none";
-		menu=26; break;
-	case 6:
+		menu=31; break;
+	case 6: case 7:case 8:case 9:case 10:
 		document.getElementById("1").style.display = "inline";
 		document.getElementById("2").style.display = "inline";
 		document.getElementById("3").style.display = "inline";
@@ -405,7 +417,7 @@ document.getElementById('leftNav').addEventListener('click', function (event) {
 		document.getElementById("9").style.display = "none";
 		document.getElementById("10").style.display = "none";
 		menu=1; break;
-	case 11:
+	case 11: case 12:case 13:case 14:case 15:
 		document.getElementById("6").style.display = "inline";
 		document.getElementById("7").style.display = "inline";
 		document.getElementById("8").style.display = "inline";
@@ -417,7 +429,7 @@ document.getElementById('leftNav').addEventListener('click', function (event) {
 		document.getElementById("14").style.display = "none";
 		document.getElementById("15").style.display = "none";
 		menu=6; break;
-	case 16:
+	case 16: case 17:case 18:case 19:case 20:
 		document.getElementById("11").style.display = "inline";
 		document.getElementById("12").style.display = "inline";
 		document.getElementById("13").style.display = "inline";
@@ -429,7 +441,7 @@ document.getElementById('leftNav').addEventListener('click', function (event) {
 		document.getElementById("19").style.display = "none";
 		document.getElementById("20").style.display = "none";
 		menu=11; break;
-	case 21:
+	case 21: case 21:case 23:case 24:case 25:
 		document.getElementById("16").style.display = "inline";
 		document.getElementById("17").style.display = "inline";
 		document.getElementById("18").style.display = "inline";
@@ -441,7 +453,7 @@ document.getElementById('leftNav').addEventListener('click', function (event) {
 		document.getElementById("24").style.display = "none";
 		document.getElementById("25").style.display = "none";
 		menu=16; break;
-	case 26:
+	case 26: case 27:case 28:case 29:case 30:
 		document.getElementById("21").style.display = "inline";
 		document.getElementById("22").style.display = "inline";
 		document.getElementById("23").style.display = "inline";
@@ -453,11 +465,23 @@ document.getElementById('leftNav').addEventListener('click', function (event) {
 		document.getElementById("29").style.display = "none";
 		document.getElementById("30").style.display = "none";
 		menu=21; break;
+	case 31: case 32:case 33:case 34:case 35:
+		document.getElementById("26").style.display = "inline";
+		document.getElementById("27").style.display = "inline";
+		document.getElementById("28").style.display = "inline";
+		document.getElementById("29").style.display = "inline";
+		document.getElementById("30").style.display = "inline";
+		document.getElementById("31").style.display = "none";
+		document.getElementById("32").style.display = "none";
+		document.getElementById("33").style.display = "none";
+		document.getElementById("34").style.display = "none";
+		document.getElementById("35").style.display = "none";
+		menu=26; break;
 	}
 });
 document.getElementById('rightNav').addEventListener('click', function (event) {
 	switch (menu) {
-	case 1:
+	case 1: case 2:case 3:case 4:case 5:
 		document.getElementById("1").style.display = "none";
 		document.getElementById("2").style.display = "none";
 		document.getElementById("3").style.display = "none";
@@ -469,7 +493,7 @@ document.getElementById('rightNav').addEventListener('click', function (event) {
 		document.getElementById("9").style.display = "inline";
 		document.getElementById("10").style.display = "inline";
 		menu=6; break;
-	case 6:
+	case 6: case 7:case 8:case 9:case 10:
 		document.getElementById("6").style.display = "none";
 		document.getElementById("7").style.display = "none";
 		document.getElementById("8").style.display = "none";
@@ -481,7 +505,7 @@ document.getElementById('rightNav').addEventListener('click', function (event) {
 		document.getElementById("14").style.display = "inline";
 		document.getElementById("15").style.display = "inline";
 		menu=11; break;
-	case 11:
+	case 11: case 12:case 13:case 14:case 15:
 		document.getElementById("11").style.display = "none";
 		document.getElementById("12").style.display = "none";
 		document.getElementById("13").style.display = "none";
@@ -493,7 +517,7 @@ document.getElementById('rightNav').addEventListener('click', function (event) {
 		document.getElementById("19").style.display = "inline";
 		document.getElementById("20").style.display = "inline";
 		menu=16; break;
-	case 16:
+	case 16: case 17:case 18:case 19:case 20:
 		document.getElementById("16").style.display = "none";
 		document.getElementById("17").style.display = "none";
 		document.getElementById("18").style.display = "none";
@@ -505,7 +529,7 @@ document.getElementById('rightNav').addEventListener('click', function (event) {
 		document.getElementById("24").style.display = "inline";
 		document.getElementById("25").style.display = "inline";
 		menu=21; break;
-	case 21:
+	case 21: case 21:case 23:case 24:case 25:
 		document.getElementById("21").style.display = "none";
 		document.getElementById("22").style.display = "none";
 		document.getElementById("23").style.display = "none";
@@ -517,12 +541,24 @@ document.getElementById('rightNav').addEventListener('click', function (event) {
 		document.getElementById("29").style.display = "inline";
 		document.getElementById("30").style.display = "inline";
 		menu=26; break;
-	case 26:
+	case 26: case 27:case 28:case 29:case 30:
 		document.getElementById("26").style.display = "none";
 		document.getElementById("27").style.display = "none";
 		document.getElementById("28").style.display = "none";
 		document.getElementById("29").style.display = "none";
 		document.getElementById("30").style.display = "none";
+		document.getElementById("31").style.display = "inline";
+		document.getElementById("32").style.display = "inline";
+		document.getElementById("33").style.display = "inline";
+		document.getElementById("34").style.display = "inline";
+		document.getElementById("35").style.display = "inline";
+		menu=31; break;
+	case 31: case 32:case 33:case 34:case 35:
+		document.getElementById("31").style.display = "none";
+		document.getElementById("32").style.display = "none";
+		document.getElementById("33").style.display = "none";
+		document.getElementById("34").style.display = "none";
+		document.getElementById("35").style.display = "none";
 		document.getElementById("1").style.display = "inline";
 		document.getElementById("2").style.display = "inline";
 		document.getElementById("3").style.display = "inline";
@@ -617,51 +653,107 @@ xDown = null;
 function loadCards(lesson) {
 	i=0;
 	vocabTable = [];
-	if (lesson < 26) {
-		while (i < holdTable.length) {
-			if(holdTable[i][4] == lesson) {
-				vocabTable.push(holdTable[i]);
-			}
-			i++;
-		}
-	} else {
-		if (lesson == 26) {
+	switch(lesson) { // Lesson Number
+		case '26': // Verb group I
 			while (i < holdTable.length) {
-				if(holdTable[i][6] == 'I') {
+				if(holdTable[i][6] === '1') {
 					vocabTable.push(holdTable[i]);
 				}
 				i++;
 			}
-		} else {
-			if(lesson == 27) {
-				while (i < holdTable.length) {
-					if(holdTable[i][6] == 'II') {
-						vocabTable.push(holdTable[i]);
-					}
-					i++;
+			break;
+		case '27':  // Verb group II
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '2') {
+					vocabTable.push(holdTable[i]);
 				}
-			} else {
-				if(lesson == 28) {
-					while (i < holdTable.length) {
-						if(holdTable[i][6] == 'III') {
-							vocabTable.push(holdTable[i]);
-						}
-						i++;
-					}
-				}
+				i++;
 			}
-		}
+			break;
+		case '28': // Verb group III
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '3') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		case '29': // All 3 verb groups
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '1' || holdTable[i][6] === '2' || holdTable[i][6] === '3') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		case '30': // adverb
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'A') {
+					vocabTable.push(holdTable[i]);
+				}
+			i++;
+			}
+			break;
+		case '31':  // い　& な　adjectives
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'I' || holdTable[i][6] === 'N') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		case '32':  // な 　adjectives
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'N') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		case '33':  // い　adjectives
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'I') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		case '34':  // family
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'F') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		case '35':  // calendar
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'C') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+		default:	
+			while (i < holdTable.length) {
+				if(holdTable[i][4] == lesson) {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+		break;
 	}
-	populateLessonTable();
-	removeSelected();
-	document.getElementById(lesson).classList.add("selected");
-	wordCount = vocabTable.length;
-	currentWord = 0;
-	loadWord();
+	if (vocabTable.length > 0) {
+		populateLessonTable();
+		removeSelected();
+		document.getElementById(lesson).classList.add("selected");
+		wordCount = vocabTable.length;
+		currentWord = 0;
+		loadWord();	
+	}
 }
 
 function loadHoldTable() {
-	// 0 Romaji, 1 Kanji, 2 Hiragana/Katakana, 3 English, 4 Chapter, 5 Flag, 6 Verb Group, 7 てform,　8 ないform
 	holdTable.push(['watashi','私','わたし','I',1,0,'','','','']);
 	holdTable.push(['watashi tachi','私たち','わたしたち','we',1,0,'','','','']);
 	holdTable.push(['anata','あなた','&nbsp;','you',1,0,'','','','']);
@@ -708,6 +800,7 @@ function loadHoldTable() {
 	holdTable.push(['nihon','日本','にほん','Japan',1,0,'','','','']);
 	holdTable.push(['furansu','フランス','&nbsp;','France',1,0,'','','','']);
 	holdTable.push(['burajiru','ブラジル','&nbsp;','Brazil',1,0,'','','','']);
+	
 	holdTable.push(['kore','これ','&nbsp;','this (thing here)',2,0,'','','','']);
 	holdTable.push(['sore','それ','&nbsp;','that (thing near you)',2,0,'','','','']);
 	holdTable.push(['are','あれ','&nbsp;','that (thing over there)',2,0,'','','','']);
@@ -756,6 +849,7 @@ function loadHoldTable() {
 	holdTable.push(['dōmo arigatō gozaima xsu','どう　もありがとう　ございます','どうも　ありがとう　ございます','Thank you very much',2,0,'','','','']);
 	holdTable.push(['korekara osewani narima xsu','これ　から　お世話　に　なります','これ　から　おせわ　に　なります','I hope for your kind assistance hereafter',2,0,'','','','']);
 	holdTable.push(['kochira koso yoroshiku','こちら　こそ　よろしく','&nbsp;','I am pleased to meet you',2,0,'','','','']);
+	
 	holdTable.push(['koko','ここ','&nbsp;','here, this place',3,0,'','','','']);
 	holdTable.push(['soko','そこ','&nbsp;','there, that place near you',3,0,'','','','']);
 	holdTable.push(['asoko','あそこ','&nbsp;','that place over there',3,0,'','','','']);
@@ -798,12 +892,13 @@ function loadHoldTable() {
 	holdTable.push(['o misete kudasai','～を見せてください','～をみせてください','Please show me ~',3,0,'','','','']);
 	holdTable.push(['jia','じゃ','&nbsp;','well, then, in that case	',3,0,'','','','']);
 	holdTable.push(['o kudasai','～をください','&nbsp;','Give me ~, please.	',3,0,'','','','']);
-	holdTable.push(['','起きます','おきます','get up, wake up',4,0,'II','おきて','おきない','']);
-	holdTable.push(['','寝ます','ねます','sleep, go to bed',4,0,'II','ねて','ねない','']);
-	holdTable.push(['','働きます','はたらきます','work',4,0,'I','はたらいて','はたらかない','']);
-	holdTable.push(['','休みます','やすみます','take a rest, take a holiday',4,0,'I','やすんで','やすまない','']);
-	holdTable.push(['','勉強します','べんきょうします','study',4,0,'III','べんきょうして','べんきょうしない','']);
-	holdTable.push(['','終わります','おわります','finish',4,0,'I','おわって','おわらない','']);
+	
+	holdTable.push(['','起きます','おきます','get up, wake up',4,0,'2','おきて','おきない','おきる']);
+	holdTable.push(['','寝ます','ねます','sleep, go to bed',4,0,'2','ねて','ねない','ねる']);
+	holdTable.push(['','働きます','はたらきます','work',4,0,'1','はたらいて','はたらかない','はたらく']);
+	holdTable.push(['','休みます','やすみます','take a rest, take a holiday',4,0,'1','やすんで','やすまない','やすむ']);
+	holdTable.push(['','勉強します','べんきょうします','study',4,0,'3','べんきょうして','べんきょうしない','べんきょうする']);
+	holdTable.push(['','終わります','おわります','finish',4,0,'1','おわって','おわらない','おわる']);
 	
 	holdTable.push(['depāto','デパート','&nbsp;','department store',4,0,'','','','']);
 	holdTable.push(['ginkō','銀行','ぎんこう','bank',4,0,'','','','']);
@@ -859,9 +954,10 @@ function loadHoldTable() {
 //	holdTable.push(['Bankoku','バンコク','&nbsp;','Bangkok',4,0,'','','','']);
 	holdTable.push(['Rosan zerusu','ロサンゼルス','&nbsp;','Los Angeles',4,0,'','','','']);
 	holdTable.push(['Rondon','ロンドン','&nbsp;','London',4,0,'','','','']);
-	holdTable.push(['iki mas xu','行ます','いきます','go',5,0,'I','いって','','']);
-	holdTable.push(['ki mas xu','来ます','きます','come',5,0,'III','きて','','']);
-	holdTable.push(['kaer imas xu','帰ります','かえります','go home, return',5,0,'I','かえって','','']);
+	
+	holdTable.push(['iki mas xu','行ます','いきます','go',5,0,'1','いって','いかない','いく']);
+	holdTable.push(['ki mas xu','来ます','きます','come',5,0,'3','きて','こない','くる']);
+	holdTable.push(['kaer imas xu','帰ります','かえります','go home, return',5,0,'1','かえって','かえらない','かえる']);
 	
 	holdTable.push(['gakkō','学校','がっこう','school',5,0,'','','','']);
 	holdTable.push(['sūpā','スーパー','&nbsp;','supermarket',5,0,'','','','']);
@@ -915,21 +1011,21 @@ function loadHoldTable() {
 	holdTable.push(['tsugi no','次の','つぎの','next',5,0,'','','','']);
 	holdTable.push(['dōitashi mashite','どういたしまして','&nbsp;','You\'re welcome, Don\'t mention it',5,0,'','','','']);
 	holdTable.push(['～bansen','～番線','～ばんせん','platform ~, ~th platform',5,0,'','','','']);
-
-	holdTable.push(['','食べます','たべます','eat',6,0,'II','たべて','','']);
-	holdTable.push(['','飲みます','のみます','drink',6,0,'I','のんで','','']);
-	holdTable.push(['','吸います','すいます','smoke',6,0,'I','すって','','']);
-	holdTable.push(['','たばこを吸います','たばこをすいます','smoke a cigarette',6,0,'I','すって','','']);
-	holdTable.push(['','見ます','みます','see, look at, watch',6,0,'II','みて','','']);
-	holdTable.push(['','聞きます','ききます','hear, listen',6,0,'I','きいて','','']);
-	holdTable.push(['','読みます','よみます','read',6,0,'I','よんで','','']);
-	holdTable.push(['','書きます','かきます','write, draw, paint',6,0,'I','かいて','','']);
-	holdTable.push(['','買います','かいます','buy',6,0,'I','かって','','']);
-	holdTable.push(['','撮ります','とります','take (a photograph)',6,0,'I','とって','','']);
-	holdTable.push(['','写真を撮ります','しゃしんをとります','take a picture',6,0,'I','とって','','']);
-	holdTable.push(['','します','&nbsp;','do',6,0,'III','して','','']);
-	holdTable.push(['','会います','あいます','meet',6,0,'I','あって','','']);
-	holdTable.push(['','友達を会います','ともだちをあいます','meet a friend',6,0,'I','あって','','']);
+	
+	holdTable.push(['','食べます','たべます','eat',6,0,'2','たべて','たべない','']);
+	holdTable.push(['','飲みます','のみます','drink',6,0,'1','のんで','のまない','']);
+	holdTable.push(['','吸います','すいます','smoke',6,0,'1','すって','すわない','']);
+	holdTable.push(['','たばこを吸います','たばこをすいます','smoke a cigarette',6,0,'1','すって','すわない','']);
+	holdTable.push(['','見ます','みます','see, look at, watch',6,0,'2','みて','みない','']);
+	holdTable.push(['','聞きます','ききます','hear, listen',6,0,'1','きいて','きかない','']);
+	holdTable.push(['','読みます','よみます','read',6,0,'1','よんで','よまない','']);
+	holdTable.push(['','書きます','かきます','write, draw, paint',6,0,'1','かいて','かかない','']);
+	holdTable.push(['','買います','かいます','buy',6,0,'1','かって','かわない','']);
+	holdTable.push(['','撮ります','とります','take (a photograph)',6,0,'1','とって','とらない','']);
+	holdTable.push(['','写真を撮ります','しゃしんをとります','take a picture',6,0,'1','とって','とらない','']);
+	holdTable.push(['','します','します','do',6,0,'3','して','しない','']);
+	holdTable.push(['','会います','あいます','meet',6,0,'1','あって','あわない','']);
+	holdTable.push(['','友達に会います','ともだちにあいます','meet a friend',6,0,'1','あって','あわない','']);
 	
 	holdTable.push(['','ごはん','&nbsp;','a meal, cooked rice',6,0,'','','','']);
 	holdTable.push(['','朝ごはん','あさごはん','breakfast',6,0,'','','','']);
@@ -974,16 +1070,16 @@ function loadHoldTable() {
 	holdTable.push(['','わかりました','&nbsp;','I see',6,0,'','','','']);
 	holdTable.push(['','何ですか','なんですか','Yes?',6,0,'','','','']);
 	holdTable.push(['','じゃ、またあした','&nbsp;','See you tomorrow',6,0,'','','','']);
-
-	holdTable.push(['','切ります','きります','cut, slice',7,0,'I','きって','','']);
-	holdTable.push(['','送ります','おくります','send',7,0,'I','おくって','','']);
-	holdTable.push(['','あげます','&nbsp;','give',7,0,'II','あげて','','']);
-	holdTable.push(['','もらいます','&nbsp;','receive',7,0,'I','もらって','','']);
-	holdTable.push(['','貨します','かします','lend',7,0,'I','かして','','']);
-	holdTable.push(['','借ります','かります','borrow',7,0,'II','かりて','','']);
-	holdTable.push(['','教えます','おしえます','teach',7,0,'II','おしえて','','']);
-	holdTable.push(['','習います','ならいます','learn',7,0,'I','ならって','','']);
-	holdTable.push(['','でんわをかけます','&nbsp;','make a telephone call',7,0,'II','かけて','','']);
+	
+	holdTable.push(['','切ります','きります','cut, slice',7,0,'1','きって','きらない','']);
+	holdTable.push(['','送ります','おくります','send',7,0,'1','おくって','おくらない','']);
+	holdTable.push(['','あげます','あげます','give',7,0,'2','あげて','あげない','']);
+	holdTable.push(['','もらいます','もらいます','receive',7,0,'1','もらって','もらわない','']);
+	holdTable.push(['','貨します','かします','lend',7,0,'1','かして','かさない','']);
+	holdTable.push(['','借ります','かります','borrow',7,0,'2','かりて','かりない','']);
+	holdTable.push(['','教えます','おしえます','teach',7,0,'2','おしえて','おしえない','']);
+	holdTable.push(['','習います','ならいます','learn',7,0,'1','ならって','ならわない','']);
+	holdTable.push(['','でんわをかけます','でんわをかけます','make a telephone call',7,0,'2','かけて','かけない','']);
 	
 	holdTable.push(['','手','て','hand, arm',7,0,'','','','']);
 	holdTable.push(['','はし','&nbsp;','chopsticks',7,0,'','','','']);
@@ -991,9 +1087,12 @@ function loadHoldTable() {
 	holdTable.push(['','ナイフ','&nbsp;','knife',7,0,'','','','']);
 	holdTable.push(['','フォーク','&nbsp;','fork',7,0,'','','','']);
 	holdTable.push(['','はさみ','&nbsp;','scissors',7,0,'','','','']);
-	holdTable.push(['','ファクス','&nbsp;','fax',7,0,'','','','']);
-	holdTable.push(['','ワープロ','&nbsp;','word procecessor',7,0,'','','','']);
+//	holdTable.push(['','ファクス','&nbsp;','fax',7,0,'','','','']);
+//	holdTable.push(['','ワープロ','&nbsp;','word processor',7,0,'','','','']);
 	holdTable.push(['','パソコン','&nbsp;','personal computer',7,0,'','','','']);
+	holdTable.push(['','ケータイ','&nbsp;','mobile phone, cellphone',7,0,'','','','']);
+	holdTable.push(['','メール','&nbsp;','e-mail',7,0,'','','','']);
+	holdTable.push(['','年賀状','ねんがじょう','New Year\'s greeting card',7,0,'','','','']);
 	holdTable.push(['','パンチ','&nbsp;','punch',7,0,'','','','']);
 	holdTable.push(['','ホッチキス','&nbsp;','stapler',7,0,'','','','']);
 	holdTable.push(['','セロテープ','&nbsp;','Scotch tape, clear adhesive tape',7,0,'','','','']);
@@ -1014,48 +1113,49 @@ function loadHoldTable() {
 	holdTable.push(['','まだ','&nbsp;','not yet',7,0,'','','','']);
 	holdTable.push(['','これから','&nbsp;','from now on, soon',7,0,'','','','']);
 	holdTable.push(['','～すてきですね','&nbsp;','What a nice ~!',7,0,'','','','']);
-	holdTable.push(['','ごめんください','&nbsp;','Excuse me, Anybody home?, May I come in? (an expression used by a visitor)',7,0,'','','','']);
+//	holdTable.push(['','ごめん ください','&nbsp;','Excuse me, Anybody home?, May I come in? (an expression used by a visitor)',7,0,'','','','']);
 	holdTable.push(['','いらっしゃい','&nbsp;','How nice of you to come (lit. Welcome)',7,0,'','','','']);
-	holdTable.push(['','どうぞお上がりください','どうぞおあがりください','Do come in',7,0,'','','','']);
-	holdTable.push(['','失礼します','しつれいします','Thank you, May I? (lit. I\'m afraid I\'ll be disturbing you)',7,0,'','','','']);
-	holdTable.push(['','～はいかがですか','&nbsp;','Won\'t you have ~?, Would you like to have ~? (used when offering something)',7,0,'','','','']);
+	holdTable.push(['','どうぞ お上がり ください','どうぞ おあがり ください','Do come in',7,0,'','','','']);
+	holdTable.push(['','失礼します','しつれいします','May I? (lit. I commit an incivility)',7,0,'','','','']);
+	holdTable.push(['','[～は]いかがですか','&nbsp;','Won\'t you have ~?, Would you like to have ~? (used when offering something)',7,0,'','','','']);
 	holdTable.push(['','いただきます','&nbsp;','Thank you, I accept (said before starting to eat or drink)',7,0,'','','','']);
-	holdTable.push(['','お土産','おみやげ','souvenir, present',7,0,'','','','']);
-	holdTable.push(['','ヨーロッパ','&nbsp;','Europe',7,0,'','','','']);
-	holdTable.push(['','スペイン','&nbsp;','Spain',7,0,'','','','']);
+	holdTable.push(['','ごちそうさま[でした]','&nbsp;','That was delicious (said after eating or drinking)',7,0,'','','','']);
+//	holdTable.push(['','お土産','おみやげ','souvenir, present',7,0,'','','','']);
+//	holdTable.push(['','ヨーロッパ','ヨーロッパ','Europe',7,0,'','','','']);
+	holdTable.push(['','スペイン','スペイン','Spain',7,0,'','','','']);
 
-	holdTable.push(['','ハンサム[な]','&nbsp;','handsome',8,0,'','','','']);
-	holdTable.push(['','綺麗な','きれい[な]','beautiful, clean',8,0,'','','','']);
-	holdTable.push(['','静か[な]','しずか[な]','quiet',8,0,'','','','']);
-	holdTable.push(['','にぎやか[な]','&nbsp;','lively',8,0,'','','','']);
-	holdTable.push(['','有名[な]','ゆうめい[な]','famous',8,0,'','','','']);
-	holdTable.push(['','親切[な]','しんせつ[な]','helpful, kind, considerate (not used about one\'s own family',8,0,'','','','']);
-	holdTable.push(['','元気[な]','げんき[な]','healthy, energetic, cheerful',8,0,'','','','']);
-	holdTable.push(['','暇[な]','ひま[な]','free (time)',8,0,'','','','']);
-	holdTable.push(['','便利[な]','べんり[な]','convenient',8,0,'','','','']);
-	holdTable.push(['','すてき[な]','&nbsp;','fine, nice, wonderful',8,0,'','','','']);
-	holdTable.push(['','大きい','おおきい','big, large',8,0,'','','','']);
-	holdTable.push(['','小さい','ちいさい','small, little',8,0,'','','','']);
-	holdTable.push(['','新しい','あたらしい','new',8,0,'','','','']);
-	holdTable.push(['','古い','ふるい','old (not of age)',8,0,'','','','']);
-	holdTable.push(['','いい(よい)','&nbsp;','good',8,0,'','','','']);
-	holdTable.push(['','悪い','わるい','bad',8,0,'','','','']);
-	holdTable.push(['','厚い、熱い','あつい','hot',8,0,'','','','']);
-	holdTable.push(['','寒い','さむい','cold (referring to temperature)',8,0,'','','','']);
-	holdTable.push(['','冷たい','つめたい','cold (referring to touch)',8,0,'','','','']);
-	holdTable.push(['','難しい','むずかしい','difficult',8,0,'','','','']);
-	holdTable.push(['','易しい','やさしい','easy',8,0,'','','','']);
-	holdTable.push(['','高い','たかい','expensive, tall, high',8,0,'','','','']);
-	holdTable.push(['','安い','やすい','inexpensive, cheap',8,0,'','','','']);
-	holdTable.push(['','低い','ひくい','low',8,0,'','','','']);
-	holdTable.push(['','おもしろい','&nbsp;','interesting',8,0,'','','','']);
-	holdTable.push(['','おいしい','&nbsp;','delicious, tasty',8,0,'','','','']);
-	holdTable.push(['','忙しい','いそがしい','busy',8,0,'','','','']);
-	holdTable.push(['','楽しい','たのしい','enjoyable',8,0,'','','','']);
-	holdTable.push(['','白い','しろい','white',8,0,'','','','']);
-	holdTable.push(['','黒い','くろい','black',8,0,'','','','']);
-	holdTable.push(['','赤い','あかい','red',8,0,'','','','']);
-	holdTable.push(['','青い','あおい','blue',8,0,'','','','']);
+	holdTable.push(['','ハンサム[な]','ハンサム[な]','handsome',8,0,'N','ハンサム じゃ　ありません','ハンサム でした','ハンサム じゃ　ありませんでした']);
+	holdTable.push(['','綺麗[な]','きれい[な]','beautiful, clean',8,0,'N','きれい じゃ　ありません','きれい でした','きれい じゃ　ありませんでした']);
+	holdTable.push(['','静か[な]','しずか[な]','quiet',8,0,'N','しずか じゃ　ありません','しずか でした','しずか じゃ　ありませんでした']);
+	holdTable.push(['','にぎやか[な]','にぎやか[な]','lively',8,0,'N','にぎやか じゃ　ありません','にぎやか でした','にぎやか じゃ　ありませんでした']);
+	holdTable.push(['','有名[な]','ゆうめい[な]','famous',8,0,'N','ゆうめい じゃ　ありません','ゆうめい でした','ゆうめい じゃ　ありませんでした']);
+	holdTable.push(['','親切[な]','しんせつ[な]','helpful, kind, considerate (not used about one\'s own family',8,0,'N','しんせつ じゃ　ありません','しんせつ でした','しんせつ じゃ　ありませんでした']);
+	holdTable.push(['','元気[な]','げんき[な]','healthy, energetic, cheerful',8,0,'N','げんき じゃ　ありません','げんき でした','げんき じゃ　ありませんでした']);
+	holdTable.push(['','暇[な]','ひま[な]','free (time)',8,0,'N','ひま じゃ　ありません','ひま でした','ひま じゃ　ありませんでした']);
+	holdTable.push(['','便利[な]','べんり[な]','convenient',8,0,'N','べんり じゃ　ありません','べんり でした','べんり じゃ　ありませんでした']);
+	holdTable.push(['','すてき[な]','すてき[な]','fine, nice, wonderful',8,0,'N','すてき じゃ　ありません','すてき でした','すてき じゃ　ありませんでした']);	
+	holdTable.push(['','大きい','おおきい','big, large',8,0,'I','おおき くないです','おおき かったです','おおき くなかったです']);
+	holdTable.push(['','小さい','ちいさい','small, little',8,0,'I','ちいさ くないです','ちいさ かったです','ちいさ くなかったです']);
+	holdTable.push(['','新しい','あたらしい','new',8,0,'I','あたらし くないです','あたらし かったです','あたらし くなかったです']);
+	holdTable.push(['','古い','ふるい','old (not of age)',8,0,'I','ふる くないです','ふる かったです','ふる くなかったです']);
+	holdTable.push(['','いい(よい)','いい(よい)','good',8,0,'I','よ くないです','よ かったです','よ くなかったです']);
+	holdTable.push(['','悪い','わるい','bad',8,0,'I','わる くないです','わる かったです','わる くなかったです']);
+	holdTable.push(['','厚い、熱い','あつい','hot',8,0,'I','あつ くないです','あつ かったです','あつ くなかったです']);
+	holdTable.push(['','寒い','さむい','cold (referring to temperature)',8,0,'I','さむ くないです','さむ かったです','さむ くなかったです']);
+	holdTable.push(['','冷たい','つめたい','cold (referring to touch)',8,0,'I','つめた くないです','つめた かったです','つめた くなかったです']);
+	holdTable.push(['','難しい','むずかしい','difficult',8,0,'I','むずかし くないです','むずかし かったです','むずかし くなかったです']);
+	holdTable.push(['','易しい','やさしい','easy',8,0,'I','やさし くないです','やさし かったです','やさし くなかったです']);
+	holdTable.push(['','高い','たかい','expensive, tall, high',8,0,'I','たか くないです','たか かったです','たか くなかったです']);
+	holdTable.push(['','安い','やすい','inexpensive, cheap',8,0,'I','やす くないです','やす かったです','やす くなかったです']);
+	holdTable.push(['','低い','ひくい','low',8,0,'I','ひく くないです','ひく かったです','ひく くなかったです']);
+	holdTable.push(['','おもしろい','&nbsp;','interesting',8,0,'I','おもしろ くないです','おもしろ かったです','おもしろ くなかったです']);
+	holdTable.push(['','おいしい','&nbsp;','delicious, tasty',8,0,'I','おいし くないです','おいし かったです','おいし くなかったです']);
+	holdTable.push(['','忙しい','いそがしい','busy',8,0,'I','いそがし くないです','いそがし かったです','いそがし くなかったです']);
+	holdTable.push(['','楽しい','たのしい','enjoyable',8,0,'I','たのし くないです','たのし かったです','たのし くなかったです']);
+	holdTable.push(['','白い','しろい','white',8,0,'I','しろ くないです','しろ かったです','しろ くなかったです']);
+	holdTable.push(['','黒い','くろい','black',8,0,'I','くろ くないです','くろ かったです','くろ くなかったです']);
+	holdTable.push(['','赤い','あかい','red',8,0,'I','あか くないです','あか かったです','あか くなかったです']);
+	holdTable.push(['','青い','あおい','blue',8,0,'I','あお くないです','あお かったです','あお くなかったです']);
 	holdTable.push(['','桜','さくら','cherry (blossom)',8,0,'','','','']);
 	holdTable.push(['','山','やま','mountain',8,0,'','','','']);
 	holdTable.push(['','町','まち','town, city',8,0,'','','','']);
@@ -1063,7 +1163,7 @@ function loadHoldTable() {
 //	holdTable.push(['','車','くるま','car, vehicle',8,0,'','','','']);
 	holdTable.push(['','所','ところ','place',8,0,'','','','']);
 	holdTable.push(['','寮','りょう','dormitory',8,0,'','','','']);
-	holdTable.push(['','レストラン','&nbsp;','restaurant',6,0,'','','','']);
+	holdTable.push(['','レストラン','&nbsp;','restaurant',8,0,'','','','']);
 //	holdTable.push(['','勉強','べんきょう','study',8,0,'','','','']);
 	holdTable.push(['','生活','せいかつ','life',8,0,'','','','']);
 	holdTable.push(['','[お]仕事','[お]しごと','work, business',8,0,'','','','']);
@@ -1082,16 +1182,16 @@ function loadHoldTable() {
 	holdTable.push(['','[いいえ、]けっこうです','&nbsp;','No, thank you',8,0,'','','','']);
 	holdTable.push(['','もう～です[ね]','&nbsp;','It\'s already ~ (isn\'t it)',8,0,'','','','']);
 	holdTable.push(['','そろそろ 失礼します','そろそろ しつれいします','It\'s time I was going',8,0,'','','','']);
+	holdTable.push(['','いいえ','&nbsp;','Not at all.',8,0,'','','','']);
 	holdTable.push(['','また いらっしゃって ください','&nbsp;','Please come again',8,0,'','','','']);
 	holdTable.push(['','上海','&nbsp;','Shanghai',8,0,'','','','']);
 	holdTable.push(['','金閣寺','きんかくじ','Kinkakuji Temple (the Golden Pavilion)',8,0,'','','','']);
 	holdTable.push(['','奈良公園','','Nara Park',8,0,'','','','']);
 	holdTable.push(['','富士山','ふじさん','Mt. Fuji',8,0,'','','','']);
 	holdTable.push(['','七人の侍','しちにんのさむらい','The Seven Samurai',8,0,'','','','']);
-
-	holdTable.push(['','わかります','&nbsp;','understand',9,0,'I','わかって','','']);
-	holdTable.push(['','あります','&nbsp;','have',9,0,'I','あって','','']);
 	
+	holdTable.push(['','わかります','わかります','understand',9,0,'1','わかって','わからない','']);
+	holdTable.push(['','あります','あります','have',9,0,'1','あって','ない','']);
 	holdTable.push(['','好き[な]','すき[な]','like',9,0,'','','','']);
 	holdTable.push(['','嫌い[な]','きらい[な]','dislike',9,0,'','','','']);
 	holdTable.push(['','上手[な]','じょうず[な]','good at',9,0,'','','','']);
@@ -1101,7 +1201,7 @@ function loadHoldTable() {
 	holdTable.push(['','スポーツ','&nbsp;','sport<br/>(～をします: play sports)',9,0,'','','','']);
 	holdTable.push(['','野球','やきゅう','baseball<br/>(～をします: play baseball)',9,0,'','','','']);
 	holdTable.push(['','ダンス','&nbsp;','dance<br/>(～をします: dance)',9,0,'','','','']);
-	holdTable.push(['','旅行','りょこう','trip, tour<br/>(～をします: travel, take a trip)',7,0,'','','','']);
+	holdTable.push(['','旅行','りょこう','trip, tour<br/>(～をします: travel, take a trip)',9,0,'','','','']);
 	holdTable.push(['','音楽','おんがく','music',9,0,'','','','']);
 	holdTable.push(['','歌','うた','song',9,0,'','','','']);
 	holdTable.push(['','クラシック','&nbsp;','classical music',9,0,'','','','']);
@@ -1144,9 +1244,9 @@ function loadHoldTable() {
 	holdTable.push(['','[～は]ちょっと','&nbsp;','[~] is a bit difficult<br/>(a euphemism used when declining an invitation)',9,0,'','','','']);
 	holdTable.push(['','だめですか','&nbsp;','So you can\'t (come)?',9,0,'','','','']);
 	holdTable.push(['','また 今度 お願いします','また こんど おねがいします','Please ask me again some other time<br/>(used when refusing an invitation indirectly)',9,0,'','','','']);
-
-	holdTable.push(['arimas xu','ありま','&nbsp;','exist, be (referring to inanimate things)',10,0,'I','あって','','']);
-	holdTable.push(['imas xu','います','&nbsp;','exist, be (referring to animate things)',10,0,'II','いて','','']);
+	
+	holdTable.push(['arimas xu','ありま','ありま','exist, be (referring to inanimate things)',10,0,'1','あって','ない','']);
+	holdTable.push(['imas xu','います','います','exist, be (referring to animate things)',10,0,'2','いて','いない','']);
 	
 	holdTable.push(['iro iro[na]','いろいろ[な]','&nbsp;','various',10,0,'','','','']);
 	holdTable.push(['otoko no hito','男の人','おとこの　ひと','man',10,0,'','','','']);
@@ -1202,11 +1302,11 @@ function loadHoldTable() {
 	holdTable.push(['nanpurā','ナンプラー','&nbsp;','nam pla',10,0,'','','','']);
 	holdTable.push(['kōnā','コーナー','&nbsp;','corner, section',10,0,'','','','']);
 	holdTable.push(['ichiban shita','一番　下','いちばん　した　','the bottom',10,0,'','','','']);
-
-	holdTable.push(['imas xu [kodomo ga～]','います [子供が～]','います [こどもが～]','have [a child]',11,0,'II','いて','','']);
-	holdTable.push(['imas xu [Nihon ni～]','います [日本に～]','います [にほんに～]','stay, be [in Japan]',11,0,'II','いて','','']);
-	holdTable.push(['kakari mas xu','かかります','&nbsp;','take (referring to time or money)',11,0,'I','かかって','','']);
-	holdTable.push(['yasumi mas xu [kaisha o ]','休みます [会社を～]','やすみます [かいしゃを]','take a day off [work]',11,0,'I','やすんで','','']);
+	
+	holdTable.push(['imas xu [kodomo ga～]','います [子供が～]','います [こどもが～]','have [a child]',11,0,'2','いて','いない','']);
+	holdTable.push(['imas xu [Nihon ni～]','います [日本に～]','います [にほんに～]','stay, be [in Japan]',11,0,'2','いて','いない','']);
+	holdTable.push(['kakari mas xu','かかります','かかります','take (referring to time or money)',11,0,'1','かかって','かからない','']);
+	holdTable.push(['yasumi mas xu [kaisha o ]','休みます [会社を～]','やすみます [かいしゃを]','take a day off [work]',11,0,'1','やすんで','やすまなない','']);
 	
 	holdTable.push(['hitotsu','一つ','ひとつ','one (used when counting things)',11,0,'','','','']);
 	holdTable.push(['futatsu','二つ','ふたつ','two (used when counting things)',11,0,'','','','']);
@@ -1247,7 +1347,7 @@ function loadHoldTable() {
 	holdTable.push(['imōto san','妹 さん','いもうと さん','(someone else\'s) younger sister',11,0,'','','','']);
 	holdTable.push(['gai koku','外国','がいこく','foreign country',11,0,'','','','']);
 	holdTable.push(['ryū gakusei','留学生','りゅうがくせい','foreign student',11,0,'','','','']);
-	holdTable.push(['kurasu','クラス','&nbsp;','class',11,0,'','','','']);
+	holdTable.push(['kurasu','	','&nbsp;','class',11,0,'','','','']);
 	holdTable.push(['~ jikan','～時間','～じかん','~ hour(s)',11,0,'','','','']);
 	holdTable.push(['~ shūkan','～週間','～しゅうかん','~ week(s)',11,0,'','','','']);
 	holdTable.push(['~ kagetsu','～か月','～かげつ','~ month(s)',11,0,'','','','']);
@@ -1257,9 +1357,9 @@ function loadHoldTable() {
 	holdTable.push(['zenbude','全部で','ぜんぶで','in total',11,0,'','','','']);
 	holdTable.push(['minna','みんな','&nbsp;','all, everything, everyone',11,0,'','','','']);
 	holdTable.push(['~ dake','～だけ','&nbsp;','only ~',11,0,'','','','']);
-	holdTable.push(['kashi komari mashita','かし こまり ました','&nbsp;','Certainly, (Sir/Madam).',11,0,'','','','']);
-	holdTable.push(['ī tenki des xu ne','いい 天気 ですね','いい てんき ですね','Nice weather, isn\'t it?',11,0,'','','','']);
-	holdTable.push(['odekake des xu ka','お出かけ ですか','おでかけ ですか','Are you going out?',11,0,'','','','']);
+	holdTable.push(['kashi komari mashita','かしこまりました','&nbsp;','Certainly, (Sir/Madam).',11,0,'','','','']);
+	holdTable.push(['ī tenki des xu ne','いい天気ですね','いいてんきですね','Nice weather, isn\'t it?',11,0,'','','','']);
+	holdTable.push(['odekake des xu ka','お出かけですか','おでかけですか','Are you going out?',11,0,'','','','']);
 	holdTable.push(['chotto ~ made','ちょっと～まで','&nbsp;','I\'m just going to ~',11,0,'','','','']);
 //	holdTable.push(['irasshaimase','いらしゃいませ','&nbsp;','Welcome, May I help you? (a greeting to a customer or a guest entering a shop, etc.)',11,0,'','','','']);
 	holdTable.push(['itte irasshai','行っていらっしゃい','いっていらっしゃい','See you later/So long. (lit. Go and come back.)',11,0,'','','','']);
@@ -1268,21 +1368,21 @@ function loadHoldTable() {
 	holdTable.push(['kōkū-bin (eyamēru)','航空便 (エヤメール)','こうくうびん (エヤメール)','airmail',11,0,'','','','']);
 	holdTable.push(['onegaishi mas xu','お願いします','おねがいします','Please. (lit. ask for a favour)',11,0,'','','','']);
 	holdTable.push(['Ōsutoraria','オーストラリア','&nbsp;','Australia',11,0,'','','','']);
-
-	holdTable.push(['kantan [na]','簡単[な]','かんたん[な]','easy, simple',12,0,'','','','']);
-	holdTable.push(['chikai','近い','ちかい','near',12,0,'','','','']);
-	holdTable.push(['tōi','遠い','とおい','far',12,0,'','','','']);
-	holdTable.push(['hayai','速い、早い','はやい','fast, early',12,0,'','','','']);
-	holdTable.push(['osoi','遅い','おそい','slow, late',12,0,'','','','']);
-	holdTable.push(['ōi [hito ga～]','多い [人が～]','おおい [ひとが～]','many [people], much',12,0,'','','','']);
-	holdTable.push(['suku nai [hito ga～]','少ない [人が～]','すくない [ひとが～]','few people',12,0,'','','','']);
-	holdTable.push(['atata kai','暖かい、温かい','あったかい','warm',12,0,'','','','']);
-	holdTable.push(['suzushī','涼しい','すずしい','cool',12,0,'','','','']);
-	holdTable.push(['amai','甘い','あまい','sweet',12,0,'','','','']);
-	holdTable.push(['kurai','辛い','からい','hot (taste), spicy',12,0,'','','','']);
-	holdTable.push(['omoi','重い','おもい','heavy',12,0,'','','','']);
-	holdTable.push(['karui','軽い','かるい','light (of weight)',12,0,'','','','']);
-	holdTable.push(['kōhī ga ī','コーヒーがいい ','&nbsp;','prefer coffee',12,0,'','','','']);
+	
+	holdTable.push(['kantan [na]','簡単[な]','かんたん[な]','easy, simple',12,0,'N','かんたん じゃ ありません','かんたん でした','かんたん じゃ ありません でした']);
+	holdTable.push(['chikai','近い','ちかい','near',12,0,'I','ちか くないです','ちか かったです','ちか くなかったです']);
+	holdTable.push(['tōi','遠い','とおい','far',12,0,'I','とお くないです','とお かったです','とお くなかったです']);
+	holdTable.push(['hayai','速い、早い','はやい','fast, early',12,0,'I','はや くないです','はや かったです','はや くなかったです']);
+	holdTable.push(['osoi','遅い','おそい','slow, late',12,0,'I','おそ くないです','おそ かったです','おそ くなかったです']);
+	holdTable.push(['ōi [hito ga～]','多い [人が～]','おおい [ひとが～]','many [people], much',12,0,'I','おお くないです','おお かったです','おお くなかったです']);
+	holdTable.push(['suku nai [hito ga～]','少ない [人が～]','すくない [ひとが～]','few people',12,0,'I','すくな くないです','すくな かったです','すくな くなかったです']);
+	holdTable.push(['atata kai','暖かい、温かい','あったかい','warm',12,0,'I','あったか くないです','あったか かったです','あったか くなかったです']);
+	holdTable.push(['suzushī','涼しい','すずしい','cool',12,0,'I','すずし くないです','すずし かったです','すずし くなかったです']);
+	holdTable.push(['amai','甘い','あまい','sweet',12,0,'I','あま くないです','あま かったです','あま くなかったです']);
+	holdTable.push(['kurai','辛い','からい','hot (taste), spicy',12,0,'I','から くないです','から かったです','から くなかったです']);
+	holdTable.push(['omoi','重い','おもい','heavy',12,0,'I','おも くないです','おも かったです','おも くなかったです']);
+	holdTable.push(['karui','軽い','かるい','light (of weight)',12,0,'I','かる くないです','かる かったです','かる くなかったです']);
+	holdTable.push(['kōhī ga ī','コーヒーがいい ','コーヒーがいい','prefer coffee',12,0,'I','コーヒーがい くないです','コーヒーがい かったです','コーヒーがい くなかったです']);
 	holdTable.push(['kisetsu','季節','きせつ','season',12,0,'','','','']);
 	holdTable.push(['haru','春','はる','spring',12,0,'','','','']);
 	holdTable.push(['natsu','夏','なつ','summer',12,0,'','','','']);
@@ -1322,20 +1422,20 @@ function loadHoldTable() {
 	holdTable.push(['Gion matsuri','祇園祭','ぎおんまつり','the Gion Festival, the most famous festival in Kyoto',12,0,'','','','']);
 	holdTable.push(['Hon Kon','香港','ホンコン','Hong Kong',12,0,'','','','']);
 	holdTable.push(['Shingapōru','シンガポール','&nbsp;','Singapore',12,0,'','','','']);
-
-	holdTable.push(['asobi mas xu','遊びます','あそびます','enjoy oneself, play',13,0,'I','あそんで','','']);
-	holdTable.push(['oyogi mas xu','泳ぎます','およぎます','swim',13,0,'I','およいで','','']);
-	holdTable.push(['mukae mas xu','迎えます','むかえます','go to meet, welcome',13,0,'I','むかえて','','']);
-	holdTable.push(['tsukare mas xu','疲れます','つかれます','get tired (when expressing being tired, つかれました is used)',13,0,'II','つかれて','','']);
-	holdTable.push(['ke xk qkon shi mas xu','結婚します','けっこんします','marry, get married',13,0,'III','けっこんして','','']);
-	holdTable.push(['kaimono shi mas xu','買い物します','かいものします','do shopping',13,0,'I','かいものして','','']);
-	holdTable.push(['shyoku ji shimas xu','食事します','しょくじします','have a meal, dine',13,0,'I','しょくじして','','']);
-	holdTable.push(['[kōen o~] sa xm qpo shi mas xu','「公園を～」　散歩します','「こおえんを～」　さんぽします','take a walk [in a park]',13,0,'III','さんぽして','','']);
 	
-	holdTable.push(['tai hen[na]','大変「な」','たいへん「な」','hard, tough, severe, awful',13,0,'','','','']);
-	holdTable.push(['ho shi','欲しい','ほしい','want (something)',13,0,'','','','']);
-	holdTable.push(['hi roi','広い','ひろい','wide, spacious',13,0,'','','','']);
-	holdTable.push(['se mai','狭い','せまい','narrow, small (room, etc.)',13,0,'','','','']);
+	holdTable.push(['asobi mas xu','遊びます','あそびます','enjoy oneself, play',13,0,'1','あそんで','あそばない','']);
+	holdTable.push(['oyogi mas xu','泳ぎます','およぎます','swim',13,0,'1','およいて','およがない','']);
+	holdTable.push(['mukae mas xu','迎えます','むかえます','go to meet, welcome',13,0,'2','むかえて','むかえない','']);
+	holdTable.push(['tsukare mas xu','疲れます','つかれます','get tired',13,0,'2','つかれて','つかれない','']);
+	holdTable.push(['ke xk qkon shi mas xu','結婚します','けっこんします','marry, get married',13,0,'3','けっこんして','けっこんしない','']);
+	holdTable.push(['kaimono shi mas xu','買い物します','かいものします','do shopping',13,0,'3','かいものして','かいものしない','']);
+	holdTable.push(['shyoku ji shimas xu','食事します','しょくじします','have a meal, dine',13,0,'3','しょくじして','しょくじしない','']);
+	holdTable.push(['[kōen o~] sa xm qpo shi mas xu','「公園を～」 散歩します','「こおえんを～」 さんぽします','take a walk [in a park]',13,0,'3','さんぽして','さんぽしない','']);
+	
+	holdTable.push(['tai hen[na]','大変「な」','たいへん「な」','hard, tough, severe, awful',13,0,'N','たいへん じゃ ありません','たいへん でした','たいへん じゃ ありません でした']);
+	holdTable.push(['ho shi','欲しい','ほしい','want (something)',13,0,'I','ほし くないです','ほし かったです','ほし くなかったです']);
+	holdTable.push(['hi roi','広い','ひろい','wide, spacious',13,0,'I','ひろ くないです','ひろ かったです','ひろ くなかったです']);
+	holdTable.push(['se mai','狭い','せまい','narrow, small (room, etc.)',13,0,'I','せま くないです','せま かったです','せま くなかったです']);
 	holdTable.push(['pū ru','プール','&nbsp;','swimming pool',13,0,'','','','']);
 	holdTable.push(['ka wa','川','かわ','river',13,0,'','','','']);
 	holdTable.push(['bi ju tsu','美術','びじゅつ','fine arts',13,0,'','','','']);
@@ -1346,46 +1446,46 @@ function loadHoldTable() {
 	holdTable.push(['～goro','～ごろ','&nbsp;','about (time)',13,0,'','','','']);
 	holdTable.push(['nanika','何か','なにか','something',13,0,'','','','']);
 	holdTable.push(['dokoka','どこか','&nbsp;','somewhere, some place',13,0,'','','','']);
-	holdTable.push(['nodoga kawaki mas xu','のどがかわきます','&nbsp;','Get thirsty',13,0,'','','','']);
-	holdTable.push(['nodoga kawaki mashita','のどがかわきました','&nbsp;','I\'m thirsty',13,0,'','','','']);
-	holdTable.push(['onaka ga suki mas xu','おなかがすきます','&nbsp;','Get hungry',13,0,'','','','']);
-	holdTable.push(['onaka ga suki mashita','おなかがすきました','&nbsp;','I\'m) hungry',13,0,'','','','']);
-	holdTable.push(['sō shi mashou','そうしましょう','&nbsp;','Let\'s do that (used when agreeing to someone\'s suggestion)',13,0,'','','','']);
-	holdTable.push(['go chūmon wa','ご注文は','ごちゅうもんは','May I take your order?',13,0,'','','','']);
+	holdTable.push(['nodoga kawaki mas xu','のどが かわき ます','&nbsp;','Get thirsty',13,0,'','','','']);
+	holdTable.push(['nodoga kawaki mashita','のどが かわき ました','&nbsp;','I\'m thirsty',13,0,'','','','']);
+	holdTable.push(['onaka ga suki mas xu','おなか が すきます','&nbsp;','Get hungry',13,0,'','','','']);
+	holdTable.push(['onaka ga suki mashita','おなか が すきました','&nbsp;','I\'m hungry',13,0,'','','','']);
+	holdTable.push(['sō shi mashou','そうし ましょう','&nbsp;','Let\'s do that (used when agreeing to someone\'s suggestion)',13,0,'','','','']);
+	holdTable.push(['go chūmon wa','ご注文は','ご ちゅうもん は','May I take your order?',13,0,'','','','']);
 	holdTable.push(['teishoku','定食','ていしょく','set meal, table d\'hôte',13,0,'','','','']);
 	holdTable.push(['gyūdon','牛どん','ぎゅうどん','bowl of rice topped with beef',13,0,'','','','']);
-	holdTable.push(['shōshō omachi kudasai','少々お待ちください','しょうしょうおまちください','Please wait a moment',13,0,'','','','']);
+	holdTable.push(['shōshō omachi kudasai','少々お待ちください','しょうしょう おまち ください','Please wait a moment',13,0,'','','','']);
 	holdTable.push(['betsu betsu ni','別々に','べつべつに','separately',13,0,'','','','']);
-
-	holdTable.push(['tsuke mas xu','つけます','つけます','turn on',14,0,'II','つけて','','']);
-	holdTable.push(['keshi mas xu','消します','けします','turn off',14,0,'I','けして','','']);
-	holdTable.push(['ake mas xu','開けます','あけます','open',14,0,'II','あけて','','']);
-	holdTable.push(['shime mas xu','閉めます','しめます','close, shut',14,0,'II','しめて','','']);
-	holdTable.push(['isogi mas xu','急ぎます','いそぎます','hurry',14,0,'I','いそいで','','']);
-	holdTable.push(['machi mas xu','待ちます','まちます','wait',14,0,'I','まって','','']);
-	holdTable.push(['mochi mas xu','持ちます','もちます','hold',14,0,'I','もって','','']);
-	holdTable.push(['tori mas xu','取ります','とります','take, pass',14,0,'I','とって','','']);
-	holdTable.push(['tetsu dai mas xu','手伝います','てつだいます','help (with a task)',14,0,'I','てつだって','','']);
-	holdTable.push(['yobi mas xu','呼びます','よびます','call',14,0,'I','よんで','','']);
-	holdTable.push(['hanashi mas xu','話します','はなします','speak, talk',14,0,'I','はなして','','']);
-	holdTable.push(['tsukai mas xu','使い','つかいます','use',14,0,'I','つかって','','']);
-	holdTable.push(['tome mas xu','止めます','とめます','stop, park',14,0,'II','とめて','','']);
-//	holdTable.push(['magari mas xu','曲がります','まがります','turn',14,0,'','','','']);
-//	holdTable.push(['migi e magari mas xu','右へ曲がります','みぎへまがります','turn to the right',14,0,'','','','']);
-	holdTable.push(['mise mas xu','見せます','みせます','show',14,0,'II','みせて','','']);
-	holdTable.push(['oshie mas xu','教えます','おしえます','tell',14,0,'II','おしえて','','']);
-	holdTable.push(['jūsho o oshie mas xu','住所を教えます','じゅうしょをおしえます','tell an address',14,0,'II','おしえて','','']);
-	holdTable.push(['suwari mas xu','座ります','すわります','sit down',14,0,'I','すわって','','']);
-	holdTable.push(['tachi mas xu','立ちます','たちます','stand up',14,0,'I','たって','','']);
-	holdTable.push(['hairi mas xu','入ります','はいります','enter',14,0,'I','はいって','','']);
-	holdTable.push(['kissaten ni hairimas xu','喫茶店に入ります','きっさてんにはいります','enter a café',14,0,'I','はいって','','']);
-	holdTable.push(['de mas xu','出ます','でます','go out',14,0,'I','でて','','']);
-	holdTable.push(['kissaten o de mas xu','喫茶店をでます','きっさてんをでます','go out of a café',14,0,'II','でて','','']);
-//	holdTable.push(['hajime mas xu','始めます','はじめます','start, begin',14,0,'','','','']);
-//	holdTable.push(['ori mas xu','降ります','おります','get off',14,0,'','','','']);
-	holdTable.push(['furi mas xu','降ります','ふります','rain',14,0,'I','ふって','','']);
-	holdTable.push(['ame ga furi mas xu','雨が降ります','あめがふります','it\'s raining',14,0,'I','ふって','','']);
-	holdTable.push(['kopī shimas xu','コピーします','コピーします','copy',14,0,'III','コピーして','','']);
+	
+	holdTable.push(['tsuke mas xu','つけます','つけます','turn on',14,0,'2','つけて','つけない','']);
+	holdTable.push(['keshi mas xu','消します','けします','turn off',14,0,'1','けして','けさない','']);
+	holdTable.push(['ake mas xu','開けます','あけます','open',14,0,'2','あけて','あけない','']);
+	holdTable.push(['shime mas xu','閉めます','しめます','close, shut',14,0,'2','しめて','しめない','']);
+	holdTable.push(['isogi mas xu','急ぎます','いそぎます','hurry',14,0,'1','いそいで','いそがない','']);
+	holdTable.push(['machi mas xu','待ちます','まちます','wait',14,0,'1','まって','またない','']);
+	holdTable.push(['mochi mas xu','持ちます','もちます','hold',14,0,'1','もって','もたない','']);
+	holdTable.push(['tori mas xu','取ります','とります','take, pass',14,0,'1','とって','とらない','']);
+	holdTable.push(['tetsu dai mas xu','手伝います','てつだいます','help (with a task)',14,0,'1','てつだって','てつだわない','']);
+	holdTable.push(['yobi mas xu','呼びます','よびます','call',14,0,'1','よんで','よばない','']);
+	holdTable.push(['hanashi mas xu','話します','はなします','speak, talk',14,0,'1','はなして','はなさない','']);
+	holdTable.push(['tsukai mas xu','使い','つかいます','use',14,0,'1','つかって','つかわない','']);
+	holdTable.push(['tome mas xu','止めます','とめます','stop, park',14,0,'2','とめて','とめない','']);
+//	holdTable.push(['magari mas xu','曲がります','まがります','turn',14,0,'','','ない','']);
+//	holdTable.push(['migi e magari mas xu','右へ曲がります','みぎへまがります','turn to the right',14,0,'','','ない','']);
+	holdTable.push(['mise mas xu','見せます','みせます','show',14,0,'2','みせて','みせない','']);
+	holdTable.push(['oshie mas xu','教えます','おしえます','tell',14,0,'2','おしえて','おしえない','']);
+	holdTable.push(['jūsho o oshie mas xu','住所　を　教えます','じゅうしょ　を　おしえます','tell an address',14,0,'2','おしえて','おしえない','']);
+	holdTable.push(['suwari mas xu','座ります','すわります','sit down',14,0,'1','すわって','すわらない','']);
+	holdTable.push(['tachi mas xu','立ちます','たちます','stand up',14,0,'1','たって','たたない','']);
+	holdTable.push(['hairi mas xu','入ります','はいります','enter',14,0,'1','はいって','はいらない','']);
+	holdTable.push(['kissaten ni hairimas xu','喫茶店　に　入ります','きっさてん　に　はいります','enter a café',14,0,'1','はいって','はいらない','']);
+	holdTable.push(['de mas xu','出ます','でます','go out',14,0,'2','でて','でない','']);
+	holdTable.push(['kissaten o de mas xu','喫茶店をでます','きっさてんをでます','go out of a café',14,0,'2','でて','でない','']);
+//	holdTable.push(['hajime mas xu','始めます','はじめます','start, begin',14,0,'','','ない','']);
+//	holdTable.push(['ori mas xu','降ります','おります','get off',14,0,'','','ない','']);
+	holdTable.push(['furi mas xu','降ります','ふります','rain',14,0,'1','ふって','ふらない','']);
+	holdTable.push(['ame ga furi mas xu','雨が降ります','あめがふります','it\'s raining',14,0,'1','ふって','ふらない','']);
+	holdTable.push(['kopī shimas xu','コピーします','コピーします','copy',14,0,'3','コピーして','コピーしない','']);
 	
 	holdTable.push(['denki','電気','でんき','electricity, light',14,0,'','','','']);
 	holdTable.push(['eakon','エアコン','&nbsp;','air conditioner',14,0,'','','','']);
@@ -1408,25 +1508,25 @@ function loadHoldTable() {
 	holdTable.push(['mō','もう～','&nbsp;','~ more, another ~',14,0,'','','','']);	
 	holdTable.push(['sā','さあ','&nbsp;','right (used when encouraging some course of action)',14,0,'','','','']);
 	holdTable.push(['are','あれ','&nbsp;','Oh! (in surprise or in wonder)',14,0,'','','','']);
-	holdTable.push(['shingō o migi e magatte kudasai','信号を右へ曲がってください','しんごうをみぎへまがってください','Turn right at the signal',14,0,'','','','']);
-	holdTable.push(['kore de onegaishi mas xu','これでお願いします','これでおねがいします','I\'d like to pay with this',14,0,'','','','']);
+	holdTable.push(['shingō o migi e magatte kudasai','信号を 右へ 曲がって ください','しんごうを みぎへ まがって ください','Turn right at the signal',14,0,'','','','']);
+	holdTable.push(['kore de onegaishi mas xu','これで お願いします','これで おねがいします','I\'d like to pay with this',14,0,'','','','']);
 	holdTable.push(['otsuri','お釣り','おつり','change',14,0,'','','','']);
-
 //	holdTable.push(['tachi mas xu','立ちます','たちます','stand up',15,0,'','','ない','']);
 //	holdTable.push(['suwari mas xu','座ります','すわります','sit down',15,0,'','','ない','']);
 //	holdTable.push(['tsukai mas xu','使います','つかいます','use',15,0,'','','ない','']);
-	holdTable.push(['oki mas xu','置きます','おきます','put',15,0,'I','おいて','おかない','']);
-	holdTable.push(['tsukuri mas xu','作ります','つくります','make',15,0,'I','つくって','つくらない','']);
-	holdTable.push(['tsukuri mas xu','造ります','つくります','produce',15,0,'I','つくって','つくらない','']);
-	holdTable.push(['uri mas xu','売ります','うります','sell ',15,0,'I','うって','うらない','']);
-	holdTable.push(['shiri mas xu','知ります','しります','get to know',15,0,'I','しって','しらない','']);
-	holdTable.push(['sumi mas xu','住ます','すみます','be going to live',15,0,'I','すんで','すまない','']);
-	holdTable.push(['kenkyū shi mas xu','研究します','けんきゅうします','do research',15,0,'III','けんきゅうして','けんきゅうしない','']);
+
+	holdTable.push(['oki mas xu','置きます','おきます','put',15,0,'1','おいて','おかない','おく']);
+	holdTable.push(['tsukuri mas xu','作ります','つくります','make',15,0,'1','つくって','つくらない','つくる']);
+	holdTable.push(['tsukuri mas xu','造ります','つくります','produce',15,0,'1','つくって','つくらない','つくる']);
+	holdTable.push(['uri mas xu','売ります','うります','sell ',15,0,'1','うって','うらない','うる']);
+	holdTable.push(['shiri mas xu','知ります','しります','get to know',15,0,'1','しって','しらない','しる']);
+	holdTable.push(['sumi mas xu','住ます','すみます','be going to live',15,0,'1','すんで','すまない','すむ']);
+	holdTable.push(['kenkyū shi mas xu','研究します','けんきゅうします','do research',15,0,'3','けんきゅうして','けんきゅうしない','けんきゅうする']);
+	
 //	holdTable.push(['shitte imas xu','知っています','しっています','know',15,0,'','','ない','']);
 //	holdTable.push(['shiri masen','知りません','しりません','don\'t know',15,0,'','','ない','']);
 //	holdTable.push(['sunde imas xu','住んでいます','すんでいます','live',15,0,'','','ない','']);
 //	holdTable.push(['Ōsaka ni sunde i mas xu','大阪に住んでいます','おおさかにすんでいます','live in Osaka',15,0,'','','ない','']);
-
 	holdTable.push(['shiryō','資料','しりょう','materials, data',15,0,'','','','']);
 	holdTable.push(['katarogu','カタログ','&nbsp;','catalog',15,0,'','','','']);
 	holdTable.push(['jiko kuhyō','時刻表','じこくひょう','timetable',15,0,'','','','']);
@@ -1446,38 +1546,39 @@ function loadHoldTable() {
 	holdTable.push(['minna san','皆さん','みんあさん','Ladies and Gentlemen, everybody',15,0,'','','','']);
 //	holdTable.push(['tokuni','特に','とくに','especially',15,0,'','','','']);
 
-	holdTable.push(['omoi dashi mas xu','思い出します','おもいだします','remember, recollect ',15,0,'I','おもいだして','おもいださない','']);
+	holdTable.push(['omoi dashi mas xu','思い出します','おもいだします','remember, recollect ',15,0,'1','おもいだして','おもいださない','おもいだす']);
+	
 //	holdTable.push(['goka zoku','ご家族','ごかぞく','your family',15,0,'','','ない','']);
-	holdTable.push(['ira xs shai mas xu','いらっしゃいます','&nbsp;','be (honorific equivalent of います)',15,0,'I','いらっしゃて','いらっしゃわない','']);
-
-	holdTable.push(['nori mas xu','乗ります','のります','ride, get on',16,0,'I','のって','ない','']);
-	holdTable.push(['densha ni nori mas xu','電車に乗ります','でんしゃにのります','ride, get on a train',16,0,'I','のって','のらない','']);
-	holdTable.push(['ori mas xu','降ります','おります','get off',16,0,'II','おりて','おりない','']);
-	holdTable.push(['densha o ori mas xu','電車を降ります','でんしゃをおります','get off a train',16,0,'II','おりて','おりない','']);
-	holdTable.push(['norikae mas xu','乗り換えます','のりかえます','change (trains, etc.)',16,0,'II','のりかえて','のりかえない','']);
-	holdTable.push(['shawā o abi mas xu','シャワーを浴びます','シャワーをあびます','take a shower',16,0,'II','あびて','あびない','']);
-	holdTable.push(['ire mas xu','入れます','いれます','put in, insert',16,0,'II','いれて','いれない','']);
-	holdTable.push(['dashi mas xu','出します','だします','take out, hand in, send',16,0,'I','だして','おさない','']);
-	holdTable.push(['oroshi mas xu','下ろしすます','おろしすます','withdraw',16,0,'I','おろして','おろさない','']);
-	holdTable.push(['okane o oroshi mas xu','お金を下ろしすます','おかねをおろしすます','withdraw money',16,0,'I','おろして','おろさない','']);
-	holdTable.push(['hairi mas xu','入ります','はいります','enter',16,0,'I','はいって','はいらない','']);
-	holdTable.push(['daigaku ni hairi mas xu','大学に入ります','だいがくにはいります','enter a university',16,0,'I','はいって','はいらない','']);
-	holdTable.push(['de mas xu','出ます','でます','graduate',16,0,'II','でて','でない','']);
-	holdTable.push(['daigaku o demas xu','大学を出ます','だいがくをでます','graduate from a university',16,0,'II','でて','でない','']);
+	holdTable.push(['ira xs shai mas xu','いらっしゃいます','いらっしゃいます','be (honorific equivalent of います)',15,0,'1','いらっしゃて','いらっしゃわない','']);
+	
+	holdTable.push(['nori mas xu','乗ります','のります','ride, get on',16,0,'1','のって','のらない','のる']);
+	holdTable.push(['densha ni nori mas xu','電車に乗ります','でんしゃにのります','ride, get on a train',16,0,'1','のって','のらない','のる']);
+	holdTable.push(['ori mas xu','降ります','おります','get off',16,0,'2','おりて','おりない','おりる']);
+	holdTable.push(['densha o ori mas xu','電車を降ります','でんしゃをおります','get off a train',16,0,'2','おりて','おりない','おりる']);
+	holdTable.push(['norikae mas xu','乗り換えます','のりかえます','change (trains, etc.)',16,0,'2','のりかえて','のりかえない','のりかえる']);
+	holdTable.push(['shawā o abi mas xu','シャワーを浴びます','シャワーをあびます','take a shower',16,0,'2','あびて','あびない','あびる']);
+	holdTable.push(['ire mas xu','入れます','いれます','put in, insert',16,0,'2','いれて','いれない','いれる']);
+	holdTable.push(['dashi mas xu','出します','だします','take out, hand in, send',16,0,'1','だして','おさない','だす']);
+	holdTable.push(['oroshi mas xu','下ろします','おろします','withdraw',16,0,'1','おろして','おろさない','おろす']);
+	holdTable.push(['okane o oroshi mas xu','お金を下ろします','おかねをおろします','withdraw money',16,0,'1','おろして','おろさない','おろす']);
+	holdTable.push(['hairi mas xu','入ります','はいります','enter',16,0,'1','はいって','はいらない','はいる']);
+	holdTable.push(['daigaku ni hairi mas xu','大学に入ります','だいがくにはいります','enter a university',16,0,'1','はいって','はいらない','はいる']);
+	holdTable.push(['de mas xu','出ます','でます','graduate',16,0,'2','でて','でない','でる']);
+	holdTable.push(['daigaku o demas xu','大学を出ます','だいがくをでます','graduate from a university',16,0,'2','でて','でない','でる']);
 //	holdTable.push(['yame mas xu','やめます','&nbsp;','quit or retire from, stop, give up',16,0,'','','ない','']);
 //	holdTable.push(['kaisha o yame mas xu','会社をやめます','かいしゃをやめます','quit or retire from a company',16,0,'','','ない','']);
-	holdTable.push(['oshi mas xu','押します','おします','press, push',16,0,'I','おして','おさない','']);
-	holdTable.push(['nomi mas xu','飲みます','のみます','drink alcohol',16,0,'I','のんで','のまない','']);
-	holdTable.push(['hajime mas xu','始まます','はじめます','start, begin',16,0,'II','はじめて','はじめない','']);
-	holdTable.push(['ken ga kushi mas xu','見学します','けんがくします','tour, visit a place to study',16,0,'III','けんがくして','けんがくしない','']);
-	holdTable.push(['denwa shi mas xu','電話します','でんわします','phone',16,0,'III','でんわして','でんわしない','']);
+	holdTable.push(['oshi mas xu','押します','おします','press, push',16,0,'1','おして','おさない','おす']);
+	holdTable.push(['nomi mas xu','飲みます','のみます','drink alcohol',16,0,'1','のんで','のまない','のむ']);
+	holdTable.push(['hajime mas xu','始まます','はじめます','start, begin',16,0,'2','はじめて','はじめない','はじめる']);
+	holdTable.push(['ken ga kushi mas xu','見学します','けんがくします','tour, visit a place to study',16,0,'3','けんがくして','けんがくしない','けんがくする']);
+	holdTable.push(['denwa shi mas xu','電話します','でんわします','phone',16,0,'3','でんわして','でんわしない','でんわする']);
 	
-	holdTable.push(['wakai','若い','わかい','young',16,0,'','','','']);
-	holdTable.push(['nakai','長い','ながい','long',16,0,'','','','']);
-	holdTable.push(['mijikai','短い','みじかい','short',16,0,'','','','']);
-	holdTable.push(['akarui','明るい','あかるい','bright, light',16,0,'','','','']);
-	holdTable.push(['kurai','暗い','くらい','dark',16,0,'','','','']);
-//	holdTable.push(['atama gaii','頭がいい','あたまがいい','clever, smart',16,0,'','','','']);
+	holdTable.push(['wakai','若い','わかい','young',16,0,'I','わか くないです','わか かったです','わか くなかったです']);
+	holdTable.push(['nakai','長い','ながい','long',16,0,'I','なが くないです','なが かったです','なが くなかったです']);
+	holdTable.push(['mijikai','短い','みじかい','short',16,0,'I','みじか くないです','みじか かったです','みじか くなかったです']);
+	holdTable.push(['akarui','明るい','あかるい','bright, light',16,0,'I','あかる くないです','あかる かったです','あかる くなかったです']);
+	holdTable.push(['kurai','暗い','くらい','dark',16,0,'I','くら くないです','くら かったです','くら くなかったです']);
+//	holdTable.push(['atama gaii','頭がいい','あたまがいい','clever, smart',16,0,'あたまがい くないです','あたまがい かったです','あたまがい くなかったです']);
 	holdTable.push(['karada','体','からだ','body, health',16,0,'','','','']);
 	holdTable.push(['atama','頭','あたま','head, brain',16,0,'','','','']);
 	holdTable.push(['kami','髪','かみ','hair',16,0,'','','','']);
@@ -1522,26 +1623,27 @@ function loadHoldTable() {
 	holdTable.push(['Bera kurusu','ベラクルス','&nbsp;','Veracruz (in Mexico)',16,0,'','','','']);
 //	holdTable.push(['Beto namu','ベトナム','&nbsp;','Vietnam',16,0,'','','','']);
 //	holdTable.push(['Fue','フエ','&nbsp;','Hue (in Vietnam)',16,0,'','','','']);
-	holdTable.push(['Umeda','梅田','うめだ','a district in Osaka',16,0,'','','','']);
-
-	holdTable.push(['oboe mas xu','覚えます','おぼえます','memorize',17,0,'II','おぼえて','おぼえない','']);
-	holdTable.push(['wasure mas xu','忘れます','わすれます','forget',17,0,'II','わすれて','わすられい','']);
-	holdTable.push(['nakushi mas xu','なくします','なくします','lose',17,0,'I','なくして','なくさない','']);
-	holdTable.push(['harai mas xu','払います','はらいます','pay',17,0,'I','はらって','はらわない','']);
-	holdTable.push(['kae shi mas xu','返します','かえします','give back, return',17,0,'I','かえして','かえさない','']);
-	holdTable.push(['dekake mas xu','出かけます','でかけます','go out',17,0,'II','でかけて','でない','']);
-	holdTable.push(['nugi mas xu','脱ぎます','ぬぎます','take off (clothes, shoes, etc.)',17,0,'I','ぬいで','ぬがない','']);
-	holdTable.push(['motte iki mas xu','持って行ます','もっていきます','take (something)',17,0,'I','もっていって','もっていかない','']);
-	holdTable.push(['motte ki mas xu','持って来ます','もってきます','bring (something)',17,0,'III','もってきて','もってこない','']);
-	holdTable.push(['shinpai shi mas xu','心配します','しんぱいします','worry',17,0,'III','しんぱいして','しんぱいしない','']);
-	holdTable.push(['zangyō shi mas xu','残業します','ざんぎょうします','work overtime',17,0,'III','ざんぎょうして','ざんぎょうしない','']);
-	holdTable.push(['shutchō shi mas xu','出張します','しゅっちょうします','go on a business trip',17,0,'III','しゅっちょうして','しゅっちょうしない','']);
-	holdTable.push(['kusuri o nomi mas xu','[薬を]　飲みます','[くすりお]　のみます','take medicine',17,0,'I','のみで','のまない','']);
-	holdTable.push(['o furo ni hairi mas xu','[おふろに]　入ります','[おふろに]　はいります','take a bath',17,0,'I','はいって','はいらない','']);
+	holdTable.push(['Umeda','梅田','うめだ','Umeda. A district in Osaka',16,0,'','','','']);
 	
-	holdTable.push(['tai setsu','大切[な]','たいせつ','important, precious',17,0,'','','','']);
-	holdTable.push(['dai jōbu','大丈夫[な]','だいじょうぶ[な]','all right',17,0,'','','','']);
-	holdTable.push(['abunai','危ない','あぶ　ない','dangerous',17,0,'','','','']);
+	holdTable.push(['oboe mas xu','覚えます','おぼえます','memorize',17,0,'2','おぼえて','おぼえない','おぼえる']);
+	holdTable.push(['wasure mas xu','忘れます','わすれます','forget',17,0,'2','わすれて','わすれない','わすれる']);
+	holdTable.push(['nakushi mas xu','なくします','なくします','lose',17,0,'1','なくして','なくさない','なくす']);
+	holdTable.push(['harai mas xu','払います','はらいます','pay',17,0,'1','はらって','はらわない','はらう']);
+	holdTable.push(['kae shi mas xu','返します','かえします','give back, return',17,0,'1','かえして','かえさない','かえす']);
+	holdTable.push(['dekake mas xu','出かけます','でかけます','go out',17,0,'2','でかけて','でかけない','でかける']);
+	holdTable.push(['nugi mas xu','脱ぎます','ぬぎます','take off (clothes, shoes, etc.)',17,0,'1','ぬいで','ぬがない','ぬぐ']);
+	holdTable.push(['motte iki mas xu','持って行ます','もっていきます','take (something)',17,0,'1','もっていって','もっていかない','もっていく']);
+	holdTable.push(['motte ki mas xu','持って来ます','もってきます','bring (something)',17,0,'3','もってきて','もってこない','もってくる']);
+	holdTable.push(['shinpai shi mas xu','心配します','しんぱいします','worry',17,0,'3','しんぱいして','しんぱいしない','しんぱいする']);
+	holdTable.push(['zangyō shi mas xu','残業します','ざんぎょうします','work overtime',17,0,'3','ざんぎょうして','ざんぎょうしない','ざんぎょうする']);
+	holdTable.push(['shutchō shi mas xu','出張します','しゅっちょうします','go on a business trip',17,0,'3','しゅっちょうして','しゅっちょうしない','しゅっちょうする']);
+	holdTable.push(['kusuri o nomi mas xu','[薬を]　飲みます','[くすりお]　のみます','take medicine',17,0,'1','のみで','のまない','のむ']);
+	holdTable.push(['o furo ni hairi mas xu','[おふろに]　入ります','[おふろに]　はいります','take a bath',17,0,'1','はいって','はいらない','はいる']);
+	
+	holdTable.push(['tai setsu','大切[な]','たいせつ','important, precious',17,0,'N','たいせつ じゃ　ありません','たいせつ でした','たいせつ じゃ　ありませんでした']);
+	holdTable.push(['dai jōbu','大丈夫[な]','だいじょうぶ[な]','all right',17,0,'N','だいじょうぶ じゃ　ありません','だいじょうぶ でした','だいじょうぶ じゃ　ありませんでした']);
+	holdTable.push(['abunai','危ない','あぶない','dangerous',17,0,'I','あぶな くないです','あぶな かったです','あぶな くなかったです']);
+	
 	holdTable.push(['kinen','禁煙','きんえん','no smoking',17,0,'','','','']);
 	holdTable.push(['kenkō hoken-shō','[健康]保険証','[けんこう]　ほけんしょう','health insurance card',17,0,'','','','']);
 //	holdTable.push(['mondai','問題','もんだい','question, problem, trouble',17,0,'','','','']);
@@ -1555,110 +1657,198 @@ function loadHoldTable() {
 	holdTable.push(['２，３ nichi','２，３日','２，３にち','two or three days',17,0,'','','','']);
 	holdTable.push(['２，３～','２，３～','&nbsp;','two or three ~ (where ~ is a counter suffix)',17,0,'','','','']);	
 //	holdTable.push(['sensei','先生','せんせい','doctor (used when addressing a medical doctor)',17,0,'','','','']);
-	holdTable.push(['～made ni','～まで　に','&nbsp;','before ~, by ~ (indicating time limit)',17,0,'','','','']);
-	holdTable.push(['des xu kara','です　から','&nbsp;','therefore, so',17,0,'','','','']);
+	holdTable.push(['～made ni','～まで　に','&nbsp;','before ~, by ~ (indicating time limit)',17,0,'A','','','']);
+	holdTable.push(['des xu kara','です　から','&nbsp;','therefore, so',17,0,'A','','','']);
 	holdTable.push(['dō shimashita ka','どう　しましたか','&nbsp;','What\'s the matter?',17,0,'','','','']);
 	holdTable.push(['nodo','のど','&nbsp;','throat',17,0,'','','','']);
 	holdTable.push(['[～ga] itai des xu','[～が]　痛いです','[～が]　いたいです','have a pain in my ~',17,0,'','','','']);
 	holdTable.push(['kaze','かぜ','&nbsp;','cold,flu',17,0,'','','','']);
 	holdTable.push(['kore kara','これ　から','&nbsp;','and, furthermore',17,0,'','','','']);
 	holdTable.push(['odai shini','お大　事に','おだいじに','Take care of yourself (said to people who are ill)',17,0,'','','','']);
+	
+	holdTable.push(['','病気','びょうき','illness',17,0,'X','','','']);
+	holdTable.push(['','どう　しましたか。','&nbsp;','What seems to be the problem?',17,0,'X','','','']);
+	holdTable.push(['','頭　が　痛い','あたま　が　いたい','have a headache',17,0,'X','','','']);
+	holdTable.push(['','おなか　が　痛い','おなか　が　いたい','have a stomach ache',17,0,'X','','','']);
+	holdTable.push(['','歯　が　痛い','は　が　いたい','have a toothache',17,0,'X','','','']);
+	holdTable.push(['','熱　が　あります','ねつ　が　あります','have a temperature, fever',17,0,'X','','','']);
+	holdTable.push(['','せき　が　出ます','せき　が　でます','have a cough',17,0,'X','','','']);
+	holdTable.push(['','鼻水　が　出ます','はな　みず　が　でます','have a runny nose',17,0,'X','','','']);
+	holdTable.push(['','血　が　出ます','ち　が　でます','bleed',17,0,'X','','','']);
+	holdTable.push(['','吐き気　が　します','はきけ　が　します','feel sick, nauseous',17,0,'X','','','']);
+	holdTable.push(['','寒気　が　します','さむけ　が　します','feel a chill',17,0,'X','','','']);
+	holdTable.push(['','めまい　が　します','&nbsp;','feel dizzy',17,0,'X','','','']);
+	holdTable.push(['','下痢　を　します','げり　を　します','have diarrhea',17,0,'X','','','']);
+	holdTable.push(['','弁日　を　します','べんび　を　します','be constipated',17,0,'X','','','']);
+	holdTable.push(['','けが　を　します','&nbsp;','get injured',17,0,'X','','','']);
+	holdTable.push(['','やけど　を　します','&nbsp;','get burnt',17,0,'X','','','']);
+	holdTable.push(['','しょくよく　が　ありません','食欲　が　ありません','have no appetite',17,0,'X','','','']);
+	holdTable.push(['','肩　が　こります','かた　が　こります','feel stiff in one\'s shoulders',17,0,'X','','','']);
+	holdTable.push(['','体　が　だるい','からだ　が　だるい','feel weary',17,0,'X','','','']);
+	holdTable.push(['','かゆい','&nbsp;','itchy',17,0,'X','','','']);
+	holdTable.push(['','かぜ','&nbsp;','cold',17,0,'X','','','']);
+	holdTable.push(['','インフルエンザ','&nbsp;','flu, influenza',17,0,'X','','','']);
+	holdTable.push(['','盲腸','もうしょう','appendicitis',17,0,'X','','','']);
+	holdTable.push(['','ぎっくり腰','ぎっくり　ごし','slipped disc',17,0,'X','','','']);
+	holdTable.push(['','ねんざ','&nbsp;','sprain',17,0,'X','','','']);
+	holdTable.push(['','骨折','こっせつ','bone fracture',17,0,'X','','','']);
+	holdTable.push(['','二日酔い','ふつかよい','hangover',17,0,'X','','','']);
+	
+	holdTable.push(['','骨','ほね','bone',17,0,'X','','','']);
+	holdTable.push(['','尻','しり','buttocks',17,0,'X','','','']);
+	holdTable.push(['','腰','こし','lower back',17,0,'X','','','']);
+	holdTable.push(['','膝','ひざ','knee',17,0,'X','','','']);
+	holdTable.push(['','爪','つめ','nail',17,0,'X','','','']);
+	holdTable.push(['','指','ゆび','finger',17,0,'X','','','']);
+	holdTable.push(['','肘','ひじ','elbow',17,0,'X','','','']);
+	holdTable.push(['','腕','うで','arm',17,0,'X','','','']);
+	holdTable.push(['','肩','かた','shoulder',17,0,'X','','','']);
+	holdTable.push(['','胸','むね','chest',17,0,'X','','','']);
+	holdTable.push(['','首','くび','neck',17,0,'X','','','']);
+	holdTable.push(['','顎','あご','chin',17,0,'X','','','']);
+	
+	holdTable.push(['','できます','できます','be able to, can',18,0,'2','できて','できない','できる']);
+	holdTable.push(['','洗います','あらいます','wash',18,0,'1','あらって','あらわない','あらう']);
+	holdTable.push(['','弾きます','ひきます','play (stringed instrument or piano, etc.)',18,0,'1','ひいて','ひかない','ひく']);
+	holdTable.push(['','歌います','うたいます','sing',18,0,'1','うたって','うたわない','うたう']);
+	holdTable.push(['','集めます','あつめます','collect, gather',18,0,'2','あつめて','あつめない','あつめる']);
+	holdTable.push(['','捨てます','すてます','throw away',18,0,'2','すてて','すてない','すてる']);
+	holdTable.push(['','換えます','かえます','exchange, change',18,0,'2','かえて','かえない','かえる']);
+	holdTable.push(['','運転します','うんてんします','drive',18,0,'3','うんてんして','うんてんしない','うんてんする']);
+	holdTable.push(['','予約します','よやくします','reserve, book',18,0,'3','よやくして','よやくしない','よやくする']);
+//	holdTable.push(['','見学します','けんがくします','visit some place for study',18,0,'','','','']);
 
-	holdTable.push(['','できます','&nbsp;','be able to, can',18,0,'','','','']);
-	holdTable.push(['','洗います','あらいます','wash',18,0,'','','','']);
-	holdTable.push(['','弾きます','ひきます','play (stringed instrument or piano, etc.)',18,0,'','','','']);
-	holdTable.push(['','歌います','うたいます','sing',18,0,'','','','']);
-	holdTable.push(['','集めます','あつめます','collect, gather',18,0,'','','','']);
-	holdTable.push(['','捨てます','すてます','throw away',18,0,'','','','']);
-	holdTable.push(['','換えます','かえます','exchange, change',18,0,'','','','']);
-	holdTable.push(['','運転します','うんてんします','drive',18,0,'','','','']);
-	holdTable.push(['','予約します','よやくします','reserve, book',18,0,'','','','']);
-	holdTable.push(['','見学します','けんがくします','visit some place for study',18,0,'','','','']);
 	holdTable.push(['','ピアノ','&nbsp;','piano',18,0,'','','','']);
 	holdTable.push(['','～メートル','&nbsp;','~ meter',18,0,'','','','']);
-	holdTable.push(['','国際～','こくさい～','international ~',18,0,'','','','']);
+//	holdTable.push(['','国際～','こくさい～','international ~',18,0,'','','','']);
 	holdTable.push(['','現金','げんきん','cash',18,0,'','','','']);
 	holdTable.push(['','趣味','しゅみ','hobby',18,0,'','','','']);
 	holdTable.push(['','日記','にっき','diary',18,0,'','','','']);
 	holdTable.push(['','お祈り','おいのり','prayer',18,0,'','','','']);
-	holdTable.push(['','お祈りをします','おいのりをします','pray',18,0,'','','','']);
-	holdTable.push(['','課長','かちょう','section chief',18,0,'','','','']);
-	holdTable.push(['','部長','ぶちょう','department chief',18,0,'','','','']);
-	holdTable.push(['','社長','しゃちょう','president of a company',18,0,'','','','']);
+	holdTable.push(['','お祈り を します','おいのり を します','pray',18,0,'','','','']);
+	holdTable.push(['','課長','かちょう','section head',18,0,'','','','']);
+	holdTable.push(['','部長','ぶちょう','department head',18,0,'','','','']);
+	holdTable.push(['','社長','しゃちょう','company president',18,0,'','','','']);
 	holdTable.push(['','動物','どうぶつ','animal',18,0,'','','','']);
 	holdTable.push(['','馬','うま','horse',18,0,'','','','']);
-	holdTable.push(['','へえ','&nbsp;','Really! (used when expressing surprise)',18,0,'','','','']);
-	holdTable.push(['','それはおもしろいですね','&nbsp;','That must be interesting',18,0,'','','','']);
+	holdTable.push(['','インターネット','&nbsp;','the Internet',18,0,'','','','']);
+	holdTable.push(['tokuni','特に','とくに','especially',18,0,'','','','']);
+	holdTable.push(['','へえ','&nbsp;','What! Really! (used when expressing surprise)',18,0,'','','','']);
+	holdTable.push(['','それ は おもしろい ですね','&nbsp;','That\'s interesting, isn\'t it',18,0,'','','','']);
 	holdTable.push(['','なかなか','&nbsp;','not easily (used with negatives)',18,0,'','','','']);
-	holdTable.push(['','牧場','ぼくじょう','ranch, stock farm',18,0,'','','','']);
+//	holdTable.push(['','牧場','ぼくじょう','ranch, stock farm',18,0,'','','','']);
 	holdTable.push(['','ほんとうですか','&nbsp;','Really?',18,0,'','','','']);
-	holdTable.push(['','ぜひ','&nbsp;','by all means',18,0,'','','','']);
+	holdTable.push(['','ぜひ','&nbsp;','by all means, really',18,0,'','','','']);
+	holdTable.push(['Furusato','故郷','ふるさと','A song title meaning \'Home Town\'',18,0,'','','','']);
+	holdTable.push(['','ビートルズ','&nbsp;','The Beatles',18,0,'','','','']);
+	holdTable.push(['','秋葉原','あきはばち','Akihabara. A District in Tokyo',18,0,'','','','']);
+	
+	holdTable.push(['','飛ぶ','とぶ','fly',18,0,'X','','','']);
+	holdTable.push(['','跳ぶ','とぶ','jump',18,0,'X','','','']);
+	holdTable.push(['','登る','のぼる','climb',18,0,'X','','','']);
+	holdTable.push(['','走る','はしる','run',18,0,'X','','','']);
+	holdTable.push(['','泳ぐ','およぐ','swim',18,0,'X','','','']);
+	holdTable.push(['','もぐる','もぐる','dive',18,0,'X','','','']);
+	holdTable.push(['','飛び込む','とびこむ','dive into',18,0,'X','','','']);
+	holdTable.push(['','逆立ちする','さかだらする','do a handstand',18,0,'X','','','']);
+	holdTable.push(['','はう','はう','crawl',18,0,'X','','','']);
+	holdTable.push(['','はる','はる','kick',18,0,'X','','','']);
+	holdTable.push(['','振る','ふる','wave',18,0,'X','','','']);
+	holdTable.push(['','持ち上げる','もちあげる','lift',18,0,'X','','','']);
+	holdTable.push(['','投げる','なげる','throw',18,0,'X','','','']);
+	holdTable.push(['','たたく','たたく','pat, tap',18,0,'X','','','']);
+	holdTable.push(['','引く','ひく','pull',18,0,'X','','','']);
+	holdTable.push(['','押す','おす','push',18,0,'X','','','']);
+	holdTable.push(['','曲げる','まげる','bend',18,0,'X','','','']);
+	holdTable.push(['','のばす','のばす','extend',18,0,'X','','','']);
+	holdTable.push(['','転ぶ','ころぶ','fall down',18,0,'X','','','']);
+	holdTable.push(['','振り向く','ふりむく','look back',18,0,'X','','','']);
 
-	holdTable.push(['','登ります','のぼります','climb',19,0,'','','','']);
-	holdTable.push(['','山に登ります','やまにのぼります','climb a mountain',19,0,'','','','']);
-	holdTable.push(['','泊まります','とまります','stay',19,0,'','','','']);
-	holdTable.push(['','ホテルに泊まります','ホテルにとまります','stay at a hotel',19,0,'','','','']);
-	holdTable.push(['','掃除します','そうじします','clean (a room)',19,0,'','','','']);
-	holdTable.push(['','洗濯します','せんたくします','wash (clothes)',19,0,'','','','']);
-	holdTable.push(['','練習します','れんしゅうします','practice',19,0,'','','','']);
-	holdTable.push(['','なります','なります','become',19,0,'','','','']);
+	holdTable.push(['','登ります, 上ります','のぼります','climb, go up',19,0,'1','のぼって','のぼらない','のぼる']);
+	holdTable.push(['','山 に 登ります','やま に のぼります','climb a mountain',19,0,'1','のぼって','のぼらない','のぼる']);
+	holdTable.push(['','泊まります','とまります','stay',19,0,'1','とまって','とまらない','とまる']);
+	holdTable.push(['','ホテル に 泊まります','ホテル に とまります','stay [at a hotel]',19,0,'1','とまって','とまらない','とまる']);
+	holdTable.push(['','掃除します','そうじします','clean (a room)',19,0,'3','そうじして','そうじしない','そうじする']);
+	holdTable.push(['','洗濯します','せんたくします','wash (clothes)',19,0,'3','せんたくして','せんたくしない','せんたくする']);
+	holdTable.push(['','なります','なります','become',19,0,'1','なって','ならない','なる']);
+	
 	holdTable.push(['','眠い','ねむい','sleepy',19,0,'','','','']);
 	holdTable.push(['','強い','つよい','strong',19,0,'','','','']);
 	holdTable.push(['','弱い','よわい','weak',19,0,'','','','']);
-	holdTable.push(['','調子がいい','ちょうしがいい','be in good condition',19,0,'','','','']);
-	holdTable.push(['','調子が悪い','ちょうしがわるい','be in bad condition',19,0,'','','','']);
-	holdTable.push(['','調子','ちょうし','condition',19,0,'','','','']);
-	holdTable.push(['','ゴルフ','&nbsp;','golf',19,0,'','','','']);
-	holdTable.push(['','ゴルフをします','&nbsp;','play golf',19,0,'','','','']);
-	holdTable.push(['','相撲','すもう','sumo wrestling',19,0,'','','','']);
-	holdTable.push(['','パチンコ','&nbsp;','pinball game',19,0,'','','','']);
-	holdTable.push(['','パチンコをします','&nbsp;','play pachinko',19,0,'','','','']);
+	holdTable.push(['','練習','れんしゅう','practice　(~[を] します:practice)',19,0,'','','','']);
+//	holdTable.push(['','調子がいい','ちょうしがいい','be in good condition',19,0,'','','','']);
+//	holdTable.push(['','調子が悪い','ちょうしがわるい','be in bad condition',19,0,'','','','']);
+	holdTable.push(['','ゴルフ','&nbsp;','golf　(~[を] します:play golf)',19,0,'','','','']);
+	holdTable.push(['','相撲','すもう','sumo wrestling　(~[を] します:wrestle)',19,0,'','','','']);
 	holdTable.push(['','お茶','おちゃ','tea ceremony',19,0,'','','','']);
 	holdTable.push(['','日','ひ','day, date',19,0,'','','','']);
+	holdTable.push(['','調子','ちょうし','condition',19,0,'','','','']);
+//	holdTable.push(['','パチンコ','&nbsp;','pinball game',19,0,'','','','']);
+//	holdTable.push(['','パチンコをします','&nbsp;','play pachinko',19,0,'','','','']);
 	holdTable.push(['','一度','いちど','once',19,0,'','','','']);
 	holdTable.push(['','一度も','いちども','not once, never (used with negatives)',19,0,'','','','']);
 	holdTable.push(['','だんだん','&nbsp;','gradually',19,0,'','','','']);
 	holdTable.push(['','もうすぐ','&nbsp;','soon',19,0,'','','','']);
 	holdTable.push(['','おかげさまで','&nbsp;','Thank you (used when expressing gratitude for help received)',19,0,'','','','']);
+	holdTable.push(['','でも','&nbsp;','but',19,0,'','','','']);
 	holdTable.push(['','乾杯','かんぱい','Bottoms up!, Cheers!',19,0,'','','','']);
-	holdTable.push(['','実は','じつは','actually, to tell the truth',19,0,'','','','']);
-	holdTable.push(['','ダイエット','&nbsp;','diet',19,0,'','','','']);
-	holdTable.push(['','ダイエットをします','&nbsp;','go on a diet',19,0,'','','','']);
-	holdTable.push(['','何回も','なんかいも','many times',19,0,'','','','']);
-	holdTable.push(['','しかし','&nbsp;','but, however',19,0,'','','','']);
-	holdTable.push(['','無理','むり','excessive, impossible',19,0,'','','','']);
+//	holdTable.push(['','実は','じつは','actually, to tell the truth',19,0,'','','','']);
+	holdTable.push(['','ダイエット','&nbsp;','diet　(~[を] します:go on a diet)',19,0,'','','','']);
+//	holdTable.push(['','ダイエットをします','&nbsp;','go on a diet',19,0,'','','','']);
+	holdTable.push(['','無理[な]','むり[な]','excessive, impossible',19,0,'N','むり じゃ　ありません','むり でした','むり じゃ　ありませんでした']);
+//	holdTable.push(['','何回も','なんかいも','many times',19,0,'','','','']);
+//	holdTable.push(['','しかし','&nbsp;','but, however',19,0,'','','','']);
 	holdTable.push(['','体にいい','からだにいい','good for one\'s health',19,0,'','','','']);
-	holdTable.push(['','ケーキ','&nbsp;','cake',19,0,'','','','']);
+//	holdTable.push(['','ケーキ','&nbsp;','cake',19,0,'','','','']);
+	holdTable.push(['','東京スカイツリー','とうきょうスカイツリー','Tokyo Sky Tree (broadcasting tower with observation deck in Tokyo)',19,0,'','','','']);
 	holdTable.push(['','葛飾北斎','かつしかほくさい','(Katsushika Hokusai) famous Edo period wood block artist and painter (1760-1849)',19,0,'','','','']);
+	
+	holdTable.push(['','茶道 (お茶)','さどう (おちゃ)','tea ceremony',19,0,'X','','','']);
+	holdTable.push(['','華道　（生け花）','かどう　（いけばな）','flower arranging',19,0,'X','','','']);
+	holdTable.push(['','書道','しょどう','calligraphy',19,0,'X','','','']);
+	holdTable.push(['','歌舞伎','かぶき','Kabuki<br/>(traditional Japanese musical drama)',19,0,'X','','','']);
+	holdTable.push(['','能','のう','Noh',19,0,'X','','','']);
+	holdTable.push(['','文楽','ぶんらく','Bunraku',19,0,'X','','','']);
+	holdTable.push(['','相撲','すも','sumo',19,0,'X','','','']);
+	holdTable.push(['','柔道','じゅうどう','judo',19,0,'X','','','']);
+	holdTable.push(['','剣道','けんどう','kendo',19,0,'X','','','']);
+	holdTable.push(['','空手','からて','karate',19,0,'X','','','']);
+	holdTable.push(['','漫才、落語','まんさい、らくご','manzai, rakugo',19,0,'X','','','']);
+	holdTable.push(['','囲碁、将棋','いご、しょうぎ','go, shogi',19,0,'X','','','']);
+	holdTable.push(['','パチンコ','&nbsp;','pachinko',19,0,'X','','','']);
+	holdTable.push(['','カラオケ','&nbsp;','karaoke',19,0,'X','','','']);
+	holdTable.push(['','盆踊り','ぼんおどり','bon dance',19,0,'X','','','']);
 
-	holdTable.push(['','要ります','いります','need, require',20,0,'','','','']);
-	holdTable.push(['','ビザが要ります','ビザがいります','need, require a visa',20,0,'','','','']);
-	holdTable.push(['','調べます','しらべます','check, investigate',20,0,'','','','']);
-	holdTable.push(['','直します','なおします','repair, correct',20,0,'','','','']);
-	holdTable.push(['','修理します','しゅうりします','repair',20,0,'','','','']);
-	holdTable.push(['','電話します','でんわします','to phone',20,0,'','','','']);
+	holdTable.push(['','要ります','いります','need, require',20,0,'1','いって','いらない','いる']);
+	holdTable.push(['','ビザ　が　要ります','ビザ　が　いります','need, require a visa',20,0,'1','いって','いらない','いる']);
+	holdTable.push(['','調べます','しらべます','check, investigate',20,0,'2','しらべて','しらべない','しらべる']);
+//	holdTable.push(['','直します','なおします','repair, correct',20,0,'','','','']);
+	holdTable.push(['','修理します','しゅうりします','repair',20,0,'3','しゅうりして','しゅうりしない','しゅうりする']);
+//	holdTable.push(['','電話します','でんわします','to phone',20,0,'','','','']);
+	
 	holdTable.push(['','僕','ぼく','I (an infomal equivalent of watshi used by men)',20,0,'','','','']);
 	holdTable.push(['','君','きみ','you (an informal equivalent of anata used by men)',20,0,'','','','']);
 	holdTable.push(['','～君','～くん','Mr. (an informal equivalent of ~san used by men)',20,0,'','','','']);
 	holdTable.push(['','うん','&nbsp;','yes (an informal equivalent of hai)',20,0,'','','','']);
 	holdTable.push(['','ううん','&nbsp;','no (an informal equivalent of iie)',20,0,'','','','']);
-	holdTable.push(['','サラレーマン','&nbsp;','salaried worker, office worker',20,0,'','','','']);
+//	holdTable.push(['','サラレーマン','&nbsp;','salaried worker, office worker',20,0,'','','','']);
 	holdTable.push(['','ことば','&nbsp;','word, language',20,0,'','','','']);
-	holdTable.push(['','物価','ぶっか','commodity prices',20,0,'','','','']);
+//	holdTable.push(['','物価','ぶっか','commodity prices',20,0,'','','','']);
 	holdTable.push(['','着物','きもの','kimono (traditional Japanese attire)',20,0,'','','','']);
 	holdTable.push(['','ビザ','&nbsp;','visa',20,0,'','','','']);
 	holdTable.push(['','初め','はじめ','the beginning',20,0,'','','','']);
-	holdTable.push(['','終わり','おわり','the end',20,0,'','','','']);
-	holdTable.push(['','こっち','&nbsp;','this way, this place (an informal equivalent of kochira)',20,0,'','','','']);
-	holdTable.push(['','そっち','&nbsp;','this way, that place (an informal equivalent of sochira)',20,0,'','','','']);
-	holdTable.push(['','あっち','&nbsp;','this way, that place over there (an informal equivalent of achira)',20,0,'','','','']);
-	holdTable.push(['','どっち','&nbsp;','which one (between two things), which way, where (an informal equivalent of dochira)',20,0,'','','','']);
-	holdTable.push(['','あの間','あのあいだ','the other day',20,0,'','','','']);
+	holdTable.push(['','終わり','おわり','the end of ~, The End',20,0,'','','','']);
+	holdTable.push(['','こっち','&nbsp;','this way, this place (an informal equivalent of こちら)',20,0,'','','','']);
+	holdTable.push(['','そっち','&nbsp;','that way, that place near the listener(an informal equivalent of そちら)',20,0,'','','','']);
+	holdTable.push(['','あっち','&nbsp;','that way, that place over there (an informal equivalent of あちら)',20,0,'','','','']);
+	holdTable.push(['','どっち','&nbsp;','which one (of two things), which way, where (an informal equivalent of どちら)',20,0,'','','','']);
+//	holdTable.push(['','あの間','あのあいだ','the other day',20,0,'','','','']);
 	holdTable.push(['','みんなで','&nbsp;','all together',20,0,'','','','']);
 	holdTable.push(['','～けど','&nbsp;','but (an infomal equivalent of ga)',20,0,'','','','']);
-	holdTable.push(['','国へ帰るの','くにへかえるの','Are you going back to your country?',20,0,'','','','']);
-	holdTable.push(['','どうするの','&nbsp;','What will you do?',20,0,'','','','']);
-	holdTable.push(['','どうしようかな','&nbsp;','What shall I do?',20,0,'','','','']);
+	holdTable.push(['','おなか　が　いっぽいです','&nbsp;','I\'m full',20,0,'','','','']);
+//	holdTable.push(['','国へ帰るの','くにへかえるの','Are you going back to your country?',20,0,'','','','']);
+//	holdTable.push(['','どうするの','&nbsp;','What will you do?',20,0,'','','','']);
+//	holdTable.push(['','どうしようかな','&nbsp;','What shall I do?',20,0,'','','','']);
 	holdTable.push(['','よかったら','&nbsp;','if you like',20,0,'','','','']);
 	holdTable.push(['','いろいろ','&nbsp;','various',20,0,'','','','']);
 
@@ -1667,9 +1857,10 @@ function loadHoldTable() {
 	holdTable.push(['','足る','たります','be enough, be sufficient',21,0,'','','','']);
 	holdTable.push(['','勝つ','かちます','win',21,0,'','','','']);
 	holdTable.push(['','負ける','まけます','lose, be beaten',21,0,'','','','']);
-	holdTable.push(['','あります','&nbsp;','be held, take place',21,0,'','','','']);
+	holdTable.push(['','あります','あります','be held, take place',21,0,'','','','']);
 	holdTable.push(['','お祭があります','おまつりがあります','a festival is held, takes place',21,0,'','','','']);
 	holdTable.push(['','役に立ちます','やくにたちます','be useful',21,0,'','','','']);
+	
 	holdTable.push(['','むだ','&nbsp;','wasteful',21,0,'','','','']);
 	holdTable.push(['','不便','ふべん','inconvenient',21,0,'','','','']);
 	holdTable.push(['','同じ','おなじ','the same',21,0,'','','','']);
@@ -1707,12 +1898,13 @@ function loadHoldTable() {
 
 	holdTable.push(['','着ます','きます','put on (a shirt, etc.)',22,0,'','','','']);
 	holdTable.push(['','シャツを着ます','シャツをきます','put on a shirt',22,0,'','','','']);
-	holdTable.push(['','はきます','&nbsp;','put on (shoes, trousers, etc.)',22,0,'','','','']);
+	holdTable.push(['','はきます','はきます','put on (shoes, trousers, etc.)',22,0,'','','','']);
 	holdTable.push(['','靴をはきます','くつをはきます','put on shoes',22,0,'','','','']);
-	holdTable.push(['','かぶります','&nbsp;','put on (a hat, etc)',22,0,'','','','']);
+	holdTable.push(['','かぶります','かぶります','put on (a hat, etc)',22,0,'','','','']);
 	holdTable.push(['','帽子をかぶります','ぼうしをかぶります','put on a hat',22,0,'','','','']);
 	holdTable.push(['','眼鏡をかけます','めがねをかけます','put on glasses',22,0,'','','','']);
 	holdTable.push(['','生まれます','うまれます','be born',22,0,'','','','']);
+	
 	holdTable.push(['','コート','&nbsp;','coat',22,0,'','','','']);
 	holdTable.push(['','スーツ','&nbsp;','suit',22,0,'','','','']);
 	holdTable.push(['','セーター','&nbsp;','sweater',22,0,'','','','']);
@@ -1748,6 +1940,7 @@ function loadHoldTable() {
 	holdTable.push(['','気をつけます','きをつけます','pay attention, take care ',23,0,'','','','']);
 	holdTable.push(['','車に気をつけます','くるまにきをつけます','pay attention to cars',23,0,'','','','']);
 	holdTable.push(['','引っ越しします','ひっこしします','move (house)',23,0,'','','','']);
+	
 	holdTable.push(['','電気屋','でんきや','electrician',23,0,'','','','']);
 	holdTable.push(['','～屋','～や','person of ~ shop',23,0,'','','','']);
 	holdTable.push(['','サイズ','&nbsp;','size',23,0,'','','','']);
@@ -1768,7 +1961,7 @@ function loadHoldTable() {
 	holdTable.push(['','建物','たてもの','building',23,0,'','','','']);
 	holdTable.push(['','外国人登録証','がいこくじんとうろくしょう','alien registration card',23,0,'','','','']);
 
-	holdTable.push(['','くれます','&nbsp;','give(me)',24,0,'','','','']);
+	holdTable.push(['','くれます','くれます','give(me)',24,0,'','','','']);
 	holdTable.push(['','連れて行きます','つれていきます','take (someone)',24,0,'','','','']);
 	holdTable.push(['','連れて来ます','つれてきます','bring (someone)',24,0,'','','','']);
 	holdTable.push(['','送ります','おくります','escort, go with',24,0,'','','','']);
@@ -1776,6 +1969,7 @@ function loadHoldTable() {
 	holdTable.push(['','紹介します','しょうかいします','introduce',24,0,'','','','']);
 	holdTable.push(['','案内します','あんないします','show around, show the way',24,0,'','','','']);
 	holdTable.push(['','説明します','せつめいします','explain',24,0,'','','','']);
+	
 	holdTable.push(['','コーヒーをいれます','&nbsp;','make coffee',24,0,'','','','']);
 	holdTable.push(['','おじいさん','&nbsp;','grandfather, old man',24,0,'','','','']);
 	holdTable.push(['','おじいちゃん','&nbsp;','grandfather, old man',24,0,'','','','']);
@@ -1796,6 +1990,7 @@ function loadHoldTable() {
 	holdTable.push(['','駅に着きます','えきにつきます','arrive at the station',25,0,'','','','']);
 	holdTable.push(['','留学します','りゅうがくします','study abroad',25,0,'','','','']);
 	holdTable.push(['','年を取ります','としをとります','grow old',25,0,'','','','']);
+	
 	holdTable.push(['','田舎','いなか','countryside, hometown',25,0,'','','','']);
 	holdTable.push(['','大使館','たいしかん','embassy',25,0,'','','','']);
 	holdTable.push(['','グループ','&nbsp;','group',25,0,'','','','']);
@@ -1810,6 +2005,7 @@ function loadHoldTable() {
 	holdTable.push(['','いろいろお世話になりました','いろいろおせわになりました','Thank you for everything you have done for me',25,0,'','','','']);
 	holdTable.push(['','頑張ります','がんばります','do one\'s best',25,0,'','','','']);
 	holdTable.push(['','どうぞお元気で','どうぞおげんきで','Best of luck (said when expecting a long separation)',25,0,'','','','']);
+	// 0=romaji, 1=kanji, 2=hirakata, 3=eng, 4=chapter, 5=status, 6=verb group, 7=teform, 8=naiform, 9=dictform
 }
 document.getElementById('nihongo').addEventListener('click', (event) => {
 	toggleJapanese();
@@ -1821,11 +2017,17 @@ function toggleJapanese() {
 		var cell2 = document.querySelectorAll('td:nth-child(2)');
 		for(var i = 0 ; i < cell1.length ; i++) {
 			cell1[i].innerHTML = vocabTable[i][1];
-			if (vocabTable[i][6] !='') {
-				cell1[i].innerHTML += '(' + vocabTable[i][6] + ')';
-			}
-			if (vocabTable[i][7]!='') {
-				cell2[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/><span class="supnaiform">' + vocabTable[i][8] + '</span>';
+			if (vocabTable[i][6] == '1' || vocabTable[i][6] == '2' || vocabTable[i][6] == '3') {
+				var verbGroup = ''
+				switch(vocabTable[i][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
+				cell1[i].innerHTML += ' (' + verbGroup + ')';
+				cell2[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
+								   + '<span class="supnaiform">' + vocabTable[i][8] + '</span><br/>'
+								   + '<span class="supadjnegpast">' + vocabTable[i][9] + '</span>';
+			} else if (vocabTable[i][6] == 'I' || vocabTable[i][6] == 'N') {
+				cell2[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
+													  + '<span class="supnaiform">' + vocabTable[i][8] + '</span><br/>'
+													  + '<span class="supadjnegpast">' + vocabTable[i][9] + '</span>';
 			} else {
 				cell2[i].innerHTML = vocabTable[i][2];
 			}
@@ -1835,6 +2037,7 @@ function toggleJapanese() {
 		document.getElementById('hirakata').innerHTML = "&nbsp;";
 		document.getElementById('teform').innerHTML = "&nbsp;";
 		document.getElementById('naiform').innerHTML = "&nbsp;";
+		document.getElementById('adjnegpast').innerHTML = "&nbsp;";
 		var cell1 = document.querySelectorAll('td:nth-child(1)');
 		var cell2 = document.querySelectorAll('td:nth-child(2)');
 		for(var i = 0 ; i < cell1.length ; i++) {
@@ -1864,31 +2067,51 @@ function loadWord() {
 	document.getElementById('counter').innerHTML = (currentWord + 1).toString() + " / " + vocabTable.length.toString();
 	document.getElementById('hirakata').innerHTML = '&nbsp;';
 	document.getElementById('teform').innerHTML = '&nbsp;';
+	document.getElementById('naiform').innerHTML = '&nbsp;';
+	document.getElementById('adjnegpast').innerHTML = '&nbsp;';
 	document.getElementById('kanji').innerHTML = '&nbsp;';
 	document.getElementById('eng').innerHTML = vocabTable[currentWord][3];	
 	document.getElementById('kanjiHidden').value = vocabTable[currentWord][1];
 	var chkBox = document.getElementById('nihongo');
-if (chkBox.checked)
-{	displayJapanese();	}
+	if (chkBox.checked)
+	{	displayJapanese();	}
 	document.getElementById("nihongo").focus();
 }
 document.getElementById('middle').addEventListener('click', function (event) {
 	displayJapanese();
 });
+document.getElementById('teform').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('naiform').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('adjnegpast').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('kanji').addEventListener('click', function (event) {
+	displayJapanese();
+});
 function displayJapanese() {
 	document.getElementById('kanji').innerHTML = vocabTable[currentWord][1];
 	document.getElementById('kanjiHidden').value = vocabTable[currentWord][1];
-	if(vocabTable[currentWord][6]!='') {
-		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2] + '(' + vocabTable[currentWord][6] + ')';
-	} else {
-		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2];
-	}
-	if(vocabTable[currentWord][7]!='') {
+	if(vocabTable[currentWord][6] == '1' || vocabTable[currentWord][6] == '2' || vocabTable[currentWord][6] == '3') {
+		var verbGroup = ''
+		switch(vocabTable[currentWord][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
+		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2] + ' (' + verbGroup + ')';
 		document.getElementById('teform').innerHTML = vocabTable[currentWord][7];
 		document.getElementById('naiform').innerHTML = vocabTable[currentWord][8];
+		document.getElementById('adjnegpast').innerHTML = vocabTable[currentWord][9];
+	} else if(vocabTable[currentWord][6] == 'I' || vocabTable[currentWord][6] == 'N') {
+		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2];
+		document.getElementById('teform').innerHTML = vocabTable[currentWord][7];
+		document.getElementById('naiform').innerHTML = vocabTable[currentWord][8];
+		document.getElementById('adjnegpast').innerHTML = vocabTable[currentWord][9];
 	} else {
+		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2];
 		document.getElementById('teform').innerHTML = '&nbsp;';
 		document.getElementById('naiform').innerHTML = '&nbsp;';
+		document.getElementById('adjnegpast').innerHTML = '&nbsp;';
 	}
 }
 function removeSelected() {
@@ -1922,6 +2145,11 @@ function removeSelected() {
 	document.getElementById('28').classList.remove("selected");
 	document.getElementById('29').classList.remove("selected");
 	document.getElementById('30').classList.remove("selected");
+	document.getElementById('31').classList.remove("selected");
+	document.getElementById('32').classList.remove("selected");
+	document.getElementById('33').classList.remove("selected");
+	document.getElementById('34').classList.remove("selected");
+	document.getElementById('35').classList.remove("selected");
 }
 function populateLessonTable() {
 	while(lessonTable.rows.length > 0) {
@@ -1954,56 +2182,79 @@ function populateVerbTable() {
 document.getElementById('lesson').addEventListener('click', function (event) {
 	var col = window.event.target.cellIndex;
 	var row = window.event.target.parentNode.rowIndex;
+//	console.log(col);
+//	console.log(row);
+	if (typeof col == 'undefined' || typeof row == 'undefined') { // trap if a span inside the cell was clicked
+		var parent = window.event.target.parentNode;
+		col = parent.cellIndex;
+		row = parent.parentNode.rowIndex;
+//		console.log(parent.cellIndex);
+//		console.log(parent.parentNode.rowIndex);
+	}	
 	var x=document.getElementById('lesson').rows[parseInt(row,10)].cells;
 	if(x[0].innerHTML=="") {
 		x[0].innerHTML = vocabTable[row][1];
-		x[1].innerHTML = vocabTable[row][2];
+		if (vocabTable[row][6] == '1' || vocabTable[row][6] == '2' || vocabTable[row][6] == '3') {
+			var verbGroup = ''
+			switch(vocabTable[row][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
+			x[0].innerHTML += ' (' + verbGroup + ')';
+			x[1].innerHTML = vocabTable[row][2] + '<br/><span class="supteform">' + vocabTable[row][7] + '</span><br/>'
+						   + '<span class="supnaiform">' + vocabTable[row][8] + '</span><br/>'
+						   + '<span class="supadjnegpast">' + vocabTable[row][9] + '</span>';
+		} else if (vocabTable[row][6] == 'I' || vocabTable[row][6] == 'N') {
+			x[1].innerHTML = vocabTable[row][2] + '<br/><span class="supteform">' + vocabTable[row][7] + '</span><br/>'
+						   + '<span class="supnaiform">' + vocabTable[row][8] + '</span><br/>'
+						   + '<span class="supadjnegpast">' + vocabTable[row][9] + '</span>';
+		} else {
+			x[1].innerHTML = vocabTable[row][2];
+		}
 	} else {
 		x[0].innerHTML="";
 		x[1].innerHTML="";
 	}
 });
 document.onkeydown = function(e) {
-switch (e.keyCode) {
-case 13:	// enter
-case 38:	// up
-			displayJapanese();
-			break;
-case 37:	// right
-if(currentWord != 0) {
-				document.getElementById('card').classList.add("w3-animate-rightout");
-				setTimeout(function(){
-						document.getElementById('card').classList.add("w3-animate-rightin");
-						currentWord--;
-						loadWord();
-						setTimeout(function(){
-							document.getElementById('card').classList.remove("w3-animate-rightin");
-							document.getElementById('card').classList.remove("w3-animate-rightout");
-						},300);
-				},300);
-			}
-break;
-case 39:	// left
-			if(currentWord + 1 < vocabTable.length) {
-				document.getElementById('card').classList.add("w3-animate-leftout");
-				setTimeout(function(){
-						document.getElementById('card').classList.add("w3-animate-leftin");
-						currentWord++;
-						loadWord();
-						setTimeout(function(){
-							document.getElementById('card').classList.remove("w3-animate-leftin");
-							document.getElementById('card').classList.remove("w3-animate-leftout");
-						},300);
-				},300);
-			}
-break;
-case 40:	// down
-			document.getElementById('kanji').innerHTML = '&nbsp';
-			document.getElementById('hirakata').innerHTML = '&nbsp';
-			document.getElementById('teform').innerHTML = '&nbsp';
-			document.getElementById('naiform').innerHTML = '&nbsp';
-			break;
-}
+	switch (e.keyCode) {
+	case 13:	// enter
+	case 38:	// up
+				displayJapanese();
+				break;
+	case 37:	// right
+	if(currentWord != 0) {
+					document.getElementById('card').classList.add("w3-animate-rightout");
+					setTimeout(function(){
+							document.getElementById('card').classList.add("w3-animate-rightin");
+							currentWord--;
+							loadWord();
+							setTimeout(function(){
+								document.getElementById('card').classList.remove("w3-animate-rightin");
+								document.getElementById('card').classList.remove("w3-animate-rightout");
+							},300);
+					},300);
+				}
+	break;
+	case 39:	// left
+				if(currentWord + 1 < vocabTable.length) {
+					document.getElementById('card').classList.add("w3-animate-leftout");
+					setTimeout(function(){
+							document.getElementById('card').classList.add("w3-animate-leftin");
+							currentWord++;
+							loadWord();
+							setTimeout(function(){
+								document.getElementById('card').classList.remove("w3-animate-leftin");
+								document.getElementById('card').classList.remove("w3-animate-leftout");
+							},300);
+					},300);
+				}
+	break;
+	case 40:	// down
+				document.getElementById('kanji').innerHTML = '&nbsp';
+				document.getElementById('hirakata').innerHTML = '&nbsp';
+				document.getElementById('teform').innerHTML = '&nbsp';
+				document.getElementById('naiform').innerHTML = '&nbsp';
+				document.getElementById('adjnegpast').innerHTML = '&nbsp';
+				break;
+	}
 };
 document.getElementById('kanji').addEventListener('click', function (event) {
 	const el = document.createElement('textarea');
