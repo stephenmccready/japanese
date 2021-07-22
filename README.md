@@ -16,4 +16,3 @@ https://www.stephenmccready.asia/japanese/katakanaTable.html<br/>
 <br/>
 Other<br/>
 https://www.stephenmccready.asia/japanese/calendar.html<br/>
-https://www.stephenmccready.asia/japanese/grammar.html<br/>
