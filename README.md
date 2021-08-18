@@ -1,8 +1,9 @@
 # japanese
 Japanese language reference<br/>
 <br/>
-みんなの日本語 Minna no Nihongo - Book 1 Vocabulary<br/>
+みんなの日本語 Minna no Nihongo - Book 1 & 2 Vocabulary<br/>
 https://stephenmccready.asia/japanese/minnanonihongo.html<br/>
+https://stephenmccready.asia/japanese/minnanonihongo2.html<br/>
 <br/>
 Hiragana/Katakana Flashcard WebApp:<br/>
 https://www.stephenmccready.asia/japanese/index.html<br/>
