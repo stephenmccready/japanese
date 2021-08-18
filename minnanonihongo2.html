@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>みんなの日本語 2</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+html{-ms-text-size-adjust:100%;-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+.w3-serif{font-family:serif}.w3-sans-serif{font-family:sans-serif}.w3-cursive{font-family:cursive}.w3-monospace{font-family:monospace}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+.w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+.w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
+.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
+.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
+.w3-btn,.w3-button{border:none;display:inline-block;padding:16px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+.w3-btn.w3-disabled:hover,.w3-btn:disabled:hover{box-shadow:none}
+.w3-badge,.w3-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.w3-badge{border-radius:50%}
+.w3-ul{list-style-type:none;padding:0;margin:0}.w3-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.w3-ul li:last-child{border-bottom:none}
+.w3-tooltip,.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
+.w3-ripple:active{opacity:0.5}.w3-ripple{transition:opacity 0s}
+.w3-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.w3-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+.w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
+.w3-dropdown-hover:hover .w3-dropdown-content{display:block}
+.w3-dropdown-hover:first-child,.w3-dropdown-click:hover{background-color:#ccc;color:#000}
+.w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
+.w3-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+.w3-check,.w3-radio{width:24px;height:24px;position:relative;top:6px}
+.w3-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click{width:100%}
+.w3-bar-block .w3-dropdown-hover .w3-dropdown-content,.w3-bar-block .w3-dropdown-click .w3-dropdown-content{min-width:100%}
+.w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;padding:16px 16px}
+.w3-main,#main{transition:margin-left .4s}
+.w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.w3-bar{width:100%;overflow:hidden}.w3-center .w3-bar{display:inline-block;width:auto}
+.w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{position:static;float:left}
+.w3-bar .w3-button{white-space:normal}
+.w3-bar-block .w3-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+.w3-bar-block.w3-center .w3-bar-item{text-align:center}.w3-block{display:block;width:100%}
+.w3-responsive{display:block;overflow-x:auto}
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
+.w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
+.w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
+.w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
+@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
+.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
+.w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
+@media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
+.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
+.w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
+.w3-rest{overflow:hidden}.w3-stretch{margin-left:-16px;margin-right:-16px}
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+.w3-cell-row{display:table;width:100%}.w3-cell{display:table-cell}
+.w3-cell-top{vertical-align:top}.w3-cell-middle{vertical-align:middle}.w3-cell-bottom{vertical-align:bottom}
+.w3-hide{display:none!important}.w3-show-block,.w3-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
+@media (max-width:1205px){.w3-auto{max-width:95%}}
+@media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
+.w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content{position:relative}	
+.w3-hide-small{display:none!important}.w3-mobile{display:block;width:100%!important}.w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{text-align:center}
+.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
+@media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
+@media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}.w3-sidebar.w3-collapse{display:block!important}}
+@media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
+@media (max-width:992px){.w3-sidebar.w3-collapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+.w3-top,.w3-bottom{position:fixed;width:100%;z-index:1}.w3-top{top:0}.w3-bottom{bottom:0}
+.w3-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+.w3-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
+.w3-display-bottomleft{position:absolute;left:0;bottom:0}.w3-display-bottomright{position:absolute;right:0;bottom:0}
+.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3-display-position{position:absolute}
+.w3-circle{border-radius:50%}
+.w3-round-small{border-radius:2px}.w3-round,.w3-round-medium{border-radius:4px}.w3-round-large{border-radius:8px}.w3-round-xlarge{border-radius:16px}.w3-round-xxlarge{border-radius:32px}
+.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}
+.w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+.w3-code,.w3-codespan{font-family:Consolas,"courier new";font-size:16px}
+.w3-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.w3-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
+.w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.w3-spin{animation:w3-spin 2s infinite linear}@keyframes w3-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.w3-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.w3-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.w3-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.w3-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.w3-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.w3-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.w3-animate-input{transition:width 0.4s ease-in-out}.w3-animate-input:focus{width:100%!important}
+.w3-opacity,.w3-hover-opacity:hover{opacity:0.60}.w3-opacity-off,.w3-hover-opacity-off:hover{opacity:1}
+.w3-opacity-max{opacity:0.25}.w3-opacity-min{opacity:0.75}
+.w3-greyscale-max,.w3-grayscale-max,.w3-hover-greyscale:hover,.w3-hover-grayscale:hover{filter:grayscale(100%)}
+.w3-greyscale,.w3-grayscale{filter:grayscale(75%)}.w3-greyscale-min,.w3-grayscale-min{filter:grayscale(50%)}
+.w3-sepia{filter:sepia(75%)}.w3-sepia-max,.w3-hover-sepia:hover{filter:sepia(100%)}.w3-sepia-min{filter:sepia(50%)}
+.w3-tiny{font-size:10px!important}.w3-small{font-size:12px!important}.w3-medium{font-size:15px!important}.w3-large{font-size:18px!important}
+.w3-xlarge{font-size:24px!important}.w3-xxlarge{font-size:36px!important}.w3-xxxlarge{font-size:48px!important}.w3-jumbo{font-size:64px!important}
+.w3-left-align{text-align:left!important}.w3-right-align{text-align:right!important}.w3-justify{text-align:justify!important}.w3-center{text-align:center!important}
+.w3-border-0{border:0!important}.w3-border{border:1px solid #ccc!important}
+.w3-border-top{border-top:1px solid #ccc!important}.w3-border-bottom{border-bottom:1px solid #ccc!important}
+.w3-border-left{border-left:1px solid #ccc!important}.w3-border-right{border-right:1px solid #ccc!important}
+.w3-topbar{border-top:6px solid #ccc!important}.w3-bottombar{border-bottom:6px solid #ccc!important}
+.w3-leftbar{border-left:6px solid #ccc!important}.w3-rightbar{border-right:6px solid #ccc!important}
+.w3-section,.w3-code{margin-top:16px!important;margin-bottom:16px!important}
+.w3-margin{margin:16px!important}.w3-margin-top{margin-top:16px!important}.w3-margin-bottom{margin-bottom:16px!important}
+.w3-margin-left{margin-left:16px!important}.w3-margin-right{margin-right:16px!important}
+.w3-padding-small{padding:4px 8px!important}.w3-padding{padding:8px 16px!important}.w3-padding-large{padding:12px 24px!important}
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}.w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+.w3-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+.w3-padding-top-64{padding-top:64px!important}.w3-padding-top-48{padding-top:48px!important}
+.w3-padding-top-32{padding-top:32px!important}.w3-padding-top-24{padding-top:24px!important}
+.w3-left{float:left!important}.w3-right{float:right!important}
+.w3-button:hover{color:#000!important;background-color:#ccc!important}
+.w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
+.w3-hover-none:hover{box-shadow:none!important}
+.w3-amber,.w3-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.w3-aqua,.w3-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.w3-light-blue,.w3-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.w3-brown,.w3-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.w3-cyan,.w3-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.w3-blue-grey,.w3-hover-blue-grey:hover,.w3-blue-gray,.w3-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.w3-green,.w3-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.w3-light-green,.w3-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.w3-indigo,.w3-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.w3-khaki,.w3-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.w3-lime,.w3-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.w3-orange,.w3-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.w3-deep-orange,.w3-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.w3-pink,.w3-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.w3-purple,.w3-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.w3-deep-purple,.w3-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.w3-sand,.w3-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.w3-teal,.w3-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+.w3-yellow,.w3-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.w3-pale-red,.w3-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.w3-pale-green,.w3-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.w3-pale-yellow,.w3-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.w3-pale-blue,.w3-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+.w3-text-amber,.w3-hover-text-amber:hover{color:#ffc107!important}
+.w3-text-aqua,.w3-hover-text-aqua:hover{color:#00ffff!important}
+.w3-text-blue,.w3-hover-text-blue:hover{color:#2196F3!important}
+.w3-text-light-blue,.w3-hover-text-light-blue:hover{color:#87CEEB!important}
+.w3-text-brown,.w3-hover-text-brown:hover{color:#795548!important}
+.w3-text-cyan,.w3-hover-text-cyan:hover{color:#00bcd4!important}
+.w3-text-blue-grey,.w3-hover-text-blue-grey:hover,.w3-text-blue-gray,.w3-hover-text-blue-gray:hover{color:#607d8b!important}
+.w3-text-green,.w3-hover-text-green:hover{color:#4CAF50!important}
+.w3-text-light-green,.w3-hover-text-light-green:hover{color:#8bc34a!important}
+.w3-text-indigo,.w3-hover-text-indigo:hover{color:#3f51b5!important}
+.w3-text-khaki,.w3-hover-text-khaki:hover{color:#b4aa50!important}
+.w3-text-lime,.w3-hover-text-lime:hover{color:#cddc39!important}
+.w3-text-orange,.w3-hover-text-orange:hover{color:#ff9800!important}
+.w3-text-deep-orange,.w3-hover-text-deep-orange:hover{color:#ff5722!important}
+.w3-text-pink,.w3-hover-text-pink:hover{color:#e91e63!important}
+.w3-text-purple,.w3-hover-text-purple:hover{color:#9c27b0!important}
+.w3-text-deep-purple,.w3-hover-text-deep-purple:hover{color:#673ab7!important}
+.w3-text-red,.w3-hover-text-red:hover{color:#f44336!important}
+.w3-text-sand,.w3-hover-text-sand:hover{color:#fdf5e6!important}
+.w3-text-teal,.w3-hover-text-teal:hover{color:#009688!important}
+.w3-text-yellow,.w3-hover-text-yellow:hover{color:#d2be0e!important}
+.w3-text-white,.w3-hover-text-white:hover{color:#fff!important}
+.w3-text-black,.w3-hover-text-black:hover{color:#000!important}
+.w3-text-grey,.w3-hover-text-grey:hover,.w3-text-gray,.w3-hover-text-gray:hover{color:#757575!important}
+.w3-text-light-grey,.w3-hover-text-light-grey:hover,.w3-text-light-gray,.w3-hover-text-light-gray:hover{color:#f1f1f1!important}
+.w3-text-dark-grey,.w3-hover-text-dark-grey:hover,.w3-text-dark-gray,.w3-hover-text-dark-gray:hover{color:#3a3a3a!important}
+.w3-border-amber,.w3-hover-border-amber:hover{border-color:#ffc107!important}
+.w3-border-aqua,.w3-hover-border-aqua:hover{border-color:#00ffff!important}
+.w3-border-blue,.w3-hover-border-blue:hover{border-color:#2196F3!important}
+.w3-border-light-blue,.w3-hover-border-light-blue:hover{border-color:#87CEEB!important}
+.w3-border-brown,.w3-hover-border-brown:hover{border-color:#795548!important}
+.w3-border-cyan,.w3-hover-border-cyan:hover{border-color:#00bcd4!important}
+.w3-border-blue-grey,.w3-hover-border-blue-grey:hover,.w3-border-blue-gray,.w3-hover-border-blue-gray:hover{border-color:#607d8b!important}
+.w3-border-green,.w3-hover-border-green:hover{border-color:#4CAF50!important}
+.w3-border-light-green,.w3-hover-border-light-green:hover{border-color:#8bc34a!important}
+.w3-border-indigo,.w3-hover-border-indigo:hover{border-color:#3f51b5!important}
+.w3-border-khaki,.w3-hover-border-khaki:hover{border-color:#f0e68c!important}
+.w3-border-lime,.w3-hover-border-lime:hover{border-color:#cddc39!important}
+.w3-border-orange,.w3-hover-border-orange:hover{border-color:#ff9800!important}
+.w3-border-deep-orange,.w3-hover-border-deep-orange:hover{border-color:#ff5722!important}
+.w3-border-pink,.w3-hover-border-pink:hover{border-color:#e91e63!important}
+.w3-border-purple,.w3-hover-border-purple:hover{border-color:#9c27b0!important}
+.w3-border-deep-purple,.w3-hover-border-deep-purple:hover{border-color:#673ab7!important}
+.w3-border-red,.w3-hover-border-red:hover{border-color:#f44336!important}
+.w3-border-sand,.w3-hover-border-sand:hover{border-color:#fdf5e6!important}
+.w3-border-teal,.w3-hover-border-teal:hover{border-color:#009688!important}
+.w3-border-yellow,.w3-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.w3-border-white,.w3-hover-border-white:hover{border-color:#fff!important}
+.w3-border-black,.w3-hover-border-black:hover{border-color:#000!important}
+.w3-border-grey,.w3-hover-border-grey:hover,.w3-border-gray,.w3-hover-border-gray:hover{border-color:#9e9e9e!important}
+.w3-border-light-grey,.w3-hover-border-light-grey:hover,.w3-border-light-gray,.w3-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+.w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
+.w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+.w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+*{font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;overflow:hidden;}
+html,body{height:100%;background:linear-gradient(to bottom,#ffffff 75%,#535353 100%);scroll-behavior:smooth;}
+#middle{cursor:pointer;text-align:center;}
+.silent{font-family:Helvetica;color:#6f6f6f;font-size:1em;font-weight:bold;}
+.hirakata{font-size:2em;margin-top:2.25em;text-align:center;}
+.teform{font-size:1.5em;text-align:center;color:#6673ff;}
+.naiform{font-size:1.5em;text-align:center;color:#009100;}
+.dicform{font-size:1.5em;text-align:center;color:#910091;}
+.adjnegpast{font-size:1.5em;text-align:center;color:#919100;}
+.supteform{color:#6673ff;}
+.supnaiform{color:#009100;}
+.supdicform{color:#910091;}
+.supadjnegpast{color:#919100;}
+.kanji{text-shadow:2px 2px 4px #6f6f6f;font-size:3.25em;}
+.eng{font-family:Helvetica;color:#b72264;font-style:italic;font-size:1.85em;}
+.nonSelect{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+*.disable-dbl-tap-zoom {touch-action: manipulation;}
+.selected{background-color:#DCDCDC;}
+#subHead{height:3.25em;line-height:3.25em;clear:both;}
+a{padding:.25em 0 .25em 0;width:14.285%;float:left;}
+.spanHead{font-size:1.25em;float:left;}
+.fa{font-size:2em;padding-top:.25em;padding-left:.25em}
+#lesson {width:100%;font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;}
+#lesson tr > *:nth-child(1){width:2.5%;font-size:75%;}
+#lesson tr > *:nth-child(2){width:22.5%;}
+#lesson tr > *:nth-child(3){width:40%;}
+#lesson tr > *:nth-child(4){width:35%;}
+#lesson td, #lesson th {border:1px solid #ddd;padding:8px;}
+#lesson tr:nth-child(even){background-color:#f2f2f2;}
+#lesson tr:nth-child(odd){background-color:#FFF;}
+#list{overflow:auto;height:83.5%;}
+.fixed-header{width:100%;position:fixed;background:#FFF;z-index:9999;height:7.5em;top:0;}
+.fixed-footer {position:fixed;left:0;bottom:0;width:100%;text-align:center;}
+.w3-animate-leftout{position:relative;animation:animateleftout 0.4s}@keyframes animateleftout{from{left:0px;} to{left:-600px;}}
+.w3-animate-leftin{position:relative;animation:animateleftin 0.4s}@keyframes animateleftin{from{left:600px;} to{left:0px;}}
+.w3-animate-rightout{position:relative;animation:animaterightout 0.4s}@keyframes animaterightout{from{right:0px;} to{right:-600px;}}
+.w3-animate-rightin{position:relative;animation:animaterightin 0.4s}@keyframes animaterightin{from{right:600px;} to{right:0px;}}
+#card{height:100%;}
+.switch{position:relative;display:inline-block;width:60px;height:34px;margin-right:0.5em;}
+.switch input{opacity:0;width:0;height:0;}
+.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;
+background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+.slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;
+background-color: white;-webkit-transition: .4s;transition: .4s;}
+input:checked + .slider{background-color:#008080;}
+input:focus + .slider{box-shadow: 0 0 1px #008080;}
+input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);
+transform:translateX(26px);}
+.slider.round{border-radius: 34px;}
+.slider.round:before{border-radius: 50%;}
+#listToggle{float:left;padding-right:2em;font-size:1.25em;width:95px;}
+#counter{font-size:1.25em;padding-top:.65em;}
+#title{padding-top:.65em;}
+#spanNihongo{font-size:1.25em;float:left;padding-right:.5em;}
+.tinyText {font-size:65%;}
+</style>
+</head>
+<body>
+<div class="fixed-header">
+	<div class="w3-bar w3-center" id="navbar">
+	  <a href="#" class="w3-button" id="leftNav">&laquo;</a>
+	  <a href="#" class="w3-button lessonButton" id="26" style="display:block;">26</a>
+	  <a href="#" class="w3-button lessonButton" id="27" style="display:block;">27</a>
+	  <a href="#" class="w3-button lessonButton" id="28" style="display:block;">28</a>
+	  <a href="#" class="w3-button lessonButton" id="29" style="display:block;">29</a>
+	  <a href="#" class="w3-button lessonButton" id="30" style="display:block;">30</a>
+	  <a href="#" class="w3-button lessonButton" id="31" style="display:none;">31</a>
+	  <a href="#" class="w3-button lessonButton" id="32" style="display:none;">32</a>
+	  <a href="#" class="w3-button lessonButton" id="33" style="display:none;">33</a>
+	  <a href="#" class="w3-button lessonButton" id="34" style="display:none;">34</a>
+	  <a href="#" class="w3-button lessonButton" id="35" style="display:none;">35</a>
+	  <a href="#" class="w3-button lessonButton" id="36" style="display:none;">36</a>
+	  <a href="#" class="w3-button lessonButton" id="37" style="display:none;">37</a>
+	  <a href="#" class="w3-button lessonButton" id="38" style="display:none;">38</a>
+	  <a href="#" class="w3-button lessonButton" id="39" style="display:none;">39</a>
+	  <a href="#" class="w3-button lessonButton" id="40" style="display:none;">40</a>
+	  <a href="#" class="w3-button lessonButton" id="41" style="display:none;">41</a>
+	  <a href="#" class="w3-button lessonButton" id="42" style="display:none;">42</a>
+	  <a href="#" class="w3-button lessonButton" id="43" style="display:none;">43</a>
+	  <a href="#" class="w3-button lessonButton" id="44" style="display:none;">44</a>
+	  <a href="#" class="w3-button lessonButton" id="45" style="display:none;">45</a>
+	  <a href="#" class="w3-button lessonButton" id="46" style="display:none;">46</a>
+	  <a href="#" class="w3-button lessonButton" id="47" style="display:none;">47</a>
+	  <a href="#" class="w3-button lessonButton" id="48" style="display:none;">48</a>
+	  <a href="#" class="w3-button lessonButton" id="49" style="display:none;">49</a>
+	  <a href="#" class="w3-button lessonButton" id="50" style="display:none;">50</a>
+	  <a href="#" class="w3-button lessonButton" id="51" style="display:none;">&#8544;</a>
+	  <a href="#" class="w3-button lessonButton" id="52" style="display:none;">&#8545;</a>
+	  <a href="#" class="w3-button lessonButton" id="53" style="display:none;">&#8546;</a>
+	  <a href="#" class="w3-button lessonButton" id="54" style="display:none;">動</a><!-- 動詞 = dōshi - verb -->
+	  <a href="#" class="w3-button lessonButton" id="55" style="display:none;"><span class="tinyText">副詞</span></a><!-- 副詞 fukushi - adverb -->
+	  <a href="#" class="w3-button lessonButton" id="56" style="display:none;"><span class="tinyText">形容</span></a><!-- 形容詞 = keiyō shi　- adjective-->
+	  <a href="#" class="w3-button lessonButton" id="57" style="display:none;">な</a>
+	  <a href="#" class="w3-button lessonButton" id="58" style="display:none;">い</a>
+	  <a href="#" class="w3-button lessonButton" id="59" style="display:none;"><span class="tinyText">家族</span></a><!-- 家族 = family -->
+	  <a href="#" class="w3-button lessonButton" id="60" style="display:none;">暦</a><!-- 暦 = koyomi - calendar -->
+	  <a href="#" class="w3-button" id="rightNav">&raquo;</a>
+	</div>
+	<div class="w3-display-container w3-teal" style="height:300px;">
+		<div class="w3-display-topleft">
+			<span id="listToggle">
+				<i id="listIcon" class="fa fa-list-alt"></i><!--列</i>-->
+				<i id="cardIcon" class="fa fa-language"></i><!--字</i>-->
+			</span>
+			<div id="counter"></div>
+			<div id="title"></div>
+		</div>
+		<div class="w3-display-topright" style="padding-top:.75em;">
+			<div id="spanNihongo">日本語</div>
+			<label class="switch">
+				<input type="checkbox" id="nihongo" name="nihongo" value="hai" class="w3-check">
+				<span class="slider round"></span>
+			</label>
+		</div>
+	</div>
+</div> 
+<div id="card" style="clear:both;margin-top:3.25em;">
+	<div id="hirakata" class="w3-cell-row w3-middle hirakata"></div>
+	<div id="teform" class="w3-cell-row w3-middle teform"></div>
+	<div id="naiform" class="w3-cell-row w3-middle naiform"></div>
+	<div id="dicform" class="w3-cell-row w3-middle dicform"></div>
+	<div id="adjnegpast" class="w3-cell-row w3-middle adjnegpast"></div>
+	<div class="w3-cell-row">
+		<div id="middle" class="w3-col w3-center" style="width:100%; text-align:center;">
+			<div id="kanji" class="kanji"></div>
+			<div id="eng" class="eng"></div>
+		</div>
+	</div>
+</div>
+<div id="list" style="clear: both;margin-top:8em;">
+	<table id="lesson"></table>
+	<p><i id="downloadIcon" class="fa fa-download" onclick="downloadCSV();"></i></p>
+</div>
+<input type="text" id="kanjiHidden" style="display:none;">
+<script>
+var holdTable = [];
+var vocabTable=[];
+// Starting chapter:
+var menu=26;
+var currentWord=0;
+var state='card';
+var lessonTable = document.getElementById("lesson");
+window.addEventListener('load', (event) => {
+	var checkbox = document.getElementById('nihongo');
+	checkbox.checked = false;
+	document.getElementById("cardIcon").style.display = "none";
+	document.getElementById("listIcon").style.display = "block";
+	document.getElementById("list").style.display = "none";
+	document.getElementById("title").style.display = "none";
+	loadHoldTable();
+	loadCards(menu);
+});
+// Add an even listener for each button
+var elements = document.getElementsByClassName("lessonButton");
+for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', function (event) {loadCards(this.id);}, false);
+}
+
+document.getElementById('leftNav').addEventListener('click', function (event) {
+	switch (menu) {
+	case 26: case 27:case 28:case 29:case 30:
+		document.getElementById("56").style.display = "inline";
+		document.getElementById("57").style.display = "inline";
+		document.getElementById("58").style.display = "inline";
+		document.getElementById("59").style.display = "inline";
+		document.getElementById("60").style.display = "inline";
+		document.getElementById("26").style.display = "none";
+		document.getElementById("27").style.display = "none";
+		document.getElementById("28").style.display = "none";
+		document.getElementById("29").style.display = "none";
+		document.getElementById("30").style.display = "none";
+		menu=56; break;
+	case 31: case 32:case 33:case 34:case 35:
+		document.getElementById("26").style.display = "inline";
+		document.getElementById("27").style.display = "inline";
+		document.getElementById("28").style.display = "inline";
+		document.getElementById("29").style.display = "inline";
+		document.getElementById("30").style.display = "inline";
+		document.getElementById("31").style.display = "none";
+		document.getElementById("32").style.display = "none";
+		document.getElementById("33").style.display = "none";
+		document.getElementById("34").style.display = "none";
+		document.getElementById("35").style.display = "none";
+		menu=26; break;
+	case 36: case 37:case 38:case 39:case 40:
+		document.getElementById("31").style.display = "inline";
+		document.getElementById("32").style.display = "inline";
+		document.getElementById("33").style.display = "inline";
+		document.getElementById("34").style.display = "inline";
+		document.getElementById("35").style.display = "inline";
+		document.getElementById("36").style.display = "none";
+		document.getElementById("37").style.display = "none";
+		document.getElementById("38").style.display = "none";
+		document.getElementById("39").style.display = "none";
+		document.getElementById("40").style.display = "none";
+		menu=31; break;
+	case 41: case 42:case 43:case 44:case 45:
+		document.getElementById("36").style.display = "inline";
+		document.getElementById("37").style.display = "inline";
+		document.getElementById("38").style.display = "inline";
+		document.getElementById("39").style.display = "inline";
+		document.getElementById("40").style.display = "inline";
+		document.getElementById("41").style.display = "none";
+		document.getElementById("42").style.display = "none";
+		document.getElementById("43").style.display = "none";
+		document.getElementById("44").style.display = "none";
+		document.getElementById("45").style.display = "none";
+		menu=36; break;
+	case 46: case 47:case 48:case 49:case 50:
+		document.getElementById("41").style.display = "inline";
+		document.getElementById("42").style.display = "inline";
+		document.getElementById("43").style.display = "inline";
+		document.getElementById("44").style.display = "inline";
+		document.getElementById("45").style.display = "inline";
+		document.getElementById("46").style.display = "none";
+		document.getElementById("47").style.display = "none";
+		document.getElementById("48").style.display = "none";
+		document.getElementById("49").style.display = "none";
+		document.getElementById("50").style.display = "none";
+		menu=41; break;
+	case 51: case 52:case 53:case 54:case 55:
+		document.getElementById("46").style.display = "inline";
+		document.getElementById("47").style.display = "inline";
+		document.getElementById("48").style.display = "inline";
+		document.getElementById("49").style.display = "inline";
+		document.getElementById("50").style.display = "inline";
+		document.getElementById("51").style.display = "none";
+		document.getElementById("52").style.display = "none";
+		document.getElementById("53").style.display = "none";
+		document.getElementById("54").style.display = "none";
+		document.getElementById("55").style.display = "none";
+		menu=46; break;
+	case 56: case 57:case 58:case 59:case 60:
+		document.getElementById("51").style.display = "inline";
+		document.getElementById("52").style.display = "inline";
+		document.getElementById("53").style.display = "inline";
+		document.getElementById("54").style.display = "inline";
+		document.getElementById("55").style.display = "inline";
+		document.getElementById("56").style.display = "none";
+		document.getElementById("57").style.display = "none";
+		document.getElementById("58").style.display = "none";
+		document.getElementById("59").style.display = "none";
+		document.getElementById("60").style.display = "none";
+		menu=51; break;
+	}
+});
+// ???? FIX THE RIGHT BUTTON CLICK
+document.getElementById('rightNav').addEventListener('click', function (event) {
+	switch (menu) {
+
+	case 26: case 27:case 28:case 29:case 30:
+		document.getElementById("26").style.display = "none";
+		document.getElementById("27").style.display = "none";
+		document.getElementById("28").style.display = "none";
+		document.getElementById("29").style.display = "none";
+		document.getElementById("30").style.display = "none";
+		document.getElementById("31").style.display = "inline";
+		document.getElementById("32").style.display = "inline";
+		document.getElementById("33").style.display = "inline";
+		document.getElementById("34").style.display = "inline";
+		document.getElementById("35").style.display = "inline";
+		menu=31; break;
+	case 31: case 32:case 33:case 34:case 35:
+		document.getElementById("31").style.display = "none";
+		document.getElementById("32").style.display = "none";
+		document.getElementById("33").style.display = "none";
+		document.getElementById("34").style.display = "none";
+		document.getElementById("35").style.display = "none";
+		document.getElementById("36").style.display = "inline";
+		document.getElementById("37").style.display = "inline";
+		document.getElementById("38").style.display = "inline";
+		document.getElementById("39").style.display = "inline";
+		document.getElementById("40").style.display = "inline";
+		menu=36; break;
+	case 36: case 37:case 38:case 39:case 40:
+		document.getElementById("36").style.display = "none";
+		document.getElementById("37").style.display = "none";
+		document.getElementById("38").style.display = "none";
+		document.getElementById("39").style.display = "none";
+		document.getElementById("40").style.display = "none";
+		document.getElementById("41").style.display = "inline";
+		document.getElementById("42").style.display = "inline";
+		document.getElementById("43").style.display = "inline";
+		document.getElementById("44").style.display = "inline";
+		document.getElementById("45").style.display = "inline";
+		menu=41; break;
+	case 41: case 42:case 43:case 44:case 45:
+		document.getElementById("41").style.display = "none";
+		document.getElementById("42").style.display = "none";
+		document.getElementById("43").style.display = "none";
+		document.getElementById("44").style.display = "none";
+		document.getElementById("45").style.display = "none";
+		document.getElementById("46").style.display = "inline";
+		document.getElementById("47").style.display = "inline";
+		document.getElementById("48").style.display = "inline";
+		document.getElementById("49").style.display = "inline";
+		document.getElementById("50").style.display = "inline";
+		menu=46; break;
+	case 46: case 47:case 48:case 49:case 50:
+		document.getElementById("46").style.display = "none";
+		document.getElementById("47").style.display = "none";
+		document.getElementById("48").style.display = "none";
+		document.getElementById("49").style.display = "none";
+		document.getElementById("50").style.display = "none";
+		document.getElementById("51").style.display = "inline";
+		document.getElementById("52").style.display = "inline";
+		document.getElementById("53").style.display = "inline";
+		document.getElementById("54").style.display = "inline";
+		document.getElementById("55").style.display = "inline";
+		menu=51; break;
+	case 51: case 52:case 53:case 54:case 55:
+		document.getElementById("51").style.display = "none";
+		document.getElementById("52").style.display = "none";
+		document.getElementById("53").style.display = "none";
+		document.getElementById("54").style.display = "none";
+		document.getElementById("55").style.display = "none";
+		document.getElementById("56").style.display = "inline";
+		document.getElementById("57").style.display = "inline";
+		document.getElementById("58").style.display = "inline";
+		document.getElementById("59").style.display = "inline";
+		document.getElementById("60").style.display = "inline";
+		menu=56; break;
+	case 56: case 57:case 58:case 59:case 60:
+		document.getElementById("56").style.display = "none";
+		document.getElementById("57").style.display = "none";
+		document.getElementById("58").style.display = "none";
+		document.getElementById("59").style.display = "none";
+		document.getElementById("60").style.display = "none";
+		document.getElementById("26").style.display = "inline";
+		document.getElementById("27").style.display = "inline";
+		document.getElementById("28").style.display = "inline";
+		document.getElementById("29").style.display = "inline";
+		document.getElementById("30").style.display = "inline";
+		menu=26; break;
+	}
+});
+document.getElementById('card').addEventListener('touchstart', handleTouchStart, false);
+document.getElementById('card').addEventListener('touchmove', handleTouchMove, false);
+var mouseDownX=0;
+document.getElementById('card').addEventListener('mousedown', handleMouseDown, false);
+document.getElementById('card').addEventListener('mouseup', handleMouseUp, false);
+function handleMouseDown(evt) {mouseDownX=evt.clientX;}
+function handleMouseUp (evt) {
+	mouseUpX=evt.clientX
+	var xDiff = mouseDownX - mouseUpX;
+	if ( xDiff > 10 ) {
+		if(currentWord + 1 < vocabTable.length) {
+			currentWord++;
+			document.getElementById('card').classList.add("w3-animate-leftout");
+			setTimeout(function(){
+				document.getElementById('card').classList.add("w3-animate-leftin");
+				loadWord();
+				setTimeout(function(){
+					document.getElementById('card').classList.remove("w3-animate-leftin");
+					document.getElementById('card').classList.remove("w3-animate-leftout");
+				},300);
+			},300);
+		}
+	} else {
+		if ( xDiff < -10 ) {
+			if(currentWord != 0) {
+				currentWord--;
+				document.getElementById('card').classList.add("w3-animate-rightout");
+				setTimeout(function(){
+					document.getElementById('card').classList.add("w3-animate-rightin");
+					loadWord();
+					setTimeout(function(){
+						document.getElementById('card').classList.remove("w3-animate-rightin");
+						document.getElementById('card').classList.remove("w3-animate-rightout");
+					},300);
+				},300);
+			}
+		}
+	}
+}
+var xDown = null;
+function getTouches(evt) {
+	return evt.touches || // browser API
+	evt.originalEvent.touches; // jQuery
+} 
+function handleTouchStart(evt) {
+	const firstTouch = getTouches(evt)[0];  
+	xDown = firstTouch.clientX; 
+};
+function handleTouchMove(evt) {
+if ( ! xDown ) {return;}
+var xUp = evt.touches[0].clientX;
+var xDiff = xDown - xUp;
+	if ( xDiff > 5 ) {
+		if(currentWord + 1 < vocabTable.length) {
+			currentWord++;
+			document.getElementById('card').classList.add("w3-animate-leftout");
+			setTimeout(function(){
+				document.getElementById('card').classList.add("w3-animate-leftin");
+				loadWord();
+				setTimeout(function(){
+					document.getElementById('card').classList.remove("w3-animate-leftin");
+					document.getElementById('card').classList.remove("w3-animate-leftout");
+				},300);
+			},300);
+		}
+	} else 
+	if( xDiff < -5 )
+	{
+		if(currentWord != 0) {
+			currentWord--;
+			document.getElementById('card').classList.add("w3-animate-rightout");
+			setTimeout(function(){
+				document.getElementById('card').classList.add("w3-animate-rightin");
+				loadWord();
+				setTimeout(function(){
+					document.getElementById('card').classList.remove("w3-animate-rightin");
+					document.getElementById('card').classList.remove("w3-animate-rightout");
+				},300);
+			},300);
+		}
+	}
+xDown = null;
+};
+function loadCards(lesson) {
+//	console.log('loadCards(' + lesson.toString() + ')');
+	i=0;
+	vocabTable = [];
+	switch(lesson) { // Lesson Number
+		case '51': // Verb group I
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '1') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = '動詞 I<br/>どうし';
+			break;
+		case '52':  // Verb group II
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '2') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = '動詞 II<br/>どうし';
+			break;
+		case '53': // Verb group III
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '3') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = '動詞 III<br/>どうし';
+			break;
+		case '54': // All 3 verb groups
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === '1' || holdTable[i][6] === '2' || holdTable[i][6] === '3') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = '動詞<br/>どうし';
+			break;
+		case '55': // adverb
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'A') {
+					vocabTable.push(holdTable[i]);
+				}
+			i++;
+			}
+			document.getElementById("title").innerHTML = '副詞<br/>ふくし';
+			break;
+		case '56':  // い　& な　adjectives
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'I' || holdTable[i][6] === 'N') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = '形容詞<br/>けいようし';
+			break;
+		case '57':  // な 　adjectives
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'N') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = 'な形容詞<br/>けいようし';
+			break;
+		case '58':  // い　adjectives
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'I') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+			document.getElementById("title").innerHTML = 'い形容詞<br/>けいようし';
+		case '59':  // family
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'F') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;;
+			document.getElementById("title").innerHTML = '家族<br/>かぞく';
+		case '60':  // calendar
+			while (i < holdTable.length) {
+				if(holdTable[i][6] === 'C') {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			break;
+			document.getElementById("title").innerHTML = 'カレンダー';
+		default:	
+			while (i < holdTable.length) {
+				if(holdTable[i][4] == lesson) {
+					vocabTable.push(holdTable[i]);
+				}
+				i++;
+			}
+			document.getElementById("title").innerHTML = '第' + lesson.toString() + '課';
+		break;
+	}
+	if (vocabTable.length > 0) {
+		populateLessonTable();
+		removeSelected();
+		document.getElementById(lesson).classList.add("selected");
+		wordCount = vocabTable.length;
+		currentWord = 0;
+		loadWord();	
+	}
+}
+
+function loadHoldTable() {
+	// 0=romaji, 1=kanji, 2=hirakata, 3=eng, 4=chapter, 5=status, 6=verb group, 7=teform, 8=naiform, 9=dictform
+	holdTable.push(['','見ます','みます','check',26,0,'','','','']);
+	holdTable.push(['','診ます','みます','check',26,0,'','','','']);
+	holdTable.push(['','探します','さがします','look for, search',26,0,'','','','']);
+	holdTable.push(['','遅れます','おくれます','be late',26,0,'','','','']);
+	holdTable.push(['','電車に遅れます','でんしゃにおくれます','be late for a train',26,0,'','','','']);
+	holdTable.push(['','間に合います','まにあいます','be on time',26,0,'','','','']);
+	holdTable.push(['','電車に間に合う','でんしゃにまにあいます','be on time for a train',26,0,'','','','']);
+	holdTable.push(['','やります','やります','do',26,0,'','','','']);
+	holdTable.push(['','参加します','さんかします','attend',26,0,'','','','']);
+	holdTable.push(['','パーティーに参加します','パーティーにさんかします','attend a party',26,0,'','','','']);
+	holdTable.push(['','申し込みます','もうしこみます','apply for, enter for',26,0,'','','','']);
+	holdTable.push(['','都合がいい','つごうがいい','convenient (regarding time)',26,0,'','','','']);
+	holdTable.push(['','都合が悪い','つごうがわるい','inconvenient (regarding time)',26,0,'','','','']);
+	holdTable.push(['','気分がいい','きぶんがいい','feel well',26,0,'','','','']);
+	holdTable.push(['','気分が悪い','きぶんがわるい','feel ill',26,0,'','','','']);
+	holdTable.push(['','新聞社','しんぶんしゃ','newspaper publishing company, newspaper office',26,0,'','','','']);
+	holdTable.push(['','柔道','じゅうどう','judo',26,0,'','','','']);
+	holdTable.push(['','運動会','うんどうかい','athletic meeting',26,0,'','','','']);
+	holdTable.push(['','場所','ばしょ','place',26,0,'','','','']);
+	holdTable.push(['','ボランティア','ボランティア','volunteer',26,0,'','','','']);
+	holdTable.push(['','～弁','～べん','dialect',26,0,'','','','']);
+	holdTable.push(['','今度','こんど','next time, another time',26,0,'','','','']);
+	holdTable.push(['','ずいぶん','ずいぶん','pretty, very',26,0,'','','','']);
+	holdTable.push(['','直接','ちょくせつ','directly',26,0,'','','','']);
+	holdTable.push(['','いつでも','いつでも','any time',26,0,'','','','']);
+	holdTable.push(['','どこでも','どこでも','any place',26,0,'','','','']);
+	holdTable.push(['','だれでも','だれでも','anybody',26,0,'','','','']);
+	holdTable.push(['','何でも','なんでも','anything',26,0,'','','','']);
+	holdTable.push(['','こんな～','こんな～' ,'~ like this',26,0,'','','','']);
+	holdTable.push(['','そんな～','そんな～','~ like that (near the listener)',26,0,'','','','']);
+	holdTable.push(['','あんな～','あんな～','~ like that (far from both the speaker and the listener)',26,0,'','','','']);
+	holdTable.push(['','こどもの日','こどものに','Children\'s Day',26,0,'','','','']);
+	holdTable.push(['','片づきます','かたづぎます','put in order',26,0,'','','','']);
+	holdTable.push(['','ごみ','ごみ','garbage, trash, dust',26,0,'','','','']);
+	holdTable.push(['','ごみを出します','ごみをだします','put out the trash',26,0,'','','','']);
+	holdTable.push(['','燃えます','もえます','burn',26,0,'','','','']);
+	holdTable.push(['','燃えるごみ','もえるごみ','burnable trash',26,0,'','','','']);
+	holdTable.push(['','燃えないごみ','もえないごみ','non-burnable trash',26,0,'','','','']);
+	holdTable.push(['','月水金','げっすいきん','Monday, Wednesday and Friday',26,0,'','','','']);
+	holdTable.push(['','置き場','おきば','place where something is put',26,0,'','','','']);
+	holdTable.push(['','横','よこ','side',26,0,'','','','']);
+	holdTable.push(['','瓶','びん','bottle',26,0,'','','','']);
+	holdTable.push(['','缶','かん','can',26,0,'','','','']);
+	holdTable.push(['','お湯','おゆ','hot water',26,0,'','','','']);
+	holdTable.push(['','ガス','ガス','gas',26,0,'','','','']);
+	holdTable.push(['','～会社','～かいしゃ','~ company',26,0,'','','','']);
+	holdTable.push(['','連絡します','れんらくします','contact',26,0,'','','','']);
+	holdTable.push(['','困ったなあ','こまったなあ','What shall I do?',26,0,'','','','']);
+	holdTable.push(['','電子メール','でんしメール','electronic mail',26,0,'','','','']);
+	holdTable.push(['','宇宙','うちゅう','space',26,0,'','','','']);
+	holdTable.push(['','怖い','こわい','be afraid of',26,0,'','','','']);
+	holdTable.push(['','宇宙船','うちゅうせん','spaceship',26,0,'','','','']);
+	holdTable.push(['','別の','べつの','another',26,0,'','','','']);
+	holdTable.push(['','宇宙飛行士','うちゅうひこうし','astronaut',26,0,'','','','']);
+	
+	holdTable.push(['','飼います','かいます','keep (a pet), raise (an animal)',27,0,'','','','']);
+	holdTable.push(['','建てます','たてます','build',27,0,'','','','']);
+	holdTable.push(['','走ります','はしります','run, drive',27,0,'','','','']);
+	holdTable.push(['','道を走ります','みちをはしります','run, drive along a road',27,0,'','','','']);
+	holdTable.push(['','取ります','とります','take',27,0,'','','','']);
+	holdTable.push(['','休みを取ります','やすみをとります','take a holiday',27,0,'','','','']);
+	holdTable.push(['','見えます','みえます','can be seen',27,0,'','','','']);
+	holdTable.push(['','山が見えます','やまがみえます','a mountain can be seen',27,0,'','','','']);
+	holdTable.push(['','聞こえます','きこえます','can be heard',27,0,'','','','']);
+	holdTable.push(['','音が聞こます','おとがきこえます','a sound can be heard',27,0,'','','','']);
+	holdTable.push(['','できます','できます','can be made, be completed, come into existence',27,0,'','','','']);
+	holdTable.push(['','空港ができます','くうこうができます','an airport can be made',27,0,'','','','']);
+	holdTable.push(['','開きます','ひらきます','set up, open, hold',27,0,'','','','']);
+	holdTable.push(['','教室を開きます','きょうしつをひらきます','set up a class',27,0,'','','','']);
+	holdTable.push(['','ペット','ペット','pet',27,0,'','','','']);
+	holdTable.push(['','鳥','とり','bird',27,0,'','','','']);
+	holdTable.push(['','声','こえ','voice',27,0,'','','','']);
+	holdTable.push(['','波','なみ','wave',27,0,'','','','']);
+	holdTable.push(['','花火','はなび','fireworks',27,0,'','','','']);
+	holdTable.push(['','景色','けしき','scenery, view',27,0,'','','','']);
+	holdTable.push(['','昼間','ひるま','daytime',27,0,'','','','']);
+	holdTable.push(['','昔','むかし','old times, ancient times',27,0,'','','','']);
+	holdTable.push(['','道具','どうぐ','tool, instrument, equipment',27,0,'','','','']);
+	holdTable.push(['','自動販売機','じどうはんばいき','vending machine',27,0,'','','','']);
+	holdTable.push(['','通信販売','つうしんはんばい','mail order, mail-order sales',27,0,'','','','']);
+	holdTable.push(['','クリーニング','クリーニング','(dry) cleaning, laundry',27,0,'','','','']);
+	holdTable.push(['','マンション','マンション','condominium, apartment house',27,0,'','','','']);
+	holdTable.push(['','台所','だいどころ','kitchen',27,0,'','','','']);
+	holdTable.push(['','～教室','～きょうしつ','~class',27,0,'','','','']);
+	holdTable.push(['','パーティールーム','パーティールーム','party room',27,0,'','','','']);
+	holdTable.push(['','～後','～ご','after ~ (duration of time)',27,0,'','','','']);
+	holdTable.push(['','～しか','～しか','only ~ (used with negatives)',27,0,'','','','']);
+	holdTable.push(['','ほかの','ほかの','other',27,0,'','','','']);
+	holdTable.push(['','はっきり','はっきり','clearly',27,0,'','','','']);
+	holdTable.push(['','ほとんど','ほとんど','almost all (in positive sentences), hardly, scarcely (in negative sentences)',27,0,'','','','']);
+	holdTable.push(['','関西空港','かんさいくうこう','Kansai Airport',27,0,'','','','']);
+	holdTable.push(['','秋葉原','あきはばら','name of a shopping district with many electrical and electronical stores',27,0,'','','','']);
+	holdTable.push(['','伊豆','いず','peninsula in Shizuoka Prefecture',27,0,'','','','']);
+	holdTable.push(['','日曜大工','にちようだいく','Sunday carpenter , do it yourself-er',27,0,'','','','']);
+	holdTable.push(['','本棚','ほんだな','bookshelf',27,0,'','','','']);
+	holdTable.push(['','夢','ゆめ','dream',27,0,'','','','']);
+	holdTable.push(['','夢をみます','ゆめをみます','have a dream',27,0,'','','','']);
+	holdTable.push(['','いつか','いつか','sometime, someday',27,0,'','','','']);
+	holdTable.push(['','家','いえ','house, home',27,0,'','','','']);
+	holdTable.push(['','すばらしい','すばらしい','marvelous, wonderful',27,0,'','','','']);
+	holdTable.push(['','子どもたち','こどもたち','children',27,0,'','','','']);
+	holdTable.push(['','大好き','だいすき','like very much',27,0,'','','','']);
+	holdTable.push(['','漫画','まんが','cartoon, comic strip',27,0,'','','','']);
+	holdTable.push(['','主人公','しゅじんこう','hero, heroine',27,0,'','','','']);
+	holdTable.push(['','形','かたち','shape',27,0,'','','','']);
+	holdTable.push(['','ロボット','ロボット','robot',27,0,'','','','']);
+	holdTable.push(['','不思議','ふしぎ','fantastic, mysterious',27,0,'','','','']);
+	holdTable.push(['','ポケット','ポケット','pocket',27,0,'','','','']);
+	holdTable.push(['','例えば','たとえば','for example',27,0,'','','','']);
+	holdTable.push(['','付けます ','つけます','attach, put on',27,0,'','','','']);
+	holdTable.push(['','自由に','じゆうに','freely',27,0,'','','','']);
+	holdTable.push(['','空','そら','sky',27,0,'','','','']);
+	holdTable.push(['','飛びます','とびます','fly',27,0,'','','','']);
+	holdTable.push(['','自分','じぶん','oneself',27,0,'','','','']);
+	holdTable.push(['','将来','しょうらい','future',27,0,'','','','']);	
+	
+	
+	holdTable.push(['','売れます','うれます','sell, be sold',28,0,'','','','']);
+	holdTable.push(['','踊ります','おどります','dance',28,0,'','','','']);
+	holdTable.push(['','かみます','かみます','chew, bite',28,0,'','','','']);
+	holdTable.push(['','選びます','えらびます','choose',28,0,'','','','']);
+	holdTable.push(['','違います','ちがいます','be different',28,0,'','','','']);
+	holdTable.push(['','通います','かよいます','go to and from',28,0,'','','','']);
+	holdTable.push(['','大学に通います','だいがくにかよいます','to go to and from university',28,0,'','','','']);
+	holdTable.push(['','メモします','メモします','take a memo',28,0,'','','','']);
+	holdTable.push(['','まじめ','まじめ','serious',28,0,'','','','']);
+	holdTable.push(['','熱心','ねっしん','earnest',28,0,'','','','']);
+	holdTable.push(['','優しい','やさしい','gentle, kind',28,0,'','','','']);
+	holdTable.push(['','偉い','えらい','great, admirable',28,0,'','','','']);
+	holdTable.push(['','ちょうどいい','ちょうどいい','proper, just right',28,0,'','','','']);
+	holdTable.push(['','習慣','しゅうかん','custom',28,0,'','','','']);
+	holdTable.push(['','経験','けいけん','experience',28,0,'','','','']);
+	holdTable.push(['','力','ちから','power',28,0,'','','','']);
+	holdTable.push(['','人気','にんき','popular',28,0,'','','','']);
+	holdTable.push(['','形','かたち','form, shape',28,0,'','','','']);
+	holdTable.push(['','色','いろ','color',28,0,'','','','']);
+	holdTable.push(['','味','あじ','taste',28,0,'','','','']);
+	holdTable.push(['','ガム','ガム','chewing gum',28,0,'','','','']);
+	holdTable.push(['','品物','しなもの','goods',28,0,'','','','']);
+	holdTable.push(['','値段','ねだん','price',28,0,'','','','']);
+	holdTable.push(['','給料','きゅうりょう','salary',28,0,'','','','']);
+	holdTable.push(['','ボーナス','ボーナス','bonus',28,0,'','','','']);
+	holdTable.push(['','番組','ばんぐみ','program',28,0,'','','','']);
+	holdTable.push(['','ドラマ','ドラマ','drama',28,0,'','','','']);
+	holdTable.push(['','小説','しょうせつ','novel',28,0,'','','','']);
+	holdTable.push(['','小説家','しょうせつか','novelist',28,0,'','','','']);
+	holdTable.push(['','歌手','かしゅ','singer',28,0,'','','','']);
+	holdTable.push(['','管理人','かんりにん','janitor',28,0,'','','','']);
+	holdTable.push(['','息子','むすこ','(my) son',28,0,'','','','']);
+	holdTable.push(['','息子さん','むすこさん','(someone else\'s) son',28,0,'','','','']);
+	holdTable.push(['','娘','むすめ','(my) daughter',28,0,'','','','']);
+	holdTable.push(['','娘さん','むすめさん','(someone else\'s) daughter',28,0,'','','','']);
+	holdTable.push(['','自分','じぶん','oneself',28,0,'','','','']);
+	holdTable.push(['','将来','しょうらい','future',28,0,'','','','']);
+	holdTable.push(['','しばらく','しばらく','a little while',28,0,'','','','']);
+	holdTable.push(['','たいてい','たいてい','usually, mostly',28,0,'','','','']);
+	holdTable.push(['','それに[それに','in addition',28,0,'','','','']);
+	holdTable.push(['','それで','それで','and so',28,0,'','','','']);
+	holdTable.push(['','ちょっとを願いあるんですが','ちょっとを願いあるんですが','I have a favor to ask ',28,0,'','','','']);
+	holdTable.push(['','ホームステイ','ホームステイ','homestay',28,0,'','','','']);
+	holdTable.push(['','会話','かいわ','conversation',28,0,'','','','']);
+	holdTable.push(['','おしゃべりします','おしゃべりします','chat',28,0,'','','','']);
+	holdTable.push(['','お知らせ','おしらせ','notice',28,0,'','','','']);
+	holdTable.push(['','日にち','ひにち','date',28,0,'','','','']);
+	holdTable.push(['','土','ど','Saturday',28,0,'','','','']);
+	holdTable.push(['','体育館','たいいくかん','gymnasium',28,0,'','','','']);
+	holdTable.push(['','無料','むりょう','free of charge',28,0,'','','','']);
+	
+	holdTable.push(['','開きます','あきます','open',29,0,'','','','']);
+	holdTable.push(['','ドアが開きます','ドアがあきます','a door opens',29,0,'','','','']);
+	holdTable.push(['','閉まりる','しまります','close, shut',29,0,'','','','']);
+	holdTable.push(['','ドアが閉まる','ドアがしまります','a door closes, shuts',29,0,'','','','']);
+	holdTable.push(['','つきます','つきます','come on',29,0,'','','','']);
+	holdTable.push(['','電気がつきます','でんきがつきます','a light comes on',29,0,'','','','']);
+	holdTable.push(['','消えます','きえます','go off, disappear',29,0,'','','','']);
+	holdTable.push(['','電気が消えます','でんきがきえます','a light goes off, disappears',29,0,'','','','']);
+	holdTable.push(['','込みます','こみます','get crowded',29,0,'','','','']);
+	holdTable.push(['','道が込みます','みちがこみます','a street gets crowded',29,0,'','','','']);
+	holdTable.push(['','すきます','すきます','get empty',29,0,'','','','']);
+	holdTable.push(['','道がすきます','みちががすきます','a street gets empty',29,0,'','','','']);
+	holdTable.push(['','壊れます','こわれます','break',29,0,'','','','']);
+	holdTable.push(['','椅子が壊れります','いすがこわれます','a chair breaks',29,0,'','','','']);
+	holdTable.push(['','割れます','われます','break, smash',29,0,'','','','']);
+	holdTable.push(['','コップが割れます','コップがわれます','a glass breaks',29,0,'','','','']);
+	holdTable.push(['','折れます','おれます','break, snap',29,0,'','','','']);
+	holdTable.push(['','木が折れます','きがおれます','a tree breaks, snaps',29,0,'','','','']);
+	holdTable.push(['','破れます','やぶれます','tear',29,0,'','','','']);
+	holdTable.push(['','紙が破れます','かみがやぶれます','the paper tears',29,0,'','','','']);
+	holdTable.push(['','汚れます','よごれます','get dirty',29,0,'','','','']);
+	holdTable.push(['','服が汚れます','ふくがよごれます','the clothes get dirty',29,0,'','','','']);
+	holdTable.push(['','付きます','つきます','be attached',29,0,'','','','']);
+	holdTable.push(['','ポケットが付きます','ポケットがつきます','a pocket is attached',29,0,'','','','']);
+	holdTable.push(['','外れます','はずれます','be undone',29,0,'','','','']);
+	holdTable.push(['','ボタンが外れます','ボタンがはずれます','a button is undone',29,0,'','','','']);
+	holdTable.push(['','止まります','とまります','stop',29,0,'','','','']);
+	holdTable.push(['','エレベーターが止まります','エレベーターがとまります','an elevator stops',29,0,'','','','']);
+	holdTable.push(['','まちがえます','まちがえます','make a mistake',29,0,'','','','']);
+	holdTable.push(['','落します','おとします','drop, loose',29,0,'','','','']);
+	holdTable.push(['','掛かります','かかります','be locked',29,0,'','','','']);
+	holdTable.push(['','お皿','おさら','plate, dish',29,0,'','','','']);
+	holdTable.push(['','おちゃわん','おちゃわん','rice bowl',29,0,'','','','']);
+	holdTable.push(['','コップ','コップ','glass (vessel)',29,0,'','','','']);
+	holdTable.push(['','ガラス','ガラス','glass (material)',29,0,'','','','']);
+	holdTable.push(['','袋','ふくろ','bag',29,0,'','','','']);
+	holdTable.push(['','財布','さいふ','wallet, purse',29,0,'','','','']);
+	holdTable.push(['','枝','えだ','branch, twig',29,0,'','','','']);
+	holdTable.push(['','駅員','えきいん','station employee',29,0,'','','','']);
+	holdTable.push(['','この辺','このへん','this neighborhood',29,0,'','','','']);
+	holdTable.push(['','～辺','～へん','neighborhood',29,0,'','','','']);
+	holdTable.push(['','このくらい','このくらい','about this size',29,0,'','','','']);
+	holdTable.push(['','お先にどうぞ','おさきにどうぞ','After you, Go ahead please',29,0,'','','','']);
+	holdTable.push(['','ああよかった','ああよかった','Thank goodness! (used to express a feeling of relief)',29,0,'','','','']);
+	holdTable.push(['','今の電車','いまのでんしゃ','the train which has just left',29,0,'','','','']);
+	holdTable.push(['','忘れ物','わすれもの','things left behind, lost things',29,0,'','','','']);
+	holdTable.push(['','～側','～がわ','side',29,0,'','','','']);
+	holdTable.push(['','ポケット','ポケット','pocket',29,0,'','','','']);
+	holdTable.push(['','覚えていません','おぼえていません','I don\'t remember ',29,0,'','','','']);
+	holdTable.push(['','網棚','あみだな','rack',29,0,'','','','']);
+	holdTable.push(['','確か','たしか]','I suppose, if I am correct ',29,0,'','','','']);
+	holdTable.push(['','地震','じしん','earthquake',29,0,'','','','']);
+	holdTable.push(['','壁','かべ','wall',29,0,'','','','']);
+	holdTable.push(['','針','はり','hands (of a clock)',29,0,'','','','']);
+	holdTable.push(['','指します','さします','point ',29,0,'','','','']);
+	holdTable.push(['','駅前','えきまえ','the area in front of the station',29,0,'','','','']);
+	holdTable.push(['','倒れます','たおれます','fall down',29,0,'','','','']);
+	holdTable.push(['','西','にし','west',29,0,'','','','']);
+	holdTable.push(['','方','ほう','direction',29,0,'','','','']);
+
+	
+	holdTable.push(['','はります','はります','put up, post, paste',30,0,'','','','']);
+	holdTable.push(['','掛けます','かけます','hang',30,0,'','','','']);
+	holdTable.push(['','飾ります','かざります','decorate, display',30,0,'','','','']);
+	holdTable.push(['','並べます','ならべます','arrange, line up',30,0,'','','','']);
+	holdTable.push(['','植えます','うえます','plant',30,0,'','','','']);
+	holdTable.push(['','戻します','もどします','return, put ~ back',30,0,'','','','']);
+	holdTable.push(['','まとめます','まとめます','put ~ together, put ~ in shape, sum up',30,0,'','','','']);
+	holdTable.push(['','片付けます','かたづけます','put things in order, tidy up',30,0,'','','','']);
+	holdTable.push(['','しまいます','しまいます','put things in their proper place',30,0,'','','','']);
+	holdTable.push(['','決めます','きめます','decide',30,0,'','','','']);
+	holdTable.push(['','知らせます','しらせます','to inform',30,0,'','','','']);
+	holdTable.push(['','相談します','そうだんします','consult, discuss',30,0,'','','','']);
+	holdTable.push(['','予習します','よしゅうします','prepare one\'s lesson',30,0,'','','','']);
+	holdTable.push(['','復習します','ふくしゅうします','review one\'s lesson',30,0,'','','','']);
+	holdTable.push(['','そのままにします','そのままにします','leave thing as they are',30,0,'','','','']);
+	holdTable.push(['','お子さん','おこさん','(someone else\'s) child',30,0,'','','','']);
+	holdTable.push(['','授業','じゅぎょう','class',30,0,'','','','']);
+	holdTable.push(['','講義','こうぎ','lecture',30,0,'','','','']);
+	holdTable.push(['','ミーティング','ミーティング','meeting',30,0,'','','','']);
+	holdTable.push(['','予定','よてい','a plan, a scheduled',30,0,'','','','']);
+	holdTable.push(['','お知らせ','おしらせ','a notice',30,0,'','','','']);
+	holdTable.push(['','案内書','あんないしょ','guidebook',30,0,'','','','']);
+	holdTable.push(['','カレンダー','カレンダー','calendar',30,0,'','','','']);
+	holdTable.push(['','ポスター','ポスター','poster',30,0,'','','','']);
+	holdTable.push(['','ごみ箱','ごみばこ','trash can, dustbin',30,0,'','','','']);
+	holdTable.push(['','人形','にんぎょう','doll',30,0,'','','','']);
+	holdTable.push(['','花瓶','かびん','vase',30,0,'','','','']);
+	holdTable.push(['','鏡','かがみ','mirror',30,0,'','','','']);
+	holdTable.push(['','引き出し','ひきだし','drawer',30,0,'','','','']);
+	holdTable.push(['','玄関','げんかん','front door, porch, entrance hall',30,0,'','','','']);
+	holdTable.push(['','廊下','ろうか','corridor, hallway',30,0,'','','','']);
+	holdTable.push(['','壁','かべ','wall',30,0,'','','','']);
+	holdTable.push(['','池','いけ','pond',30,0,'','','','']);
+	holdTable.push(['','交番','こうばん','police box ',30,0,'','','','']);
+	holdTable.push(['','元の所','もとのところ','original place',30,0,'','','','']);
+	holdTable.push(['','周り','まわり','round, around',30,0,'','','','']);
+	holdTable.push(['','真ん中','まんなか','center',30,0,'','','','']);
+	holdTable.push(['','隅','すみ','corner',30,0,'','','','']);
+	holdTable.push(['','まだ','まだ','not yet',30,0,'','','','']);
+	holdTable.push(['','～ほど','～ほど','about ~',30,0,'','','','']);
+	holdTable.push(['','予定表','よていひょう','schedule',30,0,'','','','']);
+	holdTable.push(['','ご苦労さま','ごくろうさま','Thank you for your hard work',30,0,'','','','']);
+	holdTable.push(['','希望','きぼう','hope, request',30,0,'','','','']);
+	holdTable.push(['','何かご希望がありますか','なにかごきぼうがありますか','Do you have any requests?',30,0,'','','','']);
+	holdTable.push(['','ミューシカル','ミューシカル','musical',30,0,'','','','']);
+	holdTable.push(['','これはいいですね','これはいいですね','That\'s a good idea, that sounds nice',30,0,'','','','']);
+	holdTable.push(['','ブロードウエイ','ブロードウエイ','Broadway',30,0,'','','','']);
+	holdTable.push(['','丸い','まるい','round',30,0,'','','','']);
+	holdTable.push(['','月','つき','moon',30,0,'','','','']);
+	holdTable.push(['','ある～','ある～','one ~, a certain ~',30,0,'','','','']);
+	holdTable.push(['','地球','ちきゅう','earth',30,0,'','','','']);
+	holdTable.push(['','うれしい','うれしい','happy, glad',30,0,'','','','']);
+	holdTable.push(['','嫌','いや','hateful, disagreeable',30,0,'','','','']);
+	holdTable.push(['','すると','すると','and then',30,0,'','','','']);
+	holdTable.push(['','目が覚めます','めがさめます','wake up',30,0,'','','','']);
+	
+	holdTable.push(['','始まります','はじまります','begin, starts',31,0,'','','','']);
+	holdTable.push(['','式が始まります','しきがはじまります','a ceremony begin, starts',31,0,'','','','']);
+	holdTable.push(['','続けます','つづけます','continue',31,0,'','','','']);
+	holdTable.push(['','見つけます','みつけます','find',31,0,'','','','']);
+	holdTable.push(['','受けます','うけます','take an examination',31,0,'','','','']);
+	holdTable.push(['','試験を受けます','しけんをうけます','take an examination',31,0,'','','','']);
+	holdTable.push(['','入学します','にゅうがくします','enter  (a university)',31,0,'','','','']);
+	holdTable.push(['','卒業します','そつぎょうします','graduate (from an university)',31,0,'','','','']);
+	holdTable.push(['','出席します','しゅっせきします','attend',31,0,'','','','']);
+	holdTable.push(['','休憩します','きゅうけいします','take a break, take a rest',31,0,'','','','']);
+	holdTable.push(['','連休','れんきゅう','consecutive holidays',31,0,'','','','']);
+	holdTable.push(['','作文','さくぶん','essay, composition',31,0,'','','','']);
+	holdTable.push(['','展覧会','てんらんかい','exhibition',31,0,'','','','']);
+	holdTable.push(['','結婚式','けっこんしき','wedding ceremony',31,0,'','','','']);
+	holdTable.push(['','を葬式 ','をそうしき','funeral',31,0,'','','','']);
+	holdTable.push(['','式','しき','ceremony',31,0,'','','','']);
+	holdTable.push(['','本社','ほんしゃ','head office',31,0,'','','','']);
+	holdTable.push(['','支店','してん','branch office',31,0,'','','','']);
+	holdTable.push(['','教会','きょうかい','church',31,0,'','','','']);
+	holdTable.push(['','大学院','だいがくいん','graduate school',31,0,'','','','']);
+	holdTable.push(['','動物園','どうぶつえん','zoo',31,0,'','','','']);
+	holdTable.push(['','温泉','おんせん','hot spring, spa',31,0,'','','','']);
+	holdTable.push(['','お客さん','おきゃくさん','visitor, guest, customer, client',31,0,'','','','']);
+	holdTable.push(['','誰か','だれか','somebody',31,0,'','','','']);
+	holdTable.push(['','～の方','～のほう','place toward ~, direction of ~',31,0,'','','','']);
+	holdTable.push(['','ずっと','ずっと','all the time',31,0,'','','','']);
+	holdTable.push(['','残ります','のこります','remain, be left',31,0,'','','','']);
+	holdTable.push(['','月に','つきに','per month',31,0,'','','','']);
+	holdTable.push(['','普通の','ふつうの','ordinary, common, usual',31,0,'','','','']);
+	holdTable.push(['','インターネット','インターネット','Internet',31,0,'','','','']);
+	holdTable.push(['','村','むら','village',31,0,'','','','']);
+	holdTable.push(['','映画館','えいがかん','movie theater',31,0,'','','','']);
+	holdTable.push(['','嫌','いや','disagreeable, hateful',31,0,'','','','']);
+	holdTable.push(['','空','そら','sky',31,0,'','','','']);
+	holdTable.push(['','閉じます','とじます','close',31,0,'','','','']);
+	holdTable.push(['','都会','とかい','city',31,0,'','','','']);
+	holdTable.push(['','子どもたち','こどもたち','children',31,0,'','','','']);
+	holdTable.push(['','自由に','じゆうに','freely',31,0,'','','','']);
+	holdTable.push(['','世界中','せかいじゅう','all over the world',31,0,'','','','']);
+	holdTable.push(['','集まります','あつまります','gather',31,0,'','','','']);
+	holdTable.push(['','美しい','うつくしい','beautiful',31,0,'','','','']);
+	holdTable.push(['','自然','しぜん','nature ',31,0,'','','','']);
+	holdTable.push(['','すばらしさ','すばらしさ','goodness, virtue',31,0,'','','','']);
+	holdTable.push(['','気がつきます','きがきます','notice, become aware of',31,0,'','','','']);
+	
+	holdTable.push(['','運動します','うんどうします','take exercise',32,0,'','','','']);
+	holdTable.push(['','成功します','せいこうします','succeed',32,0,'','','','']);
+	holdTable.push(['','失敗する','しっぱいします','fail',32,0,'','','','']);
+	holdTable.push(['','試験に失敗する','しけんにしっぱいします','fail an examination',32,0,'','','','']);
+	holdTable.push(['','合格する','ごうかくします','pass',32,0,'','','','']);
+	holdTable.push(['','試験に合格する','しけんにごうがくします','pass an examination',32,0,'','','','']);
+	holdTable.push(['','戻ります','もどります','return',32,0,'','','','']);
+	holdTable.push(['','やみます','やみます','stop',32,0,'','','','']);
+	holdTable.push(['','雨がやみます','あめがやみます','stop raining',32,0,'','','','']);
+	holdTable.push(['','晴れます','はれます','clear up',32,0,'','','','']);
+	holdTable.push(['','曇ります','くもります','get cloudy',32,0,'','','','']);
+	holdTable.push(['','吹きます ','ふきます','blow',32,0,'','','','']);
+	holdTable.push(['','風が吹きます ','かぜがふきます','wind blows',32,0,'','','','']); 
+	holdTable.push(['','病気が治ります','びょうきがなおります','recover from (sickness), get well',32,0,'','','','']);
+	holdTable.push(['','故障が直ります','こしょうがなおります','be fixed, be repaired',32,0,'','','','']);
+	holdTable.push(['','続づきます','つづきます','continue',32,0,'','','','']);
+	holdTable.push(['','熱が続づきます','ねつがつづきます','high temperature continues',32,0,'','','','']);
+	holdTable.push(['','ひきます','ひきます','catch',32,0,'','','','']);
+	holdTable.push(['','かぜをひきます','かぜをひきます','catch a cold',32,0,'','','','']);
+	holdTable.push(['','冷やします',' ひやします','cool',32,0,'','','','']);
+	holdTable.push(['','心配','しんぱい','worried, anxious',32,0,'','','','']);
+	holdTable.push(['','十分','じゅうぶん','enough, sufficient',32,0,'','','','']);
+	holdTable.push(['','おかしい','おかしい','strange, funny',32,0,'','','','']);
+	holdTable.push(['','うるさい','うるさい','noisy',32,0,'','','','']);
+	holdTable.push(['','やけど','やけど','burning',32,0,'','','','']);
+	holdTable.push(['','やけどをします','やけどをします','get burned',32,0,'','','','']);
+	holdTable.push(['','けが','けが','injury',32,0,'','','','']);
+	holdTable.push(['','けがをします','けがをします','get injured',32,0,'','','','']);
+	holdTable.push(['','せき','せき','cough',32,0,'','','','']);
+	holdTable.push(['','せきがします','せきがします','have a cough',32,0,'','','','']);
+	holdTable.push(['','インフルエンザ','インフルエンザ','influenza ',32,0,'','','','']);
+	holdTable.push(['','空','そら','sky',32,0,'','','','']);
+	holdTable.push(['','太陽','たいよう','sun',32,0,'','','','']);
+	holdTable.push(['','星 ','ほし','star',32,0,'','','','']);
+	holdTable.push(['','月 ','つき','moon',32,0,'','','','']);
+	holdTable.push(['','風','かぜ','wind',32,0,'','','','']);
+	holdTable.push(['','北 ','きた','north',32,0,'','','','']);
+	holdTable.push(['','南 ','みなみ','south',32,0,'','','','']);
+	holdTable.push(['','西 ','にし','west',32,0,'','','','']);
+	holdTable.push(['','東 ','ひがし','east',32,0,'','','','']);
+	holdTable.push(['','水道','すいどう','faucet, tap, water supply',32,0,'','','','']);
+	holdTable.push(['','エンジン','エンジン','engine',32,0,'','','','']);
+	holdTable.push(['','チーム','チーム','team',32,0,'','','','']);
+	holdTable.push(['','今夜','こんや','this evening',32,0,'','','','']);
+	holdTable.push(['','夕方','ゆうがた','late afternoon',32,0,'','','','']);
+	holdTable.push(['','前 ','まえ','a time in the past, before',32,0,'','','','']);
+	holdTable.push(['','遅く ','おそく','late (time)',32,0,'','','','']);
+	holdTable.push(['','こんなに','こんなに','like this',32,0,'','','','']);
+	holdTable.push(['','そんなに','そんなに','like that (concerning a matter related to the listener)',32,0,'','','','']);
+	holdTable.push(['','あんなに','あんなに','like that (concerning a matter related to the listener and the speaker), that much',32,0,'','','','']);
+	holdTable.push(['','もしかしたら','もしかしたら','possibly, perhaps',32,0,'','','','']);
+	holdTable.push(['','それはいけません','それはいけません','That\'s too bad',32,0,'','','','']);
+	holdTable.push(['','オリンピック','オリンピック','Olympic Games',32,0,'','','','']);
+	holdTable.push(['','元気','げんき','vigor',32,0,'','','','']);
+	holdTable.push(['','胃','い','stomach',32,0,'','','','']);
+	holdTable.push(['','働きすぎ','はたらきすぎ','working too much',32,0,'','','','']);
+	holdTable.push(['','ストレス','ストレス','stress',32,0,'','','','']);
+	holdTable.push(['','無理をします','むりをします','work more than one\'s capacity',32,0,'','','','']);
+	holdTable.push(['','ゆっくりします','ゆっくりします','take one\'s time',32,0,'','','','']);
+	holdTable.push(['','星占い','ほしうらない','horoscope',32,0,'','','','']);
+	holdTable.push(['','牡牛座','おうしざ','Taurus',32,0,'','','','']);
+	holdTable.push(['','困ります','こまります','be in trouble, have a problem',32,0,'','','','']);
+	holdTable.push(['','宝くじ','たからくじ','lottery',32,0,'','','','']);
+	holdTable.push(['','当たります','あたります','win',32,0,'','','','']);
+	holdTable.push(['','宝くじが当たります','たからくじがあたります','win a lottery',32,0,'','','','']);
+	holdTable.push(['','健康','けんこう','health',32,0,'','','','']);
+	holdTable.push(['','恋愛','れんあい','romantic love',32,0,'','','','']);
+	holdTable.push(['','恋人','こいびと','sweetheart, boyfriend, girlfriend',32,0,'','','','']);
+	holdTable.push(['','お金持ち','おかねもち','rich person',32,0,'','','','']);
+
+	holdTable.push(['','逃げます','にげます','run away',33,0,'','','','']);
+	holdTable.push(['','騒ぎます','さわぎます','make a noise',33,0,'','','','']);
+	holdTable.push(['','あきらめます','あきらめます','give up',33,0,'','','','']);
+	holdTable.push(['','投げます','なげます','throw',33,0,'','','','']);
+	holdTable.push(['','守ります','まもります','keep, follow, obey',33,0,'','','','']);
+	holdTable.push(['','上げます','あげます','raise, lift up',33,0,'','','','']);
+	holdTable.push(['','下げます','さげます','lower, pull down',33,0,'','','','']);
+	holdTable.push(['','伝えます','つたえます','convey (a message)',33,0,'','','','']);
+	holdTable.push(['','注意します','ちゅういします','be careful',33,0,'','','','']);
+	holdTable.push(['','車に注意します','くるまにちゅういします','be careful of cars',33,0,'','','','']);
+	holdTable.push(['','外します','はずします','be away',33,0,'','','','']);
+	holdTable.push(['','席を外します','せきをはずします','be away from one\'s desk',33,0,'','','','']);
+	holdTable.push(['','だめ','だめ','not good, not permitted, impossible',33,0,'','','','']);
+	holdTable.push(['','席','せき','seat',33,0,'','','','']);
+	holdTable.push(['','ファイト','ファイト','fight',33,0,'','','','']);
+	holdTable.push(['','マーク','マーク','mark',33,0,'','','','']);
+	holdTable.push(['','ボール','ボール','ball',33,0,'','','','']);
+	holdTable.push(['','洗濯機','せんたくき','washing mashine',33,0,'','','','']);
+	holdTable.push(['','～機','～き','~ machine',33,0,'','','','']);
+	holdTable.push(['','規則','きそく','regulation, rule',33,0,'','','','']);
+	holdTable.push(['','使用禁止','しようきんし','Do not use',33,0,'','','','']);
+	holdTable.push(['','立入禁止','たちいりきんし','Keep Out',33,0,'','','','']);
+	holdTable.push(['','入口','いりぐち','entrance',33,0,'','','','']);
+	holdTable.push(['','出口','でぐち','exit',33,0,'','','','']);
+	holdTable.push(['','非常口','ひじょうぐち','emergency exit',33,0,'','','','']);
+	holdTable.push(['','無料','むりょう','free of charge',33,0,'','','','']);
+	holdTable.push(['','本日休業','ほんじつきゅうぎょう','closed today',33,0,'','','','']);
+	holdTable.push(['','営業中','えいぎょうちゅう','open for business',33,0,'','','','']);
+	holdTable.push(['','使用中','しようちゅう','in use',33,0,'','','','']);
+	holdTable.push(['','～中','～ちゅう','~ing',33,0,'','','','']);
+	holdTable.push(['','どういう','どういう','what kind of ~',33,0,'','','','']);
+	holdTable.push(['','もう','もう','(not) any longer (used with negatives)',33,0,'','','','']);
+	holdTable.push(['','あと～','あと～','~ left',33,0,'','','','']);
+	holdTable.push(['','駐車違反','ちゅうしゃいはん','parking violation',33,0,'','','','']);
+	holdTable.push(['','そりゃあ','そりゃあ','well',33,0,'','','','']);
+	holdTable.push(['','～以内','～いない','within ~',33,0,'','','','']);
+	holdTable.push(['','警察','けいさつ','police station',33,0,'','','','']);
+	holdTable.push(['','罰金','ばっきん','fine',33,0,'','','','']);
+	holdTable.push(['','電報','でんぽう','telegram',33,0,'','','','']);
+	holdTable.push(['','人々','ひとびと','people',33,0,'','','','']);
+	holdTable.push(['','急用','きゅうよう','urgent business',33,0,'','','','']);
+	holdTable.push(['','打ちます','うちます','send',33,0,'','','','']);
+	holdTable.push(['','電報を打ちます','でんぽうをうちます','send a telegram',33,0,'','','','']);
+	holdTable.push(['','電報代','でんぽうだい','telegram charge',33,0,'','','','']);
+	holdTable.push(['','できるだけ','できるだけ','as much as possible',33,0,'','','','']);
+	holdTable.push(['','短く','みじかく','shortly, briefly',33,0,'','','','']);
+	holdTable.push(['','また','また','and',33,0,'','','','']);
+	holdTable.push(['','例えば','たとえば','for example',33,0,'','','','']);
+	holdTable.push(['','危篤','キトク','in a critical condition',33,0,'','','','']);
+	holdTable.push(['','重い病気','おもいびょうき','serious illness',33,0,'','','','']);
+	holdTable.push(['','明日','あす','tomorrow',33,0,'','','','']);
+	holdTable.push(['','留守','るす','absence',33,0,'','','','']);
+	holdTable.push(['','留守番','るすばん','looking after the house during the owner\'s absence',33,0,'','','','']);
+	holdTable.push(['','お祝い','おいわい','celebration',33,0,'','','','']);
+	holdTable.push(['','亡くなります','なくなります','pass away, die',33,0,'','','','']);
+	holdTable.push(['','悲しみ','かなしみ','sorrow, sadness',33,0,'','','','']);
+	holdTable.push(['','利用します','りようします','use',33,0,'','','',''])
+	
+	holdTable.push(['','磨きます','みがきます','brush, polish',34,0,'','','','']);
+	holdTable.push(['','歯を磨きます','はをみがきます','brush one\'s teeth',34,0,'','','','']);
+	holdTable.push(['','組み立てます','くみたてます','assemble',34,0,'','','','']);
+	holdTable.push(['','降ります','おります','bend, fold, break, snap',34,0,'','','','']);
+	holdTable.push(['','気がつきます','きがつきます','notice, become aware of',34,0,'','','','']);
+	holdTable.push(['','忘れ物に気がつきます','わすれものにきがつきます','notice, become aware of things left behind',34,0,'','','','']);
+	holdTable.push(['','つけます','つけます','put in, attach',34,0,'','','','']);
+	holdTable.push(['','しょうゆをつけます','しょうゆをつけます','put in soy sauce',34,0,'','','','']);
+	holdTable.push(['','見つかります','みつかります','be found',34,0,'','','','']);
+	holdTable.push(['','かぎを見つかりる','かぎをみつかります','a key was found',34,0,'','','','']);
+	holdTable.push(['','します','します[','put on ,wear',34,0,'','','','']);
+	holdTable.push(['','ネクタイをします','ネクタイをします','wear a tie',34,0,'','','','']);
+	holdTable.push(['','質問します','しつもんをします','ask a a question',34,0,'','','','']);
+	holdTable.push(['','細い','ほそい','thin (of small diameter)',34,0,'','','','']);
+	holdTable.push(['','太い','ふとい','thick (of large diameter)',34,0,'','','','']);
+	holdTable.push(['','盆踊り','ぼんおどり','Bon Festival dance',34,0,'','','','']);
+	holdTable.push(['','スポーツクラブ','スポーツクラブ','sports club',34,0,'','','','']);
+	holdTable.push(['',' 家具','かぐ','furniture',34,0,'','','','']);
+	holdTable.push(['','キー','キー','key',34,0,'','','','']);
+	holdTable.push(['','シートベルト[ シートベルト','seat belt ',34,0,'','','','']);
+	holdTable.push(['','説明書','せつめいしょ','explanatory pamphlet, instruction book',34,0,'','','','']);
+	holdTable.push(['','図','ず','figure, drawing',34,0,'','','','']);
+	holdTable.push(['','線','せん','line',34,0,'','','','']);
+	holdTable.push(['','矢印','やじるし','arrow (sign)',34,0,'','','','']);
+	holdTable.push(['','黒','くろ','black (noun)',34,0,'','','','']);
+	holdTable.push(['','白','しろ','white (noun)',34,0,'','','','']);
+	holdTable.push(['','赤','あか','red (noun) ',34,0,'','','','']);
+	holdTable.push(['','青','あお','blue (noun)',34,0,'','','','']);
+	holdTable.push(['','紺','こん','navy blue, dark blue (noun)',34,0,'','','','']);
+	holdTable.push(['','黄色','きいろ','yellow (noun)',34,0,'','','','']);
+	holdTable.push(['','茶色','ちゃいろ','brown (noun)',34,0,'','','','']);
+	holdTable.push(['','しょうゆ','しょうゆ','soy sauce',34,0,'','','','']);
+	holdTable.push(['','ソース','ソース','sauce, Worcestershire sauce',34,0,'','','','']);
+	holdTable.push(['','～か ～','～か～]','',34,0,'','','','']);
+	holdTable.push(['','ゆうべ','ゆうべ','last night',34,0,'','','','']);
+	holdTable.push(['','さっき','さっき','a short while ago',34,0,'','','','']);
+	holdTable.push(['','茶道','さどう','tea ceremony',34,0,'','','','']);
+	holdTable.push(['','お茶をたてます','おちゃをたてます','make green tea',34,0,'','','','']);
+	holdTable.push(['','先に','さきに','first (when doing something before something else)',34,0,'','','','']);
+	holdTable.push(['','載せます','のせます','place on, load on',34,0,'','','','']);
+	holdTable.push(['','これでいいですか','これでいいですか','Is this all right?',34,0,'','','','']);
+	holdTable.push(['','苦い','にがい','bitter',34,0,'','','','']);
+	holdTable.push(['','親子どんぶり','おやこどんぶり','a bowl of cooked rice with chicken and egg',34,0,'','','','']);
+	holdTable.push(['','材料','ざいりょう','material, ingredient',34,0,'','','','']);
+	holdTable.push(['','ー分','ーぶん','portion (used for indicating quantity) ',34,0,'','','','']);
+	holdTable.push(['','ーグラム','ーグラム',' -gram',34,0,'','','','']);
+	holdTable.push(['','ー個','ーこ','(counter for small objects)',34,0,'','','','']);
+	holdTable.push(['','たまねぎ','たまねぎ','onion',34,0,'','','','']);
+	holdTable.push(['','４分の１','よんぶんのいち','one fourth',34,0,'','','','']);
+	holdTable.push(['','調味料','ちょうみりょう','seasoning , flavoring',34,0,'','','','']);
+	holdTable.push(['','なべ','なべ','pan, pot',34,0,'','','','']);
+	holdTable.push(['','火','ひ','fire, heating',34,0,'','','','']);
+	holdTable.push(['','火にかけます','ひにかけます','put on the stove',34,0,'','','','']);
+	holdTable.push(['','煮ます','にます','cook, boil',34,0,'','','','']);
+	holdTable.push(['','煮えます','にえます','be cooked, be boiled',34,0,'','','','']);
+	holdTable.push(['','どんぶり','どんぶり','ceramic bowl',34,0,'','','','']);
+	
+	holdTable.push(['','咲きます','さきます','bloom',35,0,'','','','']);
+	holdTable.push(['','花が咲きます','はながさきます','flowers bloom',35,0,'','','','']);
+	holdTable.push(['','変わります','かわります','change',35,0,'','','','']);
+	holdTable.push(['','色が変わります','いろがかわります','the color changes',35,0,'','','','']);
+	holdTable.push(['','困ります','こまります','be in trouble, have a problem',35,0,'','','','']);
+	holdTable.push(['','付けます','つけます','draw, mark',35,0,'','','','']);
+	holdTable.push(['','丸を付けます','まるをつけます','draw a circle, mark with a circle',35,0,'','','','']);
+	holdTable.push(['','拾います','ひろいます','pick up',35,0,'','','','']);
+	holdTable.push(['','かかります','かかります','get through',35,0,'','','','']);
+	holdTable.push(['','電話がかかります','でんわがかかります','get through on the telephone',35,0,'','','','']);
+	holdTable.push(['','楽','らく','comfortable, easy',35,0,'','','','']);
+	holdTable.push(['','正しい','ただしい','correct, right',35,0,'','','','']);
+	holdTable.push(['','珍しい','めずらしい','rare, uncommon',35,0,'','','','']);
+	holdTable.push(['','方 ','かた','person (respectfull of "hito")',35,0,'','','','']);
+	holdTable.push(['','向こう ','むこう','over there, the other side',35,0,'','','','']);
+	holdTable.push(['','島 ','しま','island',35,0,'','','','']);
+	holdTable.push(['','村 ','むら','village',35,0,'','','','']);
+	holdTable.push(['','港 ','みなと','port, harbor',35,0,'','','','']);
+	holdTable.push(['','近所','きんじょ','neighborhood, vicinity',35,0,'','','','']);
+	holdTable.push(['','屋上','おくじょう','rooftop',35,0,'','','','']);
+	holdTable.push(['','海外','かいがい','overseas',35,0,'','','','']);
+	holdTable.push(['','山登り','やまのぼり','mountain climbing',35,0,'','','','']);
+	holdTable.push(['','ハイキング','ハイキング','hiking',35,0,'','','','']);
+	holdTable.push(['','機会','きかい','chance, opportunity',35,0,'','','','']);
+	holdTable.push(['','許可','きょか','permission',35,0,'','','','']);
+	holdTable.push(['','丸','まる','circle',35,0,'','','','']);
+	holdTable.push(['','操作','そうさ','operation',35,0,'','','','']);
+	holdTable.push(['','方法','ほうほう','method',35,0,'','','','']);
+	holdTable.push(['','設備','せつび','equipment, facilities',35,0,'','','','']);
+	holdTable.push(['','カーテン','カーテン','curtain',35,0,'','','','']);
+	holdTable.push(['','ひも','ひも','string',35,0,'','','','']);
+	holdTable.push(['','ふた','ふた','lid, cover, cap',35,0,'','','','']);
+	holdTable.push(['','葉','は','leaf',35,0,'','','','']);
+	holdTable.push(['','曲','きょく','a piece of music',35,0,'','','','']);
+	holdTable.push(['','楽しみ','たのしみ','pleasure, enjoyment, expectation',35,0,'','','','']);
+	holdTable.push(['','もっと','もっと','more',35,0,'','','','']);
+	holdTable.push(['','初めに','はじめに','first',35,0,'','','','']);
+	holdTable.push(['','これで終わります','これでおわります','We\'ll finish now',35,0,'','','','']);
+	holdTable.push(['','それなら','それなら','in that case',35,0,'','','','']);
+	holdTable.push(['','夜行バス','やこうバス','night bus',35,0,'','','','']);
+	holdTable.push(['','旅行社','りょこうしゃ','travel agency',35,0,'','','','']);
+	holdTable.push(['','詳しい','くわしい','detailed',35,0,'','','','']);
+	holdTable.push(['','スキー場','スキーじょう','ski resort, ski ground',35,0,'','','','']);
+	holdTable.push(['','朱','しゅ','red',35,0,'','','','']);
+	holdTable.push(['','交わります','まじわります','keep company with',35,0,'','','','']);
+	holdTable.push(['','ことわざ','ことわざ','proverb',35,0,'','','','']);
+	holdTable.push(['','仲よくします','なかよくします','be on good terms with',35,0,'','','','']);
+	holdTable.push(['','必要','ひつよう','neccessary, essential',35,0,'','','','']);
+	
+	holdTable.push(['','届きます','とどきます','be delivered',36,0,'','','','']);
+	holdTable.push(['','荷物が届きます','にもつがとどきます','parcels are delivered',36,0,'','','','']);
+	holdTable.push(['','出ます','でます','participate',36,0,'','','','']);
+	holdTable.push(['','試合に出ます','ひあいにでます','participate in the game',36,0,'','','','']);
+	holdTable.push(['','打ちます','うちます','type',36,0,'','','','']);
+	holdTable.push(['','ワープロを打ちます','ワープロをうちます','type on a word processor',36,0,'','','','']);
+	holdTable.push(['','貯金します','ちょきんします','save money',36,0,'','','','']);
+	holdTable.push(['','太ります','ふとります','get fat',36,0,'','','','']);
+	holdTable.push(['','やせます','やせます','get slim. lose weight',36,0,'','','','']);
+	holdTable.push(['','過ぎます','すぎます','pass',36,0,'','','','']);
+	holdTable.push(['','７時を過ぎます','しちじをすぎます','pass 7 o\'clock',36,0,'','','','']);
+	holdTable.push(['','慣れます','なれます','get accustomed to',36,0,'','','','']);
+	holdTable.push(['','習慣に慣れます','しゅうかんになれます','get accustomed to the customs',36,0,'','','','']);
+	holdTable.push(['','硬い','かたい','hard, tough, solid',36,0,'','','','']);
+	holdTable.push(['','軟らかい','やわらかい','soft, tender',36,0,'','','','']);
+	holdTable.push(['','電子～','でんし～','electronic ~',36,0,'','','','']);
+	holdTable.push(['','携帯～','けいたい～','portable ~',36,0,'','','','']);
+	holdTable.push(['','工場','こうじょう','factory',36,0,'','','','']);
+	holdTable.push(['','健康','けんこう','health',36,0,'','','','']);
+	holdTable.push(['','剣道','けんどう','kendo (Japanese style fencing)',36,0,'','','','']);
+	holdTable.push(['','毎週','まいしゅう','every week',36,0,'','','','']);
+	holdTable.push(['','毎月','まいつき','every month',36,0,'','','','']);
+	holdTable.push(['','毎年','まいとし、まいねん','every year',36,0,'','','','']);
+	holdTable.push(['',' やっと','やっと','finally',36,0,'','','','']);
+	holdTable.push(['','かなり','かなり','fairly',36,0,'','','','']);
+	holdTable.push(['','必ず','かならず','without fail, by all means',36,0,'','','','']);
+	holdTable.push(['','絶対に','ぜったいに','absolutely (used with negatives)',36,0,'','','','']);
+	holdTable.push(['','上手に','じょうずに','well, skillfully',36,0,'','','','']);
+	holdTable.push(['','できるだけ','できるだけ','as much as possible',36,0,'','','','']);
+	holdTable.push(['','このごろ','このごろ','these days',36,0,'','','','']);
+	holdTable.push(['','～ずつ','～ずつ','(some amount) per ~',36,0,'','','','']);
+	holdTable.push(['','そのほうが～','そのほうが～','That is more ~',36,0,'','','','']);
+	holdTable.push(['','ショパン','ショパン','Chopin',36,0,'','','','']);
+	holdTable.push(['','お客様','おきゃくさま','guest, customer',36,0,'','','','']);
+	holdTable.push(['','特別','とくべつ','special',36,0,'','','','']);
+	holdTable.push(['','していらっしゃいます','していらっしゃいます','be doing (respectful equivalent of shite imasu)',36,0,'','','','']);
+	holdTable.push(['','水泳','すいえい','swimming',36,0,'','','','']);
+	holdTable.push(['','～とか、～とか','～とか、～とか','~, ~, and so on',36,0,'','','','']);
+	holdTable.push(['','タンゴ','タンゴ','tango',36,0,'','','','']);
+	holdTable.push(['','チャレンジします','チャレンジします','challenge',36,0,'','','','']);
+	holdTable.push(['','気持ち','きもち','feeling, enthusiasm',36,0,'','','','']);
+	holdTable.push(['','乗り物','のりもの','vehicle, means of transportation',36,0,'','','','']);
+	holdTable.push(['','歴史','れきし','history',36,0,'','','','']);
+	holdTable.push(['','～世紀','～せいき','~ century',36,0,'','','','']);
+	holdTable.push(['','遠く','とうく','far, remote place',36,0,'','','','']);
+	holdTable.push(['','汽車','きしゃ','locomotive',36,0,'','','','']);
+	holdTable.push(['','汽船','きせん','steam boat',36,0,'','','','']);
+	holdTable.push(['','大勢の','おおぜいの','many (people)',36,0,'','','','']);
+	holdTable.push(['','運びます','はこびます','carry, transport',36,0,'','','','']);
+	holdTable.push(['','飛びます','とびます','fly',36,0,'','','','']);
+	holdTable.push(['','安全','あんぜん','safe',36,0,'','','','']);
+	holdTable.push(['','宇宙','うちゅう','space, universe',36,0,'','','','']);
+	holdTable.push(['','地球','ちきゅう','earth',36,0,'','','','']);
+	holdTable.push(['','ライト兄弟','ライトきょうだい','Wright brothers',36,0,'','','','']);
+	
+	holdTable.push(['','褒めます','ほめます','praise',37,0,'','','','']);
+	holdTable.push(['','しかります','しかります','scold',37,0,'','','','']);
+	holdTable.push(['','誘います','さそいます','invite, ask someone to join',37,0,'','','','']);
+	holdTable.push(['','起こします','おこします','wake (someone) up',37,0,'','','','']);
+	holdTable.push(['','招待します','しょうたいします','invite',37,0,'','','','']);
+	holdTable.push(['','頼みます','たのみます','ask, request',37,0,'','','','']);
+	holdTable.push(['','注意します','ちゅういします','warn, advise',37,0,'','','','']);
+	holdTable.push(['','とります','とります','rob, steal',37,0,'','','','']);
+	holdTable.push(['','踏みます','ふみます','step on (someone\'s foot)',37,0,'','','','']);
+	holdTable.push(['','壊します','こわします','break, destroy',37,0,'','','','']);
+	holdTable.push(['','汚します','よごします','make ~ dirty',37,0,'','','','']);
+	holdTable.push(['','行います','おこないます','hold, carry out, practice',37,0,'','','','']);
+	holdTable.push(['','輸出します','ゆしゅつします','export',37,0,'','','','']);
+	holdTable.push(['','輸入します','ゆにゅうします','import',37,0,'','','','']); 
+	holdTable.push(['','翻訳します','ほんやくします','translate',37,0,'','','','']);
+	holdTable.push(['','発明します','はつめいします','invent',37,0,'','','','']);
+	holdTable.push(['','発見します','はっけんします','discover',37,0,'','','','']);
+	holdTable.push(['','設計します','せっけいします','design, plan',37,0,'','','','']);
+	holdTable.push(['','米','こめ','rice',37,0,'','','','']);
+	holdTable.push(['','麦','むぎ','barley, wheat',37,0,'','','','']);
+	holdTable.push(['','石油','せきゆ','oil',37,0,'','','','']);
+	holdTable.push(['','原料','げんりょう','raw material',37,0,'','','','']);
+	holdTable.push(['','デート','デート','date',37,0,'','','','']);
+	holdTable.push(['','泥棒','どろぼう','thief, robber',37,0,'','','','']);
+	holdTable.push(['','警官','けいかん','policeman',37,0,'','','','']);
+	holdTable.push(['','建築家','けんちくか','architect',37,0,'','','','']);
+	holdTable.push(['','科学者','かがくしゃ','scientist',37,0,'','','','']);
+	holdTable.push(['','漫画','まんが','cartoon',37,0,'','','','']);
+	holdTable.push(['','世界中','せかいじゅう','all over the world',37,0,'','','','']);
+	holdTable.push(['','～中','～じゅう','all over ~',37,0,'','','','']);
+	holdTable.push(['','～によって','～によって','by',37,0,'','','','']);
+	holdTable.push(['','よかったですね','よかったですね','Thats lucky, isn\'t it?',37,0,'','','','']);
+	holdTable.push(['','ドミニカ','ドミニカ','Dominica ',37,0,'','','','']);
+	holdTable.push(['','ライト兄弟','ライトきょうだい','Wright Brothers',37,0,'','','','']);
+	holdTable.push(['','源氏物語','げんじものがたり','"The Tale of Genji"',37,0,'','','','']);
+	holdTable.push(['','紫式部','むらさきしきぶ','Heian Period (9th Century) female novellist who wrote "The Tale of Genji"',37,0,'','','','']);
+	holdTable.push(['','グラハムーベル','グラハムーベル','Alexander Graham Bell',37,0,'','','','']);
+	holdTable.push(['','東照宮','とうしょうぐう','Shrine dedicated to Tokugawa Ieyasu',37,0,'','','','']);
+	holdTable.push(['','江戸時代','えどじだい','Edo Period',37,0,'','','','']);
+	holdTable.push(['','サウジアラビア','サウジアラビア','Saudia Arabia',37,0,'','','','']);
+	holdTable.push(['','埋め立てます','うめたてます','reclaim',37,0,'','','','']);
+	holdTable.push(['','技術','ぎじゅつ','technology, technique',37,0,'','','','']);
+	holdTable.push(['','土地','とち','land',37,0,'','','','']);
+	holdTable.push(['','騒音','そうおん','noise',37,0,'','','','']);
+	holdTable.push(['','利用します','りようします','use',37,0,'','','','']);
+	holdTable.push(['','アクセス','アクセス','access',37,0,'','','','']);
+	holdTable.push(['','ー世紀','ーせいき','- century',37,0,'','','','']);
+	holdTable.push(['','豪華','ごうか','gorgeous',37,0,'','','','']);
+	holdTable.push(['','彫刻','ちょうこく','engraving, carving, sculpture',37,0,'','','','']);
+	holdTable.push(['','眠ります','ねむります','sleep',37,0,'','','','']);
+	holdTable.push(['','彫ります','ほります','engrave, carve',37,0,'','','','']);
+	holdTable.push(['','仲間','なかま','colleague, friend',37,0,'','','','']);
+	holdTable.push(['','そのあと','そのあと','after that',37,0,'','','','']);
+	holdTable.push(['','一生懸命','いっしょうけんめい','with all one\'s effort',37,0,'','','','']);
+	holdTable.push(['','ねずみ','ねずみ','mouse',37,0,'','','','']);
+	holdTable.push(['','一匹もいません','いっぴきもいません','There is not a single (mouse)',37,0,'','','','']);
+	holdTable.push(['','眠り猫','ねむりねこ','The Sleeping Cat',37,0,'','','','']);
+	holdTable.push(['','左甚五郎','ひだりじんごろう','famous japanese sculptor of the Edo Period',37,0,'','','','']);
+	
+	holdTable.push(['','育てます','そだてます','breed, bring up',38,0,'','','','']);
+	holdTable.push(['','運びます','はこびます','carry, transport',38,0,'','','','']);
+	holdTable.push(['','亡くなります','なくなります','pass away (euphemistic expression for shinimasu)',38,0,'','','','']);
+	holdTable.push(['','入院します','にゅういんします','enter hospital',38,0,'','','','']);
+	holdTable.push(['','退院します[たいいんします','leave hospital',38,0,'','','','']);
+	holdTable.push(['','入れます','いれます','turn on',38,0,'','','','']);
+	holdTable.push(['','電源を入れます','でんげんをいれます','turn on the power switch',38,0,'','','','']);
+	holdTable.push(['','切ります','きります','turn off',38,0,'','','','']);
+	holdTable.push(['','電源を切ります','でんげんをきります','turn off the power switch',38,0,'','','','']);
+	holdTable.push(['','掛けます','かけます','lock',38,0,'','','','']);
+	holdTable.push(['','気持ちがいい','きもちがいい','pleasant, agreeable',38,0,'','','','']);
+	holdTable.push(['','気持ちが悪い','きもちがわるい','unpleasant, disgusting',38,0,'','','','']);
+	holdTable.push(['','大きな','おおきな','large',38,0,'','','','']);
+	holdTable.push(['','小さな','ちいさな','small',38,0,'','','','']);
+	holdTable.push(['','赤ちゃん','あかちゃん','baby',38,0,'','','','']);
+	holdTable.push(['','小学校','しょうがっこう','elementary school',38,0,'','','','']);
+	holdTable.push(['','中学校','ちゅうがっこう','junior high scool',38,0,'','','','']);
+	holdTable.push(['','駅前','えきまえ','in front of the station',38,0,'','','','']);
+	holdTable.push(['','海岸','かいがん','seaside, seashore',38,0,'','','','']);
+	holdTable.push(['','うそ','うそ','lie',38,0,'','','','']);
+	holdTable.push(['','書類','しょるい','documents, paper',38,0,'','','','']);
+	holdTable.push(['','電源','でんげん','power switch',38,0,'','','','']);
+	holdTable.push(['','～製','～せい','made in ~',38,0,'','','','']);
+	holdTable.push(['','いけない','いけない','Ooops! Oh, no! (used when one has made a mistake)',38,0,'','','','']);
+	holdTable.push(['','お先に','おさきに','Excuse me (for leaving before you)',38,0,'','','','']);
+	holdTable.push(['','原爆ドーム','げんばくドーム','dome commemorating the atomic bombing of Hiroshima',38,0,'','','','']);
+	holdTable.push(['','回覧','かいらん','circular, sending round',38,0,'','','','']);
+	holdTable.push(['','研究室','けんきゅうしつ','study room, professor\'s office, laboratory',38,0,'','','','']);
+	holdTable.push(['','きちんと','きちんと','neatly, tidily',38,0,'','','','']);
+	holdTable.push(['','整理します','せいりします','put (things) in order, tidy up',38,0,'','','','']);
+	holdTable.push(['','～という本','～というほん','the book titled ~, the book named ~',38,0,'','','','']);
+	holdTable.push(['','～冊','～さつ','(counter for books, etc.)',38,0,'','','','']);
+	holdTable.push(['','はんこ','はんこ','seal stamp',38,0,'','','','']);
+	holdTable.push(['','押します','おします','affix',38,0,'','','','']);
+	holdTable.push(['','判子お押します','はんこをおします','affix a seal',38,0,'','','','']);
+	holdTable.push(['','双子','ふたご','twins',38,0,'','','','']);
+	holdTable.push(['','姉妹','しまい','sisters',38,0,'','','','']);
+	holdTable.push(['','５年生','５ねんせい','fifth grade, fifth year',38,0,'','','','']);
+	holdTable.push(['','似ています','にています','resemble, be like',38,0,'','','','']);
+	holdTable.push(['','性格','せいかく','character',38,0,'','','','']);
+	holdTable.push(['','おとなしい','おとなしい','quiet',38,0,'','','','']);
+	holdTable.push(['','世話をします','せわをします','take care',38,0,'','','','']);
+	holdTable.push(['','時間がたちます','じかんがたちます','time pass by',38,0,'','','','']);
+	holdTable.push(['','大好き','だいすき','like very much',38,0,'','','','']);
+	holdTable.push(['','点','てん','points',38,0,'','','','']);
+	holdTable.push(['','クラス','クラス','class',38,0,'','','','']);
+	holdTable.push(['','けんかします','けんかします','quarrel, fight',38,0,'','','','']);
+	holdTable.push(['','不思議','ふしぎ','mysterious, strange',38,0,'','','','']);
+	
+	holdTable.push(['','答えます','こたえます','answer',39,0,'','','','']);
+	holdTable.push(['','質問に答えます','しつもんにこたえます','answer a question',39,0,'','','','']);
+	holdTable.push(['','倒れます','たおれます','fall down',39,0,'','','','']);
+	holdTable.push(['','ビルが倒れます','ビルがたおれます','a building falls down',39,0,'','','','']);
+	holdTable.push(['','焼けます','やけます','burn, be baked, be roasted, be grilled',39,0,'','','','']);
+	holdTable.push(['','家が焼けます','うちがやけます','the house burns',39,0,'','','','']);
+	holdTable.push(['','パンが焼けます','パンがやけます','bake bread ',39,0,'','','','']);
+	holdTable.push(['','肉が焼けます','にくがやけます ','roast or grill meat',39,0,'','','','']);
+	holdTable.push(['','通ります','とおります','pass',39,0,'','','','']);
+	holdTable.push(['','道を通ります','みちをとおります','pass along a street',39,0,'','','','']);
+	holdTable.push(['','死にます','しにます','die',39,0,'','','','']);
+	holdTable.push(['','びっくりします','びっくりします','be surprised',39,0,'','','','']);
+	holdTable.push(['','がっかりします','がっかりします','be disappointed',39,0,'','','','']);
+	holdTable.push(['','安心します','あんしんします','be relieved',39,0,'','','','']);
+	holdTable.push(['','遅刻します','ちこくします','be late, come late',39,0,'','','','']);
+	holdTable.push(['','早退します','そうたいします','leave (work or school) earlier than usual',39,0,'','','','']);
+	holdTable.push(['','けんかします','けんかします','quarrel, fight',39,0,'','','','']);
+	holdTable.push(['','離婚します','りこんします','divorce',39,0,'','','','']);
+	holdTable.push(['','複雑','ふくざつ','complicated, complex',39,0,'','','','']);
+	holdTable.push(['','邪魔','じゃま','obstructive, in the way',39,0,'','','','']);
+	holdTable.push(['','汚い','きたない','dirty',39,0,'','','','']);
+	holdTable.push(['','うれしい','うれしい','happy',39,0,'','','','']);
+	holdTable.push(['','悲しい','かなしい','sad',39,0,'','','','']);
+	holdTable.push(['','恥ずかしい','はずかしい','embarrased, ashamed',39,0,'','','','']);
+	holdTable.push(['','地震','じしん','earthquake',39,0,'','','','']);
+	holdTable.push(['','台風','たいふう','typhoon',39,0,'','','','']);
+	holdTable.push(['','火事','かじ','fire',39,0,'','','','']);
+	holdTable.push(['','事後','じご','accident',39,0,'','','','']);
+	holdTable.push(['','お見合い','おみあい','interview with a view to marriage',39,0,'','','','']);
+	holdTable.push(['','電話代','でんわだい','telephone bill',39,0,'','','','']);
+	holdTable.push(['','～代','～だい','charge, fare, fee',39,0,'','','','']);
+	holdTable.push(['','フロント','フロント','front desk, reception desk',39,0,'','','','']);
+	holdTable.push(['','～号室','～ごしつ','room number ~',39,0,'','','','']);
+	holdTable.push(['','汗','あせ','perspiration',39,0,'','','','']);
+	holdTable.push(['','汗をかきます','あせをかきます','perspire',39,0,'','','','']);
+	holdTable.push(['','タオル','タオル','towel',39,0,'','','','']);
+	holdTable.push(['','せっけん','せっけん','soap',39,0,'','','','']);
+	holdTable.push(['','大勢','おおぜい','a great number of people',39,0,'','','','']);
+	holdTable.push(['','お疲れ様でした','おつかれさまでした','Thank you for your hard work',39,0,'','','','']);
+	holdTable.push(['','伺います','うかがいます','I\'m coming',39,0,'','','','']);
+	holdTable.push(['','途中で','とちゅうで','on the way, in the midst of',39,0,'','','','']);
+	holdTable.push(['','トラック','トラック','truck',39,0,'','','','']);
+	holdTable.push(['','ぶつかります','ぶつかります','bump, collide',39,0,'','','','']);
+	holdTable.push(['','並びます','ならびます','stand in a queue, line up',39,0,'','','','']);
+	holdTable.push(['','大人','おとな','adult',39,0,'','','','']);
+	holdTable.push(['','洋服','ようふく','western clothes',39,0,'','','','']);
+	holdTable.push(['','西洋化します','せいようかします','be Westernized',39,0,'','','','']);
+	holdTable.push(['','合います','あいます','fit, suit',39,0,'','','','']);
+	holdTable.push(['','今では','いまでは','now',39,0,'','','','']);
+	holdTable.push(['','成人式','せいじんしき','coming-of-age celebration',39,0,'','','','']);
+	
+	holdTable.push(['','数えます','かぞえます','count',40,0,'','','','']);
+	holdTable.push(['','測ります','はかります','measure',40,0,'','','','']);
+	holdTable.push(['','量ります','はかります','weigh',40,0,'','','','']);
+	holdTable.push(['','確かめます','たしかめます','confirm, make sure',40,0,'','','','']);
+	holdTable.push(['','合います','あいます','fit',40,0,'','','','']);
+	holdTable.push(['','サイズが合います','サイズがあいます','the size fits',40,0,'','','','']);
+	holdTable.push(['','出発します','しゅっぱつします','depart',40,0,'','','','']);
+	holdTable.push(['','到着します','とうちゃくします','arrive',40,0,'','','','']);
+	holdTable.push(['','酔います','よいます','get drunk',40,0,'','','','']);
+	holdTable.push(['','危険','きけん','dangerous',40,0,'','','','']);
+	holdTable.push(['','必要','ひつよう','neccesary',40,0,'','','','']);
+	holdTable.push(['','宇宙','うちゅう','space, universe',40,0,'','','','']);
+	holdTable.push(['','地球','ちきゅう','earth',40,0,'','','','']);
+	holdTable.push(['','忘年会','ぼうねんかい','year end party',40,0,'','','','']);
+	holdTable.push(['','新年会','しんねんかい','New Year\'s Party',40,0,'','','','']);
+	holdTable.push(['','二次会','にじかい','second party',40,0,'','','','']);
+	holdTable.push(['','大会','たいかい','mass meeting, convention',40,0,'','','','']);
+	holdTable.push(['','マラソン','マラソン','marathon',40,0,'','','','']);
+	holdTable.push(['','コンテスト','コンテスト','contest',40,0,'','','','']);
+	holdTable.push(['','表','おもて','face, front',40,0,'','','','']);
+	holdTable.push(['','裏','うら','back (side)',40,0,'','','','']);
+	holdTable.push(['','返事','へんじ','reply',40,0,'','','','']);
+	holdTable.push(['','申し込み','もうしこみ','application',40,0,'','','','']);
+	holdTable.push(['','ほんとう','ほんとう','truth, fact',40,0,'','','','']);
+	holdTable.push(['','まちがい','まちがい','mistake',40,0,'','','','']);
+	holdTable.push(['','傷','きず','defect, wound, scratch',40,0,'','','','']);
+	holdTable.push(['','ズボン','ズボン','trousers',40,0,'','','','']);
+	holdTable.push(['','長さ','ながさ','length',40,0,'','','','']);
+	holdTable.push(['','重さ','おもさ','weight',40,0,'','','','']);
+	holdTable.push(['','高さ','たかさ','height',40,0,'','','','']);
+	holdTable.push(['','大きさ','おおきさ','size, scale',40,0,'','','','']);
+	holdTable.push(['','～便','～びん','flight, flight number',40,0,'','','','']);
+	holdTable.push(['','～号','～ごう','train number, typhoon number',40,0,'','','','']);
+	holdTable.push(['','～個','～こ','(counter for small objects)',40,0,'','','','']);
+	holdTable.push(['','～本','～ほん','(counter for long objects)',40,0,'','','','']);
+	holdTable.push(['','～杯','～はい','glass or cup (counter for full cups, glasses)',40,0,'','','','']);
+	holdTable.push(['','～キロ','～キロ','kilograms, kilometers',40,0,'','','','']);
+	holdTable.push(['','～グラム','～グラム','grams',40,0,'','','','']);
+	holdTable.push(['','～センチ','～センチ','centimeters',40,0,'','','','']);
+	holdTable.push(['','～ミリ','～ミリ','millimeters',40,0,'','','','']);
+	holdTable.push(['','～以上','～いじょう','not less than ~, over ~',40,0,'','','','']);
+	holdTable.push(['','～以下','～いか','not more than ~, under ~',40,0,'','','','']);
+	holdTable.push(['','さあ','さあ','well, let me see',40,0,'','','','']);
+	holdTable.push(['','コッホ','コッホ','Vincent Van Gogh',40,0,'','','','']);
+	holdTable.push(['','雪祭り','ゆきまつり','Snow Festival in Sapporo',40,0,'','','','']);
+	holdTable.push(['','のぞみ','のぞみ','name of a Shinkansen train',40,0,'','','','']);
+	holdTable.push(['','どうでしょうか','どうでしょうか','How is ~?',40,0,'','','','']);
+	holdTable.push(['','クラス','クラス','class',40,0,'','','','']);
+	holdTable.push(['','テスト','テスト','test, examination',40,0,'','','','']);
+	holdTable.push(['','成績','せいせき','performance, score, result',40,0,'','','','']);
+	holdTable.push(['','ところで','ところで','by the way',40,0,'','','','']);
+	holdTable.push(['','いらっしゃいます','いらっしゃいます','come',40,0,'','','','']);
+	holdTable.push(['','様子','ようす','situation, condition, appearance',40,0,'','','','']);
+	holdTable.push(['','事件','じけん','traffic accident',40,0,'','','','']);
+	holdTable.push(['','オートバイ','オートバイ','motorcycle',40,0,'','','','']);
+	holdTable.push(['','爆弾','ばくだん','bomb',40,0,'','','','']);
+	holdTable.push(['','積みます','つみます','load, pile up',40,0,'','','','']);
+	holdTable.push(['','運転手','うんてんしゅ','driver',40,0,'','','','']);
+	holdTable.push(['','離れた','はなれた','remote',40,0,'','','','']);
+	holdTable.push(['','が','が','but',40,0,'','','','']);
+	holdTable.push(['','急に','きゅうに','suddendly',40,0,'','','','']);
+	holdTable.push(['','動かします','うごかします','start, operate, move',40,0,'','','','']);
+	holdTable.push(['','一生懸命','いっしょうけんめい','all one\'s effort',40,0,'','','','']);
+	holdTable.push(['','犯人','はんにん','suspect, criminal',40,0,'','','','']);
+	holdTable.push(['','手に入れます','てにいれます','obtain, get',40,0,'','','','']);
+	holdTable.push(['','今でも','いまでも','even now',40,0,'','','','']);
+	holdTable.push(['','噂します','うわさします','gossip',40,0,'','','','']);
+	
+	holdTable.push(['','いただきます','いただきます','receive (humble equivalent of morau)',41,0,'','','','']);
+	holdTable.push(['','くださいます','くださいます','give (respectful equivalent of kureru)',41,0,'','','','']);
+	holdTable.push(['','やります','やります','give (to a younger person, animal, plant or subordinate)',41,0,'','','','']);
+	holdTable.push(['','呼びます','よびます','invite',41,0,'','','','']);
+	holdTable.push(['','取り替えます','とりかえます','exchange',41,0,'','','','']);
+	holdTable.push(['','親切にします','しんせつにします','be kind to',41,0,'','','','']);
+	holdTable.push(['','可愛い','かわいい','lovely, cute',41,0,'','','','']);
+	holdTable.push(['','お祝い','おいわい','celebration, gift',41,0,'','','','']);
+	holdTable.push(['','お祝いをします','おいわいをします','celebrate',41,0,'','','','']);
+	holdTable.push(['','お年玉','おとしだま','money given as New Year\'s gift',41,0,'','','','']);
+	holdTable.push(['','お見舞い','おみまい','expression of symphaty, consolatory gift to a sick person',41,0,'','','','']);
+	holdTable.push(['','興味','きょうみ','interest',41,0,'','','','']);
+	holdTable.push(['','情報','じょうほう','information',41,0,'','','','']);
+	holdTable.push(['','文法','ぶんぽう','grammar',41,0,'','','','']);
+	holdTable.push(['','発音','はつおん','pronunciation',41,0,'','','','']);
+	holdTable.push(['','猿','さる','ape, monkey',41,0,'','','','']);
+	holdTable.push(['','えさ','えさ','feed, bait',41,0,'','','','']);
+	holdTable.push(['','おもちゃ','おもちゃ','toy',41,0,'','','','']);
+	holdTable.push(['','絵本','えほん','picture book',41,0,'','','','']);
+	holdTable.push(['','絵はがき','えはがき','picture postcard',41,0,'','','','']);
+	holdTable.push(['','ドライバー','ドライバー','screwdriver',41,0,'','','','']);
+	holdTable.push(['','ハンカチ','ハンカチ','handkerchief',41,0,'','','','']);
+	holdTable.push(['','靴下','くつした','socks, stockings',41,0,'','','','']);
+	holdTable.push(['','手袋','てぶくろ','gloves',41,0,'','','','']);
+	holdTable.push(['','指輪','ゆびわ','ring',41,0,'','','','']);
+	holdTable.push(['','バッグ','バッグ','bag',41,0,'','','','']);
+	holdTable.push(['','祖父','そふ','(my) grandfather',41,0,'','','','']);
+	holdTable.push(['','祖母','そぼ','(my) grandmother',41,0,'','','','']);
+	holdTable.push(['','孫','まご','grandchild',41,0,'','','','']);
+	holdTable.push(['','おじ','おじ','(my) uncle',41,0,'','','','']);
+	holdTable.push(['','おじさん','おじさん','(someone else\'s) uncle',41,0,'','','','']);
+	holdTable.push(['','おば','おば','(my) aunt',41,0,'','','','']);
+	holdTable.push(['','おばさん','おばさん','(someone else\'s) aunt',41,0,'','','','']);
+	holdTable.push(['','おととし','おととし','the year before the last',41,0,'','','','']);
+	holdTable.push(['','はあ','はあ','yes, I see',41,0,'','','','']);
+	holdTable.push(['','申し訳ありません','もうしわけありません','I\'m sorry, Excuse me',41,0,'','','','']);
+	holdTable.push(['','預かります','あずかります','keep, receive (a thing) in trust',41,0,'','','','']);
+	holdTable.push(['','先日','せんじつ','the other day',41,0,'','','','']);
+	holdTable.push(['','助かります','たすかります','be of help',41,0,'','','','']);
+	holdTable.push(['','昔話','むかしばなし','old tale, folklore',41,0,'','','','']);
+	holdTable.push(['','ある～','ある～','a certain ~, one ~',41,0,'','','','']);
+	holdTable.push(['','男','おとこ','man',41,0,'','','','']);
+	holdTable.push(['','子どもたち','こどもたち','children',41,0,'','','','']);
+	holdTable.push(['','いじめます','いじめます','bully, abuse, tease, torment, ill-treat',41,0,'','','','']);
+	holdTable.push(['','かめ','かめ','turtle',41,0,'','','','']);
+	holdTable.push(['','助けます','たすけます','save, help',41,0,'','','','']);
+	holdTable.push(['','城','しろ','castle',41,0,'','','','']);
+	holdTable.push(['','お姫様','おひめさま','princess',41,0,'','','','']);
+	holdTable.push(['','楽しく','たのしく','happily, merily',41,0,'','','','']);
+	holdTable.push(['','暮らします','くらします','live, lead a life',41,0,'','','','']);
+	holdTable.push(['','陸','りく','land, shore',41,0,'','','','']);
+	holdTable.push(['','すると','すると','and, then',41,0,'','','','']);
+	holdTable.push(['','煙','けむり','smoke',41,0,'','','','']);
+	holdTable.push(['','真っ白','まっしろ','pure white',41,0,'','','','']);
+	holdTable.push(['','中身','なかみ','content',41,0,'','','','']);
+	
+	holdTable.push(['','包みます','つつみます','wrap',42,0,'','','','']);
+	holdTable.push(['','沸かします','わかします','boil',42,0,'','','','']);
+	holdTable.push(['','混ぜます','まぜます','mix',42,0,'','','','']);
+	holdTable.push(['','計算します','けいさんします','calculate',42,0,'','','','']);
+	holdTable.push(['','厚い','あつい','thick',42,0,'','','','']);
+	holdTable.push(['','薄い','うすい','thin',42,0,'','','','']);
+	holdTable.push(['','弁護士','べんごし','lawyer',42,0,'','','','']);
+	holdTable.push(['','音楽家','おんがくか','musician',42,0,'','','','']);
+	holdTable.push(['','子どもたち','こどもたち','children',42,0,'','','','']);
+	holdTable.push(['','二人','ふたり','couple',42,0,'','','','']);
+	holdTable.push(['','教育','きょういく','education',42,0,'','','','']);
+	holdTable.push(['','歴史','れきし','history',42,0,'','','','']);
+	holdTable.push(['','文化','ぶんか','culture',42,0,'','','','']);
+	holdTable.push(['','社会','しゃかい','society',42,0,'','','','']);
+	holdTable.push(['','法律','ほうりつ','law',42,0,'','','','']);
+	holdTable.push(['','戦争','せんそう','war',42,0,'','','','']);
+	holdTable.push(['','平和','へいわ','peace',42,0,'','','','']);
+	holdTable.push(['','目的','もくてき','purpose',42,0,'','','','']);
+	holdTable.push(['','安全','あんぜん','safety',42,0,'','','','']);
+	holdTable.push(['','論文','ろんぶん','thesis, academic paper',42,0,'','','','']);
+	holdTable.push(['','関係','かんけい','relation, connection',42,0,'','','','']);
+	holdTable.push(['','ミキサー','ミキサー','mixer',42,0,'','','','']);
+	holdTable.push(['','やかん','やかん','kettle',42,0,'','','','']);
+	holdTable.push(['','栓抜き','せんぬき','cap opener',42,0,'','','','']);
+	holdTable.push(['','缶切','かんきり','can opener',42,0,'','','','']);
+	holdTable.push(['','缶詰','かんづめ','canned food, tinned food',42,0,'','','','']);
+	holdTable.push(['','ふろしき','ふろしき','wrapping cloth used to carry things',42,0,'','','','']);
+	holdTable.push(['','そろばん','そろばん','abacus',42,0,'','','','']);
+	holdTable.push(['','体温計','たいおんけい','(clinical) thermometer',42,0,'','','','']);
+	holdTable.push(['','材料','ざいりょう','material, ingredients',42,0,'','','','']);
+	holdTable.push(['','石','いし','stone',42,0,'','','','']);
+	holdTable.push(['','ピラミッド','ピラミッド','pyramid',42,0,'','','','']);
+	holdTable.push(['','データ','データ','data',42,0,'','','','']);
+	holdTable.push(['','ファイル','ファイル','file',42,0,'','','','']);
+	holdTable.push(['','ある～','ある～','a certain ~, one ~',42,0,'','','','']);
+	holdTable.push(['','一生懸命','いっしょうけんめい','with all one\'s effort',42,0,'','','','']);
+	holdTable.push(['','なぜ','なぜ','why',42,0,'','','','']);
+	holdTable.push(['','国連','こくれん','United Nations',42,0,'','','','']);
+	holdTable.push(['','エリーゼのために','エリーゼのために','Für Elize',42,0,'','','','']);
+	holdTable.push(['','ベートーベン','ベートーベン','Ludwig van Beethoven',42,0,'','','','']);
+	holdTable.push(['','ポーランド','ポーランド','Poland',42,0,'','','','']);
+	holdTable.push(['','ローン','ローン','loan',42,0,'','','','']);
+	holdTable.push(['','セット','セット','set',42,0,'','','','']);
+	holdTable.push(['','あと','あと','the amount left unused, the rest',42,0,'','','','']);
+	holdTable.push(['','カップラーメン','カップラーメン','instant Chinese noodles sold in a ready-to-use disposable container',42,0,'','','','']);
+	holdTable.push(['','インスタントラーメン','インスタントラーメン','instant Chinese noodles',42,0,'','','','']);
+	holdTable.push(['','なべ','なべ','pan, pot',42,0,'','','','']);
+	holdTable.push(['','どんぶり','どんぶり','ceramic bowl',42,0,'','','','']);
+	holdTable.push(['','食品','しょくひん','food',42,0,'','','','']);
+	holdTable.push(['','調査','ちょうさ','investigation, survey',42,0,'','','','']);
+	holdTable.push(['','カップ','カップ','cup',42,0,'','','','']);
+	holdTable.push(['','また','また','and',42,0,'','','','']);
+	holdTable.push(['','～の代わりに','～のかわりに','in place of ~, instead of ~',42,0,'','','','']);
+	holdTable.push(['','どこででも','どこででも','in any place',42,0,'','','','']);
+	holdTable.push(['','今では','いまでは','now, nowadays',42,0,'','','','']);
+	
+	holdTable.push(['','増えます','ふえます','increase',43,0,'','','','']);
+	holdTable.push(['','輸出が増えます','ゆしゅつがふえます','exports increase',43,0,'','','','']);
+	holdTable.push(['','減ります','へります','decrease',43,0,'','','','']);
+	holdTable.push(['','輸出が減ります','ゆしゅつがへります','exports decrease',43,0,'','','','']);
+	holdTable.push(['','上がります','あがります','raise',43,0,'','','','']);
+	holdTable.push(['','値段が上がります','ねだんがあがります','the price raises',43,0,'','','','']);
+	holdTable.push(['','下がります','さがります','fall',43,0,'','','','']);
+	holdTable.push(['','値段が下がります','ねだんがさがります','the price falls',43,0,'','','','']);
+	holdTable.push(['','切れます','きれます','break, snap',43,0,'','','','']);
+	holdTable.push(['','紐が切れます','ひもがきれます','a string breaks, snaps',43,0,'','','','']);
+	holdTable.push(['','とれます','とれます','come off',43,0,'','','','']);
+	holdTable.push(['','ボタンがとれます','ボタンがとれます','a button comes off',43,0,'','','','']);
+	holdTable.push(['','落ちます','おちます','fall down',43,0,'','','','']);
+	holdTable.push(['','荷物が落ちます','にもつがおちます','bagage falls down',43,0,'','','','']);
+	holdTable.push(['','なくなります','なくなります','run out, be lost',43,0,'','','','']);
+	holdTable.push(['','ガソリンがなくなります','ガソリンがなくなります','petrol, gasoline run out, be lost',43,0,'','','','']);
+	holdTable.push(['','丈夫','じょうぶ','strong, healthy',43,0,'','','','']);
+	holdTable.push(['','変','へん','strange, peculiar',43,0,'','','','']);
+	holdTable.push(['','幸せ','しあわせ','happy',43,0,'','','','']);
+	holdTable.push(['','うまい','うまい','tasty, good at',43,0,'','','','']);
+	holdTable.push(['','まずい','まずい','not tasty',43,0,'','','','']);
+	holdTable.push(['','つまらない','つまらない','boring, uninteresting',43,0,'','','','']);
+	holdTable.push(['','ガソリン','ガソリン','gasoline, petrol',43,0,'','','','']);
+	holdTable.push(['','火','ひ','fire',43,0,'','','','']);
+	holdTable.push(['','暖房','だんぼう','heating',43,0,'','','','']);
+	holdTable.push(['','冷房','れいぼう','air-conditioning',43,0,'','','','']);
+	holdTable.push(['','センス','センス','taste, sense',43,0,'','','','']);
+	holdTable.push(['','ふくのセンスがあります','ふくのセンスがあります','have good taste in clothing',43,0,'','','','']);
+	holdTable.push(['','今にも','いまにも','at any moment (used to describe a situation just before it changes)',43,0,'','','','']);
+	holdTable.push(['','わあ','わあ','Oh!, Wow!',43,0,'','','','']);
+	holdTable.push(['','会員','かいいん','member',43,0,'','','','']);
+	holdTable.push(['','適当','てきとう','suitable, proper',43,0,'','','','']);
+	holdTable.push(['','年齢','ねんれい','age',43,0,'','','','']);
+	holdTable.push(['','収入','しゅうにゅう','income',43,0,'','','','']);
+	holdTable.push(['','ぴったり','ぴったり','exactly, just right',43,0,'','','','']);
+	holdTable.push(['','そのうえ','そのうえ','in addition to that, moreover',43,0,'','','','']);
+	holdTable.push(['','～といいます','～といいます','(one\'s name) is ~',43,0,'','','','']);
+	holdTable.push(['','ばら','ばら','rose',43,0,'','','','']);
+	holdTable.push(['','ドライブ','ドライブ','driving',43,0,'','','','']);
+	
+	holdTable.push(['','泣きます','なきます','cry',44,0,'','','','']);
+	holdTable.push(['','笑います','わらいます','laugh, smile',44,0,'','','','']);
+	holdTable.push(['','乾きます','かわきます','dry',44,0,'','','','']);
+	holdTable.push(['','濡れる','ぬれます','get wet',44,0,'','','','']);
+	holdTable.push(['','滑べります','すべります','slip',44,0,'','','','']);
+	holdTable.push(['','起きます','おきます','happen',44,0,'','','','']);
+	holdTable.push(['','事故が起きる','じこがおきます','an accident happens',44,0,'','','','']);
+	holdTable.push(['','調節します','ちょうせつします','adjust',44,0,'','','','']);
+	holdTable.push(['','安全','あんぜん','safe',44,0,'','','','']);
+	holdTable.push(['','丁寧','ていねい','polite, courteous, careful',44,0,'','','','']);
+	holdTable.push(['','細かい','こまかい','small, fine',44,0,'','','','']);
+	holdTable.push(['','濃い','こい','strong (taste), dark (color)',44,0,'','','','']);
+	holdTable.push(['','薄い','うすい','weak (taste), light (color)',44,0,'','','','']);
+	holdTable.push(['','空気','くうき','air',44,0,'','','','']);
+	holdTable.push(['','涙','なみだ','tear',44,0,'','','','']);
+	holdTable.push(['','和食','わしょく','Japanese dish',44,0,'','','','']);
+	holdTable.push(['','洋食','ようしょく','Western dish',44,0,'','','','']);
+	holdTable.push(['','御数','おかず','side dish',44,0,'','','','']);
+	holdTable.push(['','量','りょう','quantity',44,0,'','','','']);
+	holdTable.push(['','～倍','～ばい','~ times',44,0,'','','','']);
+	holdTable.push(['','半分','はんぶん','half',44,0,'','','','']);
+	holdTable.push(['','シングル','シングル','single room',44,0,'','','','']);
+	holdTable.push(['','ツイン','ツイン','twin-bedded room',44,0,'','','','']);
+	holdTable.push(['','箪笥','たんす','chest of drawers',44,0,'','','','']);
+	holdTable.push(['','洗濯物','せんたくもの','washing laundry',44,0,'','','','']);
+	holdTable.push(['','理由','りゆう','reason',44,0,'','','','']);
+	holdTable.push(['','どうなさいます','どうなさいます','What can I do for you?',44,0,'','','','']);
+	holdTable.push(['','カット','カット','haircut',44,0,'','','','']);
+	holdTable.push(['','シャンプー','シャンプー','shampoo',44,0,'','','','']);
+	holdTable.push(['','どう言う風になさいます','どういうふうになさいます','How would you like it done?',44,0,'','','','']);
+	holdTable.push(['','ショート','ショート','short',44,0,'','','','']);
+	holdTable.push(['','～みたいにしてくだい','～みたいにしてください','Do it like ~',44,0,'','','','']);
+	holdTable.push(['','これでよろしいでしょうか','これでよろしいでしょうか','Would this be all right?',44,0,'','','','']);
+	holdTable.push(['','どうもおつかれさまでした','どうもおつかれさまでした','Thank you for being patient',44,0,'','','','']);
+	holdTable.push(['','嫌がります','いやがります','dislike',44,0,'','','','']);
+	holdTable.push(['','また','また','and',44,0,'','','','']);
+	holdTable.push(['','順序','じゅんじょ','order, sequence',44,0,'','','','']);
+	holdTable.push(['','表現','ひょうげん','expression',44,0,'','','','']);
+	holdTable.push(['','例えば','たとえば','for example',44,0,'','','','']);
+	holdTable.push(['','別れます','わかれます','part, separate',44,0,'','','','']);
+	holdTable.push(['','これら','これら','these things',44,0,'','','','']);
+	holdTable.push(['','縁起が悪い','えんぎがわるい','unlucky, ill-omened',44,0,'','','','']);
+	
+	holdTable.push(['','謝ります','あやまります','apologize',45,0,'','','','']);
+	holdTable.push(['','あいます','あいます','encounter',45,0,'','','','']);
+	holdTable.push(['','事故にあいます','じこにあいます','encounter an accident',45,0,'','','','']);
+	holdTable.push(['','信じます','しんじます','believe, trust',45,0,'','','','']);
+	holdTable.push(['','用意します','よういします','prepare',45,0,'','','','']);
+	holdTable.push(['','キャンセルします','キャンセルします','cancel',45,0,'','','','']);
+	holdTable.push(['','旨く行きます','うまくいきます','go well',45,0,'','','','']);
+	holdTable.push(['','保証書','ほしょうしょ','guarantee',45,0,'','','','']);
+	holdTable.push(['','領収書','りょうしゅうしょ','receipt',45,0,'','','','']);
+	holdTable.push(['','贈物','おくりもの','gift, present',45,0,'','','','']);
+	holdTable.push(['','贈物をします','おくりものをします','give a present',45,0,'','','','']);
+	holdTable.push(['','間違い電話','まちがいでんわ','wrong (telephone) number',45,0,'','','','']);
+	holdTable.push(['','キャンプ','キャンプ','camp',45,0,'','','','']);
+	holdTable.push(['','係','かかり','person in charge',45,0,'','','','']);
+	holdTable.push(['','中止','ちゅうし','calling of, cancelling, suspension',45,0,'','','','']);
+	holdTable.push(['','点','てん','point, score',45,0,'','','','']);
+	holdTable.push(['','レバー','レバー','lever',45,0,'','','','']);
+	holdTable.push(['','～円札','～えんさつ','~ yen note, bill',45,0,'','','','']);
+	holdTable.push(['','ちゃんと','ちゃんと','regularly, properly',45,0,'','','','']);
+	holdTable.push(['','急に','きゅうに','suddenly',45,0,'','','','']);
+	holdTable.push(['','楽しみにしています','たのしみにしています','be looking forward to, be expecting',45,0,'','','','']);
+	holdTable.push(['','以上です','いじょうです','That\'s all',45,0,'','','','']);
+	holdTable.push(['','係員','かかりいん','person in charge, attendant',45,0,'','','','']);
+	holdTable.push(['','コース','コース','course',45,0,'','','','']);
+	holdTable.push(['','スタート','スタート','start',45,0,'','','','']);
+	holdTable.push(['','～位','～い','~ th ranking',45,0,'','','','']);
+	holdTable.push(['','優勝します','ゆうしょうします','win the championship',45,0,'','','','']);
+	holdTable.push(['','悩み','なやみ','trouble, worry',45,0,'','','','']);
+	holdTable.push(['','目覚まし','めざまし','alarm clock',45,0,'','','','']);
+	holdTable.push(['','眠ります','ねむります','sleep',45,0,'','','','']);
+	holdTable.push(['','目が覚めます','めがさめます','wake up',45,0,'','','','']);
+	holdTable.push(['','大学生','だいがくせい','university student',45,0,'','','','']);
+	holdTable.push(['','回答','かいとう','answer, reply',45,0,'','','','']);
+	holdTable.push(['','鳴ります','なります','ring',45,0,'','','','']);
+	holdTable.push(['','セットします','セットします','set',45,0,'','','','']);
+	holdTable.push(['','其れでも','それでも','nevertheless, for all that',45,0,'','','','']);
+	
+	// 0=romaji, 1=kanji, 2=hirakata, 3=eng, 4=chapter, 5=status, 6=verb group, 7=teform, 8=naiform, 9=dictform
+	
+}
+document.getElementById('nihongo').addEventListener('click', (event) => {
+	toggleJapanese();
+});
+function toggleJapanese() {
+	if(document.getElementById('nihongo').checked === true) {
+		displayJapanese();
+		var cell2 = document.querySelectorAll('td:nth-child(2)');
+		var cell3 = document.querySelectorAll('td:nth-child(3)');
+		for(var i = 0 ; i < cell2.length ; i++) {
+			cell2[i].innerHTML = vocabTable[i][1];
+			if (vocabTable[i][6] == '1' || vocabTable[i][6] == '2' || vocabTable[i][6] == '3') {
+				var verbGroup = ''
+				switch(vocabTable[i][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
+				cell2[i].innerHTML += ' (' + verbGroup + ')';
+				cell3[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
+								   + '<span class="supnaiform">' + vocabTable[i][8] + '</span><br/>'
+								   + '<span class="supadjnegpast">' + vocabTable[i][9] + '</span>';
+			} else if (vocabTable[i][6] == 'I' || vocabTable[i][6] == 'N') {
+				cell3[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
+													  + '<span class="supnaiform">' + vocabTable[i][8] + '</span><br/>'
+													  + '<span class="supadjnegpast">' + vocabTable[i][9] + '</span>';
+			} else {
+				cell3[i].innerHTML = vocabTable[i][2];
+			}
+		}
+	} else {
+		document.getElementById('kanji').innerHTML = "&nbsp;";
+		document.getElementById('hirakata').innerHTML = "&nbsp;";
+		document.getElementById('teform').innerHTML = "&nbsp;";
+		document.getElementById('naiform').innerHTML = "&nbsp;";
+		document.getElementById('adjnegpast').innerHTML = "&nbsp;";
+		var cell2 = document.querySelectorAll('td:nth-child(2)');
+		var cell3 = document.querySelectorAll('td:nth-child(3)');
+		for(var i = 0 ; i < cell2.length ; i++) {
+			cell2[i].textContent = "";
+			cell3[i].textContent = "";
+		}
+	}
+}
+document.getElementById('listToggle').addEventListener('click', (event) => {
+	if(state === 'card') {
+		document.getElementById("cardIcon").style.display = "block";
+		document.getElementById("counter").style.display = "none";
+		document.getElementById("title").style.display = "block";
+		document.getElementById("listIcon").style.display = "none";
+		document.getElementById("card").style.display = "none";
+		document.getElementById("list").style.display = "block";
+		state='list';
+	} else {
+		document.getElementById("listIcon").style.display = "block";
+		document.getElementById("cardIcon").style.display = "none";
+		document.getElementById("card").style.display = "block";
+		document.getElementById("title").style.display = "none";
+		document.getElementById("counter").style.display = "block";
+		document.getElementById("list").style.display = "none";
+		state='card';
+	}
+});
+function loadWord() {
+	document.getElementById('counter').innerHTML = (currentWord + 1).toString() + " / " + vocabTable.length.toString();
+	document.getElementById('hirakata').innerHTML = '&nbsp;';
+	document.getElementById('teform').innerHTML = '&nbsp;';
+	document.getElementById('naiform').innerHTML = '&nbsp;';
+	document.getElementById('adjnegpast').innerHTML = '&nbsp;';
+	document.getElementById('kanji').innerHTML = '&nbsp;';
+	document.getElementById('eng').innerHTML = vocabTable[currentWord][3];	
+	document.getElementById('kanjiHidden').value = vocabTable[currentWord][1];
+	var chkBox = document.getElementById('nihongo');
+	if (chkBox.checked)
+	{	displayJapanese();	}
+	document.getElementById("nihongo").focus();
+}
+document.getElementById('middle').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('teform').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('naiform').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('adjnegpast').addEventListener('click', function (event) {
+	displayJapanese();
+});
+document.getElementById('kanji').addEventListener('click', function (event) {
+	displayJapanese();
+});
+function displayJapanese() {
+	document.getElementById('kanji').innerHTML = vocabTable[currentWord][1];
+	document.getElementById('kanjiHidden').value = vocabTable[currentWord][1];
+	if(vocabTable[currentWord][6] == '1' || vocabTable[currentWord][6] == '2' || vocabTable[currentWord][6] == '3') {
+		var verbGroup = ''
+		switch(vocabTable[currentWord][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
+		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2] + ' (' + verbGroup + ')';
+		document.getElementById('teform').innerHTML = vocabTable[currentWord][7];
+		document.getElementById('naiform').innerHTML = vocabTable[currentWord][8];
+		document.getElementById('adjnegpast').innerHTML = vocabTable[currentWord][9];	
+	} else if(vocabTable[currentWord][6] == 'I' || vocabTable[currentWord][6] == 'N') {
+		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2];
+		document.getElementById('teform').innerHTML = vocabTable[currentWord][7];
+		document.getElementById('naiform').innerHTML = vocabTable[currentWord][8];
+		document.getElementById('adjnegpast').innerHTML = vocabTable[currentWord][9];
+	} else {
+		document.getElementById('hirakata').innerHTML = vocabTable[currentWord][2];
+		document.getElementById('teform').innerHTML = '&nbsp;';
+		document.getElementById('naiform').innerHTML = '&nbsp;';
+		document.getElementById('adjnegpast').innerHTML = '&nbsp;';
+	}
+}
+function removeSelected() {
+	document.getElementById('26').classList.remove("selected");
+	document.getElementById('27').classList.remove("selected");
+	document.getElementById('28').classList.remove("selected");
+	document.getElementById('29').classList.remove("selected");
+	document.getElementById('30').classList.remove("selected");
+	document.getElementById('31').classList.remove("selected");
+	document.getElementById('32').classList.remove("selected");
+	document.getElementById('33').classList.remove("selected");
+	document.getElementById('34').classList.remove("selected");
+	document.getElementById('35').classList.remove("selected");
+	document.getElementById('36').classList.remove("selected");
+	document.getElementById('37').classList.remove("selected");
+	document.getElementById('38').classList.remove("selected");
+	document.getElementById('39').classList.remove("selected");
+	document.getElementById('40').classList.remove("selected");
+	document.getElementById('41').classList.remove("selected");
+	document.getElementById('42').classList.remove("selected");
+	document.getElementById('43').classList.remove("selected");
+	document.getElementById('44').classList.remove("selected");
+	document.getElementById('45').classList.remove("selected");
+	document.getElementById('46').classList.remove("selected");
+	document.getElementById('47').classList.remove("selected");
+	document.getElementById('48').classList.remove("selected");
+	document.getElementById('49').classList.remove("selected");
+	document.getElementById('50').classList.remove("selected");
+	document.getElementById('51').classList.remove("selected");
+	document.getElementById('52').classList.remove("selected");
+	document.getElementById('53').classList.remove("selected");
+	document.getElementById('54').classList.remove("selected");
+	document.getElementById('55').classList.remove("selected");
+	document.getElementById('56').classList.remove("selected");
+	document.getElementById('57').classList.remove("selected");
+	document.getElementById('58').classList.remove("selected");
+	document.getElementById('59').classList.remove("selected");
+	document.getElementById('60').classList.remove("selected");
+}
+function populateLessonTable() {
+	while(lessonTable.rows.length > 0) {
+		lessonTable.deleteRow(0);
+	}
+	var i=vocabTable.length-1;
+	for(i; i>=0; --i) {
+		var row = lessonTable.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		cell1.innerHTML = vocabTable[i][4];
+		cell4.innerHTML = vocabTable[i][3];
+	}
+	toggleJapanese();
+}
+function populateVerbTable() {
+	while(lessonTable.rows.length > 0) {
+		lessonTable.deleteRow(0);
+	}
+	var i=vocabTable.length-1;
+	for(i; i>=0; --i) {
+		var row = lessonTable.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		cell1.innerHTML = vocabTable[i][4];
+		cell4.innerHTML = vocabTable[i][3];
+	}
+	toggleJapanese();
+}
+/*
+document.getElementById('lesson').addEventListener('click', function (event) {
+	var col = window.event.target.cellIndex;
+	var row = window.event.target.parentNode.rowIndex;
+	if (typeof col == 'undefined' || typeof row == 'undefined') { // trap if a span inside the cell was clicked
+		var parent = window.event.target.parentNode;
+		col = parent.cellIndex;
+		row = parent.parentNode.rowIndex;
+	}	
+	var x=document.getElementById('lesson').rows[parseInt(row,10)].cells;
+	if(x[0].innerHTML=="") {
+		x[1].innerHTML = vocabTable[row][1];
+		if (vocabTable[row][6] == '1' || vocabTable[row][6] == '2' || vocabTable[row][6] == '3') {
+			var verbGroup = ''
+			switch(vocabTable[row][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
+			x[1].innerHTML += ' (' + verbGroup + ')';
+			x[2].innerHTML = vocabTable[row][2] + '<br/><span class="supteform">' + vocabTable[row][7] + '</span><br/>'
+						   + '<span class="supnaiform">' + vocabTable[row][8] + '</span><br/>'
+						   + '<span class="supadjnegpast">' + vocabTable[row][9] + '</span>';
+		} else if (vocabTable[row][6] == 'I' || vocabTable[row][6] == 'N') {
+			x[2].innerHTML = vocabTable[row][2] + '<br/><span class="supteform">' + vocabTable[row][7] + '</span><br/>'
+						   + '<span class="supnaiform">' + vocabTable[row][8] + '</span><br/>'
+						   + '<span class="supadjnegpast">' + vocabTable[row][9] + '</span>';
+		} else {
+			x[2].innerHTML = vocabTable[row][2];
+		}
+	} else {
+		x[1].innerHTML="";
+		x[2].innerHTML="";
+	}
+});
+*/
+document.onkeydown = function(e) {
+	switch (e.keyCode) {
+	case 13:	// enter
+	case 38:	// up
+				displayJapanese();
+				break;
+	case 37:	// right
+				if(currentWord != 0) {
+					currentWord--;
+					document.getElementById('card').classList.add("w3-animate-rightout");
+					setTimeout(function(){
+							document.getElementById('card').classList.add("w3-animate-rightin");
+							loadWord();
+							setTimeout(function(){
+								document.getElementById('card').classList.remove("w3-animate-rightin");
+								document.getElementById('card').classList.remove("w3-animate-rightout");
+							},300);
+					},300);
+				}
+				break;
+	case 39:	// left
+				if(currentWord + 1 < vocabTable.length) {
+					currentWord++;
+					document.getElementById('card').classList.add("w3-animate-leftout");
+					setTimeout(function(){
+							document.getElementById('card').classList.add("w3-animate-leftin");
+							loadWord();
+							setTimeout(function(){
+								document.getElementById('card').classList.remove("w3-animate-leftin");
+								document.getElementById('card').classList.remove("w3-animate-leftout");
+							},300);
+					},300);
+				}
+				break;
+	case 40:	// down
+				document.getElementById('kanji').innerHTML = '&nbsp';
+				document.getElementById('hirakata').innerHTML = '&nbsp';
+				document.getElementById('teform').innerHTML = '&nbsp';
+				document.getElementById('naiform').innerHTML = '&nbsp';
+				document.getElementById('adjnegpast').innerHTML = '&nbsp';
+				break;
+	}
+};
+document.getElementById('kanji').addEventListener('click', function (event) {
+	const el = document.createElement('textarea');
+	el.value = document.getElementById('kanjiHidden').value;
+	document.body.appendChild(el);
+	el.select();
+	document.execCommand('copy');
+	document.body.removeChild(el);
+});
+function downloadCSV () {
+	let csvContent = "data:text/csv;charset=utf-8,";
+
+	vocabTable.forEach(function(rowArray) {
+		let row = rowArray.join('","');
+		csvContent += row + "\r\n";
+	});
+	
+	var encodedUri = encodeURI(csvContent);
+	var link = document.createElement("a");
+	link.setAttribute("href", encodedUri);
+	link.setAttribute("download", "mnh.csv");
+	document.body.appendChild(link);
+
+	link.click();
+
+}
+</script>
+</body>
+</html>
