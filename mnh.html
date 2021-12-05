@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0"/>
+  <meta http-equiv="cache-control" content="max-age=0"/>
+  <meta http-equiv="expires" content="0"/>
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+  <meta http-equiv="pragma" content="no-cache"/>
+  <title>🔊 みんなの日本語 1</title>
+  <link rel="icon" href="https://www.stephenmccready.asia/japanese/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="https://www.stephenmccready.asia/japanese/favicon.ico"/>
+  <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+div.col-md-3 {vertical-align:bottom;}
+div.L {font-size: 1.5em; font-weight: bold; background-color:#e8f4f8; clear:all; padding-top: 2.25em; padding-bottom: 0.75em; margin-top:2.25em; margin-bottom: 0.75em;}
+sup {font-weight: normal; font-size: 75%; vertical-align:middle; color:grey;}
+.content {padding-top:8px; margin-top: 8px; }
+#speed {padding: 0.5em;}
+#chapter {padding: 0.5em; margin-top:1em;}
+.chapter {font-size: 1.75em;vertical-align:middle;}
+div .cd {float:left;}
+div .r {float:right;}
+</style>
+</head>
+<body>
+<div>
+	<nav class="navbar navbar-default navbar-fixed-top" id="speed">
+		Audio speed:
+		<select id="speed" onchange="setUpAudioPlay(this.value)">
+		  <option value="1" selected="selected">100%</option>
+		  <option value="0.95">95%</option>
+		  <option value="0.9">90%</option>
+		  <option value="0.85">85%</option>
+		  <option value="0.8">80%</option>
+		  <option value="0.75">75%</option>
+		  <option value="0.7">70%</option>
+		  <option value="0.65">65%</option>
+		  <option value="0.6">60%</option>
+		  <option value="0.55">55%</option>
+		  <option value="0.5">50%</option>
+		</select>
+		<br/>
+		Lesson:
+		<select id="chapter" onchange="changeChapter(this.value)">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19" selected="selected">19</option>
+		  <option value="20">20</option>
+		  <option value="21">21</option>
+		  <option value="22">22</option>
+		  <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		</select>
+	</nav>
+</div>
+<div class="container-fluid content clearfix" id="page">
+  <div class="row" style="display:none;" id="1"><div class="col-md-12 L">第<sup>だい</sup><span class="chapter">1</span>課<sup>か</sup>&nbsp;&nbsp;初<sup>はじ</sup>めまして</div>
+    <div class="col-md-3"><div class="cd">💿 CD01&nbsp;会話 (かいわ)</div><div class="r"><button id="r1">↩️</button></div><br/><audio id="a1" controls="" preload="auto"><source id="audio_src" src="mnh\CD01.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD02&nbsp;問題 (もんだい)</div><div class="r"><button id="r2">↩️</button></div><br/><audio id="a2" controls="" preload="auto"><source id="audio_src" src="mnh\CD02.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD03&nbsp;問題 (もんだい)</div><div class="r"><button id="r3">↩️</button></div><br/><audio id="a3" controls="" preload="auto"><source id="audio_src" src="mnh\CD03.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD04&nbsp;問題 (もんだい)</div><div class="r"><button id="r4">↩️</button></div><br/><audio id="a4" controls="" preload="auto"><source id="audio_src" src="mnh\CD04.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="2"><div class="col-md-12 L">第<span class="chapter">2</span>課&nbsp;&nbsp;これから　お世<sup>せ</sup>話<sup>わ</sup>に　なります</div>
+    <div class="col-md-3"><div class="cd">💿 CD05&nbsp;会話 (かいわ)</div><div class="r"><button id="r5">↩️</button></div><br/><audio id="a5" controls="" preload="auto"><source id="audio_src" src="mnh\CD005.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD06&nbsp;問題 (もんだい)</div><div class="r"><button id="r6">↩️</button></div><br/><audio id="a6" controls="" preload="auto"><source id="audio_src" src="mnh\CD006.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD07&nbsp;問題 (もんだい)</div><div class="r"><button id="r7">↩️</button></div><br/><audio id="a7" controls="" preload="auto"><source id="audio_src" src="mnh\CD007.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD08&nbsp;問題 (もんだい)</div><div class="r"><button id="r8">↩️</button></div><br/><audio id="a8" controls="" preload="auto"><source id="audio_src" src="mnh\CD008.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="3"><div class="col-md-12 L">第<span class="chapter">3</span>課&nbsp;&nbsp;これお　ください</div>
+    <div class="col-md-3"><div class="cd">💿 CD09&nbsp;会話 (かいわ)</div><div class="r"><button id="r9">↩️</button></div><br/><audio id="a9" controls="" preload="auto"><source id="audio_src" src="mnh\CD09.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD10&nbsp;問題 (もんだい)</div><div class="r"><button id="r10">↩️</button></div><br/><audio id="a10" controls="" preload="auto"><source id="audio_src" src="mnh\CD10.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD11&nbsp;問題 (もんだい)</div><div class="r"><button id="r11">↩️</button></div><br/><audio id="a11" controls="" preload="auto"><source id="audio_src" src="mnh\CD11.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="4"><div class="col-md-12 L">第<span class="chapter">4</span>課&nbsp;&nbsp;そちらは　何<sup>なん</sup>時<sup>じ</sup>までですか</div>
+    <div class="col-md-3"><div class="cd">💿 CD12&nbsp;会話 (かいわ)</div><div class="r"><button id="r12">↩️</button></div><br/><audio id="a12" controls="" preload="auto"><source id="audio_src" src="mnh\CD12.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD13&nbsp;問題 (もんだい)</div><div class="r"><button id="r13">↩️</button></div><br/><audio id="a13" controls="" preload="auto"><source id="audio_src" src="mnh\CD13.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD14&nbsp;問題 (もんだい)</div><div class="r"><button id="r14">↩️</button></div><br/><audio id="a14" controls="" preload="auto"><source id="audio_src" src="mnh\CD14.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD15&nbsp;問題 (もんだい)</div><div class="r"><button id="r15">↩️</button></div><br/><audio id="a15" controls="" preload="auto"><source id="audio_src" src="mnh\CD15.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" style="display:none;" id="4a">
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3"><div class="cd">💿 CD16&nbsp;問題 (もんだい)</div><div class="r"><button id="r16">↩️</button></div><br/><audio id="a16" controls="" preload="auto"><source id="audio_src" src="mnh\CD16.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="5"><div class="col-md-12 L">第<span class="chapter">5</span>課&nbsp;&nbsp;この　電<sup>でん</sup>車<sup>しゃ</sup>は　甲<sup>こう</sup>子<sup>し</sup>園<sup>えん</sup>へ　行<sup>い</sup>きますか</div>
+    <div class="col-md-3"><div class="cd">💿 CD17&nbsp;会話 (かいわ)</div><div class="r"><button id="r17">↩️</button></div><br/><audio id="a17" controls="" preload="auto"><source id="audio_src" src="mnh\CD17.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD18&nbsp;問題 (もんだい)</div><div class="r"><button id="r18">↩️</button></div><br/><audio id="a18" controls="" preload="auto"><source id="audio_src" src="mnh\CD18.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD19&nbsp;問題 (もんだい)</div><div class="r"><button id="r19">↩️</button></div><br/><audio id="a19" controls="" preload="auto"><source id="audio_src" src="mnh\CD19.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD20&nbsp;問題 (もんだい)</div><div class="r"><button id="r20">↩️</button></div><br/><audio id="a20" controls="" preload="auto"><source id="audio_src" src="mnh\CD20.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="6"><div class="col-md-12 L">第<span class="chapter">6</span>課&nbsp;&nbsp;いっしょに　行<sup>い</sup>きませんか</div>
+    <div class="col-md-3"><div class="cd">💿 CD21&nbsp;会話 (かいわ)</div><div class="r"><button id="r21">↩️</button></div><br/><audio id="a21" controls="" preload="auto"><source id="audio_src" src="mnh\CD21.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD22&nbsp;問題 (もんだい)</div><div class="r"><button id="r22">↩️</button></div><br/><audio id="a22" controls="" preload="auto"><source id="audio_src" src="mnh\CD22.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD23&nbsp;問題 (もんだい)</div><div class="r"><button id="r23">↩️</button></div><br/><audio id="a23" controls="" preload="auto"><source id="audio_src" src="mnh\CD23.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="7"><div class="col-md-12 L">第<span class="chapter">7</span>課&nbsp;&nbsp;いらっしゃい</div>
+    <div class="col-md-3"><div class="cd">💿 CD24&nbsp;会話 (かいわ)</div><div class="r"><button id="r24">↩️</button></div><br/><audio id="a24" controls="" preload="auto"><source id="audio_src" src="mnh\CD24.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD25&nbsp;問題 (もんだい)</div><div class="r"><button id="r25">↩️</button></div><br/><audio id="a25" controls="" preload="auto"><source id="audio_src" src="mnh\CD25.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD26&nbsp;問題 (もんだい)</div><div class="r"><button id="r26">↩️</button></div><br/><audio id="a26" controls="" preload="auto"><source id="audio_src" src="mnh\CD26.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD27&nbsp;問題 (もんだい)</div><div class="r"><button id="r27">↩️</button></div><br/><audio id="a27" controls="" preload="auto"><source id="audio_src" src="mnh\CD27.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="8"><div class="col-md-12 L">第<span class="chapter">8</span>課&nbsp;&nbsp;そろそろ　失<sup>しつ</sup>礼<sup>れい</sup>します</div>
+    <div class="col-md-3"><div class="cd">💿 CD28&nbsp;会話 (かいわ)</div><div class="r"><button id="r28">↩️</button></div><br/><audio id="a28" controls="" preload="auto"><source id="audio_src" src="mnh\CD28.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD29&nbsp;問題 (もんだい)</div><div class="r"><button id="r29">↩️</button></div><br/><audio id="a29" controls="" preload="auto"><source id="audio_src" src="mnh\CD29.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD30&nbsp;問題 (もんだい)</div><div class="r"><button id="r30">↩️</button></div><br/><audio id="a30" controls="" preload="auto"><source id="audio_src" src="mnh\CD30.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD31&nbsp;問題 (もんだい)</div><div class="r"><button id="r31">↩️</button></div><br/><audio id="a31" controls="" preload="auto"><source id="audio_src" src="mnh\CD31.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="9"><div class="col-md-12 L">第<span class="chapter">9</span>課&nbsp;&nbsp;残念<sup>ざんねん</sup>　ですか</div>
+    <div class="col-md-3"><div class="cd">💿 CD32&nbsp;会話 (かいわ)</div><div class="r"><button id="r32">↩️</button></div><br/><audio id="a32" controls="" preload="auto"><source id="audio_src" src="mnh\CD32.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD33&nbsp;問題 (もんだい)</div><div class="r"><button id="r33">↩️</button></div><br/><audio id="a33" controls="" preload="auto"><source id="audio_src" src="mnh\CD33.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD34&nbsp;問題 (もんだい)</div><div class="r"><button id="r34">↩️</button></div><br/><audio id="a34" controls="" preload="auto"><source id="audio_src" src="mnh\CD34.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="10"><div class="col-md-12 L">第<span class="chapter">10</span>課&nbsp;&nbsp;ナンプラー、ありますか</div>
+    <div class="col-md-3"><div class="cd">💿 CD35&nbsp;会話 (かいわ)</div><div class="r"><button id="r35">↩️</button></div><br/><audio id="a35" controls="" preload="auto"><source id="audio_src" src="mnh\CD35.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD36&nbsp;問題 (もんだい)</div><div class="r"><button id="r36">↩️</button></div><br/><audio id="a36" controls="" preload="auto"><source id="audio_src" src="mnh\CD36.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD37&nbsp;問題 (もんだい)</div><div class="r"><button id="r37">↩️</button></div><br/><audio id="a37" controls="" preload="auto"><source id="audio_src" src="mnh\CD37.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD38&nbsp;問題 (もんだい)</div><div class="r"><button id="r38">↩️</button></div><br/><audio id="a38" controls="" preload="auto"><source id="audio_src" src="mnh\CD38.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="11"><div class="col-md-12 L">第<span class="chapter">11</span>課&nbsp;&nbsp;これ、お願<sup>ねが</sup>いします</div>
+    <div class="col-md-3"><div class="cd">💿 CD39&nbsp;会話 (かいわ)</div><div class="r"><button id="r39">↩️</button></div><br/><audio id="a39" controls="" preload="auto"><source id="audio_src" src="mnh\CD39.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD40&nbsp;問題 (もんだい)</div><div class="r"><button id="r40">↩️</button></div><br/><audio id="a40" controls="" preload="auto"><source id="audio_src" src="mnh\CD40.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD41&nbsp;問題 (もんだい)</div><div class="r"><button id="r41">↩️</button></div><br/><audio id="a41" controls="" preload="auto"><source id="audio_src" src="mnh\CD41.mp3" type="audio/mpeg"></audio></div>`
+    <div class="col-md-3"><div class="cd">💿 CD42&nbsp;問題 (もんだい)</div><div class="r"><button id="r42">↩️</button></div><br/><audio id="a42" controls="" preload="auto"><source id="audio_src" src="mnh\CD42.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="12"><div class="col-md-12 L">第<span class="chapter">12</span>課&nbsp;&nbsp;祇<sup>ぎ</sup>園<sup>おん</sup>祭<sup>まつり</sup>　は　どうでしたか</div>
+    <div class="col-md-3"><div class="cd">💿 CD43&nbsp;会話 (かいわ)</div><div class="r"><button id="r43">↩️</button></div><br/><audio id="a43" controls="" preload="auto"><source id="audio_src" src="mnh\CD43.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD44&nbsp;問題 (もんだい)</div><div class="r"><button id="r44">↩️</button></div><br/><audio id="a44" controls="" preload="auto"><source id="audio_src" src="mnh\CD44.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD45&nbsp;問題 (もんだい)</div><div class="r"><button id="r45">↩️</button></div><br/><audio id="a45" controls="" preload="auto"><source id="audio_src" src="mnh\CD45.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="13"><div class="col-md-12 L">第<span class="chapter">13</span>課&nbsp;&nbsp;別<sup>べつ</sup>々<sup>べつ</sup>に　お願<sup>ねが</sup>いします</div>
+    <div class="col-md-3"><div class="cd">💿 CD46&nbsp;会話 (かいわ)</div><div class="r"><button id="r46">↩️</button></div><br/><audio id="a46" controls="" preload="auto"><source id="audio_src" src="mnh\CD46.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD47&nbsp;問題 (もんだい)</div><div class="r"><button id="r47">↩️</button></div><br/><audio id="a47" controls="" preload="auto"><source id="audio_src" src="mnh\CD47.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD48&nbsp;問題 (もんだい)</div><div class="r"><button id="r48">↩️</button></div><br/><audio id="a48" controls="" preload="auto"><source id="audio_src" src="mnh\CD48.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="14"><div class="col-md-12 L">第<span class="chapter">14</span>課&nbsp;&nbsp;みどり町<sup>ちょう</sup>まで　お願<sup>ねが</sup>いします</div>
+    <div class="col-md-3"><div class="cd">💿 CD49&nbsp;会話 (かいわ)</div><div class="r"><button id="r49">↩️</button></div><br/><audio id="a49" controls="" preload="auto"><source id="audio_src" src="mnh\CD49.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD50&nbsp;問題 (もんだい)</div><div class="r"><button id="r50">↩️</button></div><br/><audio id="a50" controls="" preload="auto"><source id="audio_src" src="mnh\CD50.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD51&nbsp;問題 (もんだい)</div><div class="r"><button id="r51">↩️</button></div><br/><audio id="a51" controls="" preload="auto"><source id="audio_src" src="mnh\CD51.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD52&nbsp;問題 (もんだい)</div><div class="r"><button id="r52">↩️</button></div><br/><audio id="a52" controls="" preload="auto"><source id="audio_src" src="mnh\CD52.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="15"><div class="col-md-12 L">第<span class="chapter">15</span>課&nbsp;&nbsp;ご家<sup>か</sup>族<sup>ぞく</sup>は？</div>
+    <div class="col-md-3"><div class="cd">💿 CD53&nbsp;会話 (かいわ)</div><div class="r"><button id="r53">↩️</button></div><br/><audio id="a53" controls="" preload="auto"><source id="audio_src" src="mnh\CD53.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD54&nbsp;問題 (もんだい)</div><div class="r"><button id="r54">↩️</button></div><br/><audio id="a54" controls="" preload="auto"><source id="audio_src" src="mnh\CD54.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD55&nbsp;問題 (もんだい)</div><div class="r"><button id="r55">↩️</button></div><br/><audio id="a55" controls="" preload="auto"><source id="audio_src" src="mnh\CD55.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="16"><div class="col-md-12 L">第<span class="chapter">16</span>課&nbsp;&nbsp;使<sup>つか</sup>い　教<sup>おし</sup>えて　ください</div>
+    <div class="col-md-3"><div class="cd">💿 CD56&nbsp;会話 (かいわ)</div><div class="r"><button id="r56">↩️</button></div><br/><audio id="a56" controls="" preload="auto"><source id="audio_src" src="mnh\CD56.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD57&nbsp;問題 (もんだい)</div><div class="r"><button id="r57">↩️</button></div><br/><audio id="a57" controls="" preload="auto"><source id="audio_src" src="mnh\CD57.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD58&nbsp;問題 (もんだい)</div><div class="r"><button id="r58">↩️</button></div><br/><audio id="a58" controls="" preload="auto"><source id="audio_src" src="mnh\CD58.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD59&nbsp;問題 (もんだい)</div><div class="r"><button id="r59">↩️</button></div><br/><audio id="a59" controls="" preload="auto"><source id="audio_src" src="mnh\CD59.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="17"><div class="col-md-12 L">第<span class="chapter">17</span>課&nbsp;&nbsp;どう　しましたか</div>
+    <div class="col-md-3"><div class="cd">💿 CD60&nbsp;会話 (かいわ)</div><div class="r"><button id="r60">↩️</button></div><br/><audio id="a60" controls="" preload="auto"><source id="audio_src" src="mnh\CD60.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD61&nbsp;問題 (もんだい)</div><div class="r"><button id="r61">↩️</button></div><br/><audio id="a61" controls="" preload="auto"><source id="audio_src" src="mnh\CD61.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD62&nbsp;問題 (もんだい)</div><div class="r"><button id="r62">↩️</button></div><br/><audio id="a62" controls="" preload="auto"><source id="audio_src" src="mnh\CD62.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="18"><div class="col-md-12 L">第<span class="chapter">18</span>課&nbsp;&nbsp;趣<sup>しゅ</sup>味<sup>み</sup>は　何<sup>なん</sup>ですか</div>
+    <div class="col-md-3"><div class="cd">💿 CD63&nbsp;会話 (かいわ)</div><div class="r"><button id="r63">↩️</button></div><br/><audio id="a63" controls="" preload="auto"><source id="audio_src" src="mnh\CD63.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD64&nbsp;問題 (もんだい)</div><div class="r"><button id="r64">↩️</button></div><br/><audio id="a64" controls="" preload="auto"><source id="audio_src" src="mnh\CD64.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD65&nbsp;問題 (もんだい)</div><div class="r"><button id="r65">↩️</button></div><br/><audio id="a65" controls="" preload="auto"><source id="audio_src" src="mnh\CD65.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="19"><div class="col-md-12 L">第<span class="chapter">19</span>課&nbsp;&nbsp;ダイエットは　あしたから　します</div>
+    <div class="col-md-3"><div class="cd">💿 CD66&nbsp;会話 (かいわ)</div><div class="r"><button id="r66">↩️</button></div><br/><audio id="a66" controls="" preload="auto"><source id="audio_src" src="mnh\CD66.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD67&nbsp;問題 (もんだい)</div><div class="r"><button id="r67">↩️</button></div><br/><audio id="a67" controls="" preload="auto"><source id="audio_src" src="mnh\CD67.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD68&nbsp;問題 (もんだい)</div><div class="r"><button id="r68">↩️</button></div><br/><audio id="a68" controls="" preload="auto"><source id="audio_src" src="mnh\CD68.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="20"><div class="col-md-12 L">第<span class="chapter">20</span>課&nbsp;&nbsp;いっしょに　行<sup>い</sup>かない？</div>
+    <div class="col-md-3"><div class="cd">💿 CD69&nbsp;会話 (かいわ)</div><div class="r"><button id="r69">↩️</button></div><br/><audio id="a69" controls="" preload="auto"><source id="audio_src" src="mnh\CD69.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD70&nbsp;問題 (もんだい)</div><div class="r"><button id="r70">↩️</button></div><br/><audio id="a70" controls="" preload="auto"><source id="audio_src" src="mnh\CD70.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD71&nbsp;問題 (もんだい)</div><div class="r"><button id="r71">↩️</button></div><br/><audio id="a71" controls="" preload="auto"><source id="audio_src" src="mnh\CD71.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="21"><div class="col-md-12 L">第<span class="chapter">21</span>課&nbsp;&nbsp;わたしも　そう　思<sup>おも</sup>います</div>
+    <div class="col-md-3"><div class="cd">💿 CD72&nbsp;会話 (かいわ)</div><div class="r"><button id="r72">↩️</button></div><br/><audio id="a72" controls="" preload="auto"><source id="audio_src" src="mnh\CD72.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD73&nbsp;問題 (もんだい)</div><div class="r"><button id="r73">↩️</button></div><br/><audio id="a73" controls="" preload="auto"><source id="audio_src" src="mnh\CD73.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD74&nbsp;問題 (もんだい)</div><div class="r"><button id="r74">↩️</button></div><br/><audio id="a74" controls="" preload="auto"><source id="audio_src" src="mnh\CD74.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="22"><div class="col-md-12 L">第<span class="chapter">22</span>課&nbsp;&nbsp;どんな　部<sup>へ</sup>屋<sup>や</sup>　お探<sup>さが</sup>しですか</div>
+    <div class="col-md-3"><div class="cd">💿 CD75&nbsp;会話 (かいわ)</div><div class="r"><button id="r75">↩️</button></div><br/><audio id="a75" controls="" preload="auto"><source id="audio_src" src="mnh\CD75.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD76&nbsp;問題 (もんだい)</div><div class="r"><button id="r76">↩️</button></div><br/><audio id="a76" controls="" preload="auto"><source id="audio_src" src="mnh\CD76.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD77&nbsp;問題 (もんだい)</div><div class="r"><button id="r77">↩️</button></div><br/><audio id="a77" controls="" preload="auto"><source id="audio_src" src="mnh\CD77.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="23"><div class="col-md-12 L">第<span class="chapter">23</span>課&nbsp;&nbsp;どうやって　行<sup>い</sup>ますか</div>
+    <div class="col-md-3"><div class="cd">💿 CD78&nbsp;会話 (かいわ)</div><div class="r"><button id="r78">↩️</button></div><br/><audio id="a78" controls="" preload="auto"><source id="audio_src" src="mnh\CD78.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD79&nbsp;問題 (もんだい)</div><div class="r"><button id="r79">↩️</button></div><br/><audio id="a79" controls="" preload="auto"><source id="audio_src" src="mnh\CD79.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD80&nbsp;問題 (もんだい)</div><div class="r"><button id="r80">↩️</button></div><br/><audio id="a80" controls="" preload="auto"><source id="audio_src" src="mnh\CD80.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD81&nbsp;問題 (もんだい)</div><div class="r"><button id="r81">↩️</button></div><br/><audio id="a81" controls="" preload="auto"><source id="audio_src" src="mnh\CD81.mp3" type="audio/mpeg"></audio></div>
+  </div>
+  <div class="row" style="display:none;" id="24"><div class="col-md-12 L">第<span class="chapter">24</span>課&nbsp;&nbsp;手伝<sup>てつだ</sup>いに　行<sup>い</sup>きましょうか</div>
+    <div class="col-md-3"><div class="cd">💿 CD82&nbsp;会話 (かいわ)</div><div class="r"><button id="r82">↩️</button></div><br/><audio id="a82" controls="" preload="auto"><source id="audio_src" src="mnh\CD82.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD83&nbsp;問題 (もんだい)</div><div class="r"><button id="r83">↩️</button></div><br/><audio id="a83" controls="" preload="auto"><source id="audio_src" src="mnh\CD83.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD84&nbsp;問題 (もんだい)</div><div class="r"><button id="r84">↩️</button></div><br/><audio id="a84" controls="" preload="auto"><source id="audio_src" src="mnh\CD84.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row" style="display:none;" id="25"><div class="col-md-12 L">第<span class="chapter">25</span>課&nbsp;&nbsp;いるいる　お世<sup>せ</sup>話<sup>わ</sup>に　なりました</div>
+    <div class="col-md-3"><div class="cd">💿 CD85&nbsp;会話 (かいわ)</div><div class="r"><button id="r85">↩️</button></div><br/><audio id="a85" controls="" preload="auto"><source id="audio_src" src="mnh\CD85.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD86&nbsp;問題 (もんだい)</div><div class="r"><button id="r86">↩️</button></div><br/><audio id="a86" controls="" preload="auto"><source id="audio_src" src="mnh\CD86.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"><div class="cd">💿 CD87&nbsp;問題 (もんだい)</div><div class="r"><button id="r87">↩️</button></div><br/><audio id="a87" controls="" preload="auto"><source id="audio_src" src="mnh\CD87.mp3" type="audio/mpeg"></audio></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row"><div class="col-md-12 L"></div></div>
+ </div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	changeChapter('19');
+});
+function changeChapter(chapter) {
+	for(var x=1;x<26;x++) {
+		if(x==chapter) {
+			document.getElementById(x.toString()).style.display = "block";
+			if (x==4) {
+				document.getElementById('4a').style.display = "block";
+			}
+		} else {
+			document.getElementById(x.toString()).style.display = "none";
+			if (x==4) {
+				document.getElementById('4a').style.display = "none";
+			}
+		}
+	}
+}
+function setUpAudioPlay(speed) {
+    var aud = document.getElementById("a1");
+	for (var i = 1; i < 88; i++) { 
+		aud = document.getElementById("a" + i.toString());
+		aud.defaultPlaybackRate = speed; 
+		aud.playbackRate = speed;
+	}
+}
+
+document.getElementById("r1").addEventListener("click", function() { back5(this)});
+document.getElementById("r2").addEventListener("click", function() { back5(this)});
+document.getElementById("r3").addEventListener("click", function() { back5(this)});
+document.getElementById("r4").addEventListener("click", function() { back5(this)});
+document.getElementById("r5").addEventListener("click", function() { back5(this)});
+document.getElementById("r6").addEventListener("click", function() { back5(this)});
+document.getElementById("r7").addEventListener("click", function() { back5(this)});
+document.getElementById("r8").addEventListener("click", function() { back5(this)});
+document.getElementById("r9").addEventListener("click", function() { back5(this)});
+document.getElementById("r10").addEventListener("click", function() { back5(this)});
+document.getElementById("r11").addEventListener("click", function() { back5(this)});
+document.getElementById("r12").addEventListener("click", function() { back5(this)});
+document.getElementById("r13").addEventListener("click", function() { back5(this)});
+document.getElementById("r14").addEventListener("click", function() { back5(this)});
+document.getElementById("r15").addEventListener("click", function() { back5(this)});
+document.getElementById("r16").addEventListener("click", function() { back5(this)});
+document.getElementById("r17").addEventListener("click", function() { back5(this)});
+document.getElementById("r18").addEventListener("click", function() { back5(this)});
+document.getElementById("r19").addEventListener("click", function() { back5(this)});
+document.getElementById("r20").addEventListener("click", function() { back5(this)});
+document.getElementById("r21").addEventListener("click", function() { back5(this)});
+document.getElementById("r22").addEventListener("click", function() { back5(this)});
+document.getElementById("r23").addEventListener("click", function() { back5(this)});
+document.getElementById("r24").addEventListener("click", function() { back5(this)});
+document.getElementById("r25").addEventListener("click", function() { back5(this)});
+document.getElementById("r26").addEventListener("click", function() { back5(this)});
+document.getElementById("r27").addEventListener("click", function() { back5(this)});
+document.getElementById("r28").addEventListener("click", function() { back5(this)});
+document.getElementById("r29").addEventListener("click", function() { back5(this)});
+document.getElementById("r30").addEventListener("click", function() { back5(this)});
+document.getElementById("r31").addEventListener("click", function() { back5(this)});
+document.getElementById("r32").addEventListener("click", function() { back5(this)});
+document.getElementById("r33").addEventListener("click", function() { back5(this)});
+document.getElementById("r34").addEventListener("click", function() { back5(this)});
+document.getElementById("r35").addEventListener("click", function() { back5(this)});
+document.getElementById("r36").addEventListener("click", function() { back5(this)});
+document.getElementById("r37").addEventListener("click", function() { back5(this)});
+document.getElementById("r38").addEventListener("click", function() { back5(this)});
+document.getElementById("r39").addEventListener("click", function() { back5(this)});
+document.getElementById("r40").addEventListener("click", function() { back5(this)});
+document.getElementById("r41").addEventListener("click", function() { back5(this)});
+document.getElementById("r42").addEventListener("click", function() { back5(this)});
+document.getElementById("r43").addEventListener("click", function() { back5(this)});
+document.getElementById("r44").addEventListener("click", function() { back5(this)});
+document.getElementById("r45").addEventListener("click", function() { back5(this)});
+document.getElementById("r46").addEventListener("click", function() { back5(this)});
+document.getElementById("r47").addEventListener("click", function() { back5(this)});
+document.getElementById("r48").addEventListener("click", function() { back5(this)});
+document.getElementById("r49").addEventListener("click", function() { back5(this)});
+document.getElementById("r50").addEventListener("click", function() { back5(this)});
+document.getElementById("r51").addEventListener("click", function() { back5(this)});
+document.getElementById("r52").addEventListener("click", function() { back5(this)});
+document.getElementById("r53").addEventListener("click", function() { back5(this)});
+document.getElementById("r54").addEventListener("click", function() { back5(this)});
+document.getElementById("r55").addEventListener("click", function() { back5(this)});
+document.getElementById("r56").addEventListener("click", function() { back5(this)});
+document.getElementById("r57").addEventListener("click", function() { back5(this)});
+document.getElementById("r58").addEventListener("click", function() { back5(this)});
+document.getElementById("r59").addEventListener("click", function() { back5(this)});
+document.getElementById("r60").addEventListener("click", function() { back5(this)});
+document.getElementById("r61").addEventListener("click", function() { back5(this)});
+document.getElementById("r62").addEventListener("click", function() { back5(this)});
+document.getElementById("r63").addEventListener("click", function() { back5(this)});
+document.getElementById("r64").addEventListener("click", function() { back5(this)});
+document.getElementById("r65").addEventListener("click", function() { back5(this)});
+document.getElementById("r66").addEventListener("click", function() { back5(this)});
+document.getElementById("r67").addEventListener("click", function() { back5(this)});
+document.getElementById("r68").addEventListener("click", function() { back5(this)});
+document.getElementById("r69").addEventListener("click", function() { back5(this)});
+document.getElementById("r70").addEventListener("click", function() { back5(this)});
+document.getElementById("r71").addEventListener("click", function() { back5(this)});
+document.getElementById("r72").addEventListener("click", function() { back5(this)});
+document.getElementById("r73").addEventListener("click", function() { back5(this)});
+document.getElementById("r74").addEventListener("click", function() { back5(this)});
+document.getElementById("r75").addEventListener("click", function() { back5(this)});
+document.getElementById("r76").addEventListener("click", function() { back5(this)});
+document.getElementById("r77").addEventListener("click", function() { back5(this)});
+document.getElementById("r78").addEventListener("click", function() { back5(this)});
+document.getElementById("r79").addEventListener("click", function() { back5(this)});
+document.getElementById("r80").addEventListener("click", function() { back5(this)});
+document.getElementById("r81").addEventListener("click", function() { back5(this)});
+document.getElementById("r82").addEventListener("click", function() { back5(this)});
+document.getElementById("r83").addEventListener("click", function() { back5(this)});
+document.getElementById("r84").addEventListener("click", function() { back5(this)});
+document.getElementById("r85").addEventListener("click", function() { back5(this)});
+document.getElementById("r86").addEventListener("click", function() { back5(this)});
+document.getElementById("r87").addEventListener("click", function() { back5(this)});
+
+function back5(r) {
+	var aud = document.getElementById("a"+r.id.substring(1,3));
+	var newtime = aud.currentTime - 5;
+	if(newtime < 0){newtime = 0;}
+	aud.currentTime = newtime;
+}
+
+</script>
+</body>
+</html>
