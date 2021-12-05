@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
-    <title>漢字 かんじ</title>
+    <title>漢字</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -254,9 +254,10 @@ a{padding:.25em 0 .25em 0;width:14.285%;float:left;}
 .spanHead{font-size:1.25em;float:left;}
 .fa{font-size:2em;padding-top:.25em;padding-left:.25em}
 #lesson {width:100%;font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;}
-#lesson tr > *:nth-child(1){width:25%;}
-#lesson tr > *:nth-child(2){width:40%;}
-#lesson tr > *:nth-child(3){width:35%;}
+#lesson tr > *:nth-child(1){width:5%;}
+#lesson tr > *:nth-child(2){width:25%;}
+#lesson tr > *:nth-child(3){width:40%;}
+#lesson tr > *:nth-child(4){width:35%;}
 #lesson td, #lesson th {border:1px solid #ddd;padding:8px;}
 #lesson tr:nth-child(even){background-color:#f2f2f2;}
 #lesson tr:nth-child(odd){background-color:#FFF;}
@@ -282,6 +283,7 @@ transform:translateX(26px);}
 .slider.round:before{border-radius: 50%;}
 #listToggle{float:left;padding-right:2em;font-size:1.25em;width:95px;}
 #counter{font-size:1.25em;padding-top:.65em;}
+#title{padding-top:.65em;}
 #spanNihongo{font-size:1.25em;float:left;padding-right:.5em;}
 .tinyText {font-size:65%;}
 </style>
@@ -324,7 +326,7 @@ transform:translateX(26px);}
 	  <a href="#" class="w3-button lessonButton" id="32" style="display:none;">32</a>
 	  <a href="#" class="w3-button lessonButton" id="33" style="display:none;">33</a>
 	  <a href="#" class="w3-button lessonButton" id="34" style="display:none;">34</a>
-	  <a href="#" class="w3-button lessonButton" id="35" style="display:none;">35</a>
+	  <a href="#" class="w3-button lessonButton" id="35" style="display:none;"><span class="tinyText">全て</span></a>
 	  <a href="#" class="w3-button" id="rightNav">&raquo;</a>
 </div>
 <div class="w3-display-container w3-teal" style="height:300px;">
@@ -334,6 +336,7 @@ transform:translateX(26px);}
 			<i id="cardIcon" class="fa fa-language"></i><!--字</i>-->
 		</span>
 		<div id="counter"></div>
+		<div id="title"></div>
 	</div>
 	<div class="w3-display-topright" style="padding-top:.75em;">
 		<div id="spanNihongo">日本語</div>
@@ -352,12 +355,13 @@ transform:translateX(26px);}
 </div>
 <div id="list" style="clear: both;margin-top:8em;">
 	<table id="lesson"></table>
+	<p><i id="downloadIcon" class="fa fa-download" onclick="downloadCSV();"></i></p>
 </div>
 <input type="text" id="KanjiHidden" style="display:none;">
 <script>
 var vocabTable=[];
 // Starting chapter:
-var menu=1;
+var menu=35;
 var currentWord=0;
 var state='card';
 var lessonTable = document.getElementById("lesson");
@@ -368,6 +372,7 @@ window.addEventListener('load', (event) => {
 	document.getElementById("cardIcon").style.display = "none";
 	document.getElementById("listIcon").style.display = "block";
 	document.getElementById("list").style.display = "none";
+	document.getElementById("title").style.display = "none";
 	loadCards(menu);
 });
 // Add an even listener for each button
@@ -789,14 +794,51 @@ let KanjiTable = [
 ['広','広い','ひろい','wide',0,13],
 ['多','多い','おおい','many',0,13],
 ['少','少し','すこし','a little, few',0,13],
-['長','長い手紙','ながいてがみ','long letter',0,13],
-['短','短い手紙','みじかいてがみ','short letter',0,13],
-['悪','悪い友達','わるいともだち','bad friend',0,13],
-['重','重いかばん','おもいかばん','heavy bag',0,13],
-['軽','軽いかばん','かるいかばん','light bag',0,13],
+['長','長い 手紙','ながい てがみ','long letter',0,13],
+['短','短い 手紙','みじかい てがみ','short letter',0,13],
+['悪','悪い 友達','わるい ともだち','bad friend',0,13],
+['重','重い かばん','おもい かばん','heavy bag',0,13],
+['軽','軽い かばん','かるい かばん','light bag',0,13],
 ['早','時間が早い','じかんがはやい','early',0,13],
 ['強','強いお酒','つよいおさけ','strong alcohol',0,13],
-//['','','','',0,14],
+['便','便利な かばん','べんりな かばん','convenient bag',0,14],
+['利','便利な かばん','べんりな かばん','convenient bag',0,14],
+['元','元気な 人','げんきな ひと','energetic person',0,14],
+['気','電気 を すけます','でんき を すけます','turn on the light',0,14],
+['親','親切な 友達','しんせつな ともだち','kind friend',0,14],
+['有','有名な ワイン','ゆめいな ワイン','famous wine',0,14],
+['名','会社 の 名前','かいしゃ の なまえ','company name',0,14],
+['地','地下鉄 の 駅','ちかてつ の えき','metro station',0,14],
+['下','地下鉄 の 駅','ちかてつ の えき','metro station',0,14],
+['鉄','地下鉄 の 駅','ちかてつ の えき','metro station',0,14],
+['仕','私の仕事','わたし の しごと','my job',0,14],
+['事','私の仕事','わたし の しごと','my job',0,14],
+['東','東東京','ひがし とうきょう','East Tokyo',0,15],
+['西','中国 の 西','ちゅうごく の にし','Western China',0,15],
+['南','南 の 国','みなみ の くに','South of the Country',0,15],
+['北','北 アメリカ','きた アメリカ','North America',0,15],
+['京','京都','きょうと','Kyoto',0,15],
+['夜','土曜日 の 夜','どようび の よる','Saturday Night',0,15],
+['入','カード を 入れて','カード を いれて','Insert a card',0,15],
+['出','お金 を 出します','おかね を だします','Take out money',0,15],
+['料','中国 料理','ちゅうごく りょうり','Chinese food',0,15],
+['理','中国 料理','ちゅうごく りょうり','Chinese food',0,15],
+['口','口','くち','mouth',0,15],
+['足','手　と　足','て　と　あし','hands and feet',0,15],
+['曜','土曜日','どようび','Saturday',0,15],
+['降','雨 が 降ります','あめ が ふります','It will rain',0,16],
+['思','彼 は 来ない と 思います','かれ は こない と おもいます','I don\'t think he will come',0,16],
+['寝','12時 に 寝ました','12じ に ねました','I went to bed at 12 o\'clock',0,16],
+['終','夏休み　が　終わりました','なつやすみ　が　おわります','Summer vacation is over',0,16],
+['言','彼　に　「さようなら」　と言いました','かれ　に　「さようなら」　といいました','I said "goodbye" to him',0,16],
+['話','友達　と　話します','ともだち　と　はなします','Talk to a friend',0,16],
+['知','知りません','しりません','do not know',0,16],
+['同','同じ 名前','おなじ なまえ','same name',0,16],
+['漢','漢字　を　書きます','かんじ　を　かきます','write kanji',0,16],
+['字','漢字　を　書きます','かんじ　を　かきます','write kanji',0,16],
+['方','あの方　を　知っていますか','あのかた　を　しっていますか','Do you know that person?',0,16],
+//['','','','',0,17],
+// Kanji, Sentence, Hiragana, English, Status, Chapter
 ];
 
 document.getElementById('nihongo').addEventListener('click', (event) => {
@@ -807,19 +849,21 @@ function toggleJapanese() {
 		displayKanjiExample();
 		displayHiraKataExample();
 		displayEnglishExample();
-		var cell1 = document.querySelectorAll('td:nth-child(1)');
-		var cell2 = document.querySelectorAll('td:nth-child(2)');
+		var cell0 = document.querySelectorAll('td:nth-child(1)');
+		var cell1 = document.querySelectorAll('td:nth-child(2)');
+		var cell2 = document.querySelectorAll('td:nth-child(3)');
 		for(var i = 0 ; i < cell1.length ; i++) {
+			cell0[i].innerHTML = vocabTable[i][0];
 			cell1[i].innerHTML = vocabTable[i][1];
 			if (vocabTable[i][6] == '1' || vocabTable[i][6] == '2' || vocabTable[i][6] == '3') {
 				var verbGroup = ''
 				switch(vocabTable[i][6]) {case '1': verbGroup = '&#8544;'; break; case '2': verbGroup = '&#8545;'; break; case '3': verbGroup = '&#8546;'; break;};
 				cell1[i].innerHTML += ' (' + verbGroup + ')';
-				cell2[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
+				cell2[i].innerHTML = vocabTable[i][2] + '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
 								   + '<span class="supnaiform">' + vocabTable[i][8] + '</span><br/>'
 								   + '<span class="supadjnegpast">' + vocabTable[i][9] + '</span>';
 			} else if (vocabTable[i][6] == 'I' || vocabTable[i][6] == 'N') {
-				cell2[i].innerHTML = vocabTable[i][2]　+ '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
+				cell2[i].innerHTML = vocabTable[i][2] + '<br/><span class="supteform">' + vocabTable[i][7] + '</span><br/>'
 													  + '<span class="supnaiform">' + vocabTable[i][8] + '</span><br/>'
 													  + '<span class="supadjnegpast">' + vocabTable[i][9] + '</span>';
 			} else {
@@ -831,9 +875,11 @@ function toggleJapanese() {
 		document.getElementById('KanjiExample').innerHTML = "&nbsp;";
 		document.getElementById('HiraKataExample').innerHTML = "&nbsp;";
 		document.getElementById('EnglishExample').innerHTML = "&nbsp;";
-		var cell1 = document.querySelectorAll('td:nth-child(1)');
-		var cell2 = document.querySelectorAll('td:nth-child(2)');
+		var cell0 = document.querySelectorAll('td:nth-child(1)');
+		var cell1 = document.querySelectorAll('td:nth-child(2)');
+		var cell2 = document.querySelectorAll('td:nth-child(3)');
 		for(var i = 0 ; i < cell1.length ; i++) {
+			cell0[i].textContent = "";
 			cell1[i].textContent = "";
 			cell2[i].textContent = "";
 		}
@@ -844,11 +890,13 @@ document.getElementById('listToggle').addEventListener('click', (event) => {
 		document.getElementById("cardIcon").style.display = "block";
 		document.getElementById("counter").style.display = "none";
 		document.getElementById("listIcon").style.display = "none";
+		document.getElementById("title").style.display = "block";
 		document.getElementById("card").style.display = "none";
 		document.getElementById("list").style.display = "block";
 		state='list';
 	} else {
 		document.getElementById("listIcon").style.display = "block";
+		document.getElementById("title").style.display = "none";
 		document.getElementById("cardIcon").style.display = "none";
 		document.getElementById("card").style.display = "block";
 		document.getElementById("counter").style.display = "block";
@@ -952,23 +1000,10 @@ function populateLessonTable() {
 	var i=vocabTable.length-1;
 	for(i; i>=0; --i) {
 		var row = lessonTable.insertRow(0);
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-		var cell3 = row.insertCell(2);
-		cell3.innerHTML = vocabTable[i][3];
-	}
-	toggleJapanese();
-}
-function populateVerbTable() {
-	while(lessonTable.rows.length > 0) {
-		lessonTable.deleteRow(0);
-	}
-	var i=vocabTable.length-1;
-	for(i; i>=0; --i) {
-		var row = lessonTable.insertRow(0);
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-		var cell3 = row.insertCell(2);
+		var cell0 = row.insertCell(0);
+		var cell1 = row.insertCell(1);
+		var cell2 = row.insertCell(2);
+		var cell3 = row.insertCell(3);
 		cell3.innerHTML = vocabTable[i][3];
 	}
 	toggleJapanese();
@@ -1099,16 +1134,24 @@ function multiSort(array, sortObject = {}) {
 function loadCards(lesson) {
 	i=0;
 	vocabTable = [];
-	
-	while (i < KanjiTable.length) {
-		if(KanjiTable[i][5] == lesson) {
+	if (lesson.toString() == '35') {	
+		while (i < KanjiTable.length) {
 			vocabTable.push(KanjiTable[i]);
-		} else {
-			if(KanjiTable[i][5] > lesson) {
-				i=KanjiTable.length;
-			}
+			i++;
 		}
-		i++;
+		document.getElementById("title").innerHTML = '全て<br/>すべて';
+	} else {
+		while (i < KanjiTable.length) {
+			if(KanjiTable[i][5] == lesson) {
+				vocabTable.push(KanjiTable[i]);
+			} else {
+				if(KanjiTable[i][5] > lesson) {
+					i=KanjiTable.length;
+				}
+			}
+			i++;
+		}
+		document.getElementById("title").innerHTML = '第' + lesson.toString() + '課';
 	}
 
 	if (vocabTable.length > 0) {
@@ -1121,6 +1164,22 @@ function loadCards(lesson) {
 	}
 }
 
+function downloadCSV () {
+	let csvContent = "data:text/csv;charset=utf-8,";
+
+	vocabTable.forEach(function(rowArray) {
+		let row = rowArray.join('","');
+		csvContent += row + "\r\n";
+	});
+	
+	var encodedUri = encodeURI(csvContent);
+	var link = document.createElement("a");
+	link.setAttribute("href", encodedUri);
+	link.setAttribute("download", "kanji.csv");
+	document.body.appendChild(link);
+
+	link.click();
+}
 </script>
 </body>
 </html>
